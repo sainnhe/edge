@@ -1,0 +1,6 @@
+# vim: ft=colortemplate fdm=marker cc=22,40,58
+
+# vim-plug{{{
+plug1 purple none bold
+plugNumber green none bold
+#}}}

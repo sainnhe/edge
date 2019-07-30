@@ -10,6 +10,8 @@ License:             MIT && Anti-996
 Option Prefix:       dark_and_light
 Neovim:              yes
 
+Include: _plugins
+
 Background: dark
 
 Include: _palette_dark
@@ -18,6 +20,8 @@ Include: _terminal
 
 Include: _basic
 
+Include: _plugins_non_link
+
 Background: light
 
 Include: _palette_light
@@ -25,6 +29,8 @@ Include: _palette_light
 Include: _terminal
 
 Include: _basic
+
+Include: _plugins_non_link
 
 Background: any
 

@@ -1,0 +1,16 @@
+# vim: ft=colortemplate fdm=marker cc=22,40,58
+
+# vim-plug{{{
+plug2 -> Cyan
+plugBracket -> Blue
+plugName -> Green
+plugDash -> Blue
+plugNotLoaded -> Grey
+plugH2 -> Blue
+plugMessage -> Blue
+plugError -> Red
+plugRelDate -> Grey
+plugStar -> Purple
+plugUpdate -> Cyan
+plugDeleted -> Grey
+#}}}
