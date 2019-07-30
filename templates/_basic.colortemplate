@@ -67,6 +67,7 @@ Macro                   red             none
 Exception               red             none
 Error                   red             none
 Keyword                 red             none
+Define                  red             none
 Typedef                 red             none
 Special                 yellow          none
 Type                    yellow          none
@@ -81,15 +82,14 @@ Constant                cyan            none
 Function                blue            none
 Operator                blue            none
 Title                   blue            none            bold
-Statement               blue            none
+Label                   blue            none
 SpecialKey              blue            none
 Conditional             purple          none
 PreCondit               purple          none
 Repeat                  purple          none
 Todo                    purple          none            italic
-Define                  purple          none
 StorageClass            purple          none
-Label                   purple          none
+Statement               purple          none
 Tag                     purple          none
 Delimiter               foreground      none
 Comment                 grey            none            italic
