@@ -1,0 +1,21 @@
+# vim: ft=colortemplate fdm=marker cc=22,40,58
+
+Full name:           Edge
+Short name:          edge
+Author:              Sainnhepark <sainnhe@gmail.com>
+Maintainer:          Sainnhepark <sainnhe@gmail.com>
+Website:             https://github.com/sainnhe/edge/
+Description:         Material & Clean Color Scheme
+License:             MIT && Anti-996
+Option Prefix:       light
+Neovim:              yes
+
+Background: light
+
+Include: _palette_light
+
+Include: _terminal
+
+Include: _basic
+
+Include: _bw

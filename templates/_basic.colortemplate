@@ -1,0 +1,101 @@
+# vim: ft=colortemplate fdm=marker cc=22,40,58
+
+Variant: gui
+#if get(g:, '@optionprefix_transp_bg', 0) && !has('gui_running')
+Variant: 256 8
+#if get(g:, '@optionprefix_transp_bg', 0)
+Variant: gui 256 8
+    Normal              foreground      none
+    Terminal            foreground      none
+#else
+    Normal              foreground      background
+    Terminal            foreground      background
+#endif
+
+ColorColumn             none            background_alt
+Conceal                 grey            none
+Cursor                  none            none            reverse
+CursorColumn            none            background_alt
+CursorLine              none            background_alt
+CursorLineNr            foreground      background_alt
+LineNr                  grey            background_alt
+SignColumn              none            background_alt
+DiffAdd                 none            background_green
+DiffChange              none            background_blue
+DiffDelete              none            background_red
+DiffText                none            background_orange
+Directory               green           none
+EndOfBuffer             background      background
+ErrorMsg                red             none            bold
+WarningMsg              orange          none            bold
+ModeMsg                 blue            none            bold
+MoreMsg                 purple          none            bold
+FoldColumn              grey            background_alt
+Folded                  grey            background_alt
+IncSearch               none            background_blue underline
+Search                  none            background_blue underline
+MatchParen              none            none            bold
+NonText                 grey            none
+Pmenu                   foreground      background_grey
+PmenuSel                background      azure
+PmenuSbar               none            background_grey
+PmenuThumb              none            azure
+Question                green           none
+SpellBad                red             none            s=red
+SpellCap                orange          none            s=orange
+SpellLocal              blue            none            s=blue
+SpellRare               magenta         none            s=magenta
+StatusLine              foreground      background_grey
+StatusLineNC            grey            background_alt
+TabLine                 foreground      background_grey
+TabLineFill             grey            background_alt
+TabLineSel              background      purple
+VertSplit               grey            none
+Visual                  none            background_red
+VisualNOS               none            background_red  italic
+WildMenu                background      green
+CursorIM                none            foreground
+ToolbarLine             none            grey
+ToolbarButton           foreground      background      bold
+QuickFixLine         -> Search
+lCursor              -> Cursor
+StatusLineTerm       -> StatusLine
+StatusLineTermNC     -> StatusLineNC
+
+Todo                    magenta         none            italic
+PreProc                 magenta         none
+Macro                   magenta         none
+Exception               red             none
+Error                   red             none
+PreCondit               red             none
+Keyword                 red             none
+Conditional             orange          none
+Repeat                  orange          none
+Typedef                 orange          none
+Special                 orange          none
+Type                    yellow          none
+Structure               yellow          none
+Boolean                 lemon           none
+String                  lemon           none
+Character               lemon           none
+Number                  lemon           none
+Float                   lemon           none
+Identifier              green           none
+Constant                cyan            none
+Function                azure           none
+Operator                blue            none
+Title                   blue            none            bold
+Statement               blue            none
+SpecialKey              blue            none
+Define                  purple          none
+StorageClass            purple          none
+Label                   purple          none
+Tag                     purple          none
+Delimiter               foreground      none
+Comment                 grey            none            italic
+SpecialComment          grey            none            italic
+Ignore                  grey            none
+Underlined              none            none            underline
+SpecialChar          -> Special
+Debug                -> Special
+Include              -> PreProc
