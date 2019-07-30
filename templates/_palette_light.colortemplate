@@ -9,7 +9,7 @@ Color: cyan          #529c7d           ~                 Cyan
 Color: blue          #6587bf           ~                 Blue
 Color: purple        #b870ce           ~                 Magenta
 Color: grey          #949ba5           ~                 Grey
-Color: background_alt #e8ebee          ~                 LightGrey
+Color: background_alt #eceff2          ~                 LightGrey
 Color: background_grey #dde2e7         ~                 LightGrey
 Color: background_red #f4e2e3          ~                 LightRed
 Color: background_green #e5f4de        ~                 LightGreen

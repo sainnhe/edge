@@ -32,13 +32,13 @@ ModeMsg                 blue            none            bold
 MoreMsg                 purple          none            bold
 FoldColumn              grey            background_alt
 Folded                  grey            background_alt
-IncSearch               none            background_blue underline
-Search                  none            background_blue underline
+IncSearch               none            background_grey underline
+Search                  none            background_grey underline
 MatchParen              none            none            bold
 NonText                 grey            none
-Pmenu                   foreground      background_alt
+Pmenu                   foreground      background_grey
 PmenuSel                background      blue
-PmenuSbar               none            background_alt
+PmenuSbar               none            background_grey
 PmenuThumb              none            grey
 Question                green           none
 SpellBad                red             none            s=red
@@ -51,8 +51,8 @@ TabLine                 foreground      background_grey
 TabLineFill             grey            background_alt
 TabLineSel              background      purple
 VertSplit               background_grey none
-Visual                  none            background_alt
-VisualNOS               none            background_alt  italic
+Visual                  none            none            reverse
+VisualNOS               none            none            reverse
 WildMenu                background      green
 CursorIM                none            foreground
 ToolbarLine             none            grey
