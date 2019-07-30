@@ -51,8 +51,8 @@ TabLine                 foreground      background_grey
 TabLineFill             grey            background_alt
 TabLineSel              background      purple
 VertSplit               grey            none
-Visual                  none            background_red
-VisualNOS               none            background_red  italic
+Visual                  none            background_alt
+VisualNOS               none            background_alt  italic
 WildMenu                background      green
 CursorIM                none            foreground
 ToolbarLine             none            grey

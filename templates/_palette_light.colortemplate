@@ -2,19 +2,19 @@
 
 Color: background    #fafafa           ~                 White
 Color: foreground    #656c78           ~                 Black
-Color: red           #df7676           ~                 Red
+Color: red           #db7070           ~                 Red
 Color: yellow        #d69822           ~                 LightGrey
 Color: green         #7c9f4b           ~                 Green
-Color: cyan          #4fa581           ~                 Cyan
+Color: cyan          #529c7d           ~                 Cyan
 Color: blue          #6587bf           ~                 Blue
 Color: purple        #b870ce           ~                 Magenta
 Color: grey          #949ba5           ~                 Grey
 Color: background_alt #e8ebee          ~                 LightGrey
 Color: background_grey #dde2e7         ~                 LightGrey
-Color: background_red #f6babd          ~                 LightRed
-Color: background_green #c1e5b1        ~                 LightGreen
-Color: background_yellow #eecbb4       ~                 LightYellow
-Color: background_blue #bae1f0         ~                 LightBlue
+Color: background_red #f4e2e3          ~                 LightRed
+Color: background_green #e5f4de        ~                 LightGreen
+Color: background_yellow #f4edde       ~                 LightYellow
+Color: background_blue #e6edf9         ~                 LightBlue
 
 Fg              foreground      none
 Red             red             none
