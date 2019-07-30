@@ -1,4 +1,4 @@
 # vim: ft=colortemplate fdm=marker cc=22,40,58
 
-Term colors: fg red green orange blue purple cyan grey
-Term colors: fg red lemon yellow azure magenta cyan grey
+Term colors: fg red green yellow blue purple cyan grey
+Term colors: fg red green yellow blue purple cyan grey

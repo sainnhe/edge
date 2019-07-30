@@ -23,11 +23,11 @@ SignColumn              none            background_alt
 DiffAdd                 none            background_green
 DiffChange              none            background_blue
 DiffDelete              none            background_red
-DiffText                none            background_orange
+DiffText                none            background_yellow
 Directory               green           none
 EndOfBuffer             background      background
 ErrorMsg                red             none            bold
-WarningMsg              orange          none            bold
+WarningMsg              yellow          none            bold
 ModeMsg                 blue            none            bold
 MoreMsg                 purple          none            bold
 FoldColumn              grey            background_alt
@@ -36,15 +36,15 @@ IncSearch               none            background_blue underline
 Search                  none            background_blue underline
 MatchParen              none            none            bold
 NonText                 grey            none
-Pmenu                   foreground      background_grey
-PmenuSel                background      azure
-PmenuSbar               none            background_grey
-PmenuThumb              none            azure
+Pmenu                   foreground      background_alt
+PmenuSel                background      blue
+PmenuSbar               none            background_alt
+PmenuThumb              none            grey
 Question                green           none
 SpellBad                red             none            s=red
-SpellCap                orange          none            s=orange
+SpellCap                yellow          none            s=yellow
 SpellLocal              blue            none            s=blue
-SpellRare               magenta         none            s=magenta
+SpellRare               purple          none            s=purple
 StatusLine              foreground      background_grey
 StatusLineNC            grey            background_alt
 TabLine                 foreground      background_grey
@@ -62,31 +62,31 @@ lCursor              -> Cursor
 StatusLineTerm       -> StatusLine
 StatusLineTermNC     -> StatusLineNC
 
-Todo                    magenta         none            italic
-PreProc                 magenta         none
-Macro                   magenta         none
+PreProc                 red             none
+Macro                   red             none
 Exception               red             none
 Error                   red             none
 PreCondit               red             none
 Keyword                 red             none
-Conditional             orange          none
-Repeat                  orange          none
-Typedef                 orange          none
-Special                 orange          none
+Typedef                 red             none
+Special                 yellow          none
 Type                    yellow          none
 Structure               yellow          none
-Boolean                 lemon           none
-String                  lemon           none
-Character               lemon           none
-Number                  lemon           none
-Float                   lemon           none
-Identifier              green           none
+Boolean                 green           none
+String                  green           none
+Character               green           none
+Number                  green           none
+Float                   green           none
+Identifier              cyan            none
 Constant                cyan            none
-Function                azure           none
+Function                blue            none
 Operator                blue            none
 Title                   blue            none            bold
 Statement               blue            none
 SpecialKey              blue            none
+Conditional             purple          none
+Repeat                  purple          none
+Todo                    purple          none            italic
 Define                  purple          none
 StorageClass            purple          none
 Label                   purple          none

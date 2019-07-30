@@ -1,34 +1,26 @@
 # vim: ft=colortemplate fdm=marker cc=22,40,58
 
-Color: background    #f9ebd0           ~                 White
-Color: foreground    #566b60           ~                 Black
-Color: red           #d4576a           ~                 Red
-Color: orange        #d26e41           ~                 Yellow
-Color: yellow        #cc8500           ~                 LightGrey
-Color: lemon         #758b00           ~                 LightGreen
-Color: green         #2d8d4c           ~                 Green
-Color: cyan          #36817e           ~                 Cyan
-Color: azure         #5c7aa9           ~                 LightBlue
-Color: blue          #5c7aa9           ~                 Blue
-Color: purple        #c56591           ~                 LightMagenta
-Color: magenta       #c56591           ~                 Magenta
-Color: grey          #778b81           ~                 Grey
-Color: background_alt #f6e2ba           ~                 LightGrey
-Color: background_grey #f6e2ba           ~                 LightGrey
-Color: background_red #f6babd           ~                 LightRed
-Color: background_green #c1e5b1           ~                 LightGreen
-Color: background_orange #eecbb4           ~                 LightYellow
-Color: background_blue #bae1f0           ~                 LightBlue
+Color: background    #fafafa           ~                 White
+Color: foreground    #656c78           ~                 Black
+Color: red           #df7676           ~                 Red
+Color: yellow        #d69822           ~                 LightGrey
+Color: green         #7c9f4b           ~                 Green
+Color: cyan          #4fa581           ~                 Cyan
+Color: blue          #6587bf           ~                 Blue
+Color: purple        #b870ce           ~                 Magenta
+Color: grey          #949ba5           ~                 Grey
+Color: background_alt #e8ebee          ~                 LightGrey
+Color: background_grey #dde2e7         ~                 LightGrey
+Color: background_red #f6babd          ~                 LightRed
+Color: background_green #c1e5b1        ~                 LightGreen
+Color: background_yellow #eecbb4       ~                 LightYellow
+Color: background_blue #bae1f0         ~                 LightBlue
 
 Fg              foreground      none
 Red             red             none
-Orange          orange          none
 Yellow          yellow          none
-Lemon           lemon           none
 Green           green           none
 Cyan            cyan            none
-Azure           azure           none
 Blue            blue            none
 Purple          purple          none
-Magenta         magenta         none
 Grey            grey            none
