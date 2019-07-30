@@ -50,7 +50,7 @@ StatusLineNC            grey            background_alt
 TabLine                 foreground      background_grey
 TabLineFill             grey            background_alt
 TabLineSel              background      purple
-VertSplit               grey            none
+VertSplit               background_grey none
 Visual                  none            background_alt
 VisualNOS               none            background_alt  italic
 WildMenu                background      green
@@ -66,7 +66,6 @@ PreProc                 red             none
 Macro                   red             none
 Exception               red             none
 Error                   red             none
-PreCondit               red             none
 Keyword                 red             none
 Typedef                 red             none
 Special                 yellow          none
@@ -85,6 +84,7 @@ Title                   blue            none            bold
 Statement               blue            none
 SpecialKey              blue            none
 Conditional             purple          none
+PreCondit               purple          none
 Repeat                  purple          none
 Todo                    purple          none            italic
 Define                  purple          none
