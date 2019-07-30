@@ -14,3 +14,40 @@ plugStar -> Purple
 plugUpdate -> Cyan
 plugDeleted -> Grey
 #}}}
+# EasyMotion: {{{
+EasyMotionTarget -> Search
+EasyMotionShade -> Grey
+# }}}
+# Sneak: {{{
+Sneak -> Search
+SneakLabel -> Search
+# }}}
+# GitCommit {{{
+gitcommitSelectedFile -> Green
+gitcommitDiscardedFile -> Red
+# }}}
+# FZF {{{
+verbatim
+let g:fzf_colors = {
+      \ 'fg':      ['fg', 'Normal'],
+      \ 'bg':      ['bg', 'Normal'],
+      \ 'hl':      ['fg', 'Green'],
+      \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+      \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+      \ 'hl+':     ['fg', 'Green'],
+      \ 'info':    ['fg', 'Cyan'],
+      \ 'prompt':  ['fg', 'Purple'],
+      \ 'pointer': ['fg', 'Blue'],
+      \ 'marker':  ['fg', 'Blue'],
+      \ 'spinner': ['fg', 'Yellow'],
+      \ 'header':  ['fg', 'Blue']
+      \ }
+endverbatim
+#}}}
+# LeaderF{{{
+verbatim
+if !exists('g:Lf_StlColorscheme')
+    let g:Lf_StlColorscheme = 'one'
+endif
+endverbatim
+#}}}

@@ -4,3 +4,29 @@
 plug1 purple none bold
 plugNumber green none bold
 #}}}
+# GitGutter {{{
+GitGutterAdd green background_alt
+GitGutterChange yellow background_alt
+GitGutterDelete red background_alt
+GitGutterChangeDelete purple background_alt
+# }}}
+# Signify {{{
+SignifySignAdd green background_alt
+SignifySignChange yellow background_alt
+SignifySignDelete red background_alt
+# }}}
+# Syntastic {{{
+SyntasticError none none t=underline g=undercurl s=red
+SyntasticWarning none none t=underline g=undercurl s=yellow
+SyntasticErrorSign red background_alt
+SyntasticWarningSign yellow background_alt
+# }}}
+# LeaderF {{{
+Lf_hl_match green none bold
+Lf_hl_match0 green none bold
+Lf_hl_match1 cyan none bold
+Lf_hl_match2 blue none bold
+Lf_hl_match3 purple none bold
+Lf_hl_match4 red none bold
+Lf_hl_matchRefine yellow none bold
+#}}}
