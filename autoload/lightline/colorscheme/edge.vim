@@ -44,10 +44,10 @@ let s:tab_sel_bg = s:purple
 let s:tab_middle_fg = s:grey
 let s:tab_middle_bg = s:background_alt
 
-let s:warningfg = s:yellow
-let s:warningbg = s:background_grey
-let s:errorfg = s:red
-let s:errorbg = s:background_grey
+let s:warningfg = s:background
+let s:warningbg = s:yellow
+let s:errorfg = s:background
+let s:errorbg = s:red
 
 let s:normal_l1_fg = s:background
 let s:normal_l1_bg = s:green
