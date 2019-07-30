@@ -80,15 +80,15 @@ Float                   green           none
 Identifier              cyan            none
 Constant                cyan            none
 Function                blue            none
+StorageClass            blue            none
 Operator                blue            none
-Title                   blue            none            bold
 Label                   blue            none
 SpecialKey              blue            none
+Title                   purple          none            bold
 Conditional             purple          none
 PreCondit               purple          none
 Repeat                  purple          none
 Todo                    purple          none            italic
-StorageClass            purple          none
 Statement               purple          none
 Tag                     purple          none
 Delimiter               foreground      none
