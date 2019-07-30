@@ -7,8 +7,16 @@ Maintainer:          Sainnhepark <sainnhe@gmail.com>
 Website:             https://github.com/sainnhe/edge/
 Description:         Material & Clean Color Scheme
 License:             MIT && Anti-996
-Option Prefix:       light
+Option Prefix:       dark_and_light
 Neovim:              yes
+
+Background: dark
+
+Include: _palette_dark
+
+Include: _terminal
+
+Include: _basic
 
 Background: light
 
@@ -17,5 +25,7 @@ Include: _palette_light
 Include: _terminal
 
 Include: _basic
+
+Background: any
 
 Include: _bw
