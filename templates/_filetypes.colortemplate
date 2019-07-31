@@ -171,3 +171,16 @@ phpType -> Purple
 phpMethod -> Yellow
 phpMemberSelector -> Green
 #}}}
+# csharp{{{
+csUnspecifiedStatement -> Red
+csEndColon -> Fg
+csBraces -> Fg
+csParens -> Fg
+csClass -> Red
+csType -> Red
+csNewType -> Yellow
+csClassType -> Blue
+csAsync -> Red
+csLogicSymbols -> Blue
+csLabel -> Blue
+#}}}
