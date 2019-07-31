@@ -184,3 +184,13 @@ csAsync -> Red
 csLogicSymbols -> Blue
 csLabel -> Blue
 #}}}
+# fsharp{{{
+fsharpOpen -> Purple
+fsharpModule -> Blue
+fsharpSymbol -> Cyan
+fsharpCoreClass -> Blue
+fsharpException -> Purple
+fsharpScript -> Purple
+fsharpAttrib -> Purple
+fsharpAttribute -> Blue
+#}}}
