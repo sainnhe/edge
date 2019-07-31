@@ -301,3 +301,6 @@ erlangLocalFuncCall -> Blue
 erlangLocalFuncRef -> Yellow
 erlangGlobalFuncCall -> Purple
 #}}}
+# julia{{{
+juliaBlKeyword -> Purple
+#}}}
