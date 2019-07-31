@@ -261,3 +261,13 @@ scalaSpecial -> Purple
 scalaSquareBracketsBrackets -> Fg
 scalaTypeDeclaration -> Yellow
 #}}}
+# elixir{{{
+elixirModuleDeclaration -> Purple
+elixirInclude -> Purple
+elixirAlias -> Blue
+elixirVariable -> Yellow
+elixirPseudoVariable -> Yellow
+elixirDefine -> Purple
+elixirOverridableDefine -> Purple
+elixirMacroDeclaration -> Purple
+#}}}
