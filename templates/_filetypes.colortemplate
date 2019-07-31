@@ -207,3 +207,18 @@ rubyAttribute -> Purple
 rubyInstanceVariable -> Yellow
 rubyAccess -> Purple
 #}}}
+# perl{{{
+perlPackageDecl -> Blue
+perlStatementPackage -> Red
+perlFunction -> Purple
+perlStatementInclude -> Red
+podCommand -> Red
+podVerbatimLine -> Green
+podCmdText -> Purple
+perlStatementStorage -> Red
+perlStatementHash -> Red
+perlStatementList -> Green
+perlStatementIndirObj -> Fg
+perlMethod -> Yellow
+perlPackageRef -> Blue
+#}}}
