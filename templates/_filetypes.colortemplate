@@ -194,3 +194,7 @@ fsharpScript -> Purple
 fsharpAttrib -> Purple
 fsharpAttribute -> Blue
 #}}}
+# swift{{{
+swiftStructure -> Purple
+swiftAttributes -> Purple
+#}}}
