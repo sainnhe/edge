@@ -21,3 +21,26 @@ mkdCode -> Green
 mkdBold -> Grey
 mkdRule -> Purple
 #}}}
+# rst{{{
+rstDirective -> Blue
+rstExplicitMarkup -> Red
+rstInterpretedTextOrHyperlinkReference -> Green
+rstInlineLiteral -> Green
+rstSubstitutionReference -> Cyan
+#}}}
+# tex{{{
+texStatement -> Blue
+texDefCmd -> Red
+texDefName -> Cyan
+texOnlyMath -> Grey
+#}}}
+# html{{{
+htmlTag -> Purple
+htmlArg -> Blue
+htmlEndTag -> Blue
+#}}}
+# xml{{{
+xmlTag -> Purple
+xmlTagName -> Purple
+xmlAttrib -> Blue
+#}}}

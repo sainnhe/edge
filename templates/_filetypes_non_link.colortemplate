@@ -9,3 +9,12 @@ markdownItalic none none italic
 mkdURL green none underline
 mkdItalic grey none italic
 #}}}
+# rst{{{
+rstStandaloneHyperlink green none underline
+rstSections purple none bold
+#}}}
+# html{{{
+htmlLink             none              none              underline
+htmlBold             none              none              bold
+htmlItalic           none              none              italic
+#}}}
