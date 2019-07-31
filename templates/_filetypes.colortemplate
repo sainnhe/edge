@@ -94,3 +94,38 @@ javaScriptNull -> Yellow
 javaScriptMessage -> Cyan
 javaScriptGlobal -> Blue
 #}}}
+# ts{{{
+typescriptLabel -> Purple
+typescriptExceptions -> Red
+typescriptBraces -> Fg
+typescriptEndColons -> Fg
+typescriptParens -> Fg
+typescriptDocTags -> Purple
+typescriptLogicSymbols -> Blue
+#}}}
+# dart{{{
+dartMetadata -> Red
+dartInterpolation -> Cyan
+dartCoreClasses -> Blue
+#}}}
+# coffee{{{
+coffeeParens -> Green
+coffeeCurly -> Fg
+coffeeParen -> Fg
+coffeeSpecialOp -> Fg
+coffeeInterp -> Cyan
+coffeeInterpDelim -> Cyan
+coffeeConstant -> Blue
+coffeeOperator -> Red
+coffeeExtendedOp -> Blue
+#}}}
+# purescript{{{
+purescriptModuleKeyword -> Purple
+purescriptModule -> Red
+purescriptModuleName -> Red
+purescriptClassName -> Blue
+purescriptImport -> Cyan
+purescriptAsKeyword -> Purple
+purescriptImportAs -> Blue
+purescriptWhere -> Purple
+#}}}
