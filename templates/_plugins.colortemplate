@@ -51,3 +51,91 @@ if !exists('g:Lf_StlColorscheme')
 endif
 endverbatim
 #}}}
+# Startify {{{
+StartifyBracket -> Grey
+StartifyFile -> Fg
+StartifyNumber -> Red
+StartifyPath -> Green
+StartifySlash -> Cyan
+StartifySection -> Blue
+StartifyHeader -> Purple
+StartifySpecial -> Grey
+# }}}
+# Netrw {{{
+netrwDir -> Green
+netrwClassify -> Green
+netrwLink -> Grey
+netrwSymLink -> Fg
+netrwExe -> Red
+netrwComment -> Grey
+netrwList -> Cyan
+netrwHelpCmd -> Blue
+netrwCmdSep -> Grey
+netrwVersion -> Purple
+# }}}
+# NERDTree {{{
+NERDTreeDir -> Green
+NERDTreeDirSlash -> Cyan
+NERDTreeOpenable -> Blue
+NERDTreeClosable -> Blue
+NERDTreeFile -> Fg
+NERDTreeExecFile -> Red
+NERDTreeUp -> Grey
+NERDTreeCWD -> Purple
+NERDTreeHelp -> Grey
+NERDTreeToggleOn -> Green
+NERDTreeToggleOff -> Red
+NERDTreeFlags -> Blue
+NERDTreeLinkFile -> Grey
+NERDTreeLinkTarget -> Green
+# }}}
+# Tagbar{{{
+TagbarFoldIcon -> Blue
+TagbarSignature -> Green
+TagbarKind -> Purple
+TagbarScope -> Red
+TagbarNestedKind -> Blue
+TagbarVisibilityPrivate -> Red
+TagbarVisibilityPublic -> Blue
+#}}}
+# ALE {{{
+ALEVirtualTextError -> Grey
+ALEVirtualTextWarning -> Grey
+ALEVirtualTextInfo -> Grey
+ALEVirtualTextStyleError            -> ALEVirtualTextError
+ALEVirtualTextStyleWarning          -> ALEVirtualTextWarning
+# }}}
+# CoC{{{
+CocCodeLens          -> Grey
+CocErrorSign         -> ALEErrorSign
+CocWarningSign       -> ALEWarningSign
+CocInfoSign          -> ALEInfoSign
+CocHintSign          -> Label
+CocErrorHighlight    -> ALEError
+CocWarningHighlight  -> ALEWarning
+CocInfoHighlight     -> ALEInfo
+CocWarningVirtualText -> ALEVirtualTextWarning
+CocErrorVirtualText  -> ALEVirtualTextError
+CocInfoVirtualText   -> ALEVirtualTextInfo
+CocHintVirtualText   -> ALEVirtualTextInfo
+CocCodeLens          -> ALEVirtualTextInfo
+#}}}
+# UndoTree{{{
+UndotreeNode -> Blue
+UndotreeNodeCurrent -> Purple
+UndotreeSeq -> Green
+UndotreeCurrent -> Cyan
+UndotreeNext -> Yellow
+UndotreeTimeStamp -> Grey
+UndotreeHead -> Purple
+UndotreeBranch -> Cyan
+UndotreeSavedSmall -> Red
+#}}}
+# QuickMenu{{{
+QuickmenuOption -> Green
+QuickmenuNumber -> Red
+QuickmenuBracket -> Grey
+QuickmenuHelp -> Blue
+QuickmenuSpecial -> Grey
+QuickmenuHeader -> Purple
+#}}}

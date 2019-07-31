@@ -30,3 +30,26 @@ Lf_hl_match3 purple none bold
 Lf_hl_match4 red none bold
 Lf_hl_matchRefine yellow none bold
 #}}}
+# ALE {{{
+ALEError none none t=underline g=undercurl s=red
+ALEWarning none none t=underline g=undercurl s=yellow
+ALEInfo none none t=underline g=undercurl s=blue
+ALEErrorSign red background_alt
+ALEWarningSign yellow background_alt
+ALEInfoSign blue background_alt
+# }}}
+# CoC{{{
+CocHighlightText        none              none              bold
+#}}}
+# Vim Multiple Cursors {{{
+multiple_cursors_cursor none none reverse
+multiple_cursors_visual none background_grey
+# }}}
+# vim-matchup{{{
+MatchParenCur           none            none            bold
+MatchWord               none            none            underline
+MatchWordCur            none            none            underline
+#}}}
+# UndoTree {{{
+UndotreeSavedBig red none bold
+#}}}
