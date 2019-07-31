@@ -44,3 +44,53 @@ xmlTag -> Purple
 xmlTagName -> Purple
 xmlAttrib -> Blue
 #}}}
+# css{{{
+cssFunctionName -> Yellow
+cssClassName -> Purple
+cssClassNameDot -> Purple
+cssAttrComma -> Fg
+cssTagName -> Purple
+cssBraces -> Fg
+cssSelectorOp -> Fg
+cssVendor -> Grey
+cssSelectorOp2 -> Blue
+cssImportant -> Red
+#}}}
+# sass{{{
+sassMixing -> Green
+sassClass -> Purple
+sassClassChar -> Purple
+sassMixin -> Blue
+sassAmpersand -> Cyan
+#}}}
+# scss{{{
+scssSelectorChar -> Purple
+scssSelectorName -> Purple
+scssForKeyword -> Red
+scssDefault -> Red
+scssAmpersand -> Cyan
+scssMixinName -> Yellow
+#}}}
+# less{{{
+lessMixinChar -> Purple
+lessClass -> Purple
+lessVariable -> Red
+lessAmpersandChar -> Cyan
+#}}}
+# js{{{
+jsGlobalNodeObjects -> Red
+jsFunction -> Blue
+jsObjectMethodType -> Red
+jsOperatorKeyword -> Red
+jsThis -> Cyan
+jsParensError -> Red
+jsArrowFunction -> Blue
+jsTaggedTemplate -> Cyan
+
+javaScriptReserved -> Purple
+javaScriptBraces -> Fg
+javaScriptOperator -> Red
+javaScriptNull -> Yellow
+javaScriptMessage -> Cyan
+javaScriptGlobal -> Blue
+#}}}

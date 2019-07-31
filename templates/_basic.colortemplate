@@ -64,11 +64,12 @@ StatusLineTermNC     -> StatusLineNC
 
 PreProc                 red             none
 Macro                   red             none
-Exception               red             none
 Error                   red             none
 Keyword                 red             none
 Define                  red             none
 Typedef                 red             none
+Exception               red             none
+Label                   red             none
 Special                 yellow          none
 Type                    yellow          none
 Structure               yellow          none
@@ -80,15 +81,14 @@ Float                   green           none
 Identifier              cyan            none
 Constant                cyan            none
 Function                blue            none
-StorageClass            blue            none
 Operator                blue            none
-Label                   blue            none
 SpecialKey              blue            none
 Title                   purple          none            bold
 Conditional             purple          none
 PreCondit               purple          none
 Repeat                  purple          none
 Todo                    purple          none            italic
+StorageClass            purple          none
 Statement               purple          none
 Tag                     purple          none
 Delimiter               foreground      none
