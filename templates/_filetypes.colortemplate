@@ -239,3 +239,9 @@ luaFuncCall -> Blue
 luaFuncKeyword -> Purple
 luaFuncTable -> Cyan
 #}}}
+# moonscript{{{
+moonLuaFunc -> Purple
+moonSpecialOp -> Fg
+moonObject -> Blue
+moonInterpDelim -> Cyan
+#}}}
