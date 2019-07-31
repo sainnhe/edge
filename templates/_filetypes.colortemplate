@@ -288,3 +288,10 @@ ocamlModParam1 -> Green
 ocamlModPreRHS -> Fg
 ocamlConstructor -> Green
 #}}}
+# clojure{{{
+clojureDefine -> Purple
+clojureQuote -> Fg
+clojureSpecial -> Purple
+clojureDispatch -> Yellow
+clojureVariable -> Green
+#}}}
