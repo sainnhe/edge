@@ -295,3 +295,9 @@ clojureSpecial -> Purple
 clojureDispatch -> Yellow
 clojureVariable -> Green
 #}}}
+# erlang{{{
+erlangType -> Purple
+erlangLocalFuncCall -> Blue
+erlangLocalFuncRef -> Yellow
+erlangGlobalFuncCall -> Purple
+#}}}
