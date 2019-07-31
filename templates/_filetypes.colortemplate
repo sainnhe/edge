@@ -274,3 +274,17 @@ elixirDefine -> Purple
 elixirOverridableDefine -> Purple
 elixirMacroDeclaration -> Purple
 #}}}
+# ocaml{{{
+ocamlModule -> Blue
+ocamlEqual -> Blue
+ocamlPpxEncl -> Purple
+ocamlArrow -> Blue
+ocamlModPath -> Purple
+ocamlKeyChar -> Blue
+ocamlFullMod -> Purple
+ocamlFuncWith -> Fg
+ocamlWith -> Blue
+ocamlModParam1 -> Green
+ocamlModPreRHS -> Fg
+ocamlConstructor -> Green
+#}}}
