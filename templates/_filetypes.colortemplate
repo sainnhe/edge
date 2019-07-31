@@ -304,3 +304,7 @@ erlangGlobalFuncCall -> Purple
 # julia{{{
 juliaBlKeyword -> Purple
 #}}}
+# lisp{{{
+lispDecl -> Red
+lispKey -> Blue
+#}}}
