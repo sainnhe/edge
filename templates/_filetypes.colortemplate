@@ -315,3 +315,11 @@ shDerefVar -> Yellow
 shQuote -> Green
 shFunction -> Red
 #}}}
+# zsh{{{
+zshOptStart -> Purple
+zshOption -> Blue
+zshSubst -> Yellow
+zshFunction -> Purple
+zshDeref -> Blue
+zshTypes -> Purple
+#}}}
