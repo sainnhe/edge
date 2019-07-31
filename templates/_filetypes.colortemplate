@@ -323,3 +323,6 @@ zshFunction -> Purple
 zshDeref -> Blue
 zshTypes -> Purple
 #}}}
+# fish{{{
+fishIdentifier -> Blue
+#}}}
