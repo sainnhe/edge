@@ -161,3 +161,13 @@ rustSigil -> Blue
 rustSelf -> Cyan
 rustEnumVariant -> Blue
 #}}}
+# php{{{
+phpUseClass -> Blue
+phpClass -> Purple
+phpClassExtends -> Blue
+phpParent -> Fg
+phpFunction -> Blue
+phpType -> Purple
+phpMethod -> Yellow
+phpMemberSelector -> Green
+#}}}
