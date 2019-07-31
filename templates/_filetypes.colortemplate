@@ -222,3 +222,11 @@ perlStatementIndirObj -> Fg
 perlMethod -> Yellow
 perlPackageRef -> Blue
 #}}}
+# haskell{{{
+haskellDeclKeyword -> Red
+haskellType -> Blue
+haskellDecl -> Purple
+haskellPreProc -> Purple
+haskellWhere -> Red
+haskellOperators -> Purple
+#}}}
