@@ -245,3 +245,11 @@ moonSpecialOp -> Fg
 moonObject -> Blue
 moonInterpDelim -> Cyan
 #}}}
+# d{{{
+dImport -> Purple
+dStructure -> Red
+dEnum -> Purple
+dScopeDecl -> Red
+dAnnotation -> Blue
+dAttribute -> Blue
+#}}}
