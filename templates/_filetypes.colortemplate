@@ -152,3 +152,12 @@ goImport -> Red
 goDeclType -> Blue
 goBuiltins -> Blue
 #}}}
+# rust{{{
+rustModPath -> Purple
+rustAttribute -> Purple
+rustPubScopeCrate -> Green
+rustStructure -> Purple
+rustSigil -> Blue
+rustSelf -> Cyan
+rustEnumVariant -> Blue
+#}}}
