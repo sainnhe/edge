@@ -230,3 +230,12 @@ haskellPreProc -> Purple
 haskellWhere -> Red
 haskellOperators -> Purple
 #}}}
+# lua{{{
+luaLocal -> Red
+luaBraces -> Fg
+luaSpecialTable -> Blue
+luaSpecialValue -> Yellow
+luaFuncCall -> Blue
+luaFuncKeyword -> Purple
+luaFuncTable -> Cyan
+#}}}
