@@ -146,3 +146,9 @@ pythonExClass -> Blue
 pythonDecorator -> Red
 pythonDottedName -> Red
 #}}}
+# go{{{
+goPackage -> Red
+goImport -> Red
+goDeclType -> Blue
+goBuiltins -> Blue
+#}}}
