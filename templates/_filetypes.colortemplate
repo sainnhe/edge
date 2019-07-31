@@ -79,6 +79,7 @@ lessAmpersandChar -> Cyan
 #}}}
 # js{{{
 jsGlobalNodeObjects -> Red
+jsGlobalObjects -> Yellow
 jsFunction -> Blue
 jsObjectMethodType -> Red
 jsOperatorKeyword -> Red
@@ -160,6 +161,8 @@ rustStructure -> Purple
 rustSigil -> Blue
 rustSelf -> Cyan
 rustEnumVariant -> Blue
+rustDerive -> Purple
+rustDeriveTrait -> Red
 #}}}
 # php{{{
 phpUseClass -> Blue
