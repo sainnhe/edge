@@ -198,3 +198,12 @@ fsharpAttribute -> Blue
 swiftStructure -> Purple
 swiftAttributes -> Purple
 #}}}
+# ruby{{{
+rubyModule -> Purple
+rubyModuleName -> Red
+rubyClassName -> Blue
+rubyConstant -> Cyan
+rubyAttribute -> Purple
+rubyInstanceVariable -> Yellow
+rubyAccess -> Purple
+#}}}
