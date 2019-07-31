@@ -129,3 +129,8 @@ purescriptAsKeyword -> Purple
 purescriptImportAs -> Blue
 purescriptWhere -> Purple
 #}}}
+# java{{{
+javaScopeDecl -> Red
+javaTypedef -> Cyan
+javaAnnotation -> Blue
+#}}}
