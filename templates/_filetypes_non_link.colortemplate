@@ -1,0 +1,11 @@
+# vim: ft=colortemplate fdm=marker cc=22,40,58
+
+# markdown{{{
+markdownUrl green none underline
+markdownItalicDelimiter grey none italic
+markdownBold none none bold
+markdownItalic none none italic
+
+mkdURL green none underline
+mkdItalic grey none italic
+#}}}

@@ -1,0 +1,23 @@
+# vim: ft=colortemplate fdm=marker cc=22,40,58
+
+# markdown{{{
+markdownLinkText -> Blue
+markdownHeadingDelimiter -> Red
+markdownIdDeclaration -> Cyan
+markdownId -> Cyan
+markdownListMarker -> Cyan
+markdownCodeDelimiter -> Cyan
+markdownCode -> Green
+markdownBoldDelimiter -> Grey
+markdownRule -> Purple
+
+mkdLink -> Blue
+mkdHeading -> Red
+mkdLinkDef -> Cyan
+mkdID -> Cyan
+mkdListItem -> Cyan
+mkdCodeDelimiter -> Cyan
+mkdCode -> Green
+mkdBold -> Grey
+mkdRule -> Purple
+#}}}
