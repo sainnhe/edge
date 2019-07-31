@@ -253,3 +253,11 @@ dScopeDecl -> Red
 dAnnotation -> Blue
 dAttribute -> Blue
 #}}}
+# scala{{{
+scalaCapitalWord -> Purple
+scalaKeywordModifier -> Purple
+scalaInstanceDeclaration -> Blue
+scalaSpecial -> Purple
+scalaSquareBracketsBrackets -> Fg
+scalaTypeDeclaration -> Yellow
+#}}}
