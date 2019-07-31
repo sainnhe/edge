@@ -140,3 +140,9 @@ ktAnnotation -> Blue
 ktKeyword -> Blue
 ktArrow -> Blue
 #}}}
+# python{{{
+pythonNone -> Yellow
+pythonExClass -> Blue
+pythonDecorator -> Red
+pythonDottedName -> Red
+#}}}
