@@ -326,3 +326,14 @@ zshTypes -> Purple
 # fish{{{
 fishIdentifier -> Blue
 #}}}
+# vim{{{
+vimFunction -> Blue
+vimLet -> Red
+vimMap -> Blue
+vimMapMod -> Yellow
+vimMapLhs -> Green
+vimMapRhs -> Green
+vimNotation -> Purple
+vimAugroupKey -> Red
+vimAutoCmd -> Blue
+#}}}
