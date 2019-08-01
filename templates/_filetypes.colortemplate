@@ -356,3 +356,12 @@ diffFile -> Green
 diffLine -> Grey
 diffIndexLine -> Cyan
 #}}}
+# help{{{
+helpHyperTextEntry -> Blue
+helpHyperTextJump -> Red
+helpSectionDelim -> Grey
+helpExample -> Green
+helpCommand -> Purple
+helpHeadline -> Purple
+helpHeader -> Blue
+#}}}

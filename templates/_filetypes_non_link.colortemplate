@@ -18,3 +18,7 @@ htmlLink             none              none              underline
 htmlBold             none              none              bold
 htmlItalic           none              none              italic
 #}}}
+# help{{{
+helpURL cyan none underline
+helpNote red none bold
+#}}}
