@@ -337,3 +337,12 @@ vimNotation -> Purple
 vimAugroupKey -> Red
 vimAutoCmd -> Blue
 #}}}
+# json{{{
+jsonKeyword -> Blue
+#}}}
+# yaml{{{
+yamlKey -> Blue
+#}}}
+# toml{{{
+tomlKey -> Blue
+#}}}
