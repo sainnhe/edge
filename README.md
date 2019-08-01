@@ -1,5 +1,5 @@
 <h1 align="center">
-𝐄𝐝𝐠𝐞
+    <a href="https://gist.github.com/sainnhe/991dc3cb7d885e20f911816197c85b9d#%F0%9D%90%84%F0%9D%90%83%F0%9D%90%86%F0%9D%90%84">𝐄𝐃𝐆𝐄</a>
 </h1>
 
 | 𝐃𝐚𝐫𝐤 | 𝐋𝐢𝐠𝐡𝐭 |
