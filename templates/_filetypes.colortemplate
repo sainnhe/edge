@@ -346,3 +346,13 @@ yamlKey -> Blue
 # toml{{{
 tomlKey -> Blue
 #}}}
+# diff{{{
+diffAdded -> Green
+diffRemoved -> Red
+diffChanged -> Yellow
+diffOldFile -> Blue
+diffNewFile -> Purple
+diffFile -> Green
+diffLine -> Grey
+diffIndexLine -> Cyan
+#}}}
