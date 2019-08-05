@@ -103,6 +103,29 @@ typescriptEndColons -> Fg
 typescriptParens -> Fg
 typescriptDocTags -> Purple
 typescriptLogicSymbols -> Blue
+
+typescriptImport -> Red
+typescriptBOM -> Blue
+typescriptVariableDeclaration -> Cyan
+typescriptVariable -> Red
+typescriptExport -> Purple
+typescriptAliasDeclaration -> Yellow
+typescriptClassName -> Blue
+typescriptAccessibilityModifier -> Purple
+typescriptOperator -> Red
+typescriptArrowFunc -> Blue
+typescriptMethodAccessor -> Red
+typescriptMember -> Blue
+typescriptTypeReference -> Cyan
+typescriptDefault -> Yellow
+typescriptTemplateSB -> Cyan
+typescriptArrowFuncArg -> Cyan
+typescriptParamImpl -> Green
+typescriptFuncComma -> White
+jsxOpenPunct -> Blue
+typescriptCastKeyword -> Red
+typescriptCall -> Blue
+typescriptCase -> Red
 #}}}
 # dart{{{
 dartMetadata -> Red
