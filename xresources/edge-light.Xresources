@@ -1,0 +1,37 @@
+! Author:     Sainnhepark
+! Email:      sainnhe@gmail.com
+! URL:        https://github.com/sainnhe/edge/
+! License:    MIT && Anti-996
+
+#define white #fafafa
+#define black #656c78
+#define grey #949ba5
+#define red #db7070
+#define green #7c9f4b
+#define cyan #509c93
+#define yellow #d69822
+#define blue #6587bf
+#define magenta #b870ce
+
+*.foreground:   black
+*.background:   white
+*.cursorColor:  black
+*fading: 35
+*fadeColor: grey
+
+*.color0: grey
+*.color1: red
+*.color2: green
+*.color3: yellow
+*.color4: blue
+*.color5: magenta
+*.color6: cyan
+*.color7: white
+*.color8: grey
+*.color9: red
+*.color10: green
+*.color11: yellow
+*.color12: blue
+*.color13: magenta
+*.color14: cyan
+*.color15: white
