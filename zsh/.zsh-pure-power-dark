@@ -56,10 +56,10 @@ fi
     p=$ins
   fi
   if [[ "$ICE_AGE_PURE_POWER_TRUE_COLOR" == "true" ]]; then
-    local ok="%F{#73b3e7}${p}%f"
+    local ok="%F{#d390e7}${p}%f"
     local err="%F{#e77171}${p}%f"
   else
-    local ok="%F{$(_pp_s 004 110)}${p}%f"
+    local ok="%F{$(_pp_s 005 176)}${p}%f"
     local err="%F{$(_pp_s 001 203)}${p}%f"
   fi
 
