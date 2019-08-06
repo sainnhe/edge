@@ -50,7 +50,7 @@ If you want to apply this color scheme temporarily, run this command in vim(**th
 :colorscheme edge
 ```
 
-## Lightline
+### Lightline
 
 To enable [lightline](https://github.com/itchyny/lightline.vim) color scheme, put this in your vimrc:
 
@@ -69,6 +69,25 @@ To apply it without reloading:
 :call lightline#init()
 :call lightline#colorscheme()
 ```
+
+## Tmux Status Line
+
+Check this [gist](https://gist.github.com/sainnhe/b8240bc047313fd6185bb8052df5a8fb).
+
+## Zsh
+
+- [Syntax Highlighting](https://github.com/sainnhe/edge/tree/master/zsh#syntax-highlighting)
+- [Prompt](https://github.com/sainnhe/edge/tree/master/zsh#prompt)
+
+## Terminal Emulators
+
+- [Alacritty](./alacritty/README.md)
+- [Kitty](./kitty/README.md)
+- [Tilix](./tilix/README.md)
+
+## Xresources
+
+[README.md](./xresources/README.md)
 
 # Contribution
 

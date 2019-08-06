@@ -1,6 +1,10 @@
+| 𝐃𝐚𝐫𝐤 | 𝐋𝐢𝐠𝐡𝐭 |
+| :---: | :---: |
+| ![zsh-dark](https://user-images.githubusercontent.com/37491630/62512383-4ac1af80-b807-11e9-88a2-488ec33402db.png) | ![zsh-light](https://user-images.githubusercontent.com/37491630/62512378-46959200-b807-11e9-9206-1e8f1eb85911.png) |
+
 # Syntax Highlighting
 
-The syntax highlighting is implemented by [zdharma/fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting). By using `default` theme with any terminal emulator color scheme of edge, you can get a edge syntax highlighting theme of zsh.
+The syntax highlighting is implemented by [zdharma/fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting). By using `default` theme with any [terminal emulator color scheme](https://github.com/sainnhe/edge#terminal-emulators) of edge, you can get a edge syntax highlighting theme of zsh.
 
 # Prompt
 
