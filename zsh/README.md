@@ -1,6 +1,6 @@
 | 𝐃𝐚𝐫𝐤 | 𝐋𝐢𝐠𝐡𝐭 |
 | :---: | :---: |
-| ![zsh-dark](https://user-images.githubusercontent.com/37491630/62512383-4ac1af80-b807-11e9-88a2-488ec33402db.png) | ![zsh-light](https://user-images.githubusercontent.com/37491630/62512378-46959200-b807-11e9-9206-1e8f1eb85911.png) |
+| ![zsh-dark](https://user-images.githubusercontent.com/37491630/62587046-b52e2a80-b8af-11e9-8ea2-648865f1454a.png) | ![zsh-light](https://user-images.githubusercontent.com/37491630/62587049-b8291b00-b8af-11e9-8531-629dc39a9c6b.png) |
 
 # Syntax Highlighting
 
