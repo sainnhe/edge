@@ -13,7 +13,6 @@ Color: background_alt #eef1f4          ~                 LightGrey
 Color: background_grey #e6eaee         ~                 LightGrey
 Color: background_red #f4e2e3          ~                 LightRed
 Color: background_green #e5f4de        ~                 LightGreen
-Color: background_yellow #f4edde       ~                 LightYellow
 Color: background_blue #e6edf9         ~                 LightBlue
 
 Fg              foreground      none

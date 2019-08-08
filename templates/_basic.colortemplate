@@ -23,7 +23,7 @@ SignColumn              none            background_alt
 DiffAdd                 none            background_green
 DiffChange              none            background_blue
 DiffDelete              none            background_red
-DiffText                none            background_yellow
+DiffText                none            background      reverse
 Directory               green           none
 EndOfBuffer             background      background
 ErrorMsg                red             none            bold
