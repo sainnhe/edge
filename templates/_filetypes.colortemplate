@@ -62,6 +62,7 @@ sassClass -> Purple
 sassClassChar -> Purple
 sassMixin -> Blue
 sassAmpersand -> Cyan
+sassFunction -> Yellow
 #}}}
 # scss{{{
 scssSelectorChar -> Purple
@@ -70,12 +71,14 @@ scssForKeyword -> Red
 scssDefault -> Red
 scssAmpersand -> Cyan
 scssMixinName -> Yellow
+scssFunctionName -> Yellow
 #}}}
 # less{{{
 lessMixinChar -> Purple
 lessClass -> Purple
 lessVariable -> Red
 lessAmpersandChar -> Cyan
+lessFunction -> Yellow
 #}}}
 # js{{{
 jsGlobalNodeObjects -> Red
@@ -94,6 +97,8 @@ javaScriptOperator -> Red
 javaScriptNull -> Yellow
 javaScriptMessage -> Cyan
 javaScriptGlobal -> Blue
+
+
 #}}}
 # ts{{{
 typescriptLabel -> Purple
