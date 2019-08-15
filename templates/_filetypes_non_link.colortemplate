@@ -1,6 +1,12 @@
 # vim: ft=colortemplate fdm=marker cc=22,40,58
 
 # markdown{{{
+markdownH1 purple none bold
+markdownH2 red none bold
+markdownH3 yellow none bold
+markdownH4 blue none bold
+markdownH5 cyan none bold
+markdownH6 green none bold
 markdownUrl green none underline
 markdownItalicDelimiter grey none italic
 markdownBold none none bold
