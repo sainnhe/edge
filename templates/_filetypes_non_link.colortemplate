@@ -14,9 +14,20 @@ rstStandaloneHyperlink green none underline
 rstSections purple none bold
 #}}}
 # html{{{
+htmlH1 purple none bold
+htmlH2 red none bold
+htmlH3 yellow none bold
+htmlH4 blue none bold
+htmlH5 cyan none bold
+htmlH6 green none bold
 htmlLink             none              none              underline
-htmlBold             none              none              bold
-htmlItalic           none              none              italic
+htmlBold none none bold
+htmlBoldUnderline none none bold,underline
+htmlBoldItalic none none bold,italic
+htmlBoldUnderlineItalic none none bold,underline,italic
+htmlUnderline none none underline
+htmlUnderlineItalic none none underline,italic
+htmlItalic none none italic
 #}}}
 # help{{{
 helpURL cyan none underline
