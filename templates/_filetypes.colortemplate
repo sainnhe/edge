@@ -299,8 +299,19 @@ elixirAlias -> Blue
 elixirVariable -> Yellow
 elixirPseudoVariable -> Yellow
 elixirDefine -> Purple
-elixirOverridableDefine -> Purple
 elixirMacroDeclaration -> Purple
+elixirModuleDefine -> Purple
+elixirProtocolDefine -> Purple
+elixirImplDefine -> Purple
+elixirRecordDefine -> Purple
+elixirPrivateRecordDefine -> Purple
+elixirMacroDefine -> Purple
+elixirPrivateMacroDefine -> Purple
+elixirDelegateDefine -> Purple
+elixirOverridableDefine -> Purple
+elixirExceptionDefine -> Purple
+elixirCallbackDefine -> Purple
+elixirStructDefine -> Purple
 #}}}
 # ocaml{{{
 ocamlModule -> Blue
