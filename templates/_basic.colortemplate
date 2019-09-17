@@ -18,7 +18,7 @@ Cursor                  none            none            reverse
 CursorColumn            none            background_alt
 CursorLine              none            background_alt
 CursorLineNr            foreground      background_alt
-LineNr                  grey            background_alt
+LineNr                  grey            background
 SignColumn              none            background_alt
 DiffAdd                 none            background_green
 DiffChange              none            background_blue
@@ -26,7 +26,7 @@ DiffDelete              none            background_red
 DiffText                none            background      reverse
 Directory               green           none
 EndOfBuffer             background      background
-ErrorMsg                red             none            bold
+ErrorMsg                red             none            bold,underline
 WarningMsg              yellow          none            bold
 ModeMsg                 blue            none            bold
 MoreMsg                 purple          none            bold
