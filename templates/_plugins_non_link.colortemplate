@@ -40,6 +40,7 @@ ALEInfoSign blue background_alt
 # }}}
 # CoC{{{
 CocHighlightText        none              none              bold
+CocHoverRange           none              none              bold,underline
 #}}}
 # Vim Multiple Cursors {{{
 multiple_cursors_cursor none none reverse
