@@ -120,6 +120,21 @@ CocErrorVirtualText  -> ALEVirtualTextError
 CocInfoVirtualText   -> ALEVirtualTextInfo
 CocHintVirtualText   -> ALEVirtualTextInfo
 CocCodeLens          -> ALEVirtualTextInfo
+CocExplorerBufferRoot -> Purple
+CocExplorerBufferExpandIcon -> Red
+CocExplorerBufferBufnr -> Yellow
+CocExplorerBufferModified -> Red
+CocExplorerBufferBufname -> Grey
+CocExplorerFileRoot -> Purple
+CocExplorerFileExpandIcon -> Red
+CocExplorerFileFullpath -> Cyan
+CocExplorerFileDirectory -> Green
+CocExplorerFileGitStage -> Blue
+CocExplorerFileGitUnstage -> Yellow
+CocExplorerFileSize -> Blue
+CocExplorerTimeAccessed -> Cyan
+CocExplorerTimeCreated -> Cyan
+CocExplorerTimeModified -> Cyan
 #}}}
 # UndoTree{{{
 UndotreeNode -> Blue
