@@ -34,7 +34,7 @@ FoldColumn              grey            background_alt
 Folded                  grey            background_alt
 IncSearch               none            background_grey underline
 Search                  none            background_grey underline
-MatchParen              none            none            bold
+MatchParen              none            background_grey bold
 NonText                 grey            none
 Pmenu                   foreground      background_grey
 PmenuSel                background      blue
