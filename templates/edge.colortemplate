@@ -36,6 +36,8 @@ Include: _basic
 
 Include: _plugins_non_link
 
+Include: _filetypes_non_link
+
 Background: any
 
 Include: _bw
