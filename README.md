@@ -83,11 +83,13 @@ Check this [gist](https://gist.github.com/sainnhe/b8240bc047313fd6185bb8052df5a8
 
 - [Alacritty](./alacritty/README.md)
 - [Kitty](./kitty/README.md)
+- [Termite](./termite/README.md)
 - [Tilix](./tilix/README.md)
 
-## Xresources
+## More
 
-[README.md](./xresources/README.md)
+- [Xresources](./xresources/README.md)
+- [fzf](./fzf/README.md)
 
 ## FAQ
 
@@ -120,6 +122,10 @@ Check this gist for detailed instructions to hack this color scheme: [hack-color
 [Atom One](https://github.com/atom/atom/tree/master/packages/one-dark-syntax)
 
 [Material](https://github.com/equinusocio/vsc-material-theme)
+
+# Thanks to
+
+- [manfredmjka](https://github.com/manfredmjka): termite and fzf support
 
 # License
 
