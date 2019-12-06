@@ -10,7 +10,7 @@ Color: blue          #6587bf           ~                 Blue
 Color: purple        #b870ce           ~                 Magenta
 Color: grey          #949ba5           ~                 Grey
 Color: background_alt #eef1f4          ~                 LightGrey
-Color: background_grey #e6eaee         ~                 LightGrey
+Color: background_grey #e6eaee         254               LightGrey
 Color: background_red #f4e2e3          ~                 LightRed
 Color: background_green #e5f4de        ~                 LightGreen
 Color: background_blue #e6edf9         ~                 LightBlue
