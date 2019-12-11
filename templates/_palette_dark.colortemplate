@@ -1,13 +1,13 @@
 # vim: ft=colortemplate fdm=marker cc=22,40,58
 
 Color: background    #262729           ~                 Black
-Color: foreground    #b7bec9           ~                 White
-Color: red           #e77171           ~                 Red
-Color: yellow        #dbb774           ~                 Yellow
-Color: green         #a1bf78           ~                 Green
-Color: cyan          #5ebaa5           ~                 Cyan
-Color: blue          #73b3e7           ~                 Blue
-Color: purple        #d390e7           ~                 Magenta
+Color: foreground    #bcc4d1           ~                 White          # 76.506
+Color: red           #ec7373           ~                 Red            # 59.283
+Color: yellow        #dbb774           ~                 Yellow         # 72.989
+Color: green         #a1bf78           ~                 Green          # 68.210
+Color: cyan          #6abab4           ~                 Cyan           # 61.217
+Color: blue          #73b3e7           ~                 Blue           # 65.019
+Color: purple        #d390e7           ~                 Magenta        # 68.215
 Color: grey          #88909f           ~                 Grey
 Color: background_alt #2d2f33          ~                 LightGrey
 Color: background_grey #3e4249         ~                 LightGrey
