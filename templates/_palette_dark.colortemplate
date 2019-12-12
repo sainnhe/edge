@@ -3,11 +3,11 @@
 Color: background    #262729           ~                 Black
 Color: foreground    #bcc4d1           ~                 White          # 76.506
 Color: red           #ee7474           ~                 Red            # 59.792
-Color: yellow        #d4b175           ~                 Yellow         # 70.832
+Color: yellow        #d4b480           ~                 Yellow         # 72.014
 Color: green         #a1bc7d           ~                 Green          # 67.743
-Color: cyan          #6abab4           ~                 Cyan           # 61.217 ?
+Color: cyan          #75bfb9           ~                 Cyan           # 65.959
 Color: blue          #7cb2df           ~                 Blue           # 65.486
-Color: purple        #d197e2           ~                 Magenta        # 69.369
+Color: purple        #d79ce8           ~                 Magenta        # 71.491
 Color: grey          #88909f           ~                 Grey
 Color: background_alt #2d2f33          ~                 LightGrey
 Color: background_grey #3e4249         ~                 LightGrey
