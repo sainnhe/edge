@@ -26,9 +26,8 @@ For better syntax highlighting support, please install [sheerun/vim-polyglot](ht
 
 1. Clone this repository.
 2. Copy `/path/to/edge/colors/edge.vim` to `~/.vim/colors/` .
-3. Copy `/path/to/edge/doc/edge.txt` to `~/.vim/doc/` and execute `:helptags ~/.vim/doc/` to generate help tags.
-4. To install [airline](https://github.com/vim-airline/vim-airline) theme, copy `/path/to/edge/autoload/airline/themes/edge.vim` to `~/.vim/autoload/airline/themes/edge.vim` .
-5. To install [lightline](https://github.com/itchyny/lightline.vim) theme, copy `/path/to/edge/autoload/lightline/colorscheme/edge.vim` to `~/.vim/autoload/lightline/colorscheme/edge.vim` .
+3. To install [airline](https://github.com/vim-airline/vim-airline) theme, copy `/path/to/edge/autoload/airline/themes/edge.vim` to `~/.vim/autoload/airline/themes/edge.vim` .
+4. To install [lightline](https://github.com/itchyny/lightline.vim) theme, copy `/path/to/edge/autoload/lightline/colorscheme/edge.vim` to `~/.vim/autoload/lightline/colorscheme/edge.vim` .
 
 # Usage
 
@@ -53,7 +52,7 @@ let g:edge_popup_menu_selection_background = 'green'
 colorscheme edge
 ```
 
-See `:help edge-configuration` for more configuration options.
+See [Configuration](https://github.com/sainnhe/edge#configuration) for more configuration options.
 
 If you want to apply this color scheme temporarily, run this command in vim(**this may cause broken colors**):
 
@@ -94,6 +93,26 @@ To apply it without reloading:
 :call lightline#init()
 :call lightline#colorscheme()
 ```
+
+### Configuration
+
+**Note:** The configuration options should be placed before `colorscheme gruvbox-material` .
+
+- `g:edge_transparent_background`: Set to `1` to enable transparent background.
+    - Available values: `0`, `1`
+    - Default value: `0`
+- `g:edge_popup_menu_selection_background`: Control the background color of `PmenuSel` and `WildMenu` .
+    - Available values: `'blue'`, `'green'`, `'purple'`
+    - Default value: `'blue'`
+- `g:edge_disable_italic_comment`: Set to `1` to disable italic in `Comment` .
+    - Available values: `0`, `1`
+    - Default value: `0`
+- `g:edge_current_word`: Some plugins can highlight the word under current cursor(for example [neoclide/coc-highlight](https://github.com/neoclide/coc-highlight)), you can use this option to control their behavior.
+    - Available values: `'bold'`, `'underline'`, `'italic'`, `'grey background'`
+    - Default value: `'grey background'` when not in transparent mode, `'bold'` when in transparent mode.
+- `g:edge_lightline_disable_bold`: Set to `1` to disable bold in lightline theme.
+    - Available values: `0`, `1`
+    - Default value: `0`
 
 ## Tmux Status Line
 
