@@ -2,9 +2,9 @@
 
 Color: background    #fafafa           ~                 White
 Color: foreground    #52565f           ~                 Black          # 33.659
-Color: red           #d15f5f           ~                 Red            # 50.619
-Color: yellow        #ba8603           ~                 Yellow         # 52.787
-Color: green         #6c9137           ~                 Green          # 48.501
+Color: red           #cf6262           ~                 Red            # 51.209
+Color: yellow        #c18401           ~                 Yellow         # 53.058
+Color: green         #6c9334           ~                 Green          # 48.827
 Color: cyan          #338f87           ~                 Cyan           # 44.936
 Color: blue          #5079be           ~                 Blue           # 45.730
 Color: purple        #b05ccc           ~                 Magenta        # 50.288
