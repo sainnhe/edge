@@ -2,7 +2,7 @@
 
 # markdown{{{
 markdownLinkText -> Blue
-markdownHeadingDelimiter -> Red
+markdownHeadingDelimiter -> Grey
 markdownIdDeclaration -> Cyan
 markdownId -> Cyan
 markdownListMarker -> Cyan
@@ -12,7 +12,7 @@ markdownBoldDelimiter -> Grey
 markdownRule -> Purple
 
 mkdLink -> Blue
-mkdHeading -> Red
+mkdHeading -> Grey
 mkdLinkDef -> Cyan
 mkdID -> Cyan
 mkdListItem -> Cyan
