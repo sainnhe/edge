@@ -48,13 +48,13 @@ NonText                 grey            none
 Pmenu                   foreground      background_pmenu
 PmenuSbar               none            background_pmenu
 #if get(g:, 'edge_popup_menu_selection_background', 'blue') ==# 'blue'
-    PmenuSel                background_pmenu background_blue_sel
+    PmenuSel                background_col   background_blue_sel
     WildMenu                background_col   background_blue_sel
 #elseif get(g:, 'edge_popup_menu_selection_background', 'green') ==# 'green'
-    PmenuSel                background_pmenu background_green_sel
+    PmenuSel                background_col   background_green_sel
     WildMenu                background_col   background_green_sel
 #elseif get(g:, 'edge_popup_menu_selection_background', 'purple') ==# 'purple'
-    PmenuSel                background_pmenu background_purple_sel
+    PmenuSel                background_col   background_purple_sel
     WildMenu                background_col   background_purple_sel
 #endif
 PmenuThumb              none            background_grey
@@ -69,7 +69,7 @@ StatusLineNC            grey            background_col
 StatusLineTermNC        grey            background_col
 TabLine                 foreground      background_sign
 TabLineFill             grey            background_col
-TabLineSel              background      purple
+TabLineSel              background      background_purple_sel
 VertSplit               background_sign none
 Visual                  none            background_visual
 VisualNOS               none            background_visual italic
