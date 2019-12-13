@@ -4,7 +4,7 @@
 
 | 𝐃𝐚𝐫𝐤 | 𝐋𝐢𝐠𝐡𝐭 |
 | :---: | :---: |
-| ![dark](https://user-images.githubusercontent.com/37491630/70792660-a097fc80-1d91-11ea-8aeb-ca443d7e14d4.png) | ![light](https://user-images.githubusercontent.com/37491630/70792665-a261c000-1d91-11ea-9846-e4183ceecc5e.png) |
+| ![dark](https://user-images.githubusercontent.com/37491630/70797713-f3c37c80-1d9c-11ea-8a0f-9feab2b62241.png) | ![light](https://user-images.githubusercontent.com/37491630/70797716-f58d4000-1d9c-11ea-8ad4-66ebff7c3831.png) |
 
 This color scheme is based on [Atom One](https://github.com/atom/atom/tree/master/packages/one-dark-syntax) and [Material](https://github.com/equinusocio/material-theme), I'm trying to combine my favorite parts of them together.
 
