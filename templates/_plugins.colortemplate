@@ -20,12 +20,19 @@ EasyMotionTarget -> Search
 EasyMotionShade -> Grey
 # }}}
 # Sneak: {{{
-Sneak -> Search
-SneakLabel -> Search
+Sneak -> Cursor
+SneakLabel -> Cursor
+SneakScope -> DiffChange
 # }}}
 # GitCommit {{{
 gitcommitSelectedFile -> Green
 gitcommitDiscardedFile -> Red
+# }}}
+# Signify {{{
+SignifySignAdd -> GitGutterAdd
+SignifySignChange -> GitGutterChange
+SignifySignDelete -> GitGutterDelete
+SignifySignChangeDelete -> GitGutterChangeDelete
 # }}}
 # FZF {{{
 verbatim
@@ -45,12 +52,23 @@ let g:fzf_colors = {
       \ }
 endverbatim
 #}}}
+# CtrlP{{{
+CtrlPNoEntries -> Red
+CtrlPPrtCursor -> Blue
+#}}}
 # LeaderF{{{
 verbatim
 if !exists('g:Lf_StlColorscheme')
     let g:Lf_StlColorscheme = 'one'
 endif
 endverbatim
+Lf_hl_cursorline -> Fg
+Lf_hl_selection -> DiffAdd
+Lf_hl_rgHighlight -> Visual
+Lf_hl_gtagsHighlight -> Visual
+#}}}
+# Denite{{{
+deniteSelectedLine -> Green
 #}}}
 # Startify {{{
 StartifyBracket -> Grey
@@ -61,6 +79,12 @@ StartifySlash -> Cyan
 StartifySection -> Blue
 StartifyHeader -> Purple
 StartifySpecial -> Grey
+# }}}
+# BufTabLine {{{
+BufTabLineCurrent -> TabLineSel
+BufTabLineActive -> TabLine
+BufTabLineHidden -> TabLineFill
+BufTabLineFill -> TabLineFill
 # }}}
 # Netrw {{{
 netrwDir -> Green
@@ -99,12 +123,42 @@ TagbarNestedKind -> Blue
 TagbarVisibilityPrivate -> Red
 TagbarVisibilityPublic -> Blue
 #}}}
+# Vista{{{
+VistaBracket -> Grey
+VistaChildrenNr -> Yellow
+VistaScope -> Red
+VistaTag -> Green
+VistaPrefix -> Grey
+VistaColon -> Green
+VistaIcon -> Purple
+VistaLineNr -> Fg
+#}}}
+# Syntastic {{{
+SyntasticError -> ALEError
+SyntasticWarning -> ALEWarning
+SyntasticErrorSign -> ALEErrorSign
+SyntasticWarningSign -> ALEWarningSign
+# }}}
 # ALE {{{
 ALEVirtualTextError -> Grey
 ALEVirtualTextWarning -> Grey
 ALEVirtualTextInfo -> Grey
 ALEVirtualTextStyleError            -> ALEVirtualTextError
 ALEVirtualTextStyleWarning          -> ALEVirtualTextWarning
+# }}}
+# Neomake {{{
+NeomakeError -> ALEError
+NeomakeErrorSign -> ALEErrorSign
+NeomakeWarning -> ALEWarning
+NeomakeWarningSign -> ALEWarningSign
+NeomakeInfo -> ALEInfo
+NeomakeInfoSign -> ALEInfoSign
+NeomakeMessage -> Cyan
+NeomakeMessageSign -> CocHintSign
+NeomakeVirtualtextError -> Grey
+NeomakeVirtualtextWarning -> Grey
+NeomakeVirtualtextInfo -> Grey
+NeomakeVirtualtextMessag -> Grey
 # }}}
 # CoC{{{
 CocCodeLens          -> Grey
@@ -158,4 +212,36 @@ QuickmenuBracket -> Grey
 QuickmenuHelp -> Blue
 QuickmenuSpecial -> Grey
 QuickmenuHeader -> Purple
+#}}}
+# WhichKey{{{
+WhichKey -> Red
+WhichKeySeperator -> Green
+WhichKeyGroup -> Purple
+WhichKeyDesc -> Blue
+#}}}
+# Vim Multiple Cursors {{{
+multiple_cursors_cursor -> Cursor
+multiple_cursors_visual -> Visual
+# }}}
+# Vim Visual Multi{{{
+verbatim
+let g:VM_Mono_hl   = 'Cursor'
+let g:VM_Extend_hl = 'Visual'
+let g:VM_Cursor_hl = 'Cursor'
+let g:VM_Insert_hl = 'Cursor'
+endverbatim
+#}}}
+# Vim Current Word{{{
+CurrentWord -> CocHighlightText
+CurrentWordTwins -> CocHighlightText
+#}}}
+# Vim Illuminate{{{
+illuminatedWord -> CocHighlightText
+#}}}
+# Vim Cursor Word{{{
+verbatim
+let g:cursorword_highlight = 0
+endverbatim
+CursorWord0 -> CocHighlightText
+CursorWord1 -> CocHighlightText
 #}}}

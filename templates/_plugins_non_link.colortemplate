@@ -5,21 +5,34 @@ plug1 purple none bold
 plugNumber green none bold
 #}}}
 # GitGutter {{{
-GitGutterAdd green background_col
-GitGutterChange yellow background_col
-GitGutterDelete red background_col
-GitGutterChangeDelete purple background_col
+#if get(g:, 'edge_transparent_background', 0)
+    GitGutterAdd green none
+    GitGutterChange blue none
+    GitGutterDelete red none
+    GitGutterChangeDelete purple none
+#else
+    GitGutterAdd green background_col
+    GitGutterChange blue background_col
+    GitGutterDelete red background_col
+    GitGutterChangeDelete purple background_col
+#endif
 # }}}
-# Signify {{{
-SignifySignAdd green background_col
-SignifySignChange yellow background_col
-SignifySignDelete red background_col
+# Signature {{{
+#if get(g:, 'edge_transparent_background', 0)
+    SignatureMarkText blue none
+    SignatureMarkerText purple none
+#else
+    SignatureMarkText blue background_col
+    SignatureMarkerText purple background_col
+#endif
 # }}}
-# Syntastic {{{
-SyntasticError none none t=underline g=undercurl s=red
-SyntasticWarning none none t=underline g=undercurl s=yellow
-SyntasticErrorSign red background_col
-SyntasticWarningSign yellow background_col
+# CtrlP {{{
+CtrlPMatch green none bold
+CtrlPPrtBase background_grey none
+CtrlPLinePre background_grey none
+CtrlPMode1 blue background_col bold
+CtrlPMode2 background_col blue bold
+CtrlPStats grey background_col bold
 # }}}
 # LeaderF {{{
 Lf_hl_match green none bold
@@ -30,22 +43,44 @@ Lf_hl_match3 purple none bold
 Lf_hl_match4 red none bold
 Lf_hl_matchRefine yellow none bold
 #}}}
+# Denite{{{
+deniteMatchedChar green none bold
+deniteMatchedRange green none bold,underline
+deniteInput green background_col bold
+deniteStatusLineNumber purple background_col
+deniteStatusLinePath foreground background_col
+#}}}
 # ALE {{{
 ALEError none none t=underline g=undercurl s=red
 ALEWarning none none t=underline g=undercurl s=yellow
 ALEInfo none none t=underline g=undercurl s=blue
-ALEErrorSign red background_col
-ALEWarningSign yellow background_col
-ALEInfoSign blue background_col
+#if get(g:, 'edge_transparent_background', 0)
+    ALEErrorSign red none
+    ALEWarningSign yellow none
+    ALEInfoSign blue none
+#else
+    ALEErrorSign red background_col
+    ALEWarningSign yellow background_col
+    ALEInfoSign blue background_col
+#endif
 # }}}
 # CoC{{{
-CocHighlightText        none              none              bold
-CocHoverRange           none              none              bold,underline
+#if get(g:, 'edge_current_word', get(g:, 'edge_transparent_background', 0) == 0 ? 'grey background' : 'bold') ==# 'bold'
+    CocHighlightText none none bold
+#elseif get(g:, 'edge_current_word', get(g:, 'edge_transparent_background', 0) == 0 ? 'grey background' : 'bold') ==# 'underline'
+    CocHighlightText none none underline
+#elseif get(g:, 'edge_current_word', get(g:, 'edge_transparent_background', 0) == 0 ? 'grey background' : 'bold') ==# 'italic'
+    CocHighlightText none none italic
+#elseif get(g:, 'edge_current_word', get(g:, 'edge_transparent_background', 0) == 0 ? 'grey background' : 'bold') ==# 'grey background'
+    CocHighlightText none background_pmenu
+#endif
+CocHoverRange none none bold,underline
+#if get(g:, 'edge_transparent_background', 0)
+    CocHintSign cyan none
+#else
+    CocHintSign cyan background_col
+#endif
 #}}}
-# Vim Multiple Cursors {{{
-multiple_cursors_cursor none none reverse
-multiple_cursors_visual none background_visual
-# }}}
 # vim-matchup{{{
 MatchParenCur           none            none            bold
 MatchWord               none            none            underline
@@ -53,4 +88,8 @@ MatchWordCur            none            none            underline
 #}}}
 # UndoTree {{{
 UndotreeSavedBig red none bold
+#}}}
+# Quick Scope {{{
+QuickScopePrimary       green           none            underline
+QuickScopeSecondary     blue            none            underline
 #}}}

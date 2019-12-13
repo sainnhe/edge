@@ -126,7 +126,7 @@ typescriptDefault -> Yellow
 typescriptTemplateSB -> Cyan
 typescriptArrowFuncArg -> Cyan
 typescriptParamImpl -> Green
-typescriptFuncComma -> White
+typescriptFuncComma -> Fg
 jsxOpenPunct -> Blue
 typescriptCastKeyword -> Red
 typescriptCall -> Blue
