@@ -6,7 +6,9 @@
 | :---: | :---: |
 | ![dark](https://user-images.githubusercontent.com/37491630/62260060-28432700-b400-11e9-9488-b196f6884488.png) | ![light](https://user-images.githubusercontent.com/37491630/65002546-ebfe5400-d8e3-11e9-85d5-7146b6f1b19e.png) |
 
-This color scheme is heavily inspired by [Atom One](https://github.com/atom/atom/tree/master/packages/one-dark-syntax) and [Material](https://github.com/equinusocio/vsc-material-theme), I'm trying to combine my favorite parts of them together.
+This color scheme is based on [Atom One](https://github.com/atom/atom/tree/master/packages/one-dark-syntax) and [Material](https://github.com/equinusocio/material-theme), I'm trying to combine my favorite parts of them together.
+
+Inspired by [gruvbox-material](https://github.com/sainnhe/gruvbox-material), the foreground colors are designed to have a soft contrast while keeping them vivid enough, and the background blue light is appropriately reduced in order to protect your eyes.
 
 # Installation
 
@@ -23,8 +25,10 @@ For better syntax highlighting support, please install [sheerun/vim-polyglot](ht
 ## Manually
 
 1. Clone this repository.
-2. Copy `/path/to/edge/colors/edge.vim` to `~/.vim/colors/edge.vim`
-3. To install [lightline](https://github.com/itchyny/lightline.vim) theme, copy `/path/to/edge/autoload/lightline/colorscheme/edge.vim` to `~/.vim/autoload/lightline/colorscheme/edge.vim`
+2. Copy `/path/to/edge/colors/edge.vim` to `~/.vim/colors/` .
+3. Copy `/path/to/edge/doc/edge.txt` to `~/.vim/doc/` and execute `:helptags ~/.vim/doc/` to generate help tags.
+4. To install [airline](https://github.com/vim-airline/vim-airline) theme, copy `/path/to/edge/autoload/airline/themes/edge.vim` to `~/.vim/autoload/airline/themes/edge.vim` .
+5. To install [lightline](https://github.com/itchyny/lightline.vim) theme, copy `/path/to/edge/autoload/lightline/colorscheme/edge.vim` to `~/.vim/autoload/lightline/colorscheme/edge.vim` .
 
 # Usage
 
@@ -33,21 +37,42 @@ For better syntax highlighting support, please install [sheerun/vim-polyglot](ht
 Put this in your vimrc:
 
 ```vim
+" important!!
 set termguicolors
 
 " for dark version
 set background=dark
-colorscheme edge
 
 " for light version
 set background=light
+
+" the configuration options should be placed before `colorscheme edge`
+let g:edge_disable_italic_comment = 1
+let g:edge_popup_menu_selection_background = 'green'
+
 colorscheme edge
 ```
 
-If you want to apply this color scheme temporarily, run this command in vim(**this may cause color broken**):
+See `:help edge-configuration` for more configuration options.
+
+If you want to apply this color scheme temporarily, run this command in vim(**this may cause broken colors**):
 
 ```vim
 :colorscheme edge
+```
+
+### Airline
+
+To enable [airline](https://github.com/vim-airline/vim-airline) color scheme, put this in your vimrc:
+
+```vim
+let g:airline_theme = 'edge'
+```
+
+To apply it without reloading:
+
+```vim
+:AirlineTheme edge
 ```
 
 ### Lightline
@@ -97,13 +122,13 @@ Check this [gist](https://gist.github.com/sainnhe/b8240bc047313fd6185bb8052df5a8
 
 **A:**
 
-1. This color scheme is mainly designed for true colors, `set termguicolors` is required. Check output of `vim --version`, maybe your vim doesn't support `termguicolors`
+1. This color scheme is mainly designed for true colors, `set termguicolors` is required. Check output of `vim --version`, maybe your vim doesn't support `termguicolors`.
 
-2. Maybe your terminal emulator doesn't support true colors, you can test it using [this script](https://unix.stackexchange.com/questions/404414/print-true-color-24-bit-test-pattern)
+2. Maybe your terminal emulator doesn't support true colors, you can test it using [this script](https://unix.stackexchange.com/questions/404414/print-true-color-24-bit-test-pattern).
 
 3. If you are running vim in tmux, you need to override default true colors of tmux, as tmux cannot display true color properly: [#1246 How to use true colors in vim under tmux?](https://github.com/tmux/tmux/issues/1246)
 
-4. There are many highlight group links in syntax files while a color scheme may change them, enabling one color scheme based on another color scheme enabled is very likely to cause color broken. If there is any color broken, you can enable the color scheme in your vimrc instead of after vim startup.
+4. There are many highlight group links in syntax files while a color scheme may change them, enabling one color scheme based on another color scheme enabled is very likely to cause colors to break. If any color is broken, you can enable the color scheme in your vimrc instead of after vim startup.
 
 **Q: What's your status line configuration?**
 
@@ -121,7 +146,7 @@ Check this gist for detailed instructions to hack this color scheme: [hack-color
 
 [Atom One](https://github.com/atom/atom/tree/master/packages/one-dark-syntax)
 
-[Material](https://github.com/equinusocio/vsc-material-theme)
+[Material](https://github.com/equinusocio/material-theme)
 
 # Thanks to
 
