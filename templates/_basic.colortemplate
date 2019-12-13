@@ -111,7 +111,12 @@ StorageClass            purple          none
 Statement               purple          none
 Tag                     purple          none
 Delimiter               foreground      none
-Comment                 grey            none            italic
-SpecialComment          grey            none            italic
+#if get(g:, 'edge_disable_italic_comment', 0)
+    Comment                 grey            none
+    SpecialComment          grey            none
+#else
+    Comment                 grey            none            italic
+    SpecialComment          grey            none            italic
+#endif
 Ignore                  grey            none
 Underlined              none            none            underline
