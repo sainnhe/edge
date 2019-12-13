@@ -1,68 +1,86 @@
 # vim: ft=colortemplate fdm=marker cc=22,40,58
 
 Variant: gui
-#if get(g:, '@optionprefix_transp_bg', 0) && !has('gui_running')
+#if get(g:, 'edge_transparent_background', 0) && !has('gui_running')
 Variant: 256 8
-#if get(g:, '@optionprefix_transp_bg', 0)
+#if get(g:, 'edge_transparent_background', 0)
 Variant: gui 256 8
     Normal              foreground      none
     Terminal            foreground      none
+    EndOfBuffer         grey            none
+    FoldColumn          grey            none            bold
+    Folded              grey            none            bold
+    SignColumn          none            none
 #else
     Normal              foreground      background
     Terminal            foreground      background
+    EndOfBuffer         background      background
+    FoldColumn          grey            background_col
+    Folded              grey            background_col
+    SignColumn          none            background_col
 #endif
 
 ColorColumn             none            background_col
 Conceal                 grey            none
 Cursor                  none            none            reverse
+lCursor                 none            none            reverse
 CursorColumn            none            background_line
 CursorLine              none            background_line
-CursorLineNr            foreground      background_line
-LineNr                  grey            background
-SignColumn              none            background_col
+LineNr                  grey            none
+#if &rnu == 1 && &cul == 0
+    CursorLineNr        foreground      none
+#else
+    CursorLineNr        foreground      background_line
+#endif
 DiffAdd                 none            background_green_diff
 DiffChange              none            background_blue_diff
 DiffDelete              none            background_red_diff
-DiffText                none            background      reverse
+DiffText                none            none            reverse
 Directory               green           none
-EndOfBuffer             background      background
 ErrorMsg                red             none            bold,underline
 WarningMsg              yellow          none            bold
-ModeMsg                 blue            none            bold
-MoreMsg                 purple          none            bold
-FoldColumn              grey            background_col
-Folded                  grey            background_col
-IncSearch               none            background_visual underline
-Search                  none            background_visual underline
-MatchParen              none            background_sign bold
+ModeMsg                 foreground      none            bold
+MoreMsg                 blue            none            bold
+IncSearch               none            background_red_visual bold,underline
+Search                  none            background_visual
+MatchParen              none            background_sign
 NonText                 grey            none
 Pmenu                   foreground      background_pmenu
-PmenuSel                background      blue
 PmenuSbar               none            background_pmenu
-PmenuThumb              none            grey
-Question                green           none
+#if get(g:, 'edge_popup_menu_selection_background', 'blue') ==# 'blue'
+    PmenuSel                background_pmenu blue
+    WildMenu                background_col   blue
+#elseif get(g:, 'edge_popup_menu_selection_background', 'green') ==# 'green'
+    PmenuSel                background_pmenu green
+    WildMenu                background_col   green
+#elseif get(g:, 'edge_popup_menu_selection_background', 'purple') ==# 'purple'
+    PmenuSel                background_pmenu purple
+    WildMenu                background_col   purple
+#endif
+PmenuThumb              none            background_grey
+Question                yellow          none
 SpellBad                red             none            s=red
 SpellCap                yellow          none            s=yellow
 SpellLocal              blue            none            s=blue
 SpellRare               purple          none            s=purple
 StatusLine              foreground      background_sign
+StatusLineTerm          foreground      background_sign
 StatusLineNC            grey            background_col
+StatusLineTermNC        grey            background_col
 TabLine                 foreground      background_sign
 TabLineFill             grey            background_col
 TabLineSel              background      purple
 VertSplit               background_sign none
 Visual                  none            background_visual
 VisualNOS               none            background_visual italic
-WildMenu                background      green
 CursorIM                none            foreground
 ToolbarLine             none            grey
 ToolbarButton           foreground      background      bold
-QuickFixLine         -> Search
-lCursor              -> Cursor
-StatusLineTerm       -> StatusLine
-StatusLineTermNC     -> StatusLineNC
+QuickFixLine            blue            background_col
+Debug                   yellow          none
 
 PreProc                 red             none
+Include                 red             none
 Macro                   red             none
 Error                   red             none
 Keyword                 red             none
@@ -71,6 +89,7 @@ Typedef                 red             none
 Exception               red             none
 Label                   red             none
 Special                 yellow          none
+SpecialChar             yellow          none
 Type                    yellow          none
 Structure               yellow          none
 Boolean                 green           none
@@ -96,6 +115,3 @@ Comment                 grey            none            italic
 SpecialComment          grey            none            italic
 Ignore                  grey            none
 Underlined              none            none            underline
-SpecialChar          -> Special
-Debug                -> Special
-Include              -> PreProc
