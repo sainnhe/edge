@@ -20,9 +20,9 @@ CursorLine              none            background_alt
 CursorLineNr            foreground      background_alt
 LineNr                  grey            background
 SignColumn              none            background_alt
-DiffAdd                 none            background_green
-DiffChange              none            background_blue
-DiffDelete              none            background_red
+DiffAdd                 none            background_green_diff
+DiffChange              none            background_blue_diff
+DiffDelete              none            background_red_diff
 DiffText                none            background      reverse
 Directory               green           none
 EndOfBuffer             background      background
