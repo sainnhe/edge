@@ -167,6 +167,8 @@ Check this gist for detailed instructions to hack this color scheme: [hack-color
 
 [Material](https://github.com/equinusocio/material-theme)
 
+[Gruvbox Material](https://github.com/sainnhe/gruvbox-material)
+
 # Thanks to
 
 - [manfredmjka](https://github.com/manfredmjka): termite and fzf support
