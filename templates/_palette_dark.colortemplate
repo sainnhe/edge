@@ -15,9 +15,14 @@ Color: background_red_sel #ef7f7f      ~                 LightRed
 Color: background_purple_sel #d898eb   ~                 LightMagenta
 Color: background_green_sel #98be72    ~                 LightGreen
 Color: background_green_sel #72b1e5    ~                 LightBlue
-Color: background_red #362023          ~                 LightRed
-Color: background_green #293323        ~                 LightGreen
-Color: background_blue #1e232d         ~                 LightBlue
+Color: background_red_diff #473536     ~                 LightRed
+Color: background_purple_diff #433948  ~                 LightMagenta
+Color: background_green_diff #384034   ~                 LightGreen
+Color: background_green_diff #323e47   ~                 LightBlue
+Color: background_red_visual #573c3d     ~                 LightRed
+Color: background_purple_visual #514359  ~                 LightMagenta
+Color: background_green_visual #424c3b   ~                 LightGreen
+Color: background_green_visual #394957   ~                 LightBlue
 
 Fg              foreground      none
 Red             red             none
