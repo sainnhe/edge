@@ -48,14 +48,14 @@ NonText                 grey            none
 Pmenu                   foreground      background_pmenu
 PmenuSbar               none            background_pmenu
 #if get(g:, 'edge_popup_menu_selection_background', 'blue') ==# 'blue'
-    PmenuSel                background_pmenu blue
-    WildMenu                background_col   blue
+    PmenuSel                background_pmenu background_blue_sel
+    WildMenu                background_col   background_blue_sel
 #elseif get(g:, 'edge_popup_menu_selection_background', 'green') ==# 'green'
-    PmenuSel                background_pmenu green
-    WildMenu                background_col   green
+    PmenuSel                background_pmenu background_green_sel
+    WildMenu                background_col   background_green_sel
 #elseif get(g:, 'edge_popup_menu_selection_background', 'purple') ==# 'purple'
-    PmenuSel                background_pmenu purple
-    WildMenu                background_col   purple
+    PmenuSel                background_pmenu background_purple_sel
+    WildMenu                background_col   background_purple_sel
 #endif
 PmenuThumb              none            background_grey
 Question                yellow          none
