@@ -4,14 +4,14 @@
 ! License:    MIT && Anti-996
 
 #define white #fafafa
-#define black #5e646f
+#define black #52565f
 #define grey #949ba5
-#define red #db7070
-#define green #7c9f4b
-#define cyan #509c93
-#define yellow #d69822
-#define blue #6587bf
-#define magenta #b870ce
+#define red #d15f5f
+#define green #6c9334
+#define cyan #338f87
+#define yellow #c18401
+#define blue #5079be
+#define magenta #b05ccc
 
 *.foreground:   black
 *.background:   white
