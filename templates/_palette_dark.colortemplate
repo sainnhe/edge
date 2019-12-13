@@ -11,6 +11,10 @@ Color: purple        #d898eb           ~                 Magenta        # 70.822
 Color: grey          #88909f           ~                 Grey
 Color: background_alt #2d2f33          ~                 LightGrey
 Color: background_grey #3e4249         ~                 LightGrey
+Color: background_red_sel #ef7f7f      ~                 LightRed
+Color: background_purple_sel #d898eb   ~                 LightMagenta
+Color: background_green_sel #98be72    ~                 LightGreen
+Color: background_green_sel #72b1e5    ~                 LightBlue
 Color: background_red #362023          ~                 LightRed
 Color: background_green #293323        ~                 LightGreen
 Color: background_blue #1e232d         ~                 LightBlue

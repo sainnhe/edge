@@ -10,27 +10,25 @@
 let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
 
 if &background ==# 'dark'
-    let s:foreground = [ '#b7bec9', 250 ]
+    let s:foreground = [ '#bcc4d1', 250 ]
     let s:background = [ '#262729', 235 ]
     let s:background_alt = [ '#2d2f33', 236 ]
     let s:background_grey = [ '#3e4249', 238 ]
-    let s:red = [ '#ea7272', 203 ]
-    let s:purple = [ '#d390e7', 176 ]
-    let s:yellow = [ '#ddb66c', 179 ]
-    let s:green = [ '#a1bf78', 107 ]
-    let s:blue = [ '#73b3e7', 110 ]
-    let s:grey = [ '#88909f', 246 ]
+    let s:red = [ '#ef7f7f', 203 ]
+    let s:purple = [ '#d898eb', 176 ]
+    let s:yellow = [ '#d8b570', 179 ]
+    let s:green = [ '#98be72', 107 ]
+    let s:blue = [ '#72b1e5', 110 ]
 else
-    let s:foreground = [ '#5e646f', 241 ]
+    let s:foreground = [ '#52565f', 241 ]
     let s:background = [ '#fafafa', 231 ]
     let s:background_alt = [ '#eceff2', 255 ]
     let s:background_grey = [ '#dde2e7', 253 ]
     let s:red = [ '#e17373', 167 ]
-    let s:purple = [ '#b870ce', 134 ]
-    let s:yellow = [ '#e7b14a', 172 ]
-    let s:green = [ '#83b474', 107 ]
-    let s:blue = [ '#6b8ec7', 68 ]
-    let s:grey = [ '#949ba5', 247 ]
+    let s:purple = [ '#bf75d6', 134 ]
+    let s:yellow = [ '#e0ac48', 172 ]
+    let s:green = [ '#76af6f', 107 ]
+    let s:blue = [ '#6996e0', 68 ]
 endif
 "}}}
 
@@ -41,7 +39,7 @@ let s:tab_r_fg = s:red
 let s:tab_r_bg = s:background_grey
 let s:tab_sel_fg = s:background
 let s:tab_sel_bg = s:purple
-let s:tab_middle_fg = s:grey
+let s:tab_middle_fg = s:foreground
 let s:tab_middle_bg = s:background_alt
 
 let s:warningfg = s:background
@@ -57,7 +55,7 @@ let s:normal_r1_fg = s:background
 let s:normal_r1_bg = s:green
 let s:normal_r2_fg = s:foreground
 let s:normal_r2_bg = s:background_grey
-let s:normal_middle_fg = s:grey
+let s:normal_middle_fg = s:foreground
 let s:normal_middle_bg = s:background_alt
 
 let s:insert_l1_fg = s:background
@@ -68,7 +66,7 @@ let s:insert_r1_fg = s:background
 let s:insert_r1_bg = s:blue
 let s:insert_r2_fg = s:foreground
 let s:insert_r2_bg = s:background_grey
-let s:insert_middle_fg = s:grey
+let s:insert_middle_fg = s:foreground
 let s:insert_middle_bg = s:background_alt
 
 let s:visual_l1_fg = s:background
@@ -79,7 +77,7 @@ let s:visual_r1_fg = s:background
 let s:visual_r1_bg = s:red
 let s:visual_r2_fg = s:foreground
 let s:visual_r2_bg = s:background_grey
-let s:visual_middle_fg = s:grey
+let s:visual_middle_fg = s:foreground
 let s:visual_middle_bg = s:background_alt
 
 let s:replace_l1_fg = s:background
@@ -90,7 +88,7 @@ let s:replace_r1_fg = s:background
 let s:replace_r1_bg = s:yellow
 let s:replace_r2_fg = s:foreground
 let s:replace_r2_bg = s:background_grey
-let s:replace_middle_fg = s:grey
+let s:replace_middle_fg = s:foreground
 let s:replace_middle_bg = s:background_alt
 
 let s:inactive_l1_fg = s:foreground
@@ -101,7 +99,7 @@ let s:inactive_r1_fg = s:foreground
 let s:inactive_r1_bg = s:background_grey
 let s:inactive_r2_fg = s:foreground
 let s:inactive_r2_bg = s:background_grey
-let s:inactive_middle_fg = s:grey
+let s:inactive_middle_fg = s:foreground
 let s:inactive_middle_bg = s:background_alt
 
 "}}}
