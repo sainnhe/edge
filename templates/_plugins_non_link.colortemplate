@@ -5,21 +5,21 @@ plug1 purple none bold
 plugNumber green none bold
 #}}}
 # GitGutter {{{
-GitGutterAdd green background_alt
-GitGutterChange yellow background_alt
-GitGutterDelete red background_alt
-GitGutterChangeDelete purple background_alt
+GitGutterAdd green background_col
+GitGutterChange yellow background_col
+GitGutterDelete red background_col
+GitGutterChangeDelete purple background_col
 # }}}
 # Signify {{{
-SignifySignAdd green background_alt
-SignifySignChange yellow background_alt
-SignifySignDelete red background_alt
+SignifySignAdd green background_col
+SignifySignChange yellow background_col
+SignifySignDelete red background_col
 # }}}
 # Syntastic {{{
 SyntasticError none none t=underline g=undercurl s=red
 SyntasticWarning none none t=underline g=undercurl s=yellow
-SyntasticErrorSign red background_alt
-SyntasticWarningSign yellow background_alt
+SyntasticErrorSign red background_col
+SyntasticWarningSign yellow background_col
 # }}}
 # LeaderF {{{
 Lf_hl_match green none bold
@@ -34,9 +34,9 @@ Lf_hl_matchRefine yellow none bold
 ALEError none none t=underline g=undercurl s=red
 ALEWarning none none t=underline g=undercurl s=yellow
 ALEInfo none none t=underline g=undercurl s=blue
-ALEErrorSign red background_alt
-ALEWarningSign yellow background_alt
-ALEInfoSign blue background_alt
+ALEErrorSign red background_col
+ALEWarningSign yellow background_col
+ALEInfoSign blue background_col
 # }}}
 # CoC{{{
 CocHighlightText        none              none              bold
@@ -44,7 +44,7 @@ CocHoverRange           none              none              bold,underline
 #}}}
 # Vim Multiple Cursors {{{
 multiple_cursors_cursor none none reverse
-multiple_cursors_visual none background_grey
+multiple_cursors_visual none background_visual
 # }}}
 # vim-matchup{{{
 MatchParenCur           none            none            bold

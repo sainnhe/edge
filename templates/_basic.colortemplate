@@ -12,14 +12,14 @@ Variant: gui 256 8
     Terminal            foreground      background
 #endif
 
-ColorColumn             none            background_alt
+ColorColumn             none            background_col
 Conceal                 grey            none
 Cursor                  none            none            reverse
-CursorColumn            none            background_alt
-CursorLine              none            background_alt
-CursorLineNr            foreground      background_alt
+CursorColumn            none            background_line
+CursorLine              none            background_line
+CursorLineNr            foreground      background_line
 LineNr                  grey            background
-SignColumn              none            background_alt
+SignColumn              none            background_col
 DiffAdd                 none            background_green_diff
 DiffChange              none            background_blue_diff
 DiffDelete              none            background_red_diff
@@ -30,29 +30,29 @@ ErrorMsg                red             none            bold,underline
 WarningMsg              yellow          none            bold
 ModeMsg                 blue            none            bold
 MoreMsg                 purple          none            bold
-FoldColumn              grey            background_alt
-Folded                  grey            background_alt
-IncSearch               none            background_grey underline
-Search                  none            background_grey underline
-MatchParen              none            background_grey bold
+FoldColumn              grey            background_col
+Folded                  grey            background_col
+IncSearch               none            background_visual underline
+Search                  none            background_visual underline
+MatchParen              none            background_sign bold
 NonText                 grey            none
-Pmenu                   foreground      background_grey
+Pmenu                   foreground      background_pmenu
 PmenuSel                background      blue
-PmenuSbar               none            background_grey
+PmenuSbar               none            background_pmenu
 PmenuThumb              none            grey
 Question                green           none
 SpellBad                red             none            s=red
 SpellCap                yellow          none            s=yellow
 SpellLocal              blue            none            s=blue
 SpellRare               purple          none            s=purple
-StatusLine              foreground      background_grey
-StatusLineNC            grey            background_alt
-TabLine                 foreground      background_grey
-TabLineFill             grey            background_alt
+StatusLine              foreground      background_sign
+StatusLineNC            grey            background_col
+TabLine                 foreground      background_sign
+TabLineFill             grey            background_col
 TabLineSel              background      purple
-VertSplit               background_grey none
-Visual                  none            background_grey
-VisualNOS               none            background_grey italic
+VertSplit               background_sign none
+Visual                  none            background_visual
+VisualNOS               none            background_visual italic
 WildMenu                background      green
 CursorIM                none            foreground
 ToolbarLine             none            grey

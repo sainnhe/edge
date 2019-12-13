@@ -12,8 +12,8 @@ let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': 
 if &background ==# 'dark'
     let s:foreground = [ '#bcc4d1', 250 ]
     let s:background = [ '#262729', 235 ]
-    let s:background_alt = [ '#2d2f33', 236 ]
-    let s:background_grey = [ '#3e4249', 238 ]
+    let s:background_alt = [ '#2c2d33', 236 ]
+    let s:background_grey = [ '#3b3e48', 238 ]
     let s:red = [ '#ef7f7f', 203 ]
     let s:purple = [ '#d898eb', 176 ]
     let s:yellow = [ '#d8b570', 179 ]
@@ -22,7 +22,7 @@ if &background ==# 'dark'
 else
     let s:foreground = [ '#52565f', 241 ]
     let s:background = [ '#fafafa', 231 ]
-    let s:background_alt = [ '#eceff2', 255 ]
+    let s:background_alt = [ '#eef1f4', 255 ]
     let s:background_grey = [ '#dde2e7', 253 ]
     let s:red = [ '#e17373', 167 ]
     let s:purple = [ '#bf75d6', 134 ]
