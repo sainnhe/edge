@@ -13,7 +13,7 @@ colors:
   normal:
     black: "0x52565f"
     red: "0xd15f5f"
-    green: "0x6c9334"
+    green: "0x688d31"
     yellow: "0xc18401"
     blue: "0x5079be"
     magenta: "0xb05ccc"
@@ -23,7 +23,7 @@ colors:
   bright:
     black: "0x52565f"
     red: "0xd15f5f"
-    green: "0x6c9334"
+    green: "0x688d31"
     yellow: "0xc18401"
     blue: "0x5079be"
     magenta: "0xb05ccc"
@@ -42,7 +42,7 @@ colors:
   normal:
     black: "0x3e4249"
     red: "0xef7f7f"
-    green: "0xa1ba80"
+    green: "0xa2bc81"
     yellow: "0xd2b57b"
     blue: "0x77b3e4"
     magenta: "0xd898eb"
@@ -52,7 +52,7 @@ colors:
   bright:
     black: "0x3e4249"
     red: "0xef7f7f"
-    green: "0xa1ba80"
+    green: "0xa2bc81"
     yellow: "0xd2b57b"
     blue: "0x77b3e4"
     magenta: "0xd898eb"
