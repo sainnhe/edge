@@ -8,8 +8,6 @@
 
 This color scheme is based on [Atom One](https://github.com/atom/atom/tree/master/packages/one-dark-syntax) and [Material](https://github.com/equinusocio/material-theme), I'm trying to combine my favorite parts of them together.
 
-Inspired by [gruvbox-material](https://github.com/sainnhe/gruvbox-material), the foreground colors are designed to have a soft contrast while keeping them vivid enough, and the background blue light is appropriately reduced in order to protect your eyes.
-
 # Installation
 
 ## Via Plugin Manager
@@ -96,7 +94,7 @@ To apply it without reloading:
 
 ### Configuration
 
-**Note:** The configuration options should be placed before `colorscheme gruvbox-material` .
+**Note:** The configuration options should be placed before `colorscheme edge` .
 
 - `g:edge_transparent_background`: Set to `1` to enable transparent background.
     - Available values: `0`, `1`
@@ -166,8 +164,6 @@ Check this gist for detailed instructions to hack this color scheme: [hack-color
 [Atom One](https://github.com/atom/atom/tree/master/packages/one-dark-syntax)
 
 [Material](https://github.com/equinusocio/material-theme)
-
-[Gruvbox Material](https://github.com/sainnhe/gruvbox-material)
 
 # Thanks to
 
