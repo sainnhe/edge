@@ -8,10 +8,10 @@ Add this to `~/.config/alacritty/alacritty.yml`
 colors:
   primary:
     background: "0xfafafa"
-    foreground: "0x52565f"
+    foreground: "0x4b505b"
 
   normal:
-    black: "0x52565f"
+    black: "0x4b505b"
     red: "0xd15f5f"
     green: "0x688d31"
     yellow: "0xc18401"
@@ -21,7 +21,7 @@ colors:
     white: "0x949ba5"
 
   bright:
-    black: "0x52565f"
+    black: "0x4b505b"
     red: "0xd15f5f"
     green: "0x688d31"
     yellow: "0xc18401"

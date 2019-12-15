@@ -6,8 +6,8 @@ Add this to your `.bashrc` (if running bash) or `.zshrc` (if running zsh):
 
 ```bashrc
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS' 
---color=fg:#52565f,bg:#fafafa,hl:#5079be 
---color=fg+:#52565f,bg+:#fafafa,hl+:#358c84 
+--color=fg:#4b505b,bg:#fafafa,hl:#5079be 
+--color=fg+:#4b505b,bg+:#fafafa,hl+:#358c84 
 --color=info:#88909f,prompt:#d15f5f,pointer:#b05ccc 
 --color=marker:#688d31,spinner:#d15f5f,header:#358c84'
 ```

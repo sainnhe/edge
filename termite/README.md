@@ -6,7 +6,7 @@ Add this to `~/.config/termite/termite/config`
 
 ```config
 [colors]
-foreground = #52565f
+foreground = #4b505b
 background = #fafafa
 
 color0 = #949ba5

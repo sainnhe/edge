@@ -4,7 +4,7 @@
 ! License:    MIT && Anti-996
 
 #define white #fafafa
-#define black #52565f
+#define black #4b505b
 #define grey #949ba5
 #define red #d15f5f
 #define green #688d31

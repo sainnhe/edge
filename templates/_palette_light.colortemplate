@@ -1,7 +1,7 @@
 # vim: ft=colortemplate fdm=marker cc=22,40,58
 
 Color: background    #fafafa           ~                 White
-Color: foreground    #52565f           ~                 Black          # 33.659
+Color: foreground    #4b505b           ~                 Black          # 33.659
 Color: red           #d15f5f           ~                 Red            # 50.619
 Color: yellow        #c18401           ~                 Yellow         # 53.058
 Color: green         #688d31           ~                 Green          # 46.843
