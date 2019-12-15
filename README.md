@@ -1,12 +1,8 @@
-<h1 align="center">
-𝐄𝐃𝐆𝐄
-</h1>
-
-| 𝐃𝐚𝐫𝐤 | 𝐋𝐢𝐠𝐡𝐭 |
-| :---: | :---: |
-| ![dark](https://user-images.githubusercontent.com/37491630/70797713-f3c37c80-1d9c-11ea-8a0f-9feab2b62241.png) | ![light](https://user-images.githubusercontent.com/37491630/70797716-f58d4000-1d9c-11ea-8ad4-66ebff7c3831.png) |
-
-This color scheme is based on [Atom One](https://github.com/atom/atom/tree/master/packages/one-dark-syntax) and [Material](https://github.com/equinusocio/material-theme), I'm trying to combine my favorite parts of them together.
+|       |                                                     𝐃𝐚𝐫𝐤                                                      |                                                     𝐋𝐢𝐠𝐡𝐭                                                      |
+| :---: | :-----------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
+| 𝐄𝐝𝐠𝐞  | ![dark](https://user-images.githubusercontent.com/37491630/70863551-59e90480-1f41-11ea-97f6-36b73eef8773.png) | ![light](https://user-images.githubusercontent.com/37491630/70863554-5c4b5e80-1f41-11ea-96d8-a48762addfe5.png) |
+| 𝐍𝐞𝐨𝐧  | ![dark](https://user-images.githubusercontent.com/37491630/70863555-5d7c8b80-1f41-11ea-9f3a-2f6c8d296dc9.png) | ![light](https://user-images.githubusercontent.com/37491630/70863558-61101280-1f41-11ea-9ce6-87877562c180.png) |
+| 𝐏𝐨𝐥𝐚𝐫 | ![dark](https://user-images.githubusercontent.com/37491630/70863560-62d9d600-1f41-11ea-891f-4c1e518688fc.png) | ![light](https://user-images.githubusercontent.com/37491630/70863561-653c3000-1f41-11ea-923d-a70785b02b0a.png) |
 
 # Installation
 
@@ -23,9 +19,9 @@ For better syntax highlighting support, please install [sheerun/vim-polyglot](ht
 ## Manually
 
 1. Clone this repository.
-2. Copy `/path/to/edge/colors/edge.vim` to `~/.vim/colors/` .
-3. To install [airline](https://github.com/vim-airline/vim-airline) theme, copy `/path/to/edge/autoload/airline/themes/edge.vim` to `~/.vim/autoload/airline/themes/edge.vim` .
-4. To install [lightline](https://github.com/itchyny/lightline.vim) theme, copy `/path/to/edge/autoload/lightline/colorscheme/edge.vim` to `~/.vim/autoload/lightline/colorscheme/edge.vim` .
+2. Copy `/path/to/edge/colors/*` to `~/.vim/colors/` .
+3. To install [airline](https://github.com/vim-airline/vim-airline) theme, copy `/path/to/edge/autoload/airline/themes/*` to `~/.vim/autoload/airline/themes/` .
+4. To install [lightline](https://github.com/itchyny/lightline.vim) theme, copy `/path/to/edge/autoload/lightline/colorscheme/*` to `~/.vim/autoload/lightline/colorscheme/` .
 
 # Usage
 
@@ -47,7 +43,14 @@ set background=light
 let g:edge_disable_italic_comment = 1
 let g:edge_popup_menu_selection_background = 'green'
 
+" edge
 colorscheme edge
+
+" neon
+colorscheme neon
+
+" polar
+colorscheme polar
 ```
 
 See [Configuration](https://github.com/sainnhe/edge#configuration) for more configuration options.
@@ -63,7 +66,7 @@ If you want to apply this color scheme temporarily, run this command in vim(**th
 To enable [airline](https://github.com/vim-airline/vim-airline) color scheme, put this in your vimrc:
 
 ```vim
-let g:airline_theme = 'edge'
+let g:airline_theme = 'edge'  " available themes: 'edge', 'neon', 'polar'
 ```
 
 To apply it without reloading:
@@ -78,7 +81,7 @@ To enable [lightline](https://github.com/itchyny/lightline.vim) color scheme, pu
 
 ```vim
 let g:lightline = {}
-let g:lightline.colorscheme = 'edge'
+let g:lightline.colorscheme = 'edge'  " available themes: 'edge', 'neon', 'polar'
 
 " or this line
 let g:lightline = {'colorscheme' : 'edge'}
@@ -97,20 +100,20 @@ To apply it without reloading:
 **Note:** The configuration options should be placed before `colorscheme edge` .
 
 - `g:edge_transparent_background`: Set to `1` to enable transparent background.
-    - Available values: `0`, `1`
-    - Default value: `0`
+  - Available values: `0`, `1`
+  - Default value: `0`
 - `g:edge_popup_menu_selection_background`: Control the background color of `PmenuSel` and `WildMenu` .
-    - Available values: `'blue'`, `'green'`, `'purple'`
-    - Default value: `'blue'`
+  - Available values: `'blue'`, `'green'`, `'purple'`
+  - Default value: `'blue'`
 - `g:edge_disable_italic_comment`: Set to `1` to disable italic in `Comment` .
-    - Available values: `0`, `1`
-    - Default value: `0`
+  - Available values: `0`, `1`
+  - Default value: `0`
 - `g:edge_current_word`: Some plugins can highlight the word under current cursor(for example [neoclide/coc-highlight](https://github.com/neoclide/coc-highlight)), you can use this option to control their behavior.
-    - Available values: `'bold'`, `'underline'`, `'italic'`, `'grey background'`
-    - Default value: `'grey background'` when not in transparent mode, `'bold'` when in transparent mode.
+  - Available values: `'bold'`, `'underline'`, `'italic'`, `'grey background'`
+  - Default value: `'grey background'` when not in transparent mode, `'bold'` when in transparent mode.
 - `g:edge_lightline_disable_bold`: Set to `1` to disable bold in lightline theme.
-    - Available values: `0`, `1`
-    - Default value: `0`
+  - Available values: `0`, `1`
+  - Default value: `0`
 
 ## Tmux Status Line
 
@@ -164,6 +167,8 @@ Check this gist for detailed instructions to hack this color scheme: [hack-color
 [Atom One](https://github.com/atom/atom/tree/master/packages/one-dark-syntax)
 
 [Material](https://github.com/equinusocio/material-theme)
+
+[Nord](https://github.com/arcticicestudio/nord)
 
 # Thanks to
 
