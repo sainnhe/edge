@@ -17,11 +17,11 @@ if &background ==# 'dark'
     let s:red_sel = [ '#ef7f7f', 203 ]
     let s:purple_sel = [ '#d898eb', 176 ]
     let s:green_sel = [ '#a3be8c', 107 ]
-    let s:blue_sel = [ '#95b8f2', 110 ]
+    let s:blue_sel = [ '#94b7f0', 110 ]
     let s:red_fg = [ '#ef7f7f', 203 ]
     let s:purple_fg = [ '#d898eb', 176 ]
     let s:green_fg = [ '#a3be8c', 107 ]
-    let s:blue_fg = [ '#95b8f2', 110 ]
+    let s:blue_fg = [ '#94b7f0', 110 ]
 else
     let s:foreground = [ '#4b505b', 241 ]
     let s:background = [ '#fafafa', 231 ]
