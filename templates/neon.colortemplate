@@ -1,7 +1,7 @@
 # vim: ft=colortemplate fdm=marker cc=22,40,58
 
-Full name:           Edge
-Short name:          edge
+Full name:           Neon
+Short name:          neon
 Author:              Sainnhepark <sainnhe@gmail.com>
 Maintainer:          Sainnhepark <sainnhe@gmail.com>
 Website:             https://github.com/sainnhe/edge/
@@ -16,7 +16,7 @@ Include: _filetypes
 
 Background: dark
 
-Include: _palette_edge_dark
+Include: _palette_neon_dark
 
 Include: _terminal
 
@@ -28,7 +28,7 @@ Include: _filetypes_non_link
 
 Background: light
 
-Include: _palette_edge_light
+Include: _palette_neon_light
 
 Include: _terminal
 
