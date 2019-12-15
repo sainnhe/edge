@@ -15,7 +15,7 @@ color2 = #688d31
 color3 = #c18401
 color4 = #5079be
 color5 = #b05ccc
-color6 = #338f87
+color6 = #358c84
 color7 = #fafafa
 color8 = #88909f
 color9 = #d15f5f
@@ -23,7 +23,7 @@ color10 = #688d31
 color11 = #c18401
 color12 = #5079be
 color13 = #b05ccc
-color14 = #338f87
+color14 = #358c84
 color15 = #fafafa
 ```
 
