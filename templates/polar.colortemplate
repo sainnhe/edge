@@ -5,7 +5,7 @@ Short name:          polar
 Author:              Sainnhepark <sainnhe@gmail.com>
 Maintainer:          Sainnhepark <sainnhe@gmail.com>
 Website:             https://github.com/sainnhe/edge/
-Description:         Clean & Elegant Color Scheme inspired by Atom One and Material
+Description:         Clean & Elegant Color Scheme for Vim
 License:             MIT && Anti-996
 Option Prefix:       dark_and_light
 Neovim:              yes
