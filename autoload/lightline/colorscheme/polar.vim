@@ -11,14 +11,14 @@ let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': 
 
 if &background ==# 'dark'
     let s:foreground = [ '#bcc4d1', 250 ]
-    let s:background = [ '#252932', 235 ]
-    let s:background_alt = [ '#2e343f', 236 ]
-    let s:background_grey = [ '#3c4755', 238 ]
+    let s:background = [ '#252931', 235 ]
+    let s:background_alt = [ '#2e3440', 236 ]
+    let s:background_grey = [ '#434c5e', 238 ]
     let s:red = [ '#ef7f7f', 203 ]
     let s:purple = [ '#d898eb', 176 ]
     let s:yellow = [ '#d8b570', 179 ]
-    let s:green = [ '#98be72', 107 ]
-    let s:blue = [ '#72b1e5', 110 ]
+    let s:green = [ '#a3be8c', 107 ]
+    let s:blue = [ '#95b8f2', 110 ]
 else
     let s:foreground = [ '#4b505b', 241 ]
     let s:background = [ '#fafafa', 231 ]
