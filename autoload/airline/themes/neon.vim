@@ -12,7 +12,7 @@ let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': 
 if &background ==# 'dark'
     let s:foreground = [ '#bcc4d1', 250 ]
     let s:background = [ '#23252e', 235 ]
-    let s:background_alt = [ '#2b2e3c', 236 ]
+    let s:background_alt = [ '#2b2d3c', 236 ]
     let s:background_grey = [ '#393e53', 238 ]
     let s:red_sel = [ '#ef7f7f', 203 ]
     let s:purple_sel = [ '#d898eb', 176 ]
