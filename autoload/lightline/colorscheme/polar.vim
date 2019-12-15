@@ -35,10 +35,10 @@ endif
 "{{{Definition
 let s:tab_l_fg = s:foreground
 let s:tab_l_bg = s:background_grey
-let s:tab_r_fg = s:red
+let s:tab_r_fg = s:foreground
 let s:tab_r_bg = s:background_grey
 let s:tab_sel_fg = s:background
-let s:tab_sel_bg = s:purple
+let s:tab_sel_bg = s:blue
 let s:tab_middle_fg = s:foreground
 let s:tab_middle_bg = s:background_alt
 
@@ -48,22 +48,22 @@ let s:errorfg = s:background
 let s:errorbg = s:red
 
 let s:normal_l1_fg = s:background
-let s:normal_l1_bg = s:green
+let s:normal_l1_bg = s:blue
 let s:normal_l2_fg = s:foreground
 let s:normal_l2_bg = s:background_grey
 let s:normal_r1_fg = s:background
-let s:normal_r1_bg = s:green
+let s:normal_r1_bg = s:blue
 let s:normal_r2_fg = s:foreground
 let s:normal_r2_bg = s:background_grey
 let s:normal_middle_fg = s:foreground
 let s:normal_middle_bg = s:background_alt
 
 let s:insert_l1_fg = s:background
-let s:insert_l1_bg = s:blue
+let s:insert_l1_bg = s:green
 let s:insert_l2_fg = s:foreground
 let s:insert_l2_bg = s:background_grey
 let s:insert_r1_fg = s:background
-let s:insert_r1_bg = s:blue
+let s:insert_r1_bg = s:green
 let s:insert_r2_fg = s:foreground
 let s:insert_r2_bg = s:background_grey
 let s:insert_middle_fg = s:foreground

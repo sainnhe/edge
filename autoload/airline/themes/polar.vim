@@ -42,21 +42,21 @@ endif
 let s:accents = s:red_fg
 
 let s:normal_side_fg = s:background
-let s:normal_side_bg = s:purple_sel
+let s:normal_side_bg = s:blue_sel
 let s:normal_sub_fg = s:foreground
 let s:normal_sub_bg = s:background_grey
 let s:normal_mid_fg = s:foreground
 let s:normal_mid_bg = s:background_alt
-let s:normal_mod_fg = s:purple_fg
+let s:normal_mod_fg = s:blue_fg
 let s:normal_mod_bg = s:background_alt
 
 let s:insert_side_fg = s:background
-let s:insert_side_bg = s:blue_sel
+let s:insert_side_bg = s:green_sel
 let s:insert_sub_fg = s:foreground
 let s:insert_sub_bg = s:background_grey
 let s:insert_mid_fg = s:foreground
 let s:insert_mid_bg = s:background_alt
-let s:insert_mod_fg = s:blue_fg
+let s:insert_mod_fg = s:green_fg
 let s:insert_mod_bg = s:background_alt
 
 let s:visual_side_fg = s:background
@@ -69,12 +69,12 @@ let s:visual_mod_fg = s:red_fg
 let s:visual_mod_bg = s:background_alt
 
 let s:replace_side_fg = s:background
-let s:replace_side_bg = s:green_sel
+let s:replace_side_bg = s:purple_sel
 let s:replace_sub_fg = s:foreground
 let s:replace_sub_bg = s:background_grey
 let s:replace_mid_fg = s:foreground
 let s:replace_mid_bg = s:background_alt
-let s:replace_mod_fg = s:green_fg
+let s:replace_mod_fg = s:purple_fg
 let s:replace_mod_bg = s:background_alt
 
 let s:inactive_side_fg = s:background
