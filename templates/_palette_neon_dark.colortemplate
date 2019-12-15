@@ -11,7 +11,7 @@ Color: purple        #d898eb           ~                 Magenta        # 70.822
 Color: grey          #88909f           ~                 Grey
 Color: background_line #272a35         ~                 LightGrey
 Color: background_col #2b2e3c          ~                 LightGrey
-Color: background_pmenu #313546        ~                 LightGrey
+Color: background_pmenu #333849        ~                 LightGrey
 Color: background_sign #393e53         ~                 LightGrey
 Color: background_visual #34394c       ~                 LightGrey
 Color: background_grey #828a98         ~                 LightGrey
