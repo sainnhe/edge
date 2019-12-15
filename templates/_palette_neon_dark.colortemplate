@@ -13,8 +13,8 @@ Color: background_line #272a35         ~                 LightGrey
 Color: background_col #2b2e3c          ~                 LightGrey
 Color: background_pmenu #333849        ~                 LightGrey
 Color: background_sign #393e53         ~                 LightGrey
-Color: background_visual #34394c       ~                 LightGrey
-Color: background_grey #828a98         ~                 LightGrey
+Color: background_visual #363b4e       ~                 LightGrey
+Color: background_grey #7a819d         ~                 LightGrey
 Color: background_red_sel #ef7f7f      ~                 LightRed
 Color: background_purple_sel #d898eb   ~                 LightMagenta
 Color: background_green_sel #98be72    ~                 LightGreen
