@@ -164,11 +164,11 @@ Check this gist for detailed instructions to hack this color scheme: [hack-color
 
 # Inspiration
 
-[Atom One](https://github.com/atom/atom/tree/master/packages/one-dark-syntax)
+- [Atom One](https://github.com/atom/atom/tree/master/packages/one-dark-syntax)
 
-[Material](https://github.com/equinusocio/material-theme)
+- [Material](https://github.com/equinusocio/material-theme)
 
-[Nord](https://github.com/arcticicestudio/nord)
+- [Nord](https://github.com/arcticicestudio/nord)
 
 # Thanks to
 
