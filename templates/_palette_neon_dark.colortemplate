@@ -3,7 +3,7 @@
 Color: background    #23252e           ~                 Black
 Color: foreground    #bcc4d1           ~                 White          # 76.506
 Color: red           #ef7f7f           ~                 Red            # 62.934
-Color: yellow        #d3b170           ~                 Yellow         # 70.491
+Color: yellow        #d0b073           ~                 Yellow         # 70.491
 Color: green         #a4be8e           ~                 Green          # 69.316
 Color: cyan          #7cbcb7           ~                 Cyan           # 65.999
 Color: blue          #7eb4e7           ~                 Blue           # 65.353
