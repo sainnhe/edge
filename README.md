@@ -1,8 +1,6 @@
-|       |                                                     𝐃𝐚𝐫𝐤                                                      |                                                     𝐋𝐢𝐠𝐡𝐭                                                      |
-| :---: | :-----------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
-| 𝐄𝐝𝐠𝐞  | ![dark](https://user-images.githubusercontent.com/37491630/70863551-59e90480-1f41-11ea-97f6-36b73eef8773.png) | ![light](https://user-images.githubusercontent.com/37491630/70863554-5c4b5e80-1f41-11ea-96d8-a48762addfe5.png) |
-| 𝐍𝐞𝐨𝐧  | ![dark](https://user-images.githubusercontent.com/37491630/70863555-5d7c8b80-1f41-11ea-9f3a-2f6c8d296dc9.png) | ![light](https://user-images.githubusercontent.com/37491630/70863558-61101280-1f41-11ea-9ce6-87877562c180.png) |
-| 𝐏𝐨𝐥𝐚𝐫 | ![dark](https://user-images.githubusercontent.com/37491630/70863560-62d9d600-1f41-11ea-891f-4c1e518688fc.png) | ![light](https://user-images.githubusercontent.com/37491630/70863561-653c3000-1f41-11ea-923d-a70785b02b0a.png) |
+|                                                     𝐃𝐚𝐫𝐤                                                      |                                                     𝐋𝐢𝐠𝐡𝐭                                                      |
+| :-----------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
+| ![dark](https://user-images.githubusercontent.com/37491630/70863551-59e90480-1f41-11ea-97f6-36b73eef8773.png) | ![light](https://user-images.githubusercontent.com/37491630/70863554-5c4b5e80-1f41-11ea-96d8-a48762addfe5.png) |
 
 # Installation
 
@@ -43,14 +41,7 @@ set background=light
 let g:edge_disable_italic_comment = 1
 let g:edge_popup_menu_selection_background = 'green'
 
-" edge
 colorscheme edge
-
-" neon
-colorscheme neon
-
-" polar
-colorscheme polar
 ```
 
 See [Configuration](https://github.com/sainnhe/edge#configuration) for more configuration options.
@@ -66,7 +57,7 @@ If you want to apply this color scheme temporarily, run this command in vim(**th
 To enable [airline](https://github.com/vim-airline/vim-airline) color scheme, put this in your vimrc:
 
 ```vim
-let g:airline_theme = 'edge'  " available themes: 'edge', 'neon', 'polar'
+let g:airline_theme = 'edge'
 ```
 
 To apply it without reloading:
@@ -81,7 +72,7 @@ To enable [lightline](https://github.com/itchyny/lightline.vim) color scheme, pu
 
 ```vim
 let g:lightline = {}
-let g:lightline.colorscheme = 'edge'  " available themes: 'edge', 'neon', 'polar'
+let g:lightline.colorscheme = 'edge'
 
 " or this line
 let g:lightline = {'colorscheme' : 'edge'}
@@ -167,8 +158,6 @@ Check this gist for detailed instructions to hack this color scheme: [hack-color
 - [Atom One](https://github.com/atom/atom/tree/master/packages/one-dark-syntax)
 
 - [Material](https://github.com/equinusocio/material-theme)
-
-- [Nord](https://github.com/arcticicestudio/nord)
 
 # Thanks to
 
