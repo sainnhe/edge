@@ -3,9 +3,9 @@
 Color: background    #23252e           ~                 Black
 Color: foreground    #bcc4d1           ~                 White          # 76.506
 Color: red           #ef7f7f           ~                 Red            # 62.934
-Color: yellow        #d2b57b           ~                 Yellow         # 71.787
-Color: green         #a2bc81           ~                 Green          # 68.039
-Color: cyan          #72bab3           ~                 Cyan           # 64.188
+Color: yellow        #d3b170           ~                 Yellow         # 70.491
+Color: green         #a4be8e           ~                 Green          # 69.316
+Color: cyan          #7cbcb7           ~                 Cyan           # 65.999
 Color: blue          #77b3e4           ~                 Blue           # 65.353
 Color: purple        #d898eb           ~                 Magenta        # 70.822
 Color: grey          #88909f           ~                 Grey
