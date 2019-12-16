@@ -6,7 +6,7 @@ Color: red           #ef7f7f           ~                 Red            # 62.934
 Color: yellow        #d3b170           ~                 Yellow         # 70.491
 Color: green         #a4be8e           ~                 Green          # 69.316
 Color: cyan          #7cbcb7           ~                 Cyan           # 65.999
-Color: blue          #77b3e4           ~                 Blue           # 65.353
+Color: blue          #7eb4e7           ~                 Blue           # 65.353
 Color: purple        #d898eb           ~                 Magenta        # 70.822
 Color: grey          #88909f           ~                 Grey
 Color: background_line #272935         ~                 LightGrey
@@ -17,8 +17,8 @@ Color: background_visual #363a4e       ~                 LightGrey
 Color: background_grey #7a819d         ~                 LightGrey
 Color: background_red_sel #ef7f7f      ~                 LightRed
 Color: background_purple_sel #d898eb   ~                 LightMagenta
-Color: background_green_sel #98be72    ~                 LightGreen
-Color: background_blue_sel #72b1e5     ~                 LightBlue
+Color: background_green_sel #a2be8a    ~                 LightGreen
+Color: background_blue_sel #7eb4e7     ~                 LightBlue
 Color: background_red_diff #473536     ~                 LightRed
 Color: background_purple_diff #433948  ~                 LightMagenta
 Color: background_green_diff #384034   ~                 LightGreen
