@@ -3,10 +3,10 @@
 Color: background    #262729           ~                 Black
 Color: foreground    #bcc4d1           ~                 White          # 76.506
 Color: red           #ef7f7f           ~                 Red            # 62.934
-Color: yellow        #d2b57b           ~                 Yellow         # 71.787
-Color: green         #a2bc81           ~                 Green          # 68.039
-Color: cyan          #72bab3           ~                 Cyan           # 64.188
-Color: blue          #77b3e4           ~                 Blue           # 65.353
+Color: yellow        #d1b277           ~                 Yellow         # 70.491
+Color: green         #a3bc8d           ~                 Green          # 68.039
+Color: cyan          #78b7b1           ~                 Cyan           # 64.188
+Color: blue          #7ab3e1           ~                 Blue           # 65.353
 Color: purple        #d898eb           ~                 Magenta        # 70.822
 Color: grey          #88909f           ~                 Grey
 Color: background_line #292b30         ~                 LightGrey
@@ -17,7 +17,7 @@ Color: background_visual #363944       ~                 LightGrey
 Color: background_grey #828a98         ~                 LightGrey
 Color: background_red_sel #ef7f7f      ~                 LightRed
 Color: background_purple_sel #d898eb   ~                 LightMagenta
-Color: background_green_sel #98be72    ~                 LightGreen
+Color: background_green_sel #a2be8a    ~                 LightGreen
 Color: background_blue_sel #72b1e5     ~                 LightBlue
 Color: background_red_diff #473536     ~                 LightRed
 Color: background_purple_diff #433948  ~                 LightMagenta
