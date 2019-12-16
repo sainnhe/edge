@@ -36,18 +36,18 @@ background = #262729
 
 color0 = #88909f
 color1 = #ef7f7f
-color2 = #a2bc81
-color3 = #d2b57b
-color4 = #77b3e4
+color2 = #a3bc8d
+color3 = #d1b277
+color4 = #7ab3e1
 color5 = #d898eb
-color6 = #72bab3
+color6 = #78b7b1
 color7 = #bcc4d1
 color8 = #88909f
 color9 = #ef7f7f
-color10 = #a2bc81
-color11 = #d2b57b
-color12 = #77b3e4
+color10 = #a3bc8d
+color11 = #d1b277
+color12 = #7ab3e1
 color13 = #d898eb
-color14 = #72bab3
+color14 = #78b7b1
 color15 = #bcc4d1
 ```

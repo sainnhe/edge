@@ -42,20 +42,20 @@ colors:
   normal:
     black: "0x3e4249"
     red: "0xef7f7f"
-    green: "0xa2bc81"
-    yellow: "0xd2b57b"
-    blue: "0x77b3e4"
+    green: "0xa3bc8d"
+    yellow: "0xd1b277"
+    blue: "0x7ab3e1"
     magenta: "0xd898eb"
-    cyan: "0x72bab3"
+    cyan: "0x78b7b1"
     white: "0x88909f"
 
   bright:
     black: "0x3e4249"
     red: "0xef7f7f"
-    green: "0xa2bc81"
-    yellow: "0xd2b57b"
-    blue: "0x77b3e4"
+    green: "0xa3bc8d"
+    yellow: "0xd1b277"
+    blue: "0x7ab3e1"
     magenta: "0xd898eb"
-    cyan: "0x72bab3"
+    cyan: "0x78b7b1"
     white: "0x88909f"
 ```
