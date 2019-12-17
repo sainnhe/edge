@@ -14,7 +14,7 @@ if &background ==# 'dark'
     let s:background = [ '#262729', 235 ]
     let s:background_alt = [ '#2c2e34', 236 ]
     let s:background_grey = [ '#3b3e48', 238 ]
-    let s:red = [ '#ef7f7f', 203 ]
+    let s:red = [ '#f07e7e', 203 ]
     let s:purple = [ '#d898eb', 176 ]
     let s:yellow = [ '#d8b570', 179 ]
     let s:green = [ '#a2be8a', 107 ]

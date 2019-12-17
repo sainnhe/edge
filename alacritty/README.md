@@ -41,7 +41,7 @@ colors:
 
   normal:
     black: "0x3e4249"
-    red: "0xef7f7f"
+    red: "0xf07e7e"
     green: "0xa3bc8d"
     yellow: "0xd1b277"
     blue: "0x7ab3e1"
@@ -51,7 +51,7 @@ colors:
 
   bright:
     black: "0x3e4249"
-    red: "0xef7f7f"
+    red: "0xf07e7e"
     green: "0xa3bc8d"
     yellow: "0xd1b277"
     blue: "0x7ab3e1"

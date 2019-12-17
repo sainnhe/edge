@@ -35,7 +35,7 @@ foreground = #bcc4d1
 background = #262729
 
 color0 = #88909f
-color1 = #ef7f7f
+color1 = #f07e7e
 color2 = #a3bc8d
 color3 = #d1b277
 color4 = #7ab3e1
@@ -43,7 +43,7 @@ color5 = #d898eb
 color6 = #78b7b1
 color7 = #bcc4d1
 color8 = #88909f
-color9 = #ef7f7f
+color9 = #f07e7e
 color10 = #a3bc8d
 color11 = #d1b277
 color12 = #7ab3e1

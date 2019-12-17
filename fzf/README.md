@@ -18,6 +18,6 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS' 
 --color=fg:#bcc4d1,bg:#262729,hl:#7ab3e1 
 --color=fg+:#bcc4d1,bg+:#262729,hl+:#78b7b1 
---color=info:#88909f,prompt:#ef7f7f,pointer:#d898eb 
---color=marker:#a3bc8d,spinner:#ef7f7f,header:#78b7b1'
+--color=info:#88909f,prompt:#f07e7e,pointer:#d898eb 
+--color=marker:#a3bc8d,spinner:#f07e7e,header:#78b7b1'
 ```
