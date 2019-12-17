@@ -9,7 +9,7 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --color=fg:#4b505b,bg:#fafafa,hl:#5079be 
 --color=fg+:#4b505b,bg+:#fafafa,hl+:#3a8b84 
 --color=info:#88909f,prompt:#d15f5f,pointer:#b05ccc 
---color=marker:#5d8d31,spinner:#d15f5f,header:#3a8b84'
+--color=marker:#608e32,spinner:#d15f5f,header:#3a8b84'
 ```
 
 ## Dark

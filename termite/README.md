@@ -11,7 +11,7 @@ background = #fafafa
 
 color0 = #949ba5
 color1 = #d15f5f
-color2 = #5d8d31
+color2 = #608e32
 color3 = #be7e05
 color4 = #5079be
 color5 = #b05ccc
@@ -19,7 +19,7 @@ color6 = #3a8b84
 color7 = #fafafa
 color8 = #88909f
 color9 = #d15f5f
-color10 = #5d8d31
+color10 = #608e32
 color11 = #be7e05
 color12 = #5079be
 color13 = #b05ccc

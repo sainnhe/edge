@@ -13,7 +13,7 @@ colors:
   normal:
     black: "0x4b505b"
     red: "0xd15f5f"
-    green: "0x5d8d31"
+    green: "0x608e32"
     yellow: "0xbe7e05"
     blue: "0x5079be"
     magenta: "0xb05ccc"
@@ -23,7 +23,7 @@ colors:
   bright:
     black: "0x4b505b"
     red: "0xd15f5f"
-    green: "0x5d8d31"
+    green: "0x608e32"
     yellow: "0xbe7e05"
     blue: "0x5079be"
     magenta: "0xb05ccc"

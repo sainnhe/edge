@@ -33,7 +33,7 @@ else
     let s:blue_sel = [ '#6996e0', 68 ]
     let s:red_fg = [ '#d15f5f', 167 ]
     let s:purple_fg = [ '#b05ccc', 134 ]
-    let s:green_fg = [ '#5d8d31', 107 ]
+    let s:green_fg = [ '#608e32', 107 ]
     let s:blue_fg = [ '#5079be', 68 ]
 endif
 "}}}

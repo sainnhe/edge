@@ -4,7 +4,7 @@ Color: background    #fafafa           ~                 White
 Color: foreground    #4b505b           ~                 Black          # 33.659
 Color: red           #d15f5f           ~                 Red            # 50.619
 Color: yellow        #be7e05           ~                 Yellow         # 51.584
-Color: green         #5d8d31           ~                 Green          # 45.553
+Color: green         #608e32           ~                 Green          # 45.553
 Color: cyan          #3a8b84           ~                 Cyan           # 44.701
 Color: blue          #5079be           ~                 Blue           # 45.730
 Color: purple        #b05ccc           ~                 Magenta        # 50.288
