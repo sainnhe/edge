@@ -7,9 +7,9 @@
 #define black #4b505b
 #define grey #949ba5
 #define red #d15f5f
-#define green #688d31
-#define cyan #358c84
-#define yellow #c18401
+#define green #5d8d31
+#define cyan #3a8b84
+#define yellow #be7e05
 #define blue #5079be
 #define magenta #b05ccc
 
