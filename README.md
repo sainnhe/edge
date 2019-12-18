@@ -1,6 +1,7 @@
-|                                                     𝐃𝐚𝐫𝐤                                                      |                                                     𝐋𝐢𝐠𝐡𝐭                                                      |
-| :-----------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
-| ![dark](https://user-images.githubusercontent.com/37491630/70863551-59e90480-1f41-11ea-97f6-36b73eef8773.png) | ![light](https://user-images.githubusercontent.com/37491630/70863554-5c4b5e80-1f41-11ea-96d8-a48762addfe5.png) |
+|         |                                                     𝐃𝐚𝐫𝐤                                                      |                                                     𝐋𝐢𝐠𝐡𝐭                                                      |
+| :-----: | :-----------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
+| 𝐝𝐞𝐟𝐚𝐮𝐥𝐭 | ![dark](https://user-images.githubusercontent.com/37491630/70863551-59e90480-1f41-11ea-97f6-36b73eef8773.png) | ![light](https://user-images.githubusercontent.com/37491630/70863554-5c4b5e80-1f41-11ea-96d8-a48762addfe5.png) |
+|  𝐧𝐞𝐨𝐧   | ![dark](https://user-images.githubusercontent.com/37491630/70910638-055c8c80-2008-11ea-8e13-24f5236fb8b5.png) | ![light](https://user-images.githubusercontent.com/37491630/70910639-05f52300-2008-11ea-96d3-de2ac35bd11d.png) |
 
 # Installation
 
@@ -38,8 +39,8 @@ set background=dark
 set background=light
 
 " the configuration options should be placed before `colorscheme edge`
+let g:edge_style = 'neon'
 let g:edge_disable_italic_comment = 1
-let g:edge_popup_menu_selection_background = 'green'
 
 colorscheme edge
 ```
@@ -90,6 +91,9 @@ To apply it without reloading:
 
 **Note:** The configuration options should be placed before `colorscheme edge` .
 
+- `g:edge_style`: Customize the style of this color scheme.
+  - Available values: `'default'`, `'neon'`
+  - Default value: `'default'`
 - `g:edge_transparent_background`: Set to `1` to enable transparent background.
   - Available values: `0`, `1`
   - Default value: `0`
