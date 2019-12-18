@@ -149,10 +149,6 @@ Check this [gist](https://gist.github.com/sainnhe/b8240bc047313fd6185bb8052df5a8
 
 **A:** [Fira Code Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode).
 
-# Contribution
-
-Check this gist for detailed instructions to hack this color scheme: [hack-color-schemes.md](https://gist.github.com/sainnhe/911f78cbb092ac58c8734c423a464935)
-
 # Inspiration
 
 - [Atom One](https://github.com/atom/atom/tree/master/packages/one-dark-syntax)
