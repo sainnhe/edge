@@ -12,6 +12,8 @@ if exists('syntax_on')
   syntax reset
 endif
 
+let s:t_Co = exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2
+
 let g:colors_name = 'edge'
 " }}}
 " Configuration{{{
@@ -151,6 +153,55 @@ elseif s:configuration.style ==# 'neon'
           \ 'none':       ['NONE',      'NONE', 'NONE']
           \ }
   endif
+endif
+" }}}
+" Function{{{
+" call s:HL(group, foreground, background)
+" call s:HL(group, foreground, background, gui, guisp)
+"
+" E.g.:
+" call s:HL('Normal', s:palette.fg, s:palette.bg0)
+
+if (has('termguicolors') && &termguicolors) || has('gui_running')  " guifg guibg gui cterm guisp
+  function! s:HL(group, fg, bg, ...)
+    let hl_string = [
+          \ 'highlight', a:group,
+          \ 'guifg=' . a:fg[0],
+          \ 'guibg=' . a:bg[0],
+          \ ]
+    if a:0 >= 1
+      call add(hl_string, 'gui=' . a:1)
+      call add(hl_string, 'cterm=' . a:1)
+    endif
+    if a:0 >= 2
+      call add(hl_string, 'guisp=' . a:2[0])
+    endif
+    execute join(hl_string, ' ')
+  endfunction
+elseif s:t_Co >= 256  " ctermfg ctermbg cterm
+  function! s:HL(group, fg, bg, ...)
+    let hl_string = [
+          \ 'highlight', a:group,
+          \ 'ctermfg=' . a:fg[1],
+          \ 'ctermbg=' . a:bg[1],
+          \ ]
+    if a:0 >= 1
+      call add(hl_string, 'cterm=' . a:1)
+    endif
+    execute join(hl_string, ' ')
+  endfunction
+else  " ctermfg ctermbg cterm
+  function! s:HL(group, fg, bg, ...)
+    let hl_string = [
+          \ 'highlight', a:group,
+          \ 'ctermfg=' . a:fg[2],
+          \ 'ctermbg=' . a:bg[2],
+          \ ]
+    if a:0 >= 1
+      call add(hl_string, 'cterm=' . a:1)
+    endif
+    execute join(hl_string, ' ')
+  endfunction
 endif
 " }}}
 
