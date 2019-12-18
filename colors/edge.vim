@@ -64,7 +64,7 @@ if s:configuration.style ==# 'default'
           \ 'bg2':        ['#eef1f4',   '255',  'LightGrey'],
           \ 'bg3':        ['#e8ebf0',   '254',  'LightGrey'],
           \ 'bg4':        ['#e8ebf0',   '253',  'Grey'],
-          \ 'bg4':        ['#dde2e7',   '253',  'Grey'],
+          \ 'bg5':        ['#dde2e7',   '253',  'Grey'],
           \ 'bg_grey':    ['#bcc5cf',   '246',  'DarkGrey'],
           \ 'bg_red':     ['#e17373',   '167',  'Red'],
           \ 'bg_red1':    ['#f6e4e4',   '217',  'LightRed'],
@@ -128,7 +128,7 @@ elseif s:configuration.style ==# 'neon'
           \ 'bg2':        ['#eef2f6',   '255',  'LightGrey'],
           \ 'bg3':        ['#e7ecf1',   '254',  'LightGrey'],
           \ 'bg4':        ['#e5eaf0',   '253',  'Grey'],
-          \ 'bg4':        ['#dde4ea',   '253',  'Grey'],
+          \ 'bg5':        ['#dde4ea',   '253',  'Grey'],
           \ 'bg_grey':    ['#bbc7d3',   '246',  'DarkGrey'],
           \ 'bg_red':     ['#e17373',   '167',  'Red'],
           \ 'bg_red1':    ['#f6e4e4',   '217',  'LightRed'],
@@ -172,6 +172,9 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')  " guifg guibg
     if a:0 >= 1
       call add(hl_string, 'gui=' . a:1)
       call add(hl_string, 'cterm=' . a:1)
+    else
+      call add(hl_string, 'gui=NONE')
+      call add(hl_string, 'cterm=NONE')
     endif
     if a:0 >= 2
       call add(hl_string, 'guisp=' . a:2[0])
@@ -187,6 +190,8 @@ elseif s:t_Co >= 256  " ctermfg ctermbg cterm
           \ ]
     if a:0 >= 1
       call add(hl_string, 'cterm=' . a:1)
+    else
+      call add(hl_string, 'cterm=NONE')
     endif
     execute join(hl_string, ' ')
   endfunction
@@ -199,10 +204,130 @@ else  " ctermfg ctermbg cterm
           \ ]
     if a:0 >= 1
       call add(hl_string, 'cterm=' . a:1)
+    else
+      call add(hl_string, 'cterm=NONE')
     endif
     execute join(hl_string, ' ')
   endfunction
 endif
+" }}}
+
+" Common Highlight Groups{{{
+if s:configuration.transparent_background
+  call s:HL('Normal', s:palette.fg, s:palette.none)
+  call s:HL('Terminal', s:palette.fg, s:palette.none)
+  call s:HL('EndOfBuffer', s:palette.bg0, s:palette.none)
+  call s:HL('FoldColumn', s:palette.grey, s:palette.none)
+  call s:HL('Folded', s:palette.grey, s:palette.none)
+  call s:HL('SignColumn', s:palette.fg, s:palette.none)
+else
+  call s:HL('Normal', s:palette.fg, s:palette.bg0)
+  call s:HL('Terminal', s:palette.fg, s:palette.bg0)
+  call s:HL('EndOfBuffer', s:palette.bg0, s:palette.bg0)
+  call s:HL('FoldColumn', s:palette.grey, s:palette.bg2)
+  call s:HL('Folded', s:palette.grey, s:palette.bg2)
+  call s:HL('SignColumn', s:palette.fg, s:palette.bg2)
+endif
+call s:HL('ColorColumn', s:palette.none, s:palette.bg2)
+call s:HL('Conceal', s:palette.grey, s:palette.none)
+call s:HL('Cursor', s:palette.none, s:palette.none, 'reverse')
+call s:HL('lCursor', s:palette.none, s:palette.none, 'reverse')
+call s:HL('CursorColumn', s:palette.none, s:palette.bg1)
+call s:HL('CursorLine', s:palette.none, s:palette.bg1)
+call s:HL('LineNr', s:palette.grey, s:palette.none)
+if &relativenumber == 1 && &cursorline == 0
+  call s:HL('CursorLineNr', s:palette.fg, s:palette.none)
+else
+  call s:HL('CursorLineNr', s:palette.fg, s:palette.bg1)
+endif
+call s:HL('DiffAdd', s:palette.none, s:palette.bg_green1)
+call s:HL('DiffChange', s:palette.none, s:palette.bg_blue1)
+call s:HL('DiffDelete', s:palette.none, s:palette.bg_red1)
+call s:HL('DiffText', s:palette.none, s:palette.none, 'reverse')
+call s:HL('Directory', s:palette.green, s:palette.none)
+call s:HL('ErrorMsg', s:palette.red, s:palette.none, 'bold,underline')
+call s:HL('WarningMsg', s:palette.yellow, s:palette.none, 'bold')
+call s:HL('ModeMsg', s:palette.fg, s:palette.none, 'bold')
+call s:HL('MoreMsg', s:palette.blue, s:palette.none, 'bold')
+call s:HL('IncSearch', s:palette.none, s:palette.bg_red2, 'bold,underline')
+call s:HL('Search', s:palette.none, s:palette.bg4)
+call s:HL('MatchParen', s:palette.none, s:palette.bg5)
+call s:HL('NonText', s:palette.grey, s:palette.none)
+call s:HL('Pmenu', s:palette.fg, s:palette.bg3)
+call s:HL('PmenuSbar', s:palette.none, s:palette.bg3)
+if s:configuration.popup_menu_selection_background ==# 'blue'
+  call s:HL('PmenuSel', s:palette.bg0, s:palette.bg_blue)
+  call s:HL('WildMenu', s:palette.bg0, s:palette.bg_blue)
+elseif s:configuration.popup_menu_selection_background ==# 'green'
+  call s:HL('PmenuSel', s:palette.bg0, s:palette.bg_green)
+  call s:HL('WildMenu', s:palette.bg0, s:palette.bg_green)
+elseif s:configuration.popup_menu_selection_background ==# 'purple'
+  call s:HL('PmenuSel', s:palette.bg0, s:palette.bg_purple)
+  call s:HL('WildMenu', s:palette.bg0, s:palette.bg_purple)
+endif
+call s:HL('PmenuThumb', s:palette.none, s:palette.bg_grey)
+call s:HL('Question', s:palette.yellow, s:palette.none)
+call s:HL('SpellBad', s:palette.red, s:palette.none, 'undercurl', s:palette.red)
+call s:HL('SpellCap', s:palette.yellow, s:palette.none, 'undercurl', s:palette.yellow)
+call s:HL('SpellLocal', s:palette.blue, s:palette.none, 'undercurl', s:palette.blue)
+call s:HL('SpellRare', s:palette.purple, s:palette.none, 'undercurl', s:palette.purple)
+call s:HL('StatusLine', s:palette.fg, s:palette.bg5)
+call s:HL('StatusLineTerm', s:palette.fg, s:palette.bg5)
+call s:HL('StatusLineNC', s:palette.grey, s:palette.bg2)
+call s:HL('StatusLineTermNC', s:palette.grey, s:palette.bg2)
+call s:HL('TabLine', s:palette.fg, s:palette.bg5)
+call s:HL('TabLineFill', s:palette.grey, s:palette.bg2)
+call s:HL('TabLineSel', s:palette.bg0, s:palette.bg_purple)
+call s:HL('VertSplit', s:palette.bg5, s:palette.none)
+call s:HL('Visual', s:palette.none, s:palette.bg4)
+call s:HL('VisualNOS', s:palette.none, s:palette.bg4, 'italic')
+call s:HL('CursorIM', s:palette.none, s:palette.fg)
+call s:HL('ToolbarLine', s:palette.none, s:palette.grey)
+call s:HL('ToolbarButton', s:palette.fg, s:palette.bg0, 'bold')
+call s:HL('QuickFixLine', s:palette.blue, s:palette.bg2)
+call s:HL('Debug', s:palette.yellow, s:palette.none)
+call s:HL('PreProc', s:palette.red, s:palette.none)
+call s:HL('Include', s:palette.red, s:palette.none)
+call s:HL('Macro', s:palette.red, s:palette.none)
+call s:HL('Error', s:palette.red, s:palette.none)
+call s:HL('Keyword', s:palette.red, s:palette.none)
+call s:HL('Define', s:palette.red, s:palette.none)
+call s:HL('Typedef', s:palette.red, s:palette.none)
+call s:HL('Exception', s:palette.red, s:palette.none)
+call s:HL('Label', s:palette.red, s:palette.none)
+call s:HL('Special', s:palette.yellow, s:palette.none)
+call s:HL('SpecialChar', s:palette.yellow, s:palette.none)
+call s:HL('Type', s:palette.yellow, s:palette.none)
+call s:HL('Structure', s:palette.yellow, s:palette.none)
+call s:HL('Boolean', s:palette.green, s:palette.none)
+call s:HL('String', s:palette.green, s:palette.none)
+call s:HL('Character', s:palette.green, s:palette.none)
+call s:HL('Number', s:palette.green, s:palette.none)
+call s:HL('Float', s:palette.green, s:palette.none)
+call s:HL('Identifier', s:palette.cyan, s:palette.none)
+call s:HL('Constant', s:palette.cyan, s:palette.none)
+call s:HL('Function', s:palette.blue, s:palette.none)
+call s:HL('Operator', s:palette.blue, s:palette.none)
+call s:HL('SpecialKey', s:palette.blue, s:palette.none)
+call s:HL('Title', s:palette.purple, s:palette.none, 'bold')
+call s:HL('Conditional', s:palette.purple, s:palette.none)
+call s:HL('PreCondit', s:palette.purple, s:palette.none)
+call s:HL('Repeat', s:palette.purple, s:palette.none)
+call s:HL('StorageClass', s:palette.purple, s:palette.none)
+call s:HL('Statement', s:palette.purple, s:palette.none)
+call s:HL('Tag', s:palette.purple, s:palette.none)
+call s:HL('Delimiter', s:palette.fg, s:palette.none)
+if s:configuration.disable_italic_comment
+  call s:HL('Comment', s:palette.grey, s:palette.none)
+  call s:HL('SpecialComment', s:palette.grey, s:palette.none)
+  call s:HL('Todo', s:palette.purple, s:palette.none)
+else
+  call s:HL('Comment', s:palette.grey, s:palette.none, 'italic')
+  call s:HL('SpecialComment', s:palette.grey, s:palette.none, 'italic')
+  call s:HL('Todo', s:palette.purple, s:palette.none, 'italic')
+endif
+call s:HL('Ignore', s:palette.grey, s:palette.none)
+call s:HL('Underlined', s:palette.none, s:palette.none, 'underline')
 " }}}
 
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker fmr={{{,}}}:
