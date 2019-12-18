@@ -388,7 +388,7 @@ highlight! link mkdCodeDelimiter Cyan
 highlight! link mkdCode Green
 highlight! link mkdBold Grey
 highlight! link mkdRule Purple
-"}}}
+" }}}
 " rst: {{{
 call s:HL('rstStandaloneHyperlink', s:palette.green, s:palette.none, 'underline')
 call s:HL('rstSections', s:palette.purple, s:palette.none, 'bold')
@@ -397,13 +397,13 @@ highlight! link rstExplicitMarkup Red
 highlight! link rstInterpretedTextOrHyperlinkReference Green
 highlight! link rstInlineLiteral Green
 highlight! link rstSubstitutionReference Cyan
-"}}}
+" }}}
 " tex: {{{
 highlight! link texStatement Blue
 highlight! link texDefCmd Red
 highlight! link texDefName Cyan
 highlight! link texOnlyMath Grey
-"}}}
+" }}}
 " html: {{{
 call s:HL('htmlH1', s:palette.purple, s:palette.none, 'bold')
 call s:HL('htmlH2', s:palette.red, s:palette.none, 'bold')
@@ -422,12 +422,12 @@ call s:HL('htmlItalic', s:palette.none, s:palette.none, 'italic')
 highlight! link htmlTag Purple
 highlight! link htmlArg Blue
 highlight! link htmlEndTag Blue
-"}}}
+" }}}
 " xml: {{{
 highlight! link xmlTag Purple
 highlight! link xmlTagName Purple
 highlight! link xmlAttrib Blue
-"}}}
+" }}}
 " css: {{{
 highlight! link cssFunctionName Yellow
 highlight! link cssClassName Purple
@@ -439,7 +439,7 @@ highlight! link cssSelectorOp Fg
 highlight! link cssVendor Grey
 highlight! link cssSelectorOp2 Blue
 highlight! link cssImportant Red
-"}}}
+" }}}
 " sass: {{{
 highlight! link sassMixing Green
 highlight! link sassClass Purple
@@ -447,7 +447,7 @@ highlight! link sassClassChar Purple
 highlight! link sassMixin Blue
 highlight! link sassAmpersand Cyan
 highlight! link sassFunction Yellow
-"}}}
+" }}}
 " scss: {{{
 highlight! link scssSelectorChar Purple
 highlight! link scssSelectorName Purple
@@ -456,14 +456,14 @@ highlight! link scssDefault Red
 highlight! link scssAmpersand Cyan
 highlight! link scssMixinName Yellow
 highlight! link scssFunctionName Yellow
-"}}}
+" }}}
 " less: {{{
 highlight! link lessMixinChar Purple
 highlight! link lessClass Purple
 highlight! link lessVariable Red
 highlight! link lessAmpersandChar Cyan
 highlight! link lessFunction Yellow
-"}}}
+" }}}
 " js: {{{
 highlight! link jsGlobalNodeObjects Red
 highlight! link jsGlobalObjects Yellow
@@ -480,7 +480,7 @@ highlight! link javaScriptOperator Red
 highlight! link javaScriptNull Yellow
 highlight! link javaScriptMessage Cyan
 highlight! link javaScriptGlobal Blue
-"}}}
+" }}}
 " ts: {{{
 highlight! link typescriptLabel Purple
 highlight! link typescriptExceptions Red
@@ -511,12 +511,12 @@ highlight! link jsxOpenPunct Blue
 highlight! link typescriptCastKeyword Red
 highlight! link typescriptCall Blue
 highlight! link typescriptCase Red
-"}}}
+" }}}
 " dart: {{{
 highlight! link dartMetadata Red
 highlight! link dartInterpolation Cyan
 highlight! link dartCoreClasses Blue
-"}}}
+" }}}
 " coffee: {{{
 highlight! link coffeeParens Green
 highlight! link coffeeCurly Fg
@@ -527,7 +527,7 @@ highlight! link coffeeInterpDelim Cyan
 highlight! link coffeeConstant Blue
 highlight! link coffeeOperator Red
 highlight! link coffeeExtendedOp Blue
-"}}}
+" }}}
 " purescript: {{{
 highlight! link purescriptModuleKeyword Purple
 highlight! link purescriptModule Red
@@ -537,30 +537,30 @@ highlight! link purescriptImport Cyan
 highlight! link purescriptAsKeyword Purple
 highlight! link purescriptImportAs Blue
 highlight! link purescriptWhere Purple
-"}}}
+" }}}
 " java: {{{
 highlight! link javaScopeDecl Red
 highlight! link javaTypedef Cyan
 highlight! link javaAnnotation Blue
-"}}}
+" }}}
 " kotlin: {{{
 highlight! link ktStructure Red
 highlight! link ktAnnotation Blue
 highlight! link ktKeyword Blue
 highlight! link ktArrow Blue
-"}}}
+" }}}
 " python: {{{
 highlight! link pythonNone Yellow
 highlight! link pythonExClass Blue
 highlight! link pythonDecorator Red
 highlight! link pythonDottedName Red
-"}}}
+" }}}
 " go: {{{
 highlight! link goPackage Red
 highlight! link goImport Red
 highlight! link goDeclType Blue
 highlight! link goBuiltins Blue
-"}}}
+" }}}
 " rust: {{{
 highlight! link rustModPath Purple
 highlight! link rustAttribute Purple
@@ -571,7 +571,7 @@ highlight! link rustSelf Cyan
 highlight! link rustEnumVariant Blue
 highlight! link rustDerive Purple
 highlight! link rustDeriveTrait Red
-"}}}
+" }}}
 " php: {{{
 highlight! link phpUseClass Blue
 highlight! link phpClass Purple
@@ -581,7 +581,7 @@ highlight! link phpFunction Blue
 highlight! link phpType Purple
 highlight! link phpMethod Yellow
 highlight! link phpMemberSelector Green
-"}}}
+" }}}
 " csharp: {{{
 highlight! link csUnspecifiedStatement Red
 highlight! link csEndColon Fg
@@ -594,7 +594,7 @@ highlight! link csClassType Blue
 highlight! link csAsync Red
 highlight! link csLogicSymbols Blue
 highlight! link csLabel Blue
-"}}}
+" }}}
 " fsharp: {{{
 highlight! link fsharpOpen Purple
 highlight! link fsharpModule Blue
@@ -604,11 +604,11 @@ highlight! link fsharpException Purple
 highlight! link fsharpScript Purple
 highlight! link fsharpAttrib Purple
 highlight! link fsharpAttribute Blue
-"}}}
+" }}}
 " swift: {{{
 highlight! link swiftStructure Purple
 highlight! link swiftAttributes Purple
-"}}}
+" }}}
 " ruby: {{{
 highlight! link rubyModule Purple
 highlight! link rubyModuleName Red
@@ -617,7 +617,7 @@ highlight! link rubyConstant Cyan
 highlight! link rubyAttribute Purple
 highlight! link rubyInstanceVariable Yellow
 highlight! link rubyAccess Purple
-"}}}
+" }}}
 " perl: {{{
 highlight! link perlPackageDecl Blue
 highlight! link perlStatementPackage Red
@@ -632,7 +632,7 @@ highlight! link perlStatementList Green
 highlight! link perlStatementIndirObj Fg
 highlight! link perlMethod Yellow
 highlight! link perlPackageRef Blue
-"}}}
+" }}}
 " haskell: {{{
 highlight! link haskellDeclKeyword Red
 highlight! link haskellType Blue
@@ -640,7 +640,7 @@ highlight! link haskellDecl Purple
 highlight! link haskellPreProc Purple
 highlight! link haskellWhere Red
 highlight! link haskellOperators Purple
-"}}}
+" }}}
 " lua: {{{
 highlight! link luaLocal Red
 highlight! link luaBraces Fg
@@ -649,13 +649,13 @@ highlight! link luaSpecialValue Yellow
 highlight! link luaFuncCall Blue
 highlight! link luaFuncKeyword Purple
 highlight! link luaFuncTable Cyan
-"}}}
+" }}}
 " moonscript: {{{
 highlight! link moonLuaFunc Purple
 highlight! link moonSpecialOp Fg
 highlight! link moonObject Blue
 highlight! link moonInterpDelim Cyan
-"}}}
+" }}}
 " d: {{{
 highlight! link dImport Purple
 highlight! link dStructure Red
@@ -663,7 +663,7 @@ highlight! link dEnum Purple
 highlight! link dScopeDecl Red
 highlight! link dAnnotation Blue
 highlight! link dAttribute Blue
-"}}}
+" }}}
 " scala: {{{
 highlight! link scalaCapitalWord Purple
 highlight! link scalaKeywordModifier Purple
@@ -671,7 +671,7 @@ highlight! link scalaInstanceDeclaration Blue
 highlight! link scalaSpecial Purple
 highlight! link scalaSquareBracketsBrackets Fg
 highlight! link scalaTypeDeclaration Yellow
-"}}}
+" }}}
 " elixir: {{{
 highlight! link elixirModuleDeclaration Purple
 highlight! link elixirInclude Purple
@@ -692,7 +692,7 @@ highlight! link elixirOverridableDefine Purple
 highlight! link elixirExceptionDefine Purple
 highlight! link elixirCallbackDefine Purple
 highlight! link elixirStructDefine Purple
-"}}}
+" }}}
 " ocaml: {{{
 highlight! link ocamlModule Blue
 highlight! link ocamlEqual Blue
@@ -706,34 +706,34 @@ highlight! link ocamlWith Blue
 highlight! link ocamlModParam1 Green
 highlight! link ocamlModPreRHS Fg
 highlight! link ocamlConstructor Green
-"}}}
+" }}}
 " clojure: {{{
 highlight! link clojureDefine Purple
 highlight! link clojureQuote Fg
 highlight! link clojureSpecial Purple
 highlight! link clojureDispatch Yellow
 highlight! link clojureVariable Green
-"}}}
+" }}}
 " erlang: {{{
 highlight! link erlangType Purple
 highlight! link erlangLocalFuncCall Blue
 highlight! link erlangLocalFuncRef Yellow
 highlight! link erlangGlobalFuncCall Purple
-"}}}
+" }}}
 " julia: {{{
 highlight! link juliaBlKeyword Purple
-"}}}
+" }}}
 " lisp: {{{
 highlight! link lispDecl Red
 highlight! link lispKey Blue
-"}}}
+" }}}
 " sh: {{{
 highlight! link shCommandSub Red
 highlight! link shDerefSimple Blue
 highlight! link shDerefVar Yellow
 highlight! link shQuote Green
 highlight! link shFunction Red
-"}}}
+" }}}
 " zsh: {{{
 highlight! link zshOptStart Purple
 highlight! link zshOption Blue
@@ -741,10 +741,10 @@ highlight! link zshSubst Yellow
 highlight! link zshFunction Purple
 highlight! link zshDeref Blue
 highlight! link zshTypes Purple
-"}}}
+" }}}
 " fish: {{{
 highlight! link fishIdentifier Blue
-"}}}
+" }}}
 " vim: {{{
 highlight! link vimFunction Blue
 highlight! link vimLet Red
@@ -755,16 +755,16 @@ highlight! link vimMapRhs Green
 highlight! link vimNotation Purple
 highlight! link vimAugroupKey Red
 highlight! link vimAutoCmd Blue
-"}}}
+" }}}
 " json: {{{
 highlight! link jsonKeyword Blue
-"}}}
+" }}}
 " yaml: {{{
 highlight! link yamlKey Blue
-"}}}
+" }}}
 " toml: {{{
 highlight! link tomlKey Blue
-"}}}
+" }}}
 " diff: {{{
 highlight! link diffAdded Green
 highlight! link diffRemoved Red
@@ -774,7 +774,7 @@ highlight! link diffNewFile Purple
 highlight! link diffFile Green
 highlight! link diffLine Grey
 highlight! link diffIndexLine Cyan
-"}}}
+" }}}
 " help: {{{
 call s:HL('helpURL', s:palette.cyan, s:palette.none, 'underline')
 call s:HL('helpNote', s:palette.red, s:palette.none, 'bold')
@@ -785,7 +785,7 @@ highlight! link helpExample Green
 highlight! link helpCommand Purple
 highlight! link helpHeadline Purple
 highlight! link helpHeader Blue
-"}}}
+" }}}
 " }}}
 " Plugins: {{{
 " vim-plug: {{{
@@ -804,7 +804,7 @@ highlight! link plugStar Purple
 highlight! link plugUpdate Cyan
 highlight! link plugDeleted Grey
 highlight! link plugEdge Purple
-"}}}
+" }}}
 " EasyMotion: {{{
 highlight! link EasyMotionTarget Search
 highlight! link EasyMotionShade Grey
@@ -861,7 +861,7 @@ highlight! link Lf_hl_cursorline Fg
 highlight! link Lf_hl_selection DiffAdd
 highlight! link Lf_hl_rgHighlight Visual
 highlight! link Lf_hl_gtagsHighlight Visual
-"}}}
+" }}}
 " FZF: {{{
 let g:fzf_colors = {
       \ 'fg': ['fg', 'Normal'],
@@ -877,14 +877,14 @@ let g:fzf_colors = {
       \ 'spinner': ['fg', 'Yellow'],
       \ 'header': ['fg', 'Blue']
       \ }
-"}}}
+" }}}
 " Denite{{{
 call s:HL('deniteMatchedChar', s:palette.green, s:palette.none, 'bold')
 call s:HL('deniteMatchedRange', s:palette.green, s:palette.none, 'bold,underline')
 call s:HL('deniteInput', s:palette.green, s:palette.bg2, 'bold')
 call s:HL('deniteStatusLineNumber', s:palette.purple, s:palette.bg2)
 call s:HL('deniteStatusLinePath', s:palette.fg, s:palette.bg2)
-"}}}
+" }}}
 " CtrlP: {{{
 call s:HL('CtrlPMatch', s:palette.green, s:palette.none, 'bold')
 call s:HL('CtrlPPrtBase', s:palette.bg_grey, s:palette.none)
@@ -894,10 +894,10 @@ call s:HL('CtrlPMode2', s:palette.bg2, s:palette.blue, 'bold')
 call s:HL('CtrlPStats', s:palette.grey, s:palette.bg2, 'bold')
 highlight! link CtrlPNoEntries Red
 highlight! link CtrlPPrtCursor Blue
-"}}}
+" }}}
 " Denite: {{{
 highlight! link deniteSelectedLine Green
-"}}}
+" }}}
 " Startify: {{{
 highlight! link StartifyBracket Grey
 highlight! link StartifyFile Fg
@@ -950,7 +950,7 @@ highlight! link TagbarScope Red
 highlight! link TagbarNestedKind Blue
 highlight! link TagbarVisibilityPrivate Red
 highlight! link TagbarVisibilityPublic Blue
-"}}}
+" }}}
 " Vista: {{{
 highlight! link VistaBracket Grey
 highlight! link VistaChildrenNr Yellow
@@ -960,7 +960,7 @@ highlight! link VistaPrefix Grey
 highlight! link VistaColon Green
 highlight! link VistaIcon Purple
 highlight! link VistaLineNr Fg
-"}}}
+" }}}
 " Syntastic: {{{
 highlight! link SyntasticError ALEError
 highlight! link SyntasticWarning ALEWarning
@@ -1048,7 +1048,7 @@ highlight! link CocExplorerFileSize Blue
 highlight! link CocExplorerTimeAccessed Cyan
 highlight! link CocExplorerTimeCreated Cyan
 highlight! link CocExplorerTimeModified Cyan
-"}}}
+" }}}
 " UndoTree: {{{
 call s:HL('UndotreeSavedBig', s:palette.red, s:palette.none, 'bold')
 highlight! link UndotreeNode Blue
@@ -1060,16 +1060,16 @@ highlight! link UndotreeTimeStamp Grey
 highlight! link UndotreeHead Purple
 highlight! link UndotreeBranch Cyan
 highlight! link UndotreeSavedSmall Red
-"}}}
+" }}}
 " vim-matchup{{{
 call s:HL('MatchParenCur', s:palette.none, s:palette.none, 'bold')
 call s:HL('MatchWord', s:palette.none, s:palette.none, 'underline')
 call s:HL('MatchWordCur', s:palette.none, s:palette.none, 'underline')
-"}}}
+" }}}
 " Quick Scope {{{
 call s:HL('QuickScopePrimary', s:palette.green, s:palette.none, 'underline')
 call s:HL('QuickScopeSecondary', s:palette.blue, s:palette.none, 'underline')
-"}}}
+" }}}
 " QuickMenu: {{{
 highlight! link QuickmenuOption Green
 highlight! link QuickmenuNumber Red
@@ -1077,13 +1077,13 @@ highlight! link QuickmenuBracket Grey
 highlight! link QuickmenuHelp Blue
 highlight! link QuickmenuSpecial Grey
 highlight! link QuickmenuHeader Purple
-"}}}
+" }}}
 " WhichKey: {{{
 highlight! link WhichKey Red
 highlight! link WhichKeySeperator Green
 highlight! link WhichKeyGroup Purple
 highlight! link WhichKeyDesc Blue
-"}}}
+" }}}
 " Vim Multiple Cursors: {{{
 highlight! link multiple_cursors_cursor Cursor
 highlight! link multiple_cursors_visual Visual
@@ -1093,19 +1093,19 @@ let g:VM_Mono_hl = 'Cursor'
 let g:VM_Extend_hl = 'Visual'
 let g:VM_Cursor_hl = 'Cursor'
 let g:VM_Insert_hl = 'Cursor'
-"}}}
+" }}}
 " Vim Current Word: {{{
 highlight! link CurrentWord CocHighlightText
 highlight! link CurrentWordTwins CocHighlightText
-"}}}
+" }}}
 " Vim Illuminate: {{{
 highlight! link illuminatedWord CocHighlightText
-"}}}
+" }}}
 " Vim Cursor Word: {{{
 let g:cursorword_highlight = 0
 highlight! link CursorWord0 CocHighlightText
 highlight! link CursorWord1 CocHighlightText
-"}}}
+" }}}
 " }}}
 " Terminal: {{{
 if (has('termguicolors') && &termguicolors) || has('gui_running')
@@ -1147,4 +1147,4 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
 endif
 " }}}
 
-" vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker fmr=: {{{,}}}:
+" vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker fmr={{{,}}}:
