@@ -9,32 +9,62 @@
 "{{{Palette
 let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
 
-if &background ==# 'dark'
-    let s:foreground = [ '#bcc4d1', 250 ]
-    let s:background = [ '#262729', 235 ]
-    let s:background_alt = [ '#2c2e34', 236 ]
-    let s:background_grey = [ '#3b3e48', 238 ]
-    let s:red_sel = [ '#f07e7e', 203 ]
-    let s:purple_sel = [ '#d898eb', 176 ]
-    let s:green_sel = [ '#a2be8a', 107 ]
-    let s:blue_sel = [ '#72b1e5', 110 ]
-    let s:red_fg = [ '#f07e7e', 203 ]
-    let s:purple_fg = [ '#d898eb', 176 ]
-    let s:green_fg = [ '#a3bc8d', 107 ]
-    let s:blue_fg = [ '#77b3e4', 110 ]
-else
-    let s:foreground = [ '#4b505b', 241 ]
-    let s:background = [ '#fafafa', 231 ]
-    let s:background_alt = [ '#eef1f4', 255 ]
-    let s:background_grey = [ '#dde2e7', 253 ]
-    let s:red_sel = [ '#e17373', 167 ]
-    let s:purple_sel = [ '#bf75d6', 134 ]
-    let s:green_sel = [ '#76af6f', 107 ]
-    let s:blue_sel = [ '#6996e0', 68 ]
-    let s:red_fg = [ '#d15f5f', 167 ]
-    let s:purple_fg = [ '#b05ccc', 134 ]
-    let s:green_fg = [ '#608e32', 107 ]
-    let s:blue_fg = [ '#5079be', 68 ]
+if get(g:, 'edge_style', 'default') ==# 'default'
+    if &background ==# 'dark'
+        let s:foreground = [ '#bcc4d1', 250 ]
+        let s:background = [ '#262729', 235 ]
+        let s:background_alt = [ '#2c2e34', 236 ]
+        let s:background_grey = [ '#3b3e48', 238 ]
+        let s:red_sel = [ '#f07e7e', 203 ]
+        let s:purple_sel = [ '#d898eb', 176 ]
+        let s:green_sel = [ '#a2be8a', 107 ]
+        let s:blue_sel = [ '#72b1e5', 110 ]
+        let s:red_fg = [ '#f07e7e', 203 ]
+        let s:purple_fg = [ '#d898eb', 176 ]
+        let s:green_fg = [ '#a3bc8d', 107 ]
+        let s:blue_fg = [ '#77b3e4', 110 ]
+    else
+        let s:foreground = [ '#4b505b', 241 ]
+        let s:background = [ '#fafafa', 231 ]
+        let s:background_alt = [ '#eef1f4', 255 ]
+        let s:background_grey = [ '#dde2e7', 253 ]
+        let s:red_sel = [ '#e17373', 167 ]
+        let s:purple_sel = [ '#bf75d6', 134 ]
+        let s:green_sel = [ '#76af6f', 107 ]
+        let s:blue_sel = [ '#6996e0', 68 ]
+        let s:red_fg = [ '#d15f5f', 167 ]
+        let s:purple_fg = [ '#b05ccc', 134 ]
+        let s:green_fg = [ '#608e32', 107 ]
+        let s:blue_fg = [ '#5079be', 68 ]
+    endif
+elseif get(g:, 'edge_style', 'default') ==# 'neon'
+    if &background ==# 'dark'
+        let s:foreground = [ '#bcc3d2', 250 ]
+        let s:background = [ '#23252e', 235 ]
+        let s:background_alt = [ '#2b2d3a', 236 ]
+        let s:background_grey = [ '#393e53', 238 ]
+        let s:red_sel = [ '#f07e7e', 203 ]
+        let s:purple_sel = [ '#d898eb', 176 ]
+        let s:green_sel = [ '#a2be8a', 107 ]
+        let s:blue_sel = [ '#7eb4e7', 110 ]
+        let s:red_fg = [ '#f07e7e', 203 ]
+        let s:purple_fg = [ '#d898eb', 176 ]
+        let s:green_fg = [ '#a4be8e', 107 ]
+        let s:blue_fg = [ '#7eb4e7', 110 ]
+    else
+        let s:foreground = [ '#4b505b', 241 ]
+        let s:background = [ '#fafafa', 231 ]
+        let s:background_alt = [ '#eef2f6', 255 ]
+        let s:background_grey = [ '#dde4ea', 253 ]
+        let s:red_sel = [ '#e17373', 167 ]
+        let s:purple_sel = [ '#bf75d6', 134 ]
+        let s:green_sel = [ '#76af6f', 107 ]
+        let s:blue_sel = [ '#6996e0', 68 ]
+        let s:red_fg = [ '#d15f5f', 167 ]
+        let s:purple_fg = [ '#b05ccc', 134 ]
+        let s:green_fg = [ '#608e32', 107 ]
+        let s:blue_fg = [ '#5079be', 68 ]
+    endif
 endif
 "}}}
 
