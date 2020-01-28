@@ -97,7 +97,7 @@ To apply it without reloading:
 - `g:edge_transparent_background`: Set to `1` to enable transparent background.
   - Available values: `0`, `1`
   - Default value: `0`
-- `g:edge_popup_menu_selection_background`: Control the background color of `PmenuSel` and `WildMenu` .
+- `g:edge_menu_selection_background`: Control the background color of `PmenuSel` and `WildMenu` .
   - Available values: `'blue'`, `'green'`, `'purple'`
   - Default value: `'blue'`
 - `g:edge_disable_italic_comment`: Set to `1` to disable italic in `Comment` .

@@ -20,7 +20,7 @@ let g:colors_name = 'edge'
 let s:configuration = {}
 let s:configuration.style = get(g:, 'edge_style', 'default')
 let s:configuration.transparent_background = get(g:, 'edge_transparent_background', 0)
-let s:configuration.popup_menu_selection_background = get(g:, 'edge_popup_menu_selection_background', 'blue')
+let s:configuration.menu_selection_background = get(g:, 'edge_menu_selection_background', 'blue')
 let s:configuration.disable_italic_comment = get(g:, 'edge_disable_italic_comment', 0)
 let s:configuration.current_word = get(g:, 'edge_current_word', get(g:, 'edge_transparent_background', 0) == 0 ? 'grey background' : 'bold')
 " }}}
@@ -269,13 +269,13 @@ call s:HL('MatchParen', s:palette.none, s:palette.bg5)
 call s:HL('NonText', s:palette.grey, s:palette.none)
 call s:HL('Pmenu', s:palette.fg, s:palette.bg3)
 call s:HL('PmenuSbar', s:palette.none, s:palette.bg3)
-if s:configuration.popup_menu_selection_background ==# 'blue'
+if s:configuration.menu_selection_background ==# 'blue'
   call s:HL('PmenuSel', s:palette.bg0, s:palette.bg_blue)
   call s:HL('WildMenu', s:palette.bg0, s:palette.bg_blue)
-elseif s:configuration.popup_menu_selection_background ==# 'green'
+elseif s:configuration.menu_selection_background ==# 'green'
   call s:HL('PmenuSel', s:palette.bg0, s:palette.bg_green)
   call s:HL('WildMenu', s:palette.bg0, s:palette.bg_green)
-elseif s:configuration.popup_menu_selection_background ==# 'purple'
+elseif s:configuration.menu_selection_background ==# 'purple'
   call s:HL('PmenuSel', s:palette.bg0, s:palette.bg_purple)
   call s:HL('WildMenu', s:palette.bg0, s:palette.bg_purple)
 endif
