@@ -7,11 +7,11 @@
 #define black #262729
 #define grey #88909f
 #define red #f27a7a
-#define green #a3bc8d
-#define cyan #78b7b1
-#define yellow #d1b277
-#define blue #7ab3e1
-#define magenta #d597e7
+#define green #a0bf88
+#define cyan #70bab9
+#define yellow #d9b575
+#define blue #75b6e8
+#define magenta #d798e9
 
 *.foreground:   white
 *.background:   black
