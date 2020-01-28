@@ -1,7 +1,7 @@
 |         |                                                        𝐃𝐚𝐫𝐤                                                        |                                                        𝐋𝐢𝐠𝐡𝐭                                                        |
 | :-----: | :----------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------: |
-| 𝐝𝐞𝐟𝐚𝐮𝐥𝐭 | ![edge-dark](https://user-images.githubusercontent.com/37491630/73230694-0c81c900-4176-11ea-824d-a57e811535e1.png) | ![edge-light](https://user-images.githubusercontent.com/37491630/73230696-0e4b8c80-4176-11ea-857b-0be0cc0405e6.png) |
-|  𝐧𝐞𝐨𝐧   | ![neon-dark](https://user-images.githubusercontent.com/37491630/73230684-07bd1500-4176-11ea-8234-5469b8d0640c.png) | ![neon-light](https://user-images.githubusercontent.com/37491630/73230686-0986d880-4176-11ea-890f-b77971859f87.png) |
+| 𝐝𝐞𝐟𝐚𝐮𝐥𝐭 | ![edge-dark](https://user-images.githubusercontent.com/37491630/73241142-149f3000-4199-11ea-8d28-d274d3e329e5.png) | ![edge-light](https://user-images.githubusercontent.com/37491630/73241144-1668f380-4199-11ea-9b57-fee51b4944f9.png) |
+|  𝐧𝐞𝐨𝐧   | ![neon-dark](https://user-images.githubusercontent.com/37491630/73241147-179a2080-4199-11ea-8e49-b4436b1f2e41.png) | ![neon-light](https://user-images.githubusercontent.com/37491630/73241150-18cb4d80-4199-11ea-876b-901d6e6873d0.png) |
 
 # Installation
 
