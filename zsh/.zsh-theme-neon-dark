@@ -56,8 +56,8 @@ fi
     p=$ins
   fi
   if [[ "$ICE_AGE_PURE_POWER_TRUE_COLOR" == "true" ]]; then
-    local ok="%F{#d898eb}${p}%f"
-    local err="%F{#f07e7e}${p}%f"
+    local ok="%F{#d597e7}${p}%f"
+    local err="%F{#f27a7a}${p}%f"
   else
     local ok="%F{$(_pp_s 005 176)}${p}%f"
     local err="%F{$(_pp_s 001 203)}${p}%f"
@@ -102,7 +102,7 @@ fi
   if [[ "$ICE_AGE_PURE_POWER_TRUE_COLOR" == "true" ]]; then
     typeset -g POWERLEVEL9K_DIR_{ETC,DEFAULT}_FOREGROUND='#7bbbb5'
     typeset -g POWERLEVEL9K_DIR_{HOME,HOME_SUBFOLDER}_FOREGROUND='#a4be8e'
-    typeset -g POWERLEVEL9K_DIR_NOT_WRITABLE_FOREGROUND='#f07e7e'
+    typeset -g POWERLEVEL9K_DIR_NOT_WRITABLE_FOREGROUND='#f27a7a'
   else
     typeset -g POWERLEVEL9K_DIR_{ETC,DEFAULT}_FOREGROUND=$(_pp_c 006 72)
     typeset -g POWERLEVEL9K_DIR_{HOME,HOME_SUBFOLDER}_FOREGROUND=$(_pp_c 002 107)
@@ -114,7 +114,7 @@ fi
   if [[ "$ICE_AGE_PURE_POWER_TRUE_COLOR" == "true" ]]; then
     typeset -g POWERLEVEL9K_VCS_CLEAN_FOREGROUND='#7eb4e7'
     typeset -g POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='#d0b073'
-    typeset -g POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='#d898eb'
+    typeset -g POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='#d597e7'
     typeset -g POWERLEVEL9K_VCS_LOADING_FOREGROUND='#88909f'
   else
     typeset -g POWERLEVEL9K_VCS_CLEAN_FOREGROUND=$(_pp_c 004 110)
@@ -161,7 +161,7 @@ fi
   typeset -g POWERLEVEL9K_STATUS_OK=false
   typeset -g POWERLEVEL9K_STATUS_ERROR_BACKGROUND=none
   if [[ "$ICE_AGE_PURE_POWER_TRUE_COLOR" == "true" ]]; then
-    typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND='#f07e7e'
+    typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND='#f27a7a'
   else
     typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND=$(_pp_c 001 203)
   fi
@@ -179,7 +179,7 @@ fi
   typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,ROOT,REMOTE_SUDO,REMOTE,SUDO}_BACKGROUND=none
   if [[ "$ICE_AGE_PURE_POWER_TRUE_COLOR" == "true" ]]; then
     typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,REMOTE_SUDO,REMOTE,SUDO}_FOREGROUND='#7eb4e7'
-    typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND='#f07e7e'
+    typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND='#f27a7a'
   else
     typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,REMOTE_SUDO,REMOTE,SUDO}_FOREGROUND=$(_pp_c 004 110)
     typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND=$(_pp_c 001 203)
