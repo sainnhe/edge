@@ -22,6 +22,7 @@ let s:configuration.style = get(g:, 'edge_style', 'default')
 let s:configuration.transparent_background = get(g:, 'edge_transparent_background', 0)
 let s:configuration.menu_selection_background = get(g:, 'edge_menu_selection_background', 'blue')
 let s:configuration.disable_italic_comment = get(g:, 'edge_disable_italic_comment', 0)
+let s:configuration.enable_italic = get(g:, 'edge_enable_italic', 0)
 let s:configuration.current_word = get(g:, 'edge_current_word', get(g:, 'edge_transparent_background', 0) == 0 ? 'grey background' : 'bold')
 " }}}
 " Palette: {{{
@@ -302,14 +303,31 @@ call s:HL('QuickFixLine', s:palette.blue, s:palette.bg2)
 call s:HL('Debug', s:palette.yellow, s:palette.none)
 " }}}
 " Syntax: {{{
-call s:HL('PreProc', s:palette.red, s:palette.none)
-call s:HL('Include', s:palette.red, s:palette.none)
+if s:configuration.enable_italic
+  call s:HL('PreProc', s:palette.red, s:palette.none, 'italic')
+  call s:HL('PreCondit', s:palette.purple, s:palette.none, 'italic')
+  call s:HL('Include', s:palette.red, s:palette.none, 'italic')
+  call s:HL('Define', s:palette.red, s:palette.none, 'italic')
+  call s:HL('Conditional', s:palette.purple, s:palette.none, 'italic')
+  call s:HL('Repeat', s:palette.purple, s:palette.none, 'italic')
+  call s:HL('Keyword', s:palette.red, s:palette.none, 'italic')
+  call s:HL('Typedef', s:palette.red, s:palette.none, 'italic')
+  call s:HL('Statement', s:palette.purple, s:palette.none, 'italic')
+  call s:HL('Exception', s:palette.red, s:palette.none, 'italic')
+else
+  call s:HL('PreProc', s:palette.red, s:palette.none)
+  call s:HL('PreCondit', s:palette.purple, s:palette.none)
+  call s:HL('Include', s:palette.red, s:palette.none)
+  call s:HL('Define', s:palette.red, s:palette.none)
+  call s:HL('Conditional', s:palette.purple, s:palette.none)
+  call s:HL('Repeat', s:palette.purple, s:palette.none)
+  call s:HL('Keyword', s:palette.red, s:palette.none)
+  call s:HL('Typedef', s:palette.red, s:palette.none)
+  call s:HL('Statement', s:palette.purple, s:palette.none)
+  call s:HL('Exception', s:palette.red, s:palette.none)
+endif
 call s:HL('Macro', s:palette.red, s:palette.none)
 call s:HL('Error', s:palette.red, s:palette.none)
-call s:HL('Keyword', s:palette.red, s:palette.none)
-call s:HL('Define', s:palette.red, s:palette.none)
-call s:HL('Typedef', s:palette.red, s:palette.none)
-call s:HL('Exception', s:palette.red, s:palette.none)
 call s:HL('Label', s:palette.red, s:palette.none)
 call s:HL('Special', s:palette.yellow, s:palette.none)
 call s:HL('SpecialChar', s:palette.yellow, s:palette.none)
@@ -326,11 +344,7 @@ call s:HL('Function', s:palette.blue, s:palette.none)
 call s:HL('Operator', s:palette.blue, s:palette.none)
 call s:HL('SpecialKey', s:palette.blue, s:palette.none)
 call s:HL('Title', s:palette.purple, s:palette.none, 'bold')
-call s:HL('Conditional', s:palette.purple, s:palette.none)
-call s:HL('PreCondit', s:palette.purple, s:palette.none)
-call s:HL('Repeat', s:palette.purple, s:palette.none)
 call s:HL('StorageClass', s:palette.purple, s:palette.none)
-call s:HL('Statement', s:palette.purple, s:palette.none)
 call s:HL('Tag', s:palette.purple, s:palette.none)
 call s:HL('Delimiter', s:palette.fg, s:palette.none)
 if s:configuration.disable_italic_comment
@@ -348,11 +362,18 @@ call s:HL('Underlined', s:palette.none, s:palette.none, 'underline')
 " Predefined Highlight Groups: {{{
 call s:HL('Fg', s:palette.fg, s:palette.none)
 call s:HL('Grey', s:palette.grey, s:palette.none)
-call s:HL('Red', s:palette.red, s:palette.none)
 call s:HL('Yellow', s:palette.yellow, s:palette.none)
 call s:HL('Green', s:palette.green, s:palette.none)
 call s:HL('Cyan', s:palette.cyan, s:palette.none)
 call s:HL('Blue', s:palette.blue, s:palette.none)
+if s:configuration.enable_italic
+  call s:HL('RedItalic', s:palette.red, s:palette.none, 'italic')
+  call s:HL('PurpleItalic', s:palette.purple, s:palette.none, 'italic')
+else
+  call s:HL('RedItalic', s:palette.red, s:palette.none)
+  call s:HL('PurpleItalic', s:palette.purple, s:palette.none)
+endif
+call s:HL('Red', s:palette.red, s:palette.none)
 call s:HL('Purple', s:palette.purple, s:palette.none)
 " }}}
 " }}}
@@ -420,29 +441,32 @@ call s:HL('htmlUnderline', s:palette.none, s:palette.none, 'underline')
 call s:HL('htmlUnderlineItalic', s:palette.none, s:palette.none, 'underline,italic')
 call s:HL('htmlItalic', s:palette.none, s:palette.none, 'italic')
 highlight! link htmlTag Purple
+highlight! link htmlTagN PurpleItalic
+highlight! link htmlTagName PurpleItalic
+highlight! link htmlSpecialTagName RedItalic
 highlight! link htmlArg Blue
 highlight! link htmlEndTag Blue
 " }}}
 " xml: {{{
 highlight! link xmlTag Purple
-highlight! link xmlTagName Purple
+highlight! link xmlTagName PurpleItalic
 highlight! link xmlAttrib Blue
 " }}}
 " css: {{{
 highlight! link cssFunctionName Yellow
-highlight! link cssClassName Purple
+highlight! link cssClassName PurpleItalic
 highlight! link cssClassNameDot Purple
 highlight! link cssAttrComma Fg
-highlight! link cssTagName Purple
+highlight! link cssTagName PurpleItalic
 highlight! link cssBraces Fg
 highlight! link cssSelectorOp Fg
 highlight! link cssVendor Grey
 highlight! link cssSelectorOp2 Blue
-highlight! link cssImportant Red
+highlight! link cssImportant RedItalic
 " }}}
 " sass: {{{
 highlight! link sassMixing Green
-highlight! link sassClass Purple
+highlight! link sassClass PurpleItalic
 highlight! link sassClassChar Purple
 highlight! link sassMixin Blue
 highlight! link sassAmpersand Cyan
@@ -450,8 +474,8 @@ highlight! link sassFunction Yellow
 " }}}
 " scss: {{{
 highlight! link scssSelectorChar Purple
-highlight! link scssSelectorName Purple
-highlight! link scssForKeyword Red
+highlight! link scssSelectorName PurpleItalic
+highlight! link scssForKeyword RedItalic
 highlight! link scssDefault Red
 highlight! link scssAmpersand Cyan
 highlight! link scssMixinName Yellow
@@ -459,47 +483,47 @@ highlight! link scssFunctionName Yellow
 " }}}
 " less: {{{
 highlight! link lessMixinChar Purple
-highlight! link lessClass Purple
+highlight! link lessClass PurpleItalic
 highlight! link lessVariable Red
 highlight! link lessAmpersandChar Cyan
 highlight! link lessFunction Yellow
 " }}}
 " js: {{{
-highlight! link jsGlobalNodeObjects Red
+highlight! link jsGlobalNodeObjects RedItalic
 highlight! link jsGlobalObjects Yellow
 highlight! link jsFunction Blue
-highlight! link jsObjectMethodType Red
-highlight! link jsOperatorKeyword Red
+highlight! link jsOperatorKeyword RedItalic
 highlight! link jsThis Cyan
 highlight! link jsParensError Red
 highlight! link jsArrowFunction Blue
 highlight! link jsTaggedTemplate Cyan
-highlight! link javaScriptReserved Purple
+highlight! link javaScriptReserved PurpleItalic
 highlight! link javaScriptBraces Fg
-highlight! link javaScriptOperator Red
+highlight! link javaScriptOperator RedItalic
 highlight! link javaScriptNull Yellow
 highlight! link javaScriptMessage Cyan
 highlight! link javaScriptGlobal Blue
 " }}}
 " ts: {{{
-highlight! link typescriptLabel Purple
-highlight! link typescriptExceptions Red
+highlight! link typescriptLabel PurpleItalic
+highlight! link typescriptExceptions RedItalic
 highlight! link typescriptBraces Fg
 highlight! link typescriptEndColons Fg
 highlight! link typescriptParens Fg
 highlight! link typescriptDocTags Purple
 highlight! link typescriptLogicSymbols Blue
-highlight! link typescriptImport Red
+highlight! link typescriptImport PurpleItalic
 highlight! link typescriptBOM Blue
 highlight! link typescriptVariableDeclaration Cyan
-highlight! link typescriptVariable Red
-highlight! link typescriptExport Purple
+highlight! link typescriptVariable RedItalic
+highlight! link typescriptExport PurpleItalic
 highlight! link typescriptAliasDeclaration Yellow
 highlight! link typescriptClassName Blue
-highlight! link typescriptAccessibilityModifier Purple
-highlight! link typescriptOperator Red
+highlight! link typescriptAccessibilityModifier PurpleItalic
+highlight! link typescriptOperator RedItalic
+highlight! link typescriptEnumKeyword RedItalic
 highlight! link typescriptArrowFunc Blue
-highlight! link typescriptMethodAccessor Red
+highlight! link typescriptMethodAccessor RedItalic
 highlight! link typescriptMember Blue
 highlight! link typescriptTypeReference Cyan
 highlight! link typescriptDefault Yellow
@@ -508,12 +532,12 @@ highlight! link typescriptArrowFuncArg Cyan
 highlight! link typescriptParamImpl Green
 highlight! link typescriptFuncComma Fg
 highlight! link jsxOpenPunct Blue
-highlight! link typescriptCastKeyword Red
+highlight! link typescriptCastKeyword RedItalic
 highlight! link typescriptCall Blue
-highlight! link typescriptCase Red
+highlight! link typescriptCase RedItalic
 " }}}
 " dart: {{{
-highlight! link dartMetadata Red
+highlight! link dartMetadata RedItalic
 highlight! link dartInterpolation Cyan
 highlight! link dartCoreClasses Blue
 " }}}
@@ -525,26 +549,26 @@ highlight! link coffeeSpecialOp Fg
 highlight! link coffeeInterp Cyan
 highlight! link coffeeInterpDelim Cyan
 highlight! link coffeeConstant Blue
-highlight! link coffeeOperator Red
+highlight! link coffeeOperator RedItalic
 highlight! link coffeeExtendedOp Blue
 " }}}
 " purescript: {{{
-highlight! link purescriptModuleKeyword Purple
-highlight! link purescriptModule Red
+highlight! link purescriptModuleKeyword PurpleItalic
+highlight! link purescriptModule RedItalic
 highlight! link purescriptModuleName Red
 highlight! link purescriptClassName Blue
 highlight! link purescriptImport Cyan
 highlight! link purescriptAsKeyword Purple
 highlight! link purescriptImportAs Blue
-highlight! link purescriptWhere Purple
+highlight! link purescriptWhere PurpleItalic
 " }}}
 " java: {{{
-highlight! link javaScopeDecl Red
+highlight! link javaScopeDecl RedItalic
 highlight! link javaTypedef Cyan
 highlight! link javaAnnotation Blue
 " }}}
 " kotlin: {{{
-highlight! link ktStructure Red
+highlight! link ktStructure RedItalic
 highlight! link ktAnnotation Blue
 highlight! link ktKeyword Blue
 highlight! link ktArrow Blue
@@ -552,155 +576,155 @@ highlight! link ktArrow Blue
 " python: {{{
 highlight! link pythonNone Yellow
 highlight! link pythonExClass Blue
-highlight! link pythonDecorator Red
-highlight! link pythonDottedName Red
+highlight! link pythonDecorator RedItalic
+highlight! link pythonDottedName RedItalic
 " }}}
 " go: {{{
-highlight! link goPackage Red
-highlight! link goImport Red
+highlight! link goPackage RedItalic
+highlight! link goImport RedItalic
 highlight! link goDeclType Blue
 highlight! link goBuiltins Blue
 " }}}
 " rust: {{{
 highlight! link rustModPath Purple
-highlight! link rustAttribute Purple
+highlight! link rustAttribute PurpleItalic
 highlight! link rustPubScopeCrate Green
-highlight! link rustStructure Purple
+highlight! link rustStructure PurpleItalic
 highlight! link rustSigil Blue
 highlight! link rustSelf Cyan
 highlight! link rustEnumVariant Blue
 highlight! link rustDerive Purple
-highlight! link rustDeriveTrait Red
+highlight! link rustDeriveTrait RedItalic
 " }}}
 " php: {{{
 highlight! link phpUseClass Blue
-highlight! link phpClass Purple
+highlight! link phpClass PurpleItalic
 highlight! link phpClassExtends Blue
 highlight! link phpParent Fg
 highlight! link phpFunction Blue
-highlight! link phpType Purple
+highlight! link phpType PurpleItalic
 highlight! link phpMethod Yellow
 highlight! link phpMemberSelector Green
 " }}}
 " csharp: {{{
-highlight! link csUnspecifiedStatement Red
+highlight! link csUnspecifiedStatement RedItalic
 highlight! link csEndColon Fg
 highlight! link csBraces Fg
 highlight! link csParens Fg
 highlight! link csClass Red
-highlight! link csType Red
+highlight! link csType RedItalic
 highlight! link csNewType Yellow
 highlight! link csClassType Blue
-highlight! link csAsync Red
+highlight! link csAsync RedItalic
 highlight! link csLogicSymbols Blue
 highlight! link csLabel Blue
 " }}}
 " fsharp: {{{
-highlight! link fsharpOpen Purple
+highlight! link fsharpOpen PurpleItalic
 highlight! link fsharpModule Blue
 highlight! link fsharpSymbol Cyan
 highlight! link fsharpCoreClass Blue
-highlight! link fsharpException Purple
-highlight! link fsharpScript Purple
-highlight! link fsharpAttrib Purple
+highlight! link fsharpException PurpleItalic
+highlight! link fsharpScript PurpleItalic
+highlight! link fsharpAttrib PurpleItalic
 highlight! link fsharpAttribute Blue
 " }}}
 " swift: {{{
-highlight! link swiftStructure Purple
-highlight! link swiftAttributes Purple
+highlight! link swiftStructure PurpleItalic
+highlight! link swiftAttributes PurpleItalic
 " }}}
 " ruby: {{{
-highlight! link rubyModule Purple
+highlight! link rubyModule PurpleItalic
 highlight! link rubyModuleName Red
 highlight! link rubyClassName Blue
 highlight! link rubyConstant Cyan
-highlight! link rubyAttribute Purple
+highlight! link rubyAttribute PurpleItalic
 highlight! link rubyInstanceVariable Yellow
-highlight! link rubyAccess Purple
+highlight! link rubyAccess PurpleItalic
 " }}}
 " perl: {{{
 highlight! link perlPackageDecl Blue
-highlight! link perlStatementPackage Red
-highlight! link perlFunction Purple
-highlight! link perlStatementInclude Red
-highlight! link podCommand Red
+highlight! link perlStatementPackage RedItalic
+highlight! link perlFunction PurpleItalic
+highlight! link perlStatementInclude RedItalic
+highlight! link podCommand RedItalic
 highlight! link podVerbatimLine Green
 highlight! link podCmdText Purple
-highlight! link perlStatementStorage Red
-highlight! link perlStatementHash Red
+highlight! link perlStatementStorage RedItalic
+highlight! link perlStatementHash RedItalic
 highlight! link perlStatementList Green
 highlight! link perlStatementIndirObj Fg
 highlight! link perlMethod Yellow
 highlight! link perlPackageRef Blue
 " }}}
 " haskell: {{{
-highlight! link haskellDeclKeyword Red
+highlight! link haskellDeclKeyword RedItalic
 highlight! link haskellType Blue
-highlight! link haskellDecl Purple
-highlight! link haskellPreProc Purple
-highlight! link haskellWhere Red
-highlight! link haskellOperators Purple
+highlight! link haskellDecl PurpleItalic
+highlight! link haskellPreProc PurpleItalic
+highlight! link haskellWhere RedItalic
+highlight! link haskellOperators PurpleItalic
 " }}}
 " lua: {{{
-highlight! link luaLocal Red
+highlight! link luaLocal RedItalic
 highlight! link luaBraces Fg
 highlight! link luaSpecialTable Blue
 highlight! link luaSpecialValue Yellow
 highlight! link luaFuncCall Blue
-highlight! link luaFuncKeyword Purple
+highlight! link luaFuncKeyword PurpleItalic
 highlight! link luaFuncTable Cyan
 " }}}
 " moonscript: {{{
-highlight! link moonLuaFunc Purple
+highlight! link moonLuaFunc PurpleItalic
 highlight! link moonSpecialOp Fg
 highlight! link moonObject Blue
 highlight! link moonInterpDelim Cyan
 " }}}
 " d: {{{
-highlight! link dImport Purple
-highlight! link dStructure Red
-highlight! link dEnum Purple
-highlight! link dScopeDecl Red
+highlight! link dImport PurpleItalic
+highlight! link dStructure RedItalic
+highlight! link dEnum PurpleItalic
+highlight! link dScopeDecl RedItalic
 highlight! link dAnnotation Blue
 highlight! link dAttribute Blue
 " }}}
 " scala: {{{
-highlight! link scalaCapitalWord Purple
-highlight! link scalaKeywordModifier Purple
+highlight! link scalaCapitalWord PurpleItalic
+highlight! link scalaKeywordModifier PurpleItalic
 highlight! link scalaInstanceDeclaration Blue
-highlight! link scalaSpecial Purple
+highlight! link scalaSpecial PurpleItalic
 highlight! link scalaSquareBracketsBrackets Fg
 highlight! link scalaTypeDeclaration Yellow
 " }}}
 " elixir: {{{
-highlight! link elixirModuleDeclaration Purple
-highlight! link elixirInclude Purple
+highlight! link elixirModuleDeclaration PurpleItalic
+highlight! link elixirInclude PurpleItalic
 highlight! link elixirAlias Blue
 highlight! link elixirVariable Yellow
 highlight! link elixirPseudoVariable Yellow
-highlight! link elixirDefine Purple
-highlight! link elixirMacroDeclaration Purple
-highlight! link elixirModuleDefine Purple
-highlight! link elixirProtocolDefine Purple
-highlight! link elixirImplDefine Purple
-highlight! link elixirRecordDefine Purple
-highlight! link elixirPrivateRecordDefine Purple
-highlight! link elixirMacroDefine Purple
-highlight! link elixirPrivateMacroDefine Purple
-highlight! link elixirDelegateDefine Purple
-highlight! link elixirOverridableDefine Purple
-highlight! link elixirExceptionDefine Purple
-highlight! link elixirCallbackDefine Purple
-highlight! link elixirStructDefine Purple
+highlight! link elixirDefine PurpleItalic
+highlight! link elixirMacroDeclaration PurpleItalic
+highlight! link elixirModuleDefine PurpleItalic
+highlight! link elixirProtocolDefine PurpleItalic
+highlight! link elixirImplDefine PurpleItalic
+highlight! link elixirRecordDefine PurpleItalic
+highlight! link elixirPrivateRecordDefine PurpleItalic
+highlight! link elixirMacroDefine PurpleItalic
+highlight! link elixirPrivateMacroDefine PurpleItalic
+highlight! link elixirDelegateDefine PurpleItalic
+highlight! link elixirOverridableDefine PurpleItalic
+highlight! link elixirExceptionDefine PurpleItalic
+highlight! link elixirCallbackDefine PurpleItalic
+highlight! link elixirStructDefine PurpleItalic
 " }}}
 " ocaml: {{{
 highlight! link ocamlModule Blue
 highlight! link ocamlEqual Blue
-highlight! link ocamlPpxEncl Purple
+highlight! link ocamlPpxEncl PurpleItalic
 highlight! link ocamlArrow Blue
-highlight! link ocamlModPath Purple
+highlight! link ocamlModPath PurpleItalic
 highlight! link ocamlKeyChar Blue
-highlight! link ocamlFullMod Purple
+highlight! link ocamlFullMod PurpleItalic
 highlight! link ocamlFuncWith Fg
 highlight! link ocamlWith Blue
 highlight! link ocamlModParam1 Green
@@ -708,52 +732,52 @@ highlight! link ocamlModPreRHS Fg
 highlight! link ocamlConstructor Green
 " }}}
 " clojure: {{{
-highlight! link clojureDefine Purple
+highlight! link clojureDefine PurpleItalic
 highlight! link clojureQuote Fg
-highlight! link clojureSpecial Purple
+highlight! link clojureSpecial PurpleItalic
 highlight! link clojureDispatch Yellow
 highlight! link clojureVariable Green
 " }}}
 " erlang: {{{
-highlight! link erlangType Purple
+highlight! link erlangType PurpleItalic
 highlight! link erlangLocalFuncCall Blue
 highlight! link erlangLocalFuncRef Yellow
-highlight! link erlangGlobalFuncCall Purple
+highlight! link erlangGlobalFuncCall PurpleItalic
 " }}}
 " julia: {{{
-highlight! link juliaBlKeyword Purple
+highlight! link juliaBlKeyword PurpleItalic
 " }}}
 " lisp: {{{
-highlight! link lispDecl Red
+highlight! link lispDecl RedItalic
 highlight! link lispKey Blue
 " }}}
 " sh: {{{
-highlight! link shCommandSub Red
+highlight! link shCommandSub RedItalic
 highlight! link shDerefSimple Blue
 highlight! link shDerefVar Yellow
 highlight! link shQuote Green
-highlight! link shFunction Red
+highlight! link shFunction RedItalic
 " }}}
 " zsh: {{{
-highlight! link zshOptStart Purple
+highlight! link zshOptStart PurpleItalic
 highlight! link zshOption Blue
 highlight! link zshSubst Yellow
-highlight! link zshFunction Purple
+highlight! link zshFunction PurpleItalic
 highlight! link zshDeref Blue
-highlight! link zshTypes Purple
+highlight! link zshTypes PurpleItalic
 " }}}
 " fish: {{{
 highlight! link fishIdentifier Blue
 " }}}
 " vim: {{{
 highlight! link vimFunction Blue
-highlight! link vimLet Red
+highlight! link vimLet RedItalic
 highlight! link vimMap Blue
 highlight! link vimMapMod Yellow
 highlight! link vimMapLhs Green
 highlight! link vimMapRhs Green
-highlight! link vimNotation Purple
-highlight! link vimAugroupKey Red
+highlight! link vimNotation PurpleItalic
+highlight! link vimAugroupKey RedItalic
 highlight! link vimAutoCmd Blue
 " }}}
 " json: {{{

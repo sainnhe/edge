@@ -1,7 +1,7 @@
-|         |                                                     𝐃𝐚𝐫𝐤                                                      |                                                     𝐋𝐢𝐠𝐡𝐭                                                      |
-| :-----: | :-----------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
-| 𝐝𝐞𝐟𝐚𝐮𝐥𝐭 | ![dark](https://user-images.githubusercontent.com/37491630/70863551-59e90480-1f41-11ea-97f6-36b73eef8773.png) | ![light](https://user-images.githubusercontent.com/37491630/70863554-5c4b5e80-1f41-11ea-96d8-a48762addfe5.png) |
-|  𝐧𝐞𝐨𝐧   | ![dark](https://user-images.githubusercontent.com/37491630/70910638-055c8c80-2008-11ea-8e13-24f5236fb8b5.png) | ![light](https://user-images.githubusercontent.com/37491630/70910639-05f52300-2008-11ea-96d3-de2ac35bd11d.png) |
+|         |                                                        𝐃𝐚𝐫𝐤                                                        |                                                        𝐋𝐢𝐠𝐡𝐭                                                        |
+| :-----: | :----------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------: |
+| 𝐝𝐞𝐟𝐚𝐮𝐥𝐭 | ![edge-dark](https://user-images.githubusercontent.com/37491630/73230694-0c81c900-4176-11ea-824d-a57e811535e1.png) | ![edge-light](https://user-images.githubusercontent.com/37491630/73230696-0e4b8c80-4176-11ea-857b-0be0cc0405e6.png) |
+|  𝐧𝐞𝐨𝐧   | ![neon-dark](https://user-images.githubusercontent.com/37491630/73230684-07bd1500-4176-11ea-8234-5469b8d0640c.png) | ![neon-light](https://user-images.githubusercontent.com/37491630/73230686-0986d880-4176-11ea-890f-b77971859f87.png) |
 
 # Installation
 
@@ -103,6 +103,9 @@ To apply it without reloading:
 - `g:edge_disable_italic_comment`: Set to `1` to disable italic in `Comment` .
   - Available values: `0`, `1`
   - Default value: `0`
+- `g:edge_enable_italic`: Set to `1` to italicize keywords. This option is designed to use with fonts that support cursive italic styles, for example [Fira Code iCursive Op](https://github.com/sainnhe/icursive-nerd-font).
+  - Available values: `0`, `1`
+  - Default value: `0`
 - `g:edge_current_word`: Some plugins can highlight the word under current cursor(for example [neoclide/coc-highlight](https://github.com/neoclide/coc-highlight)), you can use this option to control their behavior.
   - Available values: `'bold'`, `'underline'`, `'italic'`, `'grey background'`
   - Default value: `'grey background'` when not in transparent mode, `'bold'` when in transparent mode.
@@ -138,20 +141,17 @@ Check this [gist](https://gist.github.com/sainnhe/b8240bc047313fd6185bb8052df5a8
 **A:**
 
 1. This color scheme is mainly designed for true colors, `set termguicolors` is required. Check output of `vim --version`, maybe your vim doesn't support `termguicolors`.
-
 2. Maybe your terminal emulator doesn't support true colors, you can test it using [this script](https://unix.stackexchange.com/questions/404414/print-true-color-24-bit-test-pattern).
-
-3. If you are running vim in tmux, you need to override default true colors of tmux, as tmux cannot display true color properly: [#1246 How to use true colors in vim under tmux?](https://github.com/tmux/tmux/issues/1246)
-
+3. If you are running vim in tmux, you need to override default true colors of tmux, as tmux cannot display true colors properly: [#1246 How to use true colors in vim under tmux?](https://github.com/tmux/tmux/issues/1246)
 4. There are many highlight group links in syntax files while a color scheme may change them, enabling one color scheme based on another color scheme enabled is very likely to cause colors to break. If any color is broken, you can enable the color scheme in your vimrc instead of after vim startup.
 
-**Q: What's your status line configuration?**
+**Q: How to enable cursive italic keywords?**
 
-**A:** Check this [gist](https://gist.github.com/sainnhe/b8240bc047313fd6185bb8052df5a8fb).
+**A:**
 
-**Q: What's the font used here?**
-
-**A:** [Fira Code Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode).
+1. Install a font that supports cursive italics, for example [icursive-nerd-font](https://github.com/sainnhe/icursive-nerd-font).
+2. Enable italic keywords in this color scheme: `let g:edge_enable_italic = 1`
+3. Disable italic comment(optional): `let g:edge_disable_italic_comment = 1`
 
 # Inspiration
 
