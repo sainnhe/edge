@@ -92,7 +92,7 @@ To apply it without reloading:
 **Note:** The configuration options should be placed before `colorscheme edge` .
 
 - `g:edge_style`: Customize the style of this color scheme.
-  - Available values: `'default'`, `'neon'`
+  - Available values: `'default'`, `'proton'`, `'neon'`
   - Default value: `'default'`
 - `g:edge_transparent_background`: Set to `1` to enable transparent background.
   - Available values: `0`, `1`

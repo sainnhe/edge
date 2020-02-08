@@ -90,6 +90,70 @@ if s:configuration.style ==# 'default'
           \ 'none':       ['NONE',      'NONE', 'NONE']
           \ }
   endif
+elseif s:configuration.style ==# 'proton'
+  if &background ==# 'dark'
+    let s:palette = {
+          \ 'bg0':        ['#2b2d37',   '235',  'Black'],
+          \ 'bg1':        ['#2f323e',   '236',  'DarkGrey'],
+          \ 'bg2':        ['#2f323e',   '236',  'DarkGrey'],
+          \ 'bg3':        ['#363a49',   '237',  'DarkGrey'],
+          \ 'bg4':        ['#3a3e4e',   '237',  'Grey'],
+          \ 'bg5':        ['#404455',   '238',  'Grey'],
+          \ 'bg_grey':    ['#7e869b',   '246',  'LightGrey'],
+          \ 'bg_red':     ['#f27a7a',   '203',  'Red'],
+          \ 'bg_red1':    ['#473536',   '52',   'DarkRed'],
+          \ 'bg_red2':    ['#573c3d',   '52',   'DarkRed'],
+          \ 'bg_green':   ['#a1c286',   '107',  'Green'],
+          \ 'bg_green1':  ['#384034',   '22',   'DarkGreen'],
+          \ 'bg_green2':  ['#424c3b',   '22',   'DarkGreen'],
+          \ 'bg_blue':    ['#75b6e8',   '110',  'Blue'],
+          \ 'bg_blue1':   ['#323e47',   '17',   'DarkBlue'],
+          \ 'bg_blue2':   ['#394957',   '17',   'DarkBlue'],
+          \ 'bg_purple':  ['#d798e9',   '176',  'Magenta'],
+          \ 'bg_purple1': ['#433948',   '54',   'DarkMagenta'],
+          \ 'bg_purple2': ['#514359',   '54',   'DarkMagenta'],
+          \ 'fg':         ['#bcc3d1',   '250',  'White'],
+          \ 'red':        ['#f27a7a',   '203',  'Red'],
+          \ 'yellow':     ['#d9b575',   '179',  'Yellow'],
+          \ 'green':      ['#a1c286',   '107',  'Green'],
+          \ 'cyan':       ['#70bab9',   '72',   'Cyan'],
+          \ 'blue':       ['#75b6e8',   '110',  'Blue'],
+          \ 'purple':     ['#d798e9',   '176',  'Magenta'],
+          \ 'grey':       ['#7e8294',   '246',  'LightGrey'],
+          \ 'none':       ['NONE',      'NONE', 'NONE']
+          \ }
+  else
+    let s:palette = {
+          \ 'bg0':        ['#fafafa',   '231',  'White'],
+          \ 'bg1':        ['#f1f5f7',   '255',  'LightGrey'],
+          \ 'bg2':        ['#eef2f6',   '255',  'LightGrey'],
+          \ 'bg3':        ['#e7ecf1',   '254',  'LightGrey'],
+          \ 'bg4':        ['#e5eaf0',   '253',  'Grey'],
+          \ 'bg5':        ['#dde4ea',   '253',  'Grey'],
+          \ 'bg_grey':    ['#bbc7d3',   '246',  'DarkGrey'],
+          \ 'bg_red':     ['#e17373',   '167',  'Red'],
+          \ 'bg_red1':    ['#f6e4e4',   '217',  'LightRed'],
+          \ 'bg_red2':    ['#f4dada',   '217',  'LightRed'],
+          \ 'bg_green':   ['#76af6f',   '107',  'Green'],
+          \ 'bg_green1':  ['#e5eee4',   '150',  'LightGreen'],
+          \ 'bg_green2':  ['#dae9d8',   '150',  'LightGreen'],
+          \ 'bg_blue':    ['#6996e0',   '68',   'Blue'],
+          \ 'bg_blue1':   ['#e3eaf6',   '153',  'LightBlue'],
+          \ 'bg_blue2':   ['#d6e1f4',   '153',  'LightBlue'],
+          \ 'bg_purple':  ['#bf75d6',   '134',  'Magenta'],
+          \ 'bg_purple1': ['#f1e5f5',   '183',  'LightMagenta'],
+          \ 'bg_purple2': ['#eddaf2',   '183',  'LightMagenta'],
+          \ 'fg':         ['#4b505b',   '240',  'Black'],
+          \ 'red':        ['#d15f5f',   '167',  'Red'],
+          \ 'yellow':     ['#be7e05',   '172',  'Yellow'],
+          \ 'green':      ['#608e32',   '107',  'Green'],
+          \ 'cyan':       ['#3a8b84',   '73',   'Cyan'],
+          \ 'blue':       ['#5079be',   '68',   'Blue'],
+          \ 'purple':     ['#b05ccc',   '134',  'Magenta'],
+          \ 'grey':       ['#949ba5',   '245',  'Grey'],
+          \ 'none':       ['NONE',      'NONE', 'NONE']
+          \ }
+  endif
 elseif s:configuration.style ==# 'neon'
   if &background ==# 'dark'
     let s:palette = {

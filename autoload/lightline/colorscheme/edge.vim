@@ -31,6 +31,28 @@ if get(g:, 'edge_style', 'default') ==# 'default'
         let s:green = [ '#76af6f', 107 ]
         let s:blue = [ '#6996e0', 68 ]
     endif
+elseif get(g:, 'edge_style', 'default') ==# 'proton'
+    if &background ==# 'dark'
+        let s:foreground = [ '#bcc3d1', 250 ]
+        let s:background = [ '#2b2d37', 235 ]
+        let s:background_alt = [ '#2f323e', 236 ]
+        let s:background_grey = [ '#404455', 238 ]
+        let s:red = [ '#f27a7a', 203 ]
+        let s:purple = [ '#d798e9', 176 ]
+        let s:yellow = [ '#d9b575', 179 ]
+        let s:green = [ '#a1c286', 107 ]
+        let s:blue = [ '#75b6e8', 110 ]
+    else
+        let s:foreground = [ '#4b505b', 241 ]
+        let s:background = [ '#fafafa', 231 ]
+        let s:background_alt = [ '#eef2f6', 255 ]
+        let s:background_grey = [ '#dde4ea', 253 ]
+        let s:red = [ '#e17373', 167 ]
+        let s:purple = [ '#bf75d6', 134 ]
+        let s:yellow = [ '#e0ac48', 172 ]
+        let s:green = [ '#76af6f', 107 ]
+        let s:blue = [ '#6996e0', 68 ]
+    endif
 elseif get(g:, 'edge_style', 'default') ==# 'neon'
     if &background ==# 'dark'
         let s:foreground = [ '#bcc3d2', 250 ]
