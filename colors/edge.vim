@@ -29,12 +29,12 @@ let s:configuration.current_word = get(g:, 'edge_current_word', get(g:, 'edge_tr
 if s:configuration.style ==# 'default'
   if &background ==# 'dark'
     let s:palette = {
-          \ 'bg0':        ['#292b30',   '235',  'Black'],
-          \ 'bg1':        ['#2c2e34',   '236',  'DarkGrey'],
-          \ 'bg2':        ['#2c2e34',   '236',  'DarkGrey'],
-          \ 'bg3':        ['#34363f',   '237',  'DarkGrey'],
-          \ 'bg4':        ['#363944',   '237',  'Grey'],
-          \ 'bg5':        ['#3b3e48',   '238',  'Grey'],
+          \ 'bg0':        ['#2c2e34',   '235',  'Black'],
+          \ 'bg1':        ['#30323a',   '236',  'DarkGrey'],
+          \ 'bg2':        ['#30323a',   '236',  'DarkGrey'],
+          \ 'bg3':        ['#363944',   '237',  'DarkGrey'],
+          \ 'bg4':        ['#3b3e48',   '237',  'Grey'],
+          \ 'bg5':        ['#414550',   '238',  'Grey'],
           \ 'bg_grey':    ['#828a98',   '246',  'LightGrey'],
           \ 'bg_red':     ['#f27a7a',   '203',  'Red'],
           \ 'bg_red1':    ['#473536',   '52',   'DarkRed'],
@@ -55,7 +55,7 @@ if s:configuration.style ==# 'default'
           \ 'cyan':       ['#70bab9',   '72',   'Cyan'],
           \ 'blue':       ['#75b6e8',   '110',  'Blue'],
           \ 'purple':     ['#d798e9',   '176',  'Magenta'],
-          \ 'grey':       ['#7e8693',   '246',  'LightGrey'],
+          \ 'grey':       ['#7f8490',   '246',  'LightGrey'],
           \ 'none':       ['NONE',      'NONE', 'NONE']
           \ }
   else
@@ -93,12 +93,12 @@ if s:configuration.style ==# 'default'
 elseif s:configuration.style ==# 'neon'
   if &background ==# 'dark'
     let s:palette = {
-          \ 'bg0':        ['#272935',   '235',  'Black'],
-          \ 'bg1':        ['#2b2d3a',   '236',  'DarkGrey'],
-          \ 'bg2':        ['#2b2d3a',   '236',  'DarkGrey'],
-          \ 'bg3':        ['#333749',   '237',  'DarkGrey'],
-          \ 'bg4':        ['#363a4e',   '237',  'Grey'],
-          \ 'bg5':        ['#393e53',   '238',  'Grey'],
+          \ 'bg0':        ['#2b2d3a',   '235',  'Black'],
+          \ 'bg1':        ['#2f3242',   '236',  'DarkGrey'],
+          \ 'bg2':        ['#2f3242',   '236',  'DarkGrey'],
+          \ 'bg3':        ['#363a4e',   '237',  'DarkGrey'],
+          \ 'bg4':        ['#393e53',   '237',  'Grey'],
+          \ 'bg5':        ['#3f445b',   '238',  'Grey'],
           \ 'bg_grey':    ['#7a819d',   '246',  'LightGrey'],
           \ 'bg_red':     ['#f27a7a',   '203',  'Red'],
           \ 'bg_red1':    ['#473536',   '52',   'DarkRed'],
@@ -119,7 +119,7 @@ elseif s:configuration.style ==# 'neon'
           \ 'cyan':       ['#70bab9',   '72',   'Cyan'],
           \ 'blue':       ['#75b6e8',   '110',  'Blue'],
           \ 'purple':     ['#d798e9',   '176',  'Magenta'],
-          \ 'grey':       ['#7e8693',   '246',  'LightGrey'],
+          \ 'grey':       ['#7e8294',   '246',  'LightGrey'],
           \ 'none':       ['NONE',      'NONE', 'NONE']
           \ }
   else

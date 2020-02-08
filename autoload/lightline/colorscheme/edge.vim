@@ -12,9 +12,9 @@ let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': 
 if get(g:, 'edge_style', 'default') ==# 'default'
     if &background ==# 'dark'
         let s:foreground = [ '#bcc4d1', 250 ]
-        let s:background = [ '#262729', 235 ]
-        let s:background_alt = [ '#2c2e34', 236 ]
-        let s:background_grey = [ '#3b3e48', 238 ]
+        let s:background = [ '#2c2e34', 235 ]
+        let s:background_alt = [ '#30323a', 236 ]
+        let s:background_grey = [ '#414550', 238 ]
         let s:red = [ '#f27a7a', 203 ]
         let s:purple = [ '#d798e9', 176 ]
         let s:yellow = [ '#d9b575', 179 ]
@@ -34,9 +34,9 @@ if get(g:, 'edge_style', 'default') ==# 'default'
 elseif get(g:, 'edge_style', 'default') ==# 'neon'
     if &background ==# 'dark'
         let s:foreground = [ '#bcc3d2', 250 ]
-        let s:background = [ '#23252e', 235 ]
-        let s:background_alt = [ '#2b2d3a', 236 ]
-        let s:background_grey = [ '#393e53', 238 ]
+        let s:background = [ '#2b2d3a', 235 ]
+        let s:background_alt = [ '#2f3242', 236 ]
+        let s:background_grey = [ '#3f445b', 238 ]
         let s:red = [ '#f27a7a', 203 ]
         let s:purple = [ '#d798e9', 176 ]
         let s:yellow = [ '#d9b575', 179 ]
