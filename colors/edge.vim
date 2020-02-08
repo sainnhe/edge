@@ -29,8 +29,8 @@ let s:configuration.current_word = get(g:, 'edge_current_word', get(g:, 'edge_tr
 if s:configuration.style ==# 'default'
   if &background ==# 'dark'
     let s:palette = {
-          \ 'bg0':        ['#262729',   '235',  'Black'],
-          \ 'bg1':        ['#292b30',   '236',  'DarkGrey'],
+          \ 'bg0':        ['#292b30',   '235',  'Black'],
+          \ 'bg1':        ['#2c2e34',   '236',  'DarkGrey'],
           \ 'bg2':        ['#2c2e34',   '236',  'DarkGrey'],
           \ 'bg3':        ['#34363f',   '237',  'DarkGrey'],
           \ 'bg4':        ['#363944',   '237',  'Grey'],
@@ -93,8 +93,8 @@ if s:configuration.style ==# 'default'
 elseif s:configuration.style ==# 'neon'
   if &background ==# 'dark'
     let s:palette = {
-          \ 'bg0':        ['#23252e',   '235',  'Black'],
-          \ 'bg1':        ['#272935',   '236',  'DarkGrey'],
+          \ 'bg0':        ['#272935',   '235',  'Black'],
+          \ 'bg1':        ['#2b2d3a',   '236',  'DarkGrey'],
           \ 'bg2':        ['#2b2d3a',   '236',  'DarkGrey'],
           \ 'bg3':        ['#333749',   '237',  'DarkGrey'],
           \ 'bg4':        ['#363a4e',   '237',  'Grey'],

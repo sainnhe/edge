@@ -32,7 +32,7 @@ color15 = #fafafa
 ```config
 [colors]
 foreground = #bcc4d1
-background = #262729
+background = #292b30
 
 color0 = #88909f
 color1 = #f27a7a
