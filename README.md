@@ -1,8 +1,8 @@
-|         |                                                         𝐃𝐚𝐫𝐤                                                         |                                                         𝐋𝐢𝐠𝐡𝐭                                                         |
-| :-----: | :------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------: |
-| default |  ![edge-dark](https://user-images.githubusercontent.com/37491630/74084387-85cac700-4a66-11ea-9c4d-0976dd844dd5.png)  |  ![edge-light](https://user-images.githubusercontent.com/37491630/74084389-87948a80-4a66-11ea-8643-021cda717e2a.png)  |
-| proton  | ![proton-dark](https://user-images.githubusercontent.com/37491630/74084402-9e3ae180-4a66-11ea-9885-a925d209ac4b.png) | ![proton-light](https://user-images.githubusercontent.com/37491630/74084393-8bc0a800-4a66-11ea-9183-af47ceaf435a.png) |
-|  neon   |  ![neon-dark](https://user-images.githubusercontent.com/37491630/74084394-8d8a6b80-4a66-11ea-9fbb-9d69aabc9e82.png)  |  ![neon-light](https://user-images.githubusercontent.com/37491630/74084395-8f542f00-4a66-11ea-92ce-9e3cc5863392.png)  |
+|         |                                                         𝐃𝐚𝐫𝐤                                                          |                                                         𝐋𝐢𝐠𝐡𝐭                                                          |
+| :-----: | :-------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------: |
+| default | ![default-dark](https://user-images.githubusercontent.com/37491630/74331575-e2dabb80-4d8b-11ea-9586-59f4313e01ce.png) | ![default-light](https://user-images.githubusercontent.com/37491630/74331580-e40be880-4d8b-11ea-915d-08838a41b0b5.png) |
+| proton  | ![proton-dark](https://user-images.githubusercontent.com/37491630/74331594-e8d09c80-4d8b-11ea-8e6a-77de3dd02dcf.png)  | ![proton-light](https://user-images.githubusercontent.com/37491630/74331601-eb32f680-4d8b-11ea-9069-8366ef4d8947.png)  |
+|  neon   |  ![neon-dark](https://user-images.githubusercontent.com/37491630/74331607-ed955080-4d8b-11ea-81ea-6290f63c5972.png)   |  ![neon-light](https://user-images.githubusercontent.com/37491630/74331609-ef5f1400-4d8b-11ea-94cd-9a162ace4527.png)   |
 
 # Installation
 
