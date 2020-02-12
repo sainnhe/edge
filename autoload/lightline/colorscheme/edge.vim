@@ -18,7 +18,7 @@ if get(g:, 'edge_style', 'default') ==# 'default'
         let s:red = [ '#f27a7a', 203 ]
         let s:purple = [ '#d798e9', 176 ]
         let s:yellow = [ '#d9b575', 179 ]
-        let s:green = [ '#a1c286', 107 ]
+        let s:green = [ '#a0c582', 107 ]
         let s:blue = [ '#75b6e8', 110 ]
     else
         let s:foreground = [ '#4b505b', 241 ]
@@ -40,7 +40,7 @@ elseif get(g:, 'edge_style', 'default') ==# 'proton'
         let s:red = [ '#f27a7a', 203 ]
         let s:purple = [ '#d798e9', 176 ]
         let s:yellow = [ '#d9b575', 179 ]
-        let s:green = [ '#a1c286', 107 ]
+        let s:green = [ '#a0c582', 107 ]
         let s:blue = [ '#75b6e8', 110 ]
     else
         let s:foreground = [ '#4b505b', 241 ]
@@ -62,7 +62,7 @@ elseif get(g:, 'edge_style', 'default') ==# 'neon'
         let s:red = [ '#f27a7a', 203 ]
         let s:purple = [ '#d798e9', 176 ]
         let s:yellow = [ '#d9b575', 179 ]
-        let s:green = [ '#a1c286', 107 ]
+        let s:green = [ '#a0c582', 107 ]
         let s:blue = [ '#75b6e8', 110 ]
     else
         let s:foreground = [ '#4b505b', 241 ]

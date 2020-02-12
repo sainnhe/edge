@@ -36,7 +36,7 @@ background = #2c2e34
 
 color0 = #88909f
 color1 = #f27a7a
-color2 = #a1c286
+color2 = #a0c582
 color3 = #d9b575
 color4 = #75b6e8
 color5 = #d798e9
@@ -44,7 +44,7 @@ color6 = #70bab9
 color7 = #c5cdd9
 color8 = #88909f
 color9 = #f27a7a
-color10 = #a1c286
+color10 = #a0c582
 color11 = #d9b575
 color12 = #75b6e8
 color13 = #d798e9
