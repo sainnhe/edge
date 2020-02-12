@@ -8,9 +8,9 @@
 #define grey #88909f
 #define red #f27a7a
 #define green #a0c582
-#define cyan #70bab9
+#define cyan #64c2c2
 #define yellow #d9b575
-#define blue #75b6e8
+#define blue #75b9ee
 #define magenta #d798e9
 
 *.foreground:   white

@@ -16,8 +16,8 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 
 ```bashrc
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS' 
---color=fg:#c5cdd9,bg:#262729,hl:#75b6e8 
---color=fg+:#c5cdd9,bg+:#262729,hl+:#70bab9 
+--color=fg:#c5cdd9,bg:#262729,hl:#75b9ee 
+--color=fg+:#c5cdd9,bg+:#262729,hl+:#64c2c2 
 --color=info:#88909f,prompt:#f27a7a,pointer:#d798e9 
---color=marker:#a0c582,spinner:#f27a7a,header:#70bab9'
+--color=marker:#a0c582,spinner:#f27a7a,header:#64c2c2'
 ```

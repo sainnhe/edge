@@ -44,9 +44,9 @@ colors:
     red: "0xf27a7a"
     green: "0xa1c286"
     yellow: "0xd9b575"
-    blue: "0x75b6e8"
+    blue: "0x75b9ee"
     magenta: "0xd798e9"
-    cyan: "0x70bab9"
+    cyan: "0x64c2c2"
     white: "0x88909f"
 
   bright:
@@ -54,8 +54,8 @@ colors:
     red: "0xf27a7a"
     green: "0xa1c286"
     yellow: "0xd9b575"
-    blue: "0x75b6e8"
+    blue: "0x75b9ee"
     magenta: "0xd798e9"
-    cyan: "0x70bab9"
+    cyan: "0x64c2c2"
     white: "0x88909f"
 ```
