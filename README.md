@@ -4,9 +4,19 @@
 | proton  | ![proton-dark](https://user-images.githubusercontent.com/37491630/74331594-e8d09c80-4d8b-11ea-8e6a-77de3dd02dcf.png)  | ![proton-light](https://user-images.githubusercontent.com/37491630/74331601-eb32f680-4d8b-11ea-9069-8366ef4d8947.png)  |
 |  neon   |  ![neon-dark](https://user-images.githubusercontent.com/37491630/74331607-ed955080-4d8b-11ea-81ea-6290f63c5972.png)   |  ![neon-light](https://user-images.githubusercontent.com/37491630/74331609-ef5f1400-4d8b-11ea-94cd-9a162ace4527.png)   |
 
-# Installation
+This color scheme is heavily inspired by [Atom One](https://github.com/atom/atom/tree/master/packages/one-dark-syntax) and [Material](https://github.com/equinusocio/material-theme), I'm trying to combine my favorite designs of them in this color scheme.
 
-## Via Plugin Manager
+## Features
+
+- Balanced brightness for a better overall feeling.
+- Design to have a soft contrast for eye protection.
+- Customizable.
+- Rich support for common file types and plugins.
+- [Italic support](https://github.com/sainnhe/icursive-nerd-font) 🎉
+
+## Installation
+
+### Via Plugin Manager
 
 Take [vim-plug](https://github.com/junegunn/vim-plug) for example:
 
@@ -16,16 +26,16 @@ Plug 'sainnhe/edge'
 
 For better syntax highlighting support, please install [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot).
 
-## Manually
+### Manually
 
 1. Clone this repository.
 2. Copy `/path/to/edge/colors/*` to `~/.vim/colors/` .
 3. To install [airline](https://github.com/vim-airline/vim-airline) theme, copy `/path/to/edge/autoload/airline/themes/*` to `~/.vim/autoload/airline/themes/` .
 4. To install [lightline](https://github.com/itchyny/lightline.vim) theme, copy `/path/to/edge/autoload/lightline/colorscheme/*` to `~/.vim/autoload/lightline/colorscheme/` .
 
-# Usage
+## Usage
 
-## Vim
+### Vim
 
 Put this in your vimrc:
 
@@ -54,7 +64,7 @@ If you want to apply this color scheme temporarily, run this command in vim(**th
 :colorscheme edge
 ```
 
-### Airline
+#### Airline
 
 To enable [airline](https://github.com/vim-airline/vim-airline) color scheme, put this in your vimrc:
 
@@ -68,7 +78,7 @@ To apply it without reloading:
 :AirlineTheme edge
 ```
 
-### Lightline
+#### Lightline
 
 To enable [lightline](https://github.com/itchyny/lightline.vim) color scheme, put this in your vimrc:
 
@@ -88,7 +98,7 @@ To apply it without reloading:
 :call lightline#colorscheme()
 ```
 
-### Configuration
+#### Configuration
 
 **Note:** The configuration options should be placed before `colorscheme edge` .
 
@@ -114,28 +124,28 @@ To apply it without reloading:
   - Available values: `0`, `1`
   - Default value: `0`
 
-## Tmux Status Line
+### Tmux Status Line
 
 Check this [gist](https://gist.github.com/sainnhe/b8240bc047313fd6185bb8052df5a8fb).
 
-## Zsh
+### Zsh
 
 - [Syntax Highlighting](https://github.com/sainnhe/edge/tree/master/zsh#syntax-highlighting)
 - [Prompt](https://github.com/sainnhe/edge/tree/master/zsh#prompt)
 
-## Terminal Emulators
+### Terminal Emulators
 
 - [Alacritty](./alacritty/README.md)
 - [Kitty](./kitty/README.md)
 - [Termite](./termite/README.md)
 - [Tilix](./tilix/README.md)
 
-## More
+### More
 
 - [Xresources](./xresources/README.md)
 - [fzf](./fzf/README.md)
 
-## FAQ
+### FAQ
 
 **Q: It doesn't work as expected.**
 
@@ -154,16 +164,15 @@ Check this [gist](https://gist.github.com/sainnhe/b8240bc047313fd6185bb8052df5a8
 2. Enable italic keywords in this color scheme: `let g:edge_enable_italic = 1`
 3. Disable italic comment(optional): `let g:edge_disable_italic_comment = 1`
 
-# Inspiration
+## Inspiration
 
 - [Atom One](https://github.com/atom/atom/tree/master/packages/one-dark-syntax)
-
 - [Material](https://github.com/equinusocio/material-theme)
 
-# Thanks to
+## Thanks to
 
 - [manfredmjka](https://github.com/manfredmjka): termite and fzf support
 
-# License
+## License
 
 [MIT](./LICENSE) && [Anti-996](./Anti-996-LICENSE)
