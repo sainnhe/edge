@@ -46,7 +46,7 @@ colors:
     yellow: "0xd9b575"
     blue: "0x75b9ee"
     magenta: "0xd798e9"
-    cyan: "0x64c2c2"
+    cyan: "0x66c1c1"
     white: "0x88909f"
 
   bright:
@@ -56,6 +56,6 @@ colors:
     yellow: "0xd9b575"
     blue: "0x75b9ee"
     magenta: "0xd798e9"
-    cyan: "0x64c2c2"
+    cyan: "0x66c1c1"
     white: "0x88909f"
 ```
