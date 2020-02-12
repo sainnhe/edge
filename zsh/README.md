@@ -15,11 +15,9 @@ To use it, simply source this file in your zshrc after powerlevel10k has been lo
 ```zsh
 # for light version
 source /path/to/edge/zsh/.zsh-theme-edge-light
-source /path/to/edge/zsh/.zsh-theme-neon-light
 
 # for dark version
 source /path/to/edge/zsh/.zsh-theme-edge-dark
-source /path/to/edge/zsh/.zsh-theme-neon-dark
 ```
 
 Alternatively, if you are using [zplugin](https://github.com/zdharma/zplugin), you can install the theme like this:
@@ -29,11 +27,9 @@ zplugin light romkatv/powerlevel10k
 
 # for light version
 zplugin snippet https://github.com/sainnhe/edge/blob/master/zsh/.zsh-theme-edge-light
-zplugin snippet https://github.com/sainnhe/edge/blob/master/zsh/.zsh-theme-neon-light
 
 # for dark version
 zplugin snippet https://github.com/sainnhe/edge/blob/master/zsh/.zsh-theme-edge-dark
-zplugin snippet https://github.com/sainnhe/edge/blob/master/zsh/.zsh-theme-neon-dark
 ```
 
 ## Customization
@@ -46,4 +42,4 @@ PURE_POWER_MODE=fancy     # use unicode characters in the prompt(default)
 PURE_POWER_MODE=portable  # use only ascii characters in the prompt
 ```
 
-To switch between them, edit `/path/to/edge/zsh/.zsh-pure-power-*`, and change the value of `PURE_POWER_MODE`.
+To switch between them, edit `/path/to/edge/zsh/.zsh-theme-*`, and change the value of `PURE_POWER_MODE`.
