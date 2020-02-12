@@ -1,6 +1,6 @@
 " -----------------------------------------------------------------------------
 " Name:         Edge
-" Description:  Clean & Elegant Color Scheme for Vim
+" Description:  Clean & Elegant Color Scheme inspired by Atom One and Material
 " Author:       Sainnhepark <sainnhe@gmail.com>
 " Website:      https://github.com/sainnhe/edge/
 " License:      MIT && Anti-996
