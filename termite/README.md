@@ -31,7 +31,7 @@ color15 = #fafafa
 
 ```config
 [colors]
-foreground = #bcc4d1
+foreground = #c5cdd9
 background = #2c2e34
 
 color0 = #88909f
@@ -41,7 +41,7 @@ color3 = #d9b575
 color4 = #75b6e8
 color5 = #d798e9
 color6 = #70bab9
-color7 = #bcc4d1
+color7 = #c5cdd9
 color8 = #88909f
 color9 = #f27a7a
 color10 = #a1c286
@@ -49,5 +49,5 @@ color11 = #d9b575
 color12 = #75b6e8
 color13 = #d798e9
 color14 = #70bab9
-color15 = #bcc4d1
+color15 = #c5cdd9
 ```

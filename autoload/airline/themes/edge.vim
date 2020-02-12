@@ -11,7 +11,7 @@ let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': 
 
 if get(g:, 'edge_style', 'default') ==# 'default'
     if &background ==# 'dark'
-        let s:foreground = [ '#bcc4d1', 250 ]
+        let s:foreground = [ '#c5cdd9', 250 ]
         let s:background = [ '#2c2e34', 235 ]
         let s:background_alt = [ '#30323a', 236 ]
         let s:background_grey = [ '#414550', 238 ]
@@ -39,7 +39,7 @@ if get(g:, 'edge_style', 'default') ==# 'default'
     endif
 elseif get(g:, 'edge_style', 'default') ==# 'proton'
     if &background ==# 'dark'
-        let s:foreground = [ '#bcc3d1', 250 ]
+        let s:foreground = [ '#c5cdd9', 250 ]
         let s:background = [ '#2b2d37', 235 ]
         let s:background_alt = [ '#2f323e', 236 ]
         let s:background_grey = [ '#404455', 238 ]
@@ -67,7 +67,7 @@ elseif get(g:, 'edge_style', 'default') ==# 'proton'
     endif
 elseif get(g:, 'edge_style', 'default') ==# 'neon'
     if &background ==# 'dark'
-        let s:foreground = [ '#bcc3d2', 250 ]
+        let s:foreground = [ '#c5cdd9', 250 ]
         let s:background = [ '#2b2d3a', 235 ]
         let s:background_alt = [ '#2f3242', 236 ]
         let s:background_grey = [ '#3f445b', 238 ]
