@@ -10,7 +10,7 @@
 #define green #a0c582
 #define cyan #66c1c1
 #define yellow #d9b575
-#define blue #75b9ee
+#define blue #75b8eb
 #define magenta #d798e9
 
 *.foreground:   white

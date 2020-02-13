@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Changed
+
+- Adjust blue in the dark variant.
+
 ## [0.1.0] - 2020-02-12
 
 ### Added
