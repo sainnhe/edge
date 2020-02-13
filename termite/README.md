@@ -40,7 +40,7 @@ color2 = #a0c582
 color3 = #d9b575
 color4 = #75b8eb
 color5 = #d798e9
-color6 = #66c1c1
+color6 = #68c0c0
 color7 = #c5cdd9
 color8 = #88909f
 color9 = #f27a7a
@@ -48,6 +48,6 @@ color10 = #a0c582
 color11 = #d9b575
 color12 = #75b8eb
 color13 = #d798e9
-color14 = #66c1c1
+color14 = #68c0c0
 color15 = #c5cdd9
 ```
