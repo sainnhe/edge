@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
-- Adjust blue and cyan in the dark variant.
+- Adjust yellow, green, cyan, blue and purple in the dark variant.
 
 ## [0.1.0] - 2020-02-12
 

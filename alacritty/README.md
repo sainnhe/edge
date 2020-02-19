@@ -36,26 +36,26 @@ colors:
 ```yaml
 colors:
   primary:
-    background: "0x292b30"
+    background: "0x2c2e34"
     foreground: "0xc5cdd9"
 
   normal:
     black: "0x3e4249"
     red: "0xf27a7a"
-    green: "0xa1c286"
-    yellow: "0xd9b575"
-    blue: "0x75b8eb"
-    magenta: "0xd798e9"
-    cyan: "0x68c0c0"
+    green: "0xa0c781"
+    yellow: "0xdcb776"
+    blue: "0x77bceb"
+    magenta: "0xd696e9"
+    cyan: "0x66c0c0"
     white: "0x88909f"
 
   bright:
     black: "0x3e4249"
     red: "0xf27a7a"
-    green: "0xa1c286"
-    yellow: "0xd9b575"
-    blue: "0x75b8eb"
-    magenta: "0xd798e9"
-    cyan: "0x68c0c0"
+    green: "0xa0c781"
+    yellow: "0xdcb776"
+    blue: "0x77bceb"
+    magenta: "0xd696e9"
+    cyan: "0x66c0c0"
     white: "0x88909f"
 ```
