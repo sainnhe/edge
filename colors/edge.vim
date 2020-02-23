@@ -1194,6 +1194,9 @@ let g:cursorword_highlight = 0
 highlight! link CursorWord0 CocHighlightText
 highlight! link CursorWord1 CocHighlightText
 " }}}
+" Blamer {{{
+highlight! link Blamer Grey
+" }}}
 " }}}
 " Terminal: {{{
 if (has('termguicolors') && &termguicolors) || has('gui_running')
