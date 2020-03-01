@@ -23,6 +23,7 @@ let s:configuration.transparent_background = get(g:, 'edge_transparent_backgroun
 let s:configuration.menu_selection_background = get(g:, 'edge_menu_selection_background', 'blue')
 let s:configuration.disable_italic_comment = get(g:, 'edge_disable_italic_comment', 0)
 let s:configuration.enable_italic = get(g:, 'edge_enable_italic', 0)
+let s:configuration.cursor = get(g:, 'edge_cursor', 0)
 let s:configuration.current_word = get(g:, 'edge_current_word', get(g:, 'edge_transparent_background', 0) == 0 ? 'grey background' : 'bold')
 " }}}
 " Palette: {{{
@@ -309,8 +310,22 @@ else
 endif
 call s:HL('ColorColumn', s:palette.none, s:palette.bg2)
 call s:HL('Conceal', s:palette.grey, s:palette.none)
-call s:HL('Cursor', s:palette.none, s:palette.none, 'reverse')
-call s:HL('lCursor', s:palette.none, s:palette.none, 'reverse')
+if s:configuration.cursor ==# 'auto'
+  call s:HL('Cursor', s:palette.none, s:palette.none, 'reverse')
+  call s:HL('lCursor', s:palette.none, s:palette.none, 'reverse')
+elseif s:configuration.cursor ==# 'red'
+  call s:HL('Cursor', s:palette.bg0, s:palette.red)
+  call s:HL('lCursor', s:palette.bg0, s:palette.red)
+elseif s:configuration.cursor ==# 'green'
+  call s:HL('Cursor', s:palette.bg0, s:palette.green)
+  call s:HL('lCursor', s:palette.bg0, s:palette.green)
+elseif s:configuration.cursor ==# 'blue'
+  call s:HL('Cursor', s:palette.bg0, s:palette.blue)
+  call s:HL('lCursor', s:palette.bg0, s:palette.blue)
+elseif s:configuration.cursor ==# 'purple'
+  call s:HL('Cursor', s:palette.bg0, s:palette.purple)
+  call s:HL('lCursor', s:palette.bg0, s:palette.purple)
+endif
 call s:HL('CursorColumn', s:palette.none, s:palette.bg1)
 call s:HL('CursorLine', s:palette.none, s:palette.bg1)
 call s:HL('LineNr', s:palette.grey, s:palette.none)
