@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+- Adjust colors to be more vibrant.
+
+## [0.1.1] - 2020-02-19
+
 ### Changed
 
 - Adjust yellow, green, cyan, blue and purple in the dark variant.
@@ -23,5 +27,6 @@ All notable changes to this project will be documented in this file.
 - Add termite theme.
 - Add fzf theme.
 
-[unreleased]: https://github.com/sainnhe/edge/compare/v0.1.0...HEAD
+[unreleased]: https://github.com/sainnhe/edge/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/sainnhe/edge/releases/tag/v0.1.1
 [0.1.0]: https://github.com/sainnhe/edge/releases/tag/v0.1.0
