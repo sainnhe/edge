@@ -1,14 +1,14 @@
 |         |                                                         𝐃𝐚𝐫𝐤                                                          |                                                         𝐋𝐢𝐠𝐡𝐭                                                          |
 | :-----: | :-------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------: |
-| default | ![default-dark](https://user-images.githubusercontent.com/37491630/74331575-e2dabb80-4d8b-11ea-9586-59f4313e01ce.png) | ![default-light](https://user-images.githubusercontent.com/37491630/74331580-e40be880-4d8b-11ea-915d-08838a41b0b5.png) |
-| proton  | ![proton-dark](https://user-images.githubusercontent.com/37491630/74331594-e8d09c80-4d8b-11ea-8e6a-77de3dd02dcf.png)  | ![proton-light](https://user-images.githubusercontent.com/37491630/74331601-eb32f680-4d8b-11ea-9069-8366ef4d8947.png)  |
-|  neon   |  ![neon-dark](https://user-images.githubusercontent.com/37491630/74331607-ed955080-4d8b-11ea-81ea-6290f63c5972.png)   |  ![neon-light](https://user-images.githubusercontent.com/37491630/74331609-ef5f1400-4d8b-11ea-94cd-9a162ace4527.png)   |
+| default | ![edge-dark](https://user-images.githubusercontent.com/37491630/75647937-7a725200-5c46-11ea-8ebe-fd4354e39a1e.png) | ![edge-light](https://user-images.githubusercontent.com/37491630/75647946-7e9e6f80-5c46-11ea-9213-bead6430064e.png) |
+| proton  | ![proton-dark](https://user-images.githubusercontent.com/37491630/75647942-7ba37f00-5c46-11ea-9118-b3745a3f6c59.png)  | ![proton-light](https://user-images.githubusercontent.com/37491630/75647949-7fcf9c80-5c46-11ea-96f8-c691f0fab5c3.png)  |
+|  neon   |  ![neon-dark](https://user-images.githubusercontent.com/37491630/75647943-7cd4ac00-5c46-11ea-87ea-d5e57f4cd4e2.png)   |  ![neon-light](https://user-images.githubusercontent.com/37491630/75647952-8231f680-5c46-11ea-830a-8129638e87d5.png)   |
 
 This color scheme is heavily inspired by [Atom One](https://github.com/atom/atom/tree/master/packages/one-dark-syntax) and [Material](https://github.com/equinusocio/material-theme), I'm trying to combine my favorite designs of them in this color scheme.
 
 ## Features
 
-- Balanced brightness for a better overall feeling.
+- Vivid colors.
 - Design to have a soft contrast for eye protection.
 - Customizable.
 - Rich support for common file types and plugins.
