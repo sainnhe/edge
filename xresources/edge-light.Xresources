@@ -6,7 +6,7 @@
 #define white #fafafa
 #define black #4b505b
 #define grey #949ba5
-#define red #d15f5f
+#define red #d15b5b
 #define green #608e32
 #define cyan #3a8b84
 #define yellow #be7e05
