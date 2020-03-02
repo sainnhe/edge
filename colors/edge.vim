@@ -50,12 +50,12 @@ if s:configuration.style ==# 'default'
           \ 'bg_purple1': ['#433948',   '54',   'DarkMagenta'],
           \ 'bg_purple2': ['#514359',   '54',   'DarkMagenta'],
           \ 'fg':         ['#c5cdd9',   '250',  'White'],
-          \ 'red':        ['#ec6d75',   '203',  'Red'],
-          \ 'yellow':     ['#e1ba73',   '179',  'Yellow'],
+          \ 'red':        ['#ec7279',   '203',  'Red'],
+          \ 'yellow':     ['#deb974',   '179',  'Yellow'],
           \ 'green':      ['#a0c980',   '107',  'Green'],
           \ 'cyan':       ['#5dbbc1',   '72',   'Cyan'],
           \ 'blue':       ['#6cb6eb',   '110',  'Blue'],
-          \ 'purple':     ['#d083e8',   '176',  'Magenta'],
+          \ 'purple':     ['#d38aea',   '176',  'Magenta'],
           \ 'grey':       ['#7f8490',   '246',  'LightGrey'],
           \ 'none':       ['NONE',      'NONE', 'NONE']
           \ }
@@ -114,12 +114,12 @@ elseif s:configuration.style ==# 'proton'
           \ 'bg_purple1': ['#433948',   '54',   'DarkMagenta'],
           \ 'bg_purple2': ['#514359',   '54',   'DarkMagenta'],
           \ 'fg':         ['#c5cdd9',   '250',  'White'],
-          \ 'red':        ['#ec6d75',   '203',  'Red'],
-          \ 'yellow':     ['#e1ba73',   '179',  'Yellow'],
+          \ 'red':        ['#ec7279',   '203',  'Red'],
+          \ 'yellow':     ['#deb974',   '179',  'Yellow'],
           \ 'green':      ['#a0c980',   '107',  'Green'],
           \ 'cyan':       ['#5dbbc1',   '72',   'Cyan'],
           \ 'blue':       ['#6cb6eb',   '110',  'Blue'],
-          \ 'purple':     ['#d083e8',   '176',  'Magenta'],
+          \ 'purple':     ['#d38aea',   '176',  'Magenta'],
           \ 'grey':       ['#7e8294',   '246',  'LightGrey'],
           \ 'none':       ['NONE',      'NONE', 'NONE']
           \ }
@@ -178,12 +178,12 @@ elseif s:configuration.style ==# 'neon'
           \ 'bg_purple1': ['#433948',   '54',   'DarkMagenta'],
           \ 'bg_purple2': ['#514359',   '54',   'DarkMagenta'],
           \ 'fg':         ['#c5cdd9',   '250',  'White'],
-          \ 'red':        ['#ec6d75',   '203',  'Red'],
-          \ 'yellow':     ['#e1ba73',   '179',  'Yellow'],
+          \ 'red':        ['#ec7279',   '203',  'Red'],
+          \ 'yellow':     ['#deb974',   '179',  'Yellow'],
           \ 'green':      ['#a0c980',   '107',  'Green'],
           \ 'cyan':       ['#5dbbc1',   '72',   'Cyan'],
           \ 'blue':       ['#6cb6eb',   '110',  'Blue'],
-          \ 'purple':     ['#d083e8',   '176',  'Magenta'],
+          \ 'purple':     ['#d38aea',   '176',  'Magenta'],
           \ 'grey':       ['#7e8294',   '246',  'LightGrey'],
           \ 'none':       ['NONE',      'NONE', 'NONE']
           \ }
