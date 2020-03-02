@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 ## [0.1.2] - 2020-03-02
 
+### Changed
+
 - Adjust colors to be more vibrant.
 
 ## [0.1.1] - 2020-02-19
