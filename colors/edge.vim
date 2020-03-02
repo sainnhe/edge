@@ -126,12 +126,12 @@ elseif s:configuration.style ==# 'proton'
   else
     let s:palette = {
           \ 'bg0':        ['#fafafa',   '231',  'White'],
-          \ 'bg1':        ['#f1f5f7',   '255',  'LightGrey'],
-          \ 'bg2':        ['#eef2f6',   '255',  'LightGrey'],
-          \ 'bg3':        ['#e7ecf1',   '254',  'LightGrey'],
-          \ 'bg4':        ['#e5eaf0',   '253',  'Grey'],
-          \ 'bg5':        ['#dde4ea',   '253',  'Grey'],
-          \ 'bg_grey':    ['#bbc7d3',   '246',  'DarkGrey'],
+          \ 'bg1':        ['#f1f4f6',   '255',  'LightGrey'],
+          \ 'bg2':        ['#eef1f4',   '255',  'LightGrey'],
+          \ 'bg3':        ['#e8ebf0',   '254',  'LightGrey'],
+          \ 'bg4':        ['#e6eaf0',   '253',  'Grey'],
+          \ 'bg5':        ['#dde3e9',   '253',  'Grey'],
+          \ 'bg_grey':    ['#bbc6d1',   '246',  'DarkGrey'],
           \ 'bg_red':     ['#e17373',   '167',  'Red'],
           \ 'bg_red1':    ['#f6e4e4',   '217',  'LightRed'],
           \ 'bg_red2':    ['#f4dada',   '217',  'LightRed'],

@@ -54,8 +54,8 @@ elseif get(g:, 'edge_style', 'default') ==# 'proton'
     else
         let s:foreground = [ '#4b505b', 241 ]
         let s:background = [ '#fafafa', 231 ]
-        let s:background_alt = [ '#eef2f6', 255 ]
-        let s:background_grey = [ '#dde4ea', 253 ]
+        let s:background_alt = [ '#eef1f4', 255 ]
+        let s:background_grey = [ '#dde3e9', 253 ]
         let s:red_sel = [ '#e17373', 167 ]
         let s:purple_sel = [ '#bf75d6', 134 ]
         let s:green_sel = [ '#76af6f', 107 ]
