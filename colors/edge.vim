@@ -685,6 +685,9 @@ highlight! link phpType PurpleItalic
 highlight! link phpMethod Yellow
 highlight! link phpMemberSelector Green
 " }}}
+" c: {{{
+highlight! link cStatement RedItalic
+" }}}
 " csharp: {{{
 highlight! link csUnspecifiedStatement RedItalic
 highlight! link csEndColon Fg
