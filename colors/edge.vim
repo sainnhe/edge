@@ -1216,6 +1216,10 @@ highlight! link CursorWord1 CocHighlightText
 " Blamer {{{
 highlight! link Blamer Grey
 " }}}
+" indentLine{{{
+let g:indentLine_color_gui = s:palette.grey[0]
+let g:indentLine_color_term = s:palette.grey[1]
+" }}}
 " }}}
 " Terminal: {{{
 if (has('termguicolors') && &termguicolors) || has('gui_running')
