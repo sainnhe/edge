@@ -170,7 +170,7 @@ To apply it without reloading:
 
 - [Gruvbox Material](https://github.com/sainnhe/gruvbox-material)
 - [Forest Night](https://github.com/sainnhe/forest-night)
-- [Sonokai](https://github.com/sainnhe/edge)
+- [Sonokai](https://github.com/sainnhe/sonokai)
 
 ## Inspiration
 
