@@ -150,7 +150,7 @@ To apply it without reloading:
 
 ### Code Editor
 
-- [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=sainnhe.edge)
+- [Visual Studio Code](https://github.com/sainnhe/edge-vscode)
 
 ### Terminal Emulators
 
