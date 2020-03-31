@@ -9,7 +9,7 @@ This color scheme is heavily inspired by [Atom One](https://github.com/atom/atom
 ## Features
 
 - Vivid colors.
-- Design to have a soft contrast for eye protection.
+- Designed to have a soft contrast for eye protection.
 - Customizable.
 - Rich support for common file types and plugins.
 - [Italic support](https://github.com/sainnhe/icursive-nerd-font) 🎉
@@ -127,27 +127,6 @@ To apply it without reloading:
   - Available values: `0`, `1`
   - Default value: `0`
 
-### Tmux Status Line
-
-Check this [gist](https://gist.github.com/sainnhe/b8240bc047313fd6185bb8052df5a8fb).
-
-### Zsh
-
-- [Syntax Highlighting](https://github.com/sainnhe/edge/tree/master/zsh#syntax-highlighting)
-- [Prompt](https://github.com/sainnhe/edge/tree/master/zsh#prompt)
-
-### Terminal Emulators
-
-- [Alacritty](./alacritty/README.md)
-- [Kitty](./kitty/README.md)
-- [Termite](./termite/README.md)
-- [Tilix](./tilix/README.md)
-
-### More
-
-- [Xresources](./xresources/README.md)
-- [fzf](./fzf/README.md)
-
 ### FAQ
 
 **Q: It doesn't work as expected.**
@@ -166,6 +145,32 @@ Check this [gist](https://gist.github.com/sainnhe/b8240bc047313fd6185bb8052df5a8
 1. Install a font that supports cursive italics, for example [icursive-nerd-font](https://github.com/sainnhe/icursive-nerd-font).
 2. Enable italic keywords in this color scheme: `let g:edge_enable_italic = 1`
 3. Disable italic comment(optional): `let g:edge_disable_italic_comment = 1`
+
+## Related Projects
+
+### Code Editor
+
+- [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=sainnhe.edge)
+
+### Terminal Emulators
+
+- [Alacritty](./alacritty/README.md)
+- [Kitty](./kitty/README.md)
+- [Termite](./termite/README.md)
+- [Tilix](./tilix/README.md)
+
+### Other
+
+- [Xresources](./xresources/README.md)
+- [fzf](./fzf/README.md)
+- [zsh](https://github.com/sainnhe/edge/tree/master/zsh)
+- [tmux](https://gist.github.com/sainnhe/b8240bc047313fd6185bb8052df5a8fb)
+
+## More Color Schemes
+
+- [Gruvbox Material](https://github.com/sainnhe/gruvbox-material)
+- [Forest Night](https://github.com/sainnhe/forest-night)
+- [Sonokai](https://github.com/sainnhe/edge)
 
 ## Inspiration
 
