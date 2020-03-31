@@ -37,7 +37,7 @@ if get(g:, 'edge_style', 'default') ==# 'default'
         let s:green_fg = [ '#608e32', 107 ]
         let s:blue_fg = [ '#5079be', 68 ]
     endif
-elseif get(g:, 'edge_style', 'default') ==# 'proton'
+elseif get(g:, 'edge_style', 'default') ==# 'aura'
     if &background ==# 'dark'
         let s:foreground = [ '#c5cdd9', 250 ]
         let s:background = [ '#2b2d37', 235 ]

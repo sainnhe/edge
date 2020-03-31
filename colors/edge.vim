@@ -92,7 +92,7 @@ if s:configuration.style ==# 'default'
           \ 'none':       ['NONE',      'NONE', 'NONE']
           \ }
   endif
-elseif s:configuration.style ==# 'proton'
+elseif s:configuration.style ==# 'aura'
   if &background ==# 'dark'
     let s:palette = {
           \ 'bg0':        ['#2b2d37',   '235',  'Black'],
