@@ -7,4 +7,4 @@
 
 1. Open your profile preferences
 2. Switch to the Color tab
-3. Select `Edge Light`/`Edge Dark` from the Color scheme drop-down menu
+3. Select the color scheme from the Color scheme drop-down menu

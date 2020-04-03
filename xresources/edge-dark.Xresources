@@ -19,7 +19,7 @@
 *fading: 35
 *fadeColor: grey
 
-*.color0: grey
+*.color0: black
 *.color1: red
 *.color2: green
 *.color3: yellow
@@ -27,7 +27,7 @@
 *.color5: magenta
 *.color6: cyan
 *.color7: white
-*.color8: grey
+*.color8: black
 *.color9: red
 *.color10: green
 *.color11: yellow
