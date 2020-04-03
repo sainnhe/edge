@@ -1230,14 +1230,14 @@ let g:indentLine_color_term = s:palette.grey[1]
 if (has('termguicolors') && &termguicolors) || has('gui_running')
   " Definition
   let s:terminal = {
-        \ 'black':    s:palette.fg,
+        \ 'black':    &background ==# 'dark' ? s:palette.bg0 : s:palette.fg,
         \ 'red':      s:palette.red,
         \ 'yellow':   s:palette.yellow,
         \ 'green':    s:palette.green,
         \ 'cyan':     s:palette.cyan,
         \ 'blue':     s:palette.blue,
         \ 'purple':   s:palette.purple,
-        \ 'white':    s:palette.grey
+        \ 'white':    &background ==# 'dark' ? s:palette.fg : s:palette.bg0
         \ }
   " Implementation: {{{
   if !has('nvim')
