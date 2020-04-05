@@ -12,7 +12,7 @@ colors:
 
   normal:
     black: "0x4b505b"
-    red: "0xd15b5b"
+    red: "0xd05858"
     green: "0x608e32"
     yellow: "0xbe7e05"
     blue: "0x5079be"
@@ -22,7 +22,7 @@ colors:
 
   bright:
     black: "0x4b505b"
-    red: "0xd15b5b"
+    red: "0xd05858"
     green: "0x608e32"
     yellow: "0xbe7e05"
     blue: "0x5079be"

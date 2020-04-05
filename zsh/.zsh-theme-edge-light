@@ -57,7 +57,7 @@ fi
   fi
   if [[ "$ICE_AGE_PURE_POWER_TRUE_COLOR" == "true" ]]; then
     local ok="%F{#b05ccc}${p}%f"
-    local err="%F{#d15b5b}${p}%f"
+    local err="%F{#d05858}${p}%f"
   else
     local ok="%F{$(_pp_s 005 134)}${p}%f"
     local err="%F{$(_pp_s 001 167)}${p}%f"
@@ -102,7 +102,7 @@ fi
   if [[ "$ICE_AGE_PURE_POWER_TRUE_COLOR" == "true" ]]; then
     typeset -g POWERLEVEL9K_DIR_{ETC,DEFAULT}_FOREGROUND='#3a8b84'
     typeset -g POWERLEVEL9K_DIR_{HOME,HOME_SUBFOLDER}_FOREGROUND='#608e32'
-    typeset -g POWERLEVEL9K_DIR_NOT_WRITABLE_FOREGROUND='#d15b5b'
+    typeset -g POWERLEVEL9K_DIR_NOT_WRITABLE_FOREGROUND='#d05858'
   else
     typeset -g POWERLEVEL9K_DIR_{ETC,DEFAULT}_FOREGROUND=$(_pp_c 006 73)
     typeset -g POWERLEVEL9K_DIR_{HOME,HOME_SUBFOLDER}_FOREGROUND=$(_pp_c 002 107)
@@ -161,7 +161,7 @@ fi
   typeset -g POWERLEVEL9K_STATUS_OK=false
   typeset -g POWERLEVEL9K_STATUS_ERROR_BACKGROUND=none
   if [[ "$ICE_AGE_PURE_POWER_TRUE_COLOR" == "true" ]]; then
-    typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND='#d15b5b'
+    typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND='#d05858'
   else
     typeset -g POWERLEVEL9K_STATUS_ERROR_FOREGROUND=$(_pp_c 001 167)
   fi
@@ -179,7 +179,7 @@ fi
   typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,ROOT,REMOTE_SUDO,REMOTE,SUDO}_BACKGROUND=none
   if [[ "$ICE_AGE_PURE_POWER_TRUE_COLOR" == "true" ]]; then
     typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,REMOTE_SUDO,REMOTE,SUDO}_FOREGROUND='#5079be'
-    typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND='#d15b5b'
+    typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND='#d05858'
   else
     typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,REMOTE_SUDO,REMOTE,SUDO}_FOREGROUND=$(_pp_c 004 68)
     typeset -g POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND=$(_pp_c 001 167)
