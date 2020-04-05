@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - Optimize `Yggdroot/indentLine`.
+- Add hi groups for `iCursor` and `vCursor`.
 
 ## [0.1.2] - 2020-03-02
 
