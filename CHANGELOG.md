@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file.
 
 - Optimize `Yggdroot/indentLine`.
 - Add hi groups for `iCursor` and `vCursor`.
+- Add hi groups for builtin lsp and checkhealth.
 
 ## [0.1.2] - 2020-03-02
 
