@@ -164,7 +164,7 @@ To apply it without reloading:
 - [Xresources](./xresources/README.md)
 - [fzf](./fzf/README.md)
 - [zsh](https://github.com/sainnhe/edge/tree/master/zsh)
-- [tmux](https://gist.github.com/sainnhe/b8240bc047313fd6185bb8052df5a8fb)
+- [tmux](https://www.sainnhe.dev/post/status-line-config/)
 
 ## More Color Schemes
 
