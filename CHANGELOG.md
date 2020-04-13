@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - Adjust red in the light variant.
+- Adjust `Search` and `IncSearch`.
 
 ## [0.1.2] - 2020-03-02
 
