@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 - Add hi groups for `iCursor` and `vCursor`.
 - Add hi groups for builtin lsp and checkhealth.
 - Optimize Airline.
+- Optimize `cohama/agit.vim`.
 
 ### Changed
 

@@ -1235,6 +1235,21 @@ highlight! link Blamer Grey
 let g:indentLine_color_gui = s:palette.grey[0]
 let g:indentLine_color_term = s:palette.grey[1]
 " }}}
+" cohama/agit.vim {{{
+highlight! link agitTree Grey
+highlight! link agitDate Green
+highlight! link agitRemote Red
+highlight! link agitHead Purple
+highlight! link agitRef Blue
+highlight! link agitTag Purple
+highlight! link agitStatFile Blue
+highlight! link agitStatRemoved Red
+highlight! link agitStatAdded Green
+highlight! link agitStatMessage Purple
+highlight! link agitDiffRemove diffRemoved
+highlight! link agitDiffAdd diffAdded
+highlight! link agitDiffHeader Purple
+" }}}
 " }}}
 " Terminal: {{{
 if (has('termguicolors') && &termguicolors) || has('gui_running')
