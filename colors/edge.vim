@@ -432,7 +432,7 @@ call s:HL('String', s:palette.green, s:palette.none)
 call s:HL('Character', s:palette.green, s:palette.none)
 call s:HL('Number', s:palette.green, s:palette.none)
 call s:HL('Float', s:palette.green, s:palette.none)
-call s:HL('Identifier', s:palette.cyan, s:palette.none)
+call s:HL('Identifier', s:palette.fg, s:palette.none)
 call s:HL('Constant', s:palette.cyan, s:palette.none)
 call s:HL('Function', s:palette.blue, s:palette.none)
 call s:HL('Operator', s:palette.blue, s:palette.none)
@@ -608,7 +608,7 @@ highlight! link typescriptDocTags Purple
 highlight! link typescriptLogicSymbols Blue
 highlight! link typescriptImport PurpleItalic
 highlight! link typescriptBOM Blue
-highlight! link typescriptVariableDeclaration Cyan
+highlight! link typescriptVariableDeclaration Fg
 highlight! link typescriptVariable RedItalic
 highlight! link typescriptExport PurpleItalic
 highlight! link typescriptAliasDeclaration Yellow
@@ -622,7 +622,7 @@ highlight! link typescriptMember Blue
 highlight! link typescriptTypeReference Cyan
 highlight! link typescriptDefault Yellow
 highlight! link typescriptTemplateSB Cyan
-highlight! link typescriptArrowFuncArg Cyan
+highlight! link typescriptArrowFuncArg Fg
 highlight! link typescriptParamImpl Green
 highlight! link typescriptFuncComma Fg
 highlight! link jsxOpenPunct Blue
@@ -719,7 +719,7 @@ highlight! link csLabel Blue
 " fsharp: {{{
 highlight! link fsharpOpen PurpleItalic
 highlight! link fsharpModule Blue
-highlight! link fsharpSymbol Cyan
+highlight! link fsharpSymbol Fg
 highlight! link fsharpCoreClass Blue
 highlight! link fsharpException PurpleItalic
 highlight! link fsharpScript PurpleItalic
