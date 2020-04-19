@@ -17,6 +17,7 @@ All notable changes to this project will be documented in this file.
 - Adjust red in the light variant.
 - Adjust `Search` and `IncSearch`.
 - Adjust syntax highlighting logic.
+- Adjust `NonText`, `Whitespace` and `SpecialKey`.
 
 ## [0.1.2] - 2020-03-02
 
