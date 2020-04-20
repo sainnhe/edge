@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file.
 - Add hi groups for builtin lsp and checkhealth.
 - Optimize Airline.
 - Optimize `cohama/agit.vim`.
+- Add `ToolbarLine` and `ToolbarButton`.
 
 ### Changed
 
