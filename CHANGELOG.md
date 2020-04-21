@@ -19,6 +19,7 @@ All notable changes to this project will be documented in this file.
 - Adjust `Search` and `IncSearch`.
 - Adjust syntax highlighting logic.
 - Adjust `NonText`, `Whitespace` and `SpecialKey`.
+- Format of alacritty theme.
 
 ## [0.1.2] - 2020-03-02
 
