@@ -1,8 +1,30 @@
-|         |                                                        𝐃𝐚𝐫𝐤                                                        |                                                        𝐋𝐢𝐠𝐡𝐭                                                        |
-| :-----: | :----------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------: |
-| 𝐃𝐞𝐟𝐚𝐮𝐥𝐭 | ![edge-dark](https://user-images.githubusercontent.com/37491630/75647937-7a725200-5c46-11ea-8ebe-fd4354e39a1e.png) | ![edge-light](https://user-images.githubusercontent.com/37491630/75647946-7e9e6f80-5c46-11ea-9213-bead6430064e.png) |
-|  𝐀𝐮𝐫𝐚   | ![aura-dark](https://user-images.githubusercontent.com/37491630/75647942-7ba37f00-5c46-11ea-9118-b3745a3f6c59.png) | ![aura-light](https://user-images.githubusercontent.com/37491630/75647949-7fcf9c80-5c46-11ea-96f8-c691f0fab5c3.png) |
-|  𝐍𝐞𝐨𝐧   | ![neon-dark](https://user-images.githubusercontent.com/37491630/75647943-7cd4ac00-5c46-11ea-87ea-d5e57f4cd4e2.png) | ![neon-light](https://user-images.githubusercontent.com/37491630/75647952-8231f680-5c46-11ea-830a-8129638e87d5.png) |
+<h1 align="center">
+𝐄𝐝𝐠𝐞
+</h1>
+
+<h2 align="center">
+𝐄𝐝𝐠𝐞 𝐃𝐚𝐫𝐤
+</h2>
+
+![edge-dark](https://user-images.githubusercontent.com/37491630/75647937-7a725200-5c46-11ea-8ebe-fd4354e39a1e.png)
+
+<h2 align="center">
+𝐄𝐝𝐠𝐞 𝐃𝐚𝐫𝐤 (𝐀𝐮𝐫𝐚)
+</h2>
+
+![aura-dark](https://user-images.githubusercontent.com/37491630/75647942-7ba37f00-5c46-11ea-9118-b3745a3f6c59.png)
+
+<h2 align="center">
+𝐄𝐝𝐠𝐞 𝐃𝐚𝐫𝐤 (𝐍𝐞𝐨𝐧)
+</h2>
+
+![neon-dark](https://user-images.githubusercontent.com/37491630/75647943-7cd4ac00-5c46-11ea-87ea-d5e57f4cd4e2.png)
+
+<h2 align="center">
+𝐄𝐝𝐠𝐞 𝐋𝐢𝐠𝐡𝐭
+</h2>
+
+![edge-light](https://user-images.githubusercontent.com/37491630/75647946-7e9e6f80-5c46-11ea-9213-bead6430064e.png)
 
 This color scheme is heavily inspired by [Atom One](https://github.com/atom/atom/tree/master/packages/one-dark-syntax) and [Material](https://github.com/equinusocio/material-theme), I'm trying to combine my favorite designs of them in this color scheme.
 
