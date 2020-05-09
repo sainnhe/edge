@@ -184,6 +184,7 @@ To apply it without reloading:
 - [Kitty](./kitty/README.md)
 - [Termite](./termite/README.md)
 - [Tilix](./tilix/README.md)
+- [Windows Terminal](./wt/README.md)
 
 ### Other
 
