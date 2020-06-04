@@ -174,7 +174,7 @@ To apply it without reloading:
 
 ## Related Projects
 
-See this [wiki page](https://github.com/sainnhe/edge/wiki/Related-Projects)
+See this [wiki page](https://github.com/sainnhe/edge/wiki/Related-Projects).
 
 ## License
 
