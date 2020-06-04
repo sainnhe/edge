@@ -174,39 +174,7 @@ To apply it without reloading:
 
 ## Related Projects
 
-### Code Editor
-
-- [Visual Studio Code](https://github.com/sainnhe/edge-vscode)
-
-### Terminal Emulators
-
-- [Alacritty](./alacritty/README.md)
-- [Kitty](./kitty/README.md)
-- [Termite](./termite/README.md)
-- [Tilix](./tilix/README.md)
-- [Windows Terminal](./wt/README.md)
-
-### Other
-
-- [Xresources](./xresources/README.md)
-- [fzf](./fzf/README.md)
-- [zsh](https://github.com/sainnhe/edge/tree/master/zsh)
-- [tmux](https://www.sainnhe.dev/post/status-line-config/)
-
-## More Color Schemes
-
-- [Gruvbox Material](https://github.com/sainnhe/gruvbox-material)
-- [Forest Night](https://github.com/sainnhe/forest-night)
-- [Sonokai](https://github.com/sainnhe/sonokai)
-
-## Inspiration
-
-- [Atom One](https://github.com/atom/atom/tree/master/packages/one-dark-syntax)
-- [Material](https://github.com/equinusocio/material-theme)
-
-## Thanks to
-
-- [manfredmjka](https://github.com/manfredmjka): termite and fzf support
+See this [wiki page](https://github.com/sainnhe/edge/wiki/Related-Projects)
 
 ## License
 
