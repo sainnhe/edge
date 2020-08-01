@@ -46,14 +46,16 @@ Take [vim-plug](https://github.com/junegunn/vim-plug) for example:
 Plug 'sainnhe/edge'
 ```
 
-For better syntax highlighting support, please install [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot).
+For better syntax highlighting support, please install [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot) or [nvim-treesitter/nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
 
 ### Manually
 
 1. Clone this repository.
-2. Copy `/path/to/edge/colors/*` to `~/.vim/colors/` .
-3. To install [airline](https://github.com/vim-airline/vim-airline) theme, copy `/path/to/edge/autoload/airline/themes/*` to `~/.vim/autoload/airline/themes/` .
-4. To install [lightline](https://github.com/itchyny/lightline.vim) theme, copy `/path/to/edge/autoload/lightline/colorscheme/*` to `~/.vim/autoload/lightline/colorscheme/` .
+2. Copy `/path/to/edge/autoload/edge.vim` to `~/.vim/autoload/`.
+3. Copy `/path/to/edge/colors/edge.vim` to `~/.vim/colors/` .
+4. Copy `/path/to/edge/doc/edge.txt` to `~/.vim/doc/` and execute `:helptags ~/.vim/doc/` to generate help tags.
+5. To install [airline](https://github.com/vim-airline/vim-airline) theme, copy `/path/to/edge/autoload/airline/themes/edge.vim` to `~/.vim/autoload/airline/themes/edge.vim` .
+6. To install [lightline](https://github.com/itchyny/lightline.vim) theme, copy `/path/to/edge/autoload/lightline/colorscheme/edge.vim` to `~/.vim/autoload/lightline/colorscheme/edge.vim` .
 
 ## Usage
 
@@ -72,13 +74,13 @@ set background=dark
 set background=light
 
 " the configuration options should be placed before `colorscheme edge`
-let g:edge_style = 'neon'
+let g:edge_style = 'aura'
 let g:edge_disable_italic_comment = 1
 
 colorscheme edge
 ```
 
-See [Configuration](https://github.com/sainnhe/edge#configuration) for more configuration options.
+See `:help edge-configuration` for more configuration options.
 
 If you want to apply this color scheme temporarily, run this command in vim(**this may cause broken colors**):
 
@@ -120,35 +122,6 @@ To apply it without reloading:
 :call lightline#colorscheme()
 ```
 
-#### Configuration
-
-**Note:** The configuration options should be placed before `colorscheme edge` .
-
-- `g:edge_style`: Customize the style of this color scheme.
-  - Available values: `'default'`, `'aura'`, `'neon'`
-  - Default value: `'default'`
-- `g:edge_transparent_background`: Set to `1` to enable transparent background.
-  - Available values: `0`, `1`
-  - Default value: `0`
-- `g:edge_menu_selection_background`: Control the background color of `PmenuSel` and `WildMenu` .
-  - Available values: `'blue'`, `'green'`, `'purple'`
-  - Default value: `'blue'`
-- `g:edge_disable_italic_comment`: Set to `1` to disable italic in `Comment` .
-  - Available values: `0`, `1`
-  - Default value: `0`
-- `g:edge_enable_italic`: Set to `1` to italicize keywords. This option is designed to use with fonts that support cursive italic styles, for example [Fira Code iCursive Op](https://github.com/sainnhe/icursive-nerd-font).
-  - Available values: `0`, `1`
-  - Default value: `0`
-- `g:edge_cursor`: Customize the cursor color, only works in GUI clients.
-  - Available values: `'auto'`, `'red'`, `'green'`, `'blue'`, `'purple'`
-  - Default value: `'auto'`
-- `g:edge_current_word`: Some plugins can highlight the word under current cursor(for example [neoclide/coc-highlight](https://github.com/neoclide/coc-highlight)), you can use this option to control their behavior.
-  - Available values: `'bold'`, `'underline'`, `'italic'`, `'grey background'`
-  - Default value: `'grey background'` when not in transparent mode, `'bold'` when in transparent mode.
-- `g:edge_lightline_disable_bold`: Set to `1` to disable bold in lightline theme.
-  - Available values: `0`, `1`
-  - Default value: `0`
-
 ### FAQ
 
 **Q: It doesn't work as expected.**
@@ -175,6 +148,12 @@ To apply it without reloading:
 ## Related Projects
 
 See this [wiki page](https://github.com/sainnhe/edge/wiki/Related-Projects).
+
+## More Color Schemes
+
+- [Gruvbox Material](https://github.com/sainnhe/gruvbox-material)
+- [Forest Night](https://github.com/sainnhe/forest-night)
+- [Sonokai](https://github.com/sainnhe/sonokai)
 
 ## License
 
