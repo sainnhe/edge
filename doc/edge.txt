@@ -1,0 +1,318 @@
+*edge.txt*
+
+CONTENTS                                     *edge-contents*
+
+Introduction                                 |edge-introduction|
+Installation                                 |edge-installation|
+Usage                                        |edge-usage|
+Configuration                                |edge-configuration|
+FAQ                                          |edge-faq|
+
+==============================================================================
+INTRODUCTION                                             *edge-introduction*
+
+This color scheme is heavily inspired by Atom One and Material, I'm trying to
+combine my favorite designs of them in this color scheme.
+
+Features~
+
+- Vivid colors.
+- Designed to have a soft contrast for eye protection.
+- Customizable.
+- Rich support for common file types and plugins.
+- Italic support 🎉
+
+==============================================================================
+INSTALLATION                                             *edge-installation*
+
+------------------------------------------------------------------------------
+Via Plugin Manager~
+
+    Take [vim-plug](https://github.com/junegunn/vim-plug) for example:
+>
+	Plug 'sainnhe/edge'
+<
+    For better syntax highlighting support, please install
+    https://github.com/sheerun/vim-polyglot or https://github.com/nvim-treesitter/nvim-treesitter.
+
+------------------------------------------------------------------------------
+Manually~
+
+    1. Clone the repository: `git clone --depth 1 https://github.com/sainnhe/edge.git`
+
+    2. Copy `/path/to/edge/autoload/edge.vim` to
+    `~/.vim/autoload/`.
+
+    3. Copy `/path/to/edge/colors/edge.vim` to
+    `~/.vim/colors/` .
+
+    4. Copy `/path/to/edge/doc/edge.txt` to
+    `~/.vim/doc/` and execute `:helptags ~/.vim/doc/` to generate help tags.
+
+    5. To install [airline](https://github.com/vim-airline/vim-airline) theme,
+    copy `/path/to/edge/autoload/airline/themes/edge.vim`
+    to `~/.vim/autoload/airline/themes/edge.vim` .
+
+    6. To install [lightline](https://github.com/itchyny/lightline.vim) theme,
+    copy `/path/to/edge/autoload/lightline/colorscheme/edge.vim`
+    to `~/.vim/autoload/lightline/colorscheme/edge.vim` .
+
+==============================================================================
+USAGE                                                           *edge-usage*
+
+------------------------------------------------------------------------------
+Vim~
+
+    Put something like this in your vimrc:
+>
+	" Important!!
+	if has('termguicolors')
+	  set termguicolors
+	endif
+
+	" The configuration options should be placed before `colorscheme edge`.
+	let g:edge_style = 'aura'
+	let g:edge_enable_italic = 1
+	let g:edge_disable_italic_comment = 1
+
+	colorscheme edge
+<
+    See |edge-configuration| for more configuration options.
+
+    If you want to apply this color scheme temporarily, run this command in
+    vim(this may cause broken colors):
+>
+	:colorscheme edge
+<
+------------------------------------------------------------------------------
+Airline~
+
+    To enable [airline](https://github.com/vim-airline/vim-airline) color
+    scheme, put this in your vimrc:
+>
+	let g:airline_theme = 'edge'
+<
+    To apply it without reloading:
+>
+	:AirlineTheme edge
+<
+------------------------------------------------------------------------------
+Lightline~
+
+    To enable [lightline](https://github.com/itchyny/lightline.vim) color
+    scheme, put this in your vimrc:
+>
+	let g:lightline = {}
+	let g:lightline.colorscheme = 'edge'
+
+	" Or this line:
+	let g:lightline = {'colorscheme' : 'edge'}
+<
+    To apply it without reloading:
+>
+	:let g:lightline.colorscheme = 'edge'
+	:call lightline#init()
+	:call lightline#colorscheme()
+<
+==============================================================================
+CONFIGURATION                                           *edge-configuration*
+
+Note: the configuration options should be placed before `colorscheme edge`
+
+E.g.~
+>
+    if has('termguicolors')
+        set termguicolors
+    endif
+
+    let g:edge_style = 'edge'
+    let g:edge_enable_italic = 1
+    let g:edge_disable_italic_comment = 1
+
+    colorscheme edge
+    let g:lightline.colorscheme = 'edge'
+<
+------------------------------------------------------------------------------
+                                                              *g:edge_style*
+
+The style of this color scheme.
+
+    Available values: `'default'`, `'aura'`, `'neon'`
+    Default value: `'default'`
+
+E.g.~
+>
+    let g:edge_style = 'aura'
+<
+------------------------------------------------------------------------------
+                                             *g:edge_disable_italic_comment*
+
+By default, italic is enabled in `Comment`. To disable italic in `Comment`, set
+this option to `1`.
+
+E.g.~
+>
+    let g:edge_disable_italic_comment = 1
+<
+------------------------------------------------------------------------------
+                                                      *g:edge_enable_italic*
+
+To enable italic in this color scheme, set this option to `1`.
+
+E.g.~
+>
+    let g:edge_enable_italic = 1
+<
+Note: This option is designed to use with fonts that support cursive italics.
+See |edge-faq| for more information.
+
+------------------------------------------------------------------------------
+                                                             *g:edge_cursor*
+
+Customize the cursor color, only works in GUI clients.
+
+    Available values: `'auto'`, `'red'`, `'yellow'`, `'green'`, `'cyan'`,
+    `'blue'`, `'purple'`
+    Default value: `'auto'`
+
+E.g.~
+>
+    let g:edge_cursor = 'green'
+<
+------------------------------------------------------------------------------
+                                             *g:edge_transparent_background*
+
+To use transparent background, set this option to `1`.
+
+E.g.~
+>
+    let g:edge_transparent_background = 1
+<
+------------------------------------------------------------------------------
+                                          *g:edge_menu_selection_background*
+
+Customize the background color of |hl-PmenuSel| and |hl-WildMenu|.
+
+    Available values: `'blue'`, `'green'`, `'purple'`
+    Default value: `'blue'`
+
+E.g.~
+>
+    let g:edge_menu_selection_background = 'purple'
+<
+------------------------------------------------------------------------------
+                                             *g:edge_sign_column_background*
+
+By default, the background color of sign column is different from normal text.
+If you want to make it the same as normal text, set this option to `'none'`.
+
+    Available values: `'default'`, `'none'`
+    Default value: `'default'`
+
+E.g.~
+>
+    let g:edge_sign_column_background = 'none'
+<
+------------------------------------------------------------------------------
+                                          *g:edge_diagnostic_line_highlight*
+
+Some plugins support highlighting error/warning/info/hint lines, but this
+feature is disabled by default in this color scheme. To enable this feature,
+set this option to `1`.
+
+E.g.~
+>
+    let g:edge_diagnostic_line_highlight = 1
+<
+Currently, the following plugins are supported:
+
+- https://github.com/neoclide/coc.nvim
+- https://github.com/ycm-core/YouCompleteMe
+- https://github.com/dense-analysis/ale
+- https://github.com/vim-syntastic/syntastic
+
+------------------------------------------------------------------------------
+                                                       *g:edge_current_word*
+
+Some plugins can highlight the word under current cursor, you can use this
+option to control their behavior.
+
+Currently support:
+
+- https://github.com/neoclide/coc-highlight
+- https://github.com/dominikduda/vim_current_word
+- https://github.com/RRethy/vim-illuminate
+- https://github.com/itchyny/vim-cursorword
+- https://github.com/prabirshrestha/vim-lsp
+
+    Available values: `'grey background'`, `'bold'`, `'underline'`, `'italic'`
+    Default value: `'grey background'` when not in transparent mode, `'bold'`
+    when in transparent mode.
+
+E.g.~
+>
+    let g:edge_current_word = 'bold'
+<
+------------------------------------------------------------------------------
+                                             *g:edge_lightline_disable_bold*
+
+By default, bold is enabled in lightline color scheme. To disable bold in
+lightline color scheme, set this option to `1`.
+
+E.g.~
+>
+    let g:edge_lightline_disable_bold = 1
+<
+Note: this configuration option doesn't need to be placed before `colorscheme edge`
+
+------------------------------------------------------------------------------
+                                                 *g:edge_better_performance*
+
+The loading time of this color scheme is very long because too many file types
+and plugins are optimized. This feature allows you to load part of the code on
+demand by placing them in the `after/ftplugin` directory.
+
+Enabling this option will reduce loading time by approximately 50%.
+
+E.g.~
+>
+    let g:edge_better_performance = 1
+<
+==============================================================================
+FAQ                                                      *edge-faq*
+
+------------------------------------------------------------------------------
+Q:~
+    It doesn't work as expected.
+
+A:~
+    1. This color scheme is mainly designed for true colors, `set termguicolors`
+    is required. Check output of `vim --version`, maybe your vim doesn't support
+    `termguicolors`.
+
+    2. Maybe your terminal emulator doesn't support true colors, you can test
+    it using [this script](https://unix.stackexchange.com/questions/404414/print-true-color-24-bit-test-pattern).
+
+    3. If you are running vim in tmux, you need to override default true
+    colors of tmux, as tmux cannot display true colors properly:
+    [#1246 How to use true colors in vim under tmux?](https://github.com/tmux/tmux/issues/1246)
+
+    4. There are many highlight group links in syntax files while a color
+    scheme may change them, enabling one color scheme based on another color
+    scheme enabled is very likely to cause colors to break. If any color is
+    broken, you can enable the color scheme in your vimrc instead of after
+    vim startup.
+
+------------------------------------------------------------------------------
+Q:~
+    How to enable cursive italic keywords?
+
+A:~
+    1. Install a font that supports cursive italics, for example [icursive-nerd-font](https://github.com/sainnhe/icursive-nerd-font).
+
+    2. Enable italic keywords in this color scheme: `let g:edge_enable_italic = 1`
+
+    3. Disable italic comment(optional): `let g:edge_disable_italic_comment = 1`
+
+==============================================================================
+vim:tw=78:nosta:noet:ts=8:sts=0:ft=help:noet:fen:fdm=marker:fmr={{{,}}}:
