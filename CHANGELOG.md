@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.1.3] - 2020-08-02
+
 ### Added
 
 - Optimize `Yggdroot/indentLine`.
@@ -20,6 +22,7 @@ All notable changes to this project will be documented in this file.
 - Adjust syntax highlighting logic.
 - Adjust `NonText`, `Whitespace` and `SpecialKey`.
 - Format of alacritty theme.
+- Rewrite based on gruvbox-material.
 
 ## [0.1.2] - 2020-03-02
 
@@ -48,7 +51,8 @@ All notable changes to this project will be documented in this file.
 - Add termite theme.
 - Add fzf theme.
 
-[unreleased]: https://github.com/sainnhe/edge/compare/v0.1.2...HEAD
-[0.1.2]: https://github.com/sainnhe/edge/releases/tag/v0.1.2
-[0.1.1]: https://github.com/sainnhe/edge/releases/tag/v0.1.1
+[unreleased]: https://github.com/sainnhe/edge/compare/v0.1.3...HEAD
+[0.1.3]: https://github.com/sainnhe/edge/compare/v0.1.2...v0.1.3
+[0.1.2]: https://github.com/sainnhe/edge/compare/v0.1.1...v0.1.2
+[0.1.1]: https://github.com/sainnhe/edge/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/sainnhe/edge/releases/tag/v0.1.0
