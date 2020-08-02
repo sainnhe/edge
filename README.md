@@ -6,25 +6,25 @@
 𝐄𝐝𝐠𝐞 𝐃𝐚𝐫𝐤
 </h2>
 
-![edge-dark](https://user-images.githubusercontent.com/37491630/75647937-7a725200-5c46-11ea-8ebe-fd4354e39a1e.png)
+![edge-dark](https://user-images.githubusercontent.com/37491630/89113527-e0d4f800-d4a4-11ea-97d0-bcb223213e77.png)
 
 <h2 align="center">
 𝐄𝐝𝐠𝐞 𝐃𝐚𝐫𝐤 (𝐀𝐮𝐫𝐚)
 </h2>
 
-![aura-dark](https://user-images.githubusercontent.com/37491630/75647942-7ba37f00-5c46-11ea-9118-b3745a3f6c59.png)
+![aura-dark](https://user-images.githubusercontent.com/37491630/89113526-dfa3cb00-d4a4-11ea-97cd-213145e6bfb6.png)
 
 <h2 align="center">
 𝐄𝐝𝐠𝐞 𝐃𝐚𝐫𝐤 (𝐍𝐞𝐨𝐧)
 </h2>
 
-![neon-dark](https://user-images.githubusercontent.com/37491630/75647943-7cd4ac00-5c46-11ea-87ea-d5e57f4cd4e2.png)
+![neon-dark](https://user-images.githubusercontent.com/37491630/89113529-e5011580-d4a4-11ea-9608-61ca4cfe9a4f.png)
 
 <h2 align="center">
 𝐄𝐝𝐠𝐞 𝐋𝐢𝐠𝐡𝐭
 </h2>
 
-![edge-light](https://user-images.githubusercontent.com/37491630/75647946-7e9e6f80-5c46-11ea-9213-bead6430064e.png)
+![edge-light](https://user-images.githubusercontent.com/37491630/89113528-e3375200-d4a4-11ea-905a-c5007e78dba0.png)
 
 This color scheme is heavily inspired by [Atom One](https://github.com/atom/atom/tree/master/packages/one-dark-syntax) and [Material](https://github.com/equinusocio/material-theme), I'm trying to combine my favorite designs of them in this color scheme.
 
