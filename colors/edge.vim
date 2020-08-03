@@ -21,7 +21,7 @@ endif
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon 03 Aug 2020 12:50:07 AM UTC'
+let s:last_modified = 'Mon 03 Aug 2020 03:45:05 AM UTC'
 let g:edge_loaded_file_types = []
 " }}}
 " Common Highlight Groups: {{{
@@ -284,8 +284,8 @@ highlight! link TSConstant YellowItalic
 highlight! link TSConstBuiltin YellowItalic
 highlight! link TSConstMacro Cyan
 highlight! link TSString Green
-highlight! link TSStringRegex Blue
-highlight! link TSStringEscape Blue
+highlight! link TSStringRegex Yellow
+highlight! link TSStringEscape Yellow
 highlight! link TSCharacter Green
 highlight! link TSNumber Yellow
 highlight! link TSBoolean Yellow
@@ -696,21 +696,21 @@ highlight! link UndotreeSavedSmall Red
 " ft_begin: markdown {{{
 " builtin: {{{
 call edge#highlight('markdownH1', s:palette.purple, s:palette.none, 'bold')
-call edge#highlight('markdownH2', s:palette.cyan, s:palette.none, 'bold')
-call edge#highlight('markdownH3', s:palette.green, s:palette.none, 'bold')
-call edge#highlight('markdownH4', s:palette.blue, s:palette.none, 'bold')
-call edge#highlight('markdownH5', s:palette.red, s:palette.none, 'bold')
-call edge#highlight('markdownH6', s:palette.yellow, s:palette.none, 'bold')
-call edge#highlight('markdownUrl', s:palette.red, s:palette.none, 'underline')
+call edge#highlight('markdownH2', s:palette.red, s:palette.none, 'bold')
+call edge#highlight('markdownH3', s:palette.blue, s:palette.none, 'bold')
+call edge#highlight('markdownH4', s:palette.yellow, s:palette.none, 'bold')
+call edge#highlight('markdownH5', s:palette.green, s:palette.none, 'bold')
+call edge#highlight('markdownH6', s:palette.cyan, s:palette.none, 'bold')
+call edge#highlight('markdownUrl', s:palette.green, s:palette.none, 'underline')
 call edge#highlight('markdownItalic', s:palette.none, s:palette.none, 'italic')
 call edge#highlight('markdownBold', s:palette.none, s:palette.none, 'bold')
 call edge#highlight('markdownItalicDelimiter', s:palette.grey, s:palette.none, 'italic')
-highlight! link markdownCode Blue
-highlight! link markdownCodeBlock Blue
-highlight! link markdownCodeDelimiter Blue
+highlight! link markdownCode Green
+highlight! link markdownCodeBlock Green
+highlight! link markdownCodeDelimiter Green
 highlight! link markdownBlockquote Grey
-highlight! link markdownListMarker Purple
-highlight! link markdownOrdepurpleListMarker Purple
+highlight! link markdownListMarker Red
+highlight! link markdownOrdepurpleListMarker Red
 highlight! link markdownRule Yellow
 highlight! link markdownHeadingRule Grey
 highlight! link markdownUrlDelimiter Grey
@@ -724,14 +724,15 @@ highlight! link markdownBoldDelimiter Grey
 highlight! link markdownId Green
 " }}}
 " vim-markdown: https://github.com/gabrielelana/vim-markdown{{{
-call edge#highlight('mkdURL', s:palette.red, s:palette.none, 'underline')
-call edge#highlight('mkdInlineURL', s:palette.red, s:palette.none, 'underline')
+call edge#highlight('mkdURL', s:palette.green, s:palette.none, 'underline')
+call edge#highlight('mkdInlineURL', s:palette.green, s:palette.none, 'underline')
 call edge#highlight('mkdItalic', s:palette.grey, s:palette.none, 'italic')
-highlight! link mkdCodeDelimiter Blue
+highlight! link mkdCodeDelimiter Green
+highlight! link mkdCode Green
 highlight! link mkdBold Grey
 highlight! link mkdLink Purple
 highlight! link mkdHeading Grey
-highlight! link mkdListItem Purple
+highlight! link mkdListItem Red
 highlight! link mkdRule Yellow
 highlight! link mkdDelimiter Grey
 highlight! link mkdId Green
@@ -747,9 +748,11 @@ call edge#highlight('rstHyperlinkTarget', s:palette.red, s:palette.none, 'underl
 highlight! link rstSubstitutionReference Red
 highlight! link rstInterpretedTextOrHyperlinkReference Blue
 highlight! link rstTableLines Grey
-highlight! link rstInlineLiteral Blue
-highlight! link rstLiteralBlock Blue
-highlight! link rstQuotedLiteralBlock Blue
+highlight! link rstInlineLiteral Green
+highlight! link rstLiteralBlock Green
+highlight! link rstQuotedLiteralBlock Green
+highlight! link rstExplicitMarkup Red
+highlight! link rstDirective Red
 " }}}
 " ft_end }}}
 " ft_begin: tex {{{
@@ -769,11 +772,11 @@ highlight! link texInputFile Blue
 " ft_begin: html/markdown/javascriptreact/typescriptreact {{{
 " builtin: https://notabug.org/jorgesumle/vim-html-syntax{{{
 call edge#highlight('htmlH1', s:palette.purple, s:palette.none, 'bold')
-call edge#highlight('htmlH2', s:palette.cyan, s:palette.none, 'bold')
-call edge#highlight('htmlH3', s:palette.green, s:palette.none, 'bold')
-call edge#highlight('htmlH4', s:palette.blue, s:palette.none, 'bold')
-call edge#highlight('htmlH5', s:palette.red, s:palette.none, 'bold')
-call edge#highlight('htmlH6', s:palette.yellow, s:palette.none, 'bold')
+call edge#highlight('htmlH2', s:palette.red, s:palette.none, 'bold')
+call edge#highlight('htmlH3', s:palette.blue, s:palette.none, 'bold')
+call edge#highlight('htmlH4', s:palette.yellow, s:palette.none, 'bold')
+call edge#highlight('htmlH5', s:palette.green, s:palette.none, 'bold')
+call edge#highlight('htmlH6', s:palette.cyan, s:palette.none, 'bold')
 call edge#highlight('htmlLink', s:palette.none, s:palette.none, 'underline')
 call edge#highlight('htmlBold', s:palette.none, s:palette.none, 'bold')
 call edge#highlight('htmlBoldUnderline', s:palette.none, s:palette.none, 'bold,underline')
@@ -787,7 +790,7 @@ highlight! link htmlEndTag Purple
 highlight! link htmlTagN PurpleItalic
 highlight! link htmlTagName PurpleItalic
 highlight! link htmlArg Red
-highlight! link htmlScriptTag Yellow
+highlight! link htmlScriptTag Blue
 highlight! link htmlSpecialTagName PurpleItalic
 highlight! link htmlString Green
 " }}}
@@ -810,8 +813,8 @@ highlight! link xmlString Green
 " ft_end }}}
 " ft_begin: css/scss/sass/less {{{
 " builtin: https://github.com/JulesWang/css.vim{{{
-highlight! link cssStringQ Blue
-highlight! link cssStringQQ Blue
+highlight! link cssStringQ Green
+highlight! link cssStringQQ Green
 highlight! link cssAttrComma Grey
 highlight! link cssBraces Grey
 highlight! link cssTagName Yellow
@@ -1741,7 +1744,7 @@ highlight! link cmakeKWwrite_file Blue
 " ft_end }}}
 " ft_begin: json {{{
 highlight! link jsonKeyword Purple
-highlight! link jsonString Blue
+highlight! link jsonString Green
 highlight! link jsonBoolean Red
 highlight! link jsonNoise Grey
 highlight! link jsonQuote Grey
@@ -1750,13 +1753,13 @@ highlight! link jsonBraces Fg
 " ft_begin: yaml {{{
 highlight! link yamlKey Purple
 highlight! link yamlConstant RedItalic
-highlight! link yamlString Blue
+highlight! link yamlString Green
 " ft_end }}}
 " ft_begin: toml {{{
-call edge#highlight('tomlTable', s:palette.yellow, s:palette.none, 'bold')
-highlight! link tomlKey Purple
-highlight! link tomlBoolean Red
-highlight! link tomlString Blue
+call edge#highlight('tomlTable', s:palette.purple, s:palette.none, 'bold')
+highlight! link tomlKey Red
+highlight! link tomlBoolean Yellow
+highlight! link tomlString Green
 highlight! link tomlTableArray tomlTable
 " ft_end }}}
 " ft_begin: diff/git {{{
