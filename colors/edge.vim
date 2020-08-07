@@ -21,7 +21,7 @@ endif
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon 03 Aug 2020 03:45:05 AM UTC'
+let s:last_modified = 'Fri 07 Aug 2020 10:07:14 AM UTC'
 let g:edge_loaded_file_types = []
 " }}}
 " Common Highlight Groups: {{{
@@ -157,11 +157,11 @@ call edge#highlight('Error', s:palette.purple, s:palette.none)
 call edge#highlight('Label', s:palette.yellow, s:palette.none)
 call edge#highlight('Special', s:palette.yellow, s:palette.none)
 call edge#highlight('SpecialChar', s:palette.yellow, s:palette.none)
-call edge#highlight('Boolean', s:palette.yellow, s:palette.none)
+call edge#highlight('Boolean', s:palette.green, s:palette.none)
 call edge#highlight('String', s:palette.green, s:palette.none)
 call edge#highlight('Character', s:palette.green, s:palette.none)
-call edge#highlight('Number', s:palette.yellow, s:palette.none)
-call edge#highlight('Float', s:palette.yellow, s:palette.none)
+call edge#highlight('Number', s:palette.green, s:palette.none)
+call edge#highlight('Float', s:palette.green, s:palette.none)
 call edge#highlight('Function', s:palette.blue, s:palette.none)
 call edge#highlight('Operator', s:palette.purple, s:palette.none)
 call edge#highlight('Title', s:palette.purple, s:palette.none, 'bold')
