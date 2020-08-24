@@ -57,6 +57,13 @@ For better syntax highlighting support, please install [sheerun/vim-polyglot](ht
 5. To install [airline](https://github.com/vim-airline/vim-airline) theme, copy `/path/to/edge/autoload/airline/themes/edge.vim` to `~/.vim/autoload/airline/themes/` .
 6. To install [lightline](https://github.com/itchyny/lightline.vim) theme, copy `/path/to/edge/autoload/lightline/colorscheme/edge.vim` to `~/.vim/autoload/lightline/colorscheme/` .
 
+### AUR
+
+There are some packages available for Arch Linux users in AUR:
+
+- [vim-edge-git](https://aur.archlinux.org/pkgbase/vim-edge-git/)
+- [neovim-edge-git](https://aur.archlinux.org/pkgbase/neovim-edge-git/)
+
 ## Usage
 
 See [`:help edge.txt`](https://github.com/sainnhe/edge/blob/master/doc/edge.txt)

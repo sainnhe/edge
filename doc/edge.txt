@@ -57,6 +57,14 @@ Manually~
     copy `/path/to/edge/autoload/lightline/colorscheme/edge.vim`
     to `~/.vim/autoload/lightline/colorscheme/` .
 
+------------------------------------------------------------------------------
+AUR~
+
+    There are some packages available for Arch Linux users in AUR:
+
+    - [vim-edge-git](https://aur.archlinux.org/pkgbase/vim-edge-git/)
+    - [neovim-edge-git](https://aur.archlinux.org/pkgbase/neovim-edge-git/)
+
 ==============================================================================
 USAGE                                                           *edge-usage*
 
