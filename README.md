@@ -80,4 +80,4 @@ See this [wiki page](https://github.com/sainnhe/edge/wiki/Related-Projects).
 
 ## License
 
-[MIT](./LICENSE) && [Anti-996](./Anti-996-LICENSE)
+[MIT](./LICENSE)

@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - Remove duplicate docs in README.
+- Remove Anti-996-LICENSE.
 
 ## [0.1.3] - 2020-08-02
 
