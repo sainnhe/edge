@@ -13,6 +13,10 @@ All notable changes to this project will be documented in this file.
 - Remove duplicate docs in README.
 - Remove Anti-996-LICENSE.
 
+### Fixed
+
+- Fix errors when doesn't set `g:colors_name`.
+
 ## [0.1.3] - 2020-08-02
 
 ### Added
