@@ -30,7 +30,7 @@ Via Plugin Manager~
 
     Take [vim-plug](https://github.com/junegunn/vim-plug) for example:
 >
-	Plug 'sainnhe/edge'
+        Plug 'sainnhe/edge'
 <
     For better syntax highlighting support, please install
     https://github.com/sheerun/vim-polyglot or https://github.com/nvim-treesitter/nvim-treesitter.
@@ -65,24 +65,24 @@ Vim~
 
     Put something like this in your vimrc:
 >
-	" Important!!
-	if has('termguicolors')
-	  set termguicolors
-	endif
+        " Important!!
+        if has('termguicolors')
+          set termguicolors
+        endif
 
-	" The configuration options should be placed before `colorscheme edge`.
-	let g:edge_style = 'aura'
-	let g:edge_enable_italic = 1
-	let g:edge_disable_italic_comment = 1
+        " The configuration options should be placed before `colorscheme edge`.
+        let g:edge_style = 'aura'
+        let g:edge_enable_italic = 1
+        let g:edge_disable_italic_comment = 1
 
-	colorscheme edge
+        colorscheme edge
 <
     See |edge-configuration| for more configuration options.
 
     If you want to apply this color scheme temporarily, run this command in
     vim(this may cause broken colors):
 >
-	:colorscheme edge
+        :colorscheme edge
 <
 ------------------------------------------------------------------------------
 Airline~
@@ -90,11 +90,11 @@ Airline~
     To enable [airline](https://github.com/vim-airline/vim-airline) color
     scheme, put this in your vimrc:
 >
-	let g:airline_theme = 'edge'
+        let g:airline_theme = 'edge'
 <
     To apply it without reloading:
 >
-	:AirlineTheme edge
+        :AirlineTheme edge
 <
 ------------------------------------------------------------------------------
 Lightline~
@@ -102,17 +102,17 @@ Lightline~
     To enable [lightline](https://github.com/itchyny/lightline.vim) color
     scheme, put this in your vimrc:
 >
-	let g:lightline = {}
-	let g:lightline.colorscheme = 'edge'
+        let g:lightline = {}
+        let g:lightline.colorscheme = 'edge'
 
-	" Or this line:
-	let g:lightline = {'colorscheme' : 'edge'}
+        " Or this line:
+        let g:lightline = {'colorscheme' : 'edge'}
 <
     To apply it without reloading:
 >
-	:let g:lightline.colorscheme = 'edge'
-	:call lightline#init()
-	:call lightline#colorscheme()
+        :let g:lightline.colorscheme = 'edge'
+        :call lightline#init()
+        :call lightline#colorscheme()
 <
 ==============================================================================
 CONFIGURATION                                           *edge-configuration*
@@ -122,7 +122,7 @@ Note: the configuration options should be placed before `colorscheme edge`
 E.g.~
 >
     if has('termguicolors')
-        set termguicolors
+      set termguicolors
     endif
 
     let g:edge_style = 'edge'
@@ -315,4 +315,4 @@ A:~
     3. Disable italic comment(optional): `let g:edge_disable_italic_comment = 1`
 
 ==============================================================================
-vim:tw=78:nosta:noet:ts=8:sts=0:ft=help:noet:fen:fdm=marker:fmr={{{,}}}:
+vim:tw=78:nosta:noet:ts=8:sts=0:ft=help:et:sw=4:fen:fdm=marker:fmr={{{,}}}:
