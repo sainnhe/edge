@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Changed
+
+- Remove duplicate docs in README.
+
 ## [0.1.3] - 2020-08-02
 
 ### Added
