@@ -9,7 +9,7 @@ Configuration                                |edge-configuration|
 FAQ                                          |edge-faq|
 
 ==============================================================================
-INTRODUCTION                                             *edge-introduction*
+INTRODUCTION                                                *edge-introduction*
 
 This color scheme is heavily inspired by Atom One and Material, I'm trying to
 combine my favorite designs of them in this color scheme.
@@ -23,7 +23,7 @@ Features~
 - Italic support 🎉
 
 ==============================================================================
-INSTALLATION                                             *edge-installation*
+INSTALLATION                                                *edge-installation*
 
 ------------------------------------------------------------------------------
 Via Plugin Manager~
@@ -66,7 +66,7 @@ AUR~
     - [neovim-edge-git](https://aur.archlinux.org/pkgbase/neovim-edge-git/)
 
 ==============================================================================
-USAGE                                                           *edge-usage*
+USAGE                                                              *edge-usage*
 
 ------------------------------------------------------------------------------
 Vim~
@@ -123,7 +123,7 @@ Lightline~
         :call lightline#colorscheme()
 <
 ==============================================================================
-CONFIGURATION                                           *edge-configuration*
+CONFIGURATION                                              *edge-configuration*
 
 Note: the configuration options should be placed before `colorscheme edge`
 
@@ -141,7 +141,7 @@ E.g.~
     let g:lightline.colorscheme = 'edge'
 <
 ------------------------------------------------------------------------------
-                                                              *g:edge_style*
+                                                                 *g:edge_style*
 
 The style of this color scheme.
 
@@ -153,7 +153,7 @@ E.g.~
     let g:edge_style = 'aura'
 <
 ------------------------------------------------------------------------------
-                                             *g:edge_disable_italic_comment*
+                                                *g:edge_disable_italic_comment*
 
 By default, italic is enabled in `Comment`. To disable italic in `Comment`, set
 this option to `1`.
@@ -163,7 +163,7 @@ E.g.~
     let g:edge_disable_italic_comment = 1
 <
 ------------------------------------------------------------------------------
-                                                      *g:edge_enable_italic*
+                                                         *g:edge_enable_italic*
 
 To enable italic in this color scheme, set this option to `1`.
 
@@ -175,7 +175,7 @@ Note: This option is designed to use with fonts that support cursive italics.
 See |edge-faq| for more information.
 
 ------------------------------------------------------------------------------
-                                                             *g:edge_cursor*
+                                                                *g:edge_cursor*
 
 Customize the cursor color, only works in GUI clients.
 
@@ -188,7 +188,7 @@ E.g.~
     let g:edge_cursor = 'green'
 <
 ------------------------------------------------------------------------------
-                                             *g:edge_transparent_background*
+                                                *g:edge_transparent_background*
 
 To use transparent background, set this option to `1`.
 
@@ -197,7 +197,7 @@ E.g.~
     let g:edge_transparent_background = 1
 <
 ------------------------------------------------------------------------------
-                                          *g:edge_menu_selection_background*
+                                             *g:edge_menu_selection_background*
 
 Customize the background color of |hl-PmenuSel| and |hl-WildMenu|.
 
@@ -209,7 +209,7 @@ E.g.~
     let g:edge_menu_selection_background = 'purple'
 <
 ------------------------------------------------------------------------------
-                                             *g:edge_sign_column_background*
+                                                *g:edge_sign_column_background*
 
 By default, the background color of sign column is different from normal text.
 If you want to make it the same as normal text, set this option to `'none'`.
@@ -222,7 +222,7 @@ E.g.~
     let g:edge_sign_column_background = 'none'
 <
 ------------------------------------------------------------------------------
-                                          *g:edge_diagnostic_line_highlight*
+                                             *g:edge_diagnostic_line_highlight*
 
 Some plugins support highlighting error/warning/info/hint lines, but this
 feature is disabled by default in this color scheme. To enable this feature,
@@ -240,7 +240,7 @@ Currently, the following plugins are supported:
 - https://github.com/vim-syntastic/syntastic
 
 ------------------------------------------------------------------------------
-                                                       *g:edge_current_word*
+                                                          *g:edge_current_word*
 
 Some plugins can highlight the word under current cursor, you can use this
 option to control their behavior.
@@ -262,7 +262,7 @@ E.g.~
     let g:edge_current_word = 'bold'
 <
 ------------------------------------------------------------------------------
-                                             *g:edge_lightline_disable_bold*
+                                                *g:edge_lightline_disable_bold*
 
 By default, bold is enabled in lightline color scheme. To disable bold in
 lightline color scheme, set this option to `1`.
@@ -274,7 +274,7 @@ E.g.~
 Note: this configuration option doesn't need to be placed before `colorscheme edge`
 
 ------------------------------------------------------------------------------
-                                                 *g:edge_better_performance*
+                                                    *g:edge_better_performance*
 
 The loading time of this color scheme is very long because too many file types
 and plugins are optimized. This feature allows you to load part of the code on
@@ -287,7 +287,7 @@ E.g.~
     let g:edge_better_performance = 1
 <
 ==============================================================================
-FAQ                                                      *edge-faq*
+FAQ                                                                  *edge-faq*
 
 ------------------------------------------------------------------------------
 Q:~
