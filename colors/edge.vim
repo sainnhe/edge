@@ -21,7 +21,7 @@ endif
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Nov 23 02:37:42 AM UTC 2020'
+let s:last_modified = 'Mon Nov 23 02:50:00 AM UTC 2020'
 let g:edge_loaded_file_types = []
 " }}}
 " Common Highlight Groups: {{{
@@ -100,6 +100,7 @@ elseif s:configuration.menu_selection_background ==# 'purple'
 endif
 highlight! link WildMenu PmenuSel
 call edge#highlight('PmenuThumb', s:palette.none, s:palette.bg_grey)
+call edge#highlight('NormalFloat', s:palette.fg, s:palette.bg2)
 call edge#highlight('Question', s:palette.yellow, s:palette.none)
 call edge#highlight('SpellBad', s:palette.red, s:palette.none, 'undercurl', s:palette.red)
 call edge#highlight('SpellCap', s:palette.yellow, s:palette.none, 'undercurl', s:palette.yellow)
