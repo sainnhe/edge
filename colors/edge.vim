@@ -21,7 +21,7 @@ endif
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri 07 Aug 2020 10:07:14 AM UTC'
+let s:last_modified = 'Mon Nov 23 02:37:42 AM UTC 2020'
 let g:edge_loaded_file_types = []
 " }}}
 " Common Highlight Groups: {{{
@@ -61,10 +61,17 @@ highlight! link vCursor Cursor
 highlight! link iCursor Cursor
 highlight! link lCursor Cursor
 highlight! link CursorIM Cursor
-call edge#highlight('CursorColumn', s:palette.none, s:palette.bg1)
-call edge#highlight('CursorLine', s:palette.none, s:palette.bg1)
+if &diff
+  call edge#highlight('CursorLine', s:palette.none, s:palette.none, 'underline')
+  call edge#highlight('CursorColumn', s:palette.none, s:palette.none, 'bold')
+else
+  call edge#highlight('CursorLine', s:palette.none, s:palette.bg1)
+  call edge#highlight('CursorColumn', s:palette.none, s:palette.bg1)
+endif
 call edge#highlight('LineNr', s:palette.grey, s:palette.none)
-if (&relativenumber == 1 && &cursorline == 0) || s:configuration.sign_column_background !=# 'default'
+if &diff
+  call edge#highlight('CursorLineNr', s:palette.fg, s:palette.none, 'underline')
+elseif (&relativenumber == 1 && &cursorline == 0) || s:configuration.sign_column_background !=# 'default'
   call edge#highlight('CursorLineNr', s:palette.fg, s:palette.none)
 else
   call edge#highlight('CursorLineNr', s:palette.fg, s:palette.bg1)
@@ -114,18 +121,31 @@ call edge#highlight('debugPC', s:palette.bg0, s:palette.bg_green)
 call edge#highlight('debugBreakpoint', s:palette.bg0, s:palette.bg_red)
 call edge#highlight('ToolbarButton', s:palette.bg0, s:palette.bg_purple)
 if has('nvim')
+  call edge#highlight('LspDiagnosticsFloatingError', s:palette.red, s:palette.bg2)
+  call edge#highlight('LspDiagnosticsFloatingWarning', s:palette.yellow, s:palette.bg2)
+  call edge#highlight('LspDiagnosticsFloatingInformation', s:palette.blue, s:palette.bg2)
+  call edge#highlight('LspDiagnosticsFloatingHint', s:palette.green, s:palette.bg2)
   call edge#highlight('Substitute', s:palette.bg0, s:palette.yellow)
+  highlight! link LspDiagnosticsDefaultError ErrorLine
+  highlight! link LspDiagnosticsDefaultWarning WarningLine
+  highlight! link LspDiagnosticsDefaultInformation InfoLine
+  highlight! link LspDiagnosticsDefaultHint HintLine
+  highlight! link LspDiagnosticsVirtualTextError Grey
+  highlight! link LspDiagnosticsVirtualTextWarning Grey
+  highlight! link LspDiagnosticsVirtualTextInformation Grey
+  highlight! link LspDiagnosticsVirtualTextHint Grey
+  highlight! link LspDiagnosticsUnderlineError ErrorLine
+  highlight! link LspDiagnosticsUnderlineWarning WarningLine
+  highlight! link LspDiagnosticsUnderlineInformation InfoLine
+  highlight! link LspDiagnosticsUnderlineHint HintLine
+  highlight! link LspDiagnosticsSignError RedSign
+  highlight! link LspDiagnosticsSignWarning YellowSign
+  highlight! link LspDiagnosticsSignInformation BlueSign
+  highlight! link LspDiagnosticsSignHint GreenSign
   highlight! link TermCursor Cursor
   highlight! link healthError Red
   highlight! link healthSuccess Green
   highlight! link healthWarning Yellow
-  highlight! link LspDiagnosticsError Grey
-  highlight! link LspDiagnosticsWarning Grey
-  highlight! link LspDiagnosticsInformation Grey
-  highlight! link LspDiagnosticsHint Grey
-  highlight! link LspReferenceText CurrentWord
-  highlight! link LspReferenceRead CurrentWord
-  highlight! link LspReferenceWrite CurrentWord
 endif
 " }}}
 " Syntax: {{{
@@ -342,19 +362,38 @@ highlight! link CocGitTopRemovedSign RedSign
 highlight! link CocExplorerBufferRoot Purple
 highlight! link CocExplorerBufferExpandIcon Red
 highlight! link CocExplorerBufferBufnr Yellow
-highlight! link CocExplorerBufferModified Red
+highlight! link CocExplorerBufferModified Yellow
+highlight! link CocExplorerBufferReadonly Red
 highlight! link CocExplorerBufferBufname Grey
 highlight! link CocExplorerBufferFullpath Grey
 highlight! link CocExplorerFileRoot Purple
+highlight! link CocExplorerFileRootName Green
 highlight! link CocExplorerFileExpandIcon Red
 highlight! link CocExplorerFileFullpath Grey
 highlight! link CocExplorerFileDirectory Green
-highlight! link CocExplorerFileGitStage Blue
-highlight! link CocExplorerFileGitUnstage Yellow
+highlight! link CocExplorerFileGitStaged Purple
+highlight! link CocExplorerFileGitUnstaged Yellow
+highlight! link CocExplorerFileGitRootStaged Purple
+highlight! link CocExplorerFileGitRootUnstaged Yellow
+highlight! link CocExplorerGitPathChange Fg
+highlight! link CocExplorerGitContentChange Fg
+highlight! link CocExplorerGitRenamed Purple
+highlight! link CocExplorerGitCopied Fg
+highlight! link CocExplorerGitAdded Green
+highlight! link CocExplorerGitUntracked Blue
+highlight! link CocExplorerGitUnmodified Fg
+highlight! link CocExplorerGitUnmerged Cyan
+highlight! link CocExplorerGitMixed Cyan
+highlight! link CocExplorerGitModified Yellow
+highlight! link CocExplorerGitDeleted Red
+highlight! link CocExplorerGitIgnored Grey
 highlight! link CocExplorerFileSize Blue
 highlight! link CocExplorerTimeAccessed Cyan
 highlight! link CocExplorerTimeCreated Cyan
 highlight! link CocExplorerTimeModified Cyan
+highlight! link CocExplorerIndentLine Conceal
+highlight! link CocExplorerHelpDescription Grey
+highlight! link CocExplorerHelpHint Grey
 " }}}
 " prabirshrestha/vim-lsp {{{
 highlight! link LspErrorVirtual Grey
