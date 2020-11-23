@@ -21,7 +21,7 @@ endif
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Nov 23 02:50:00 AM UTC 2020'
+let s:last_modified = 'Mon Nov 23 03:02:33 AM UTC 2020'
 let g:edge_loaded_file_types = []
 " }}}
 " Common Highlight Groups: {{{
@@ -240,10 +240,10 @@ else
   call edge#highlight('PurpleSign', s:palette.purple, s:palette.bg1)
 endif
 if s:configuration.diagnostic_line_highlight
-  call edge#highlight('ErrorLine', s:palette.bg0, s:palette.red)
-  call edge#highlight('WarningLine', s:palette.bg0, s:palette.yellow)
-  call edge#highlight('InfoLine', s:palette.bg0, s:palette.blue)
-  call edge#highlight('HintLine', s:palette.bg0, s:palette.green)
+  call edge#highlight('ErrorLine', s:palette.none, s:palette.diff_red)
+  call edge#highlight('WarningLine', s:palette.none, s:palette.diff_yellow)
+  call edge#highlight('InfoLine', s:palette.none, s:palette.diff_blue)
+  call edge#highlight('HintLine', s:palette.none, s:palette.diff_green)
 else
   highlight clear ErrorLine
   highlight clear WarningLine
