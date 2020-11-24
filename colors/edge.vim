@@ -324,6 +324,7 @@ highlight! link TSRepeat Purple
 highlight! link TSLabel Purple
 highlight! link TSOperator Purple
 highlight! link TSKeyword Purple
+highlight! link TSTagDelimiter Purple
 highlight! link TSException Purple
 highlight! link TSType RedItalic
 highlight! link TSTypeBuiltin RedItalic
