@@ -203,7 +203,7 @@ endfunction "}}}
 function! edge#ft_rootpath(path) "{{{
   " Get the directory where `after/ftplugin` is generated.
   if (matchstr(a:path, '^/usr/share') ==# '') || has('win32') " Return the plugin directory. The `after/ftplugin` directory should never be generated in `/usr/share`, even if you are a root user.
-    return substitute(a:path, '/colors/edge\.vim$', '', '')
+    return fnamemodify(a:path, ':p:h:h')
   else " Use vim home directory.
     if has('nvim')
       return stdpath('config')
