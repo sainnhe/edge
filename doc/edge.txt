@@ -8,6 +8,8 @@ Usage                                        |edge-usage|
 Configuration                                |edge-configuration|
 FAQ                                          |edge-faq|
 
+Note: Type |gO| to show the outline of contents.
+
 ==============================================================================
 INTRODUCTION                                                *edge-introduction*
 
