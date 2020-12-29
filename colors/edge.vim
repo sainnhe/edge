@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Tue Dec 29 01:40:21 AM UTC 2020'
+let s:last_modified = 'Tue Dec 29 04:01:00 AM UTC 2020'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -303,38 +303,52 @@ endif
 " }}}
 " Plugins: {{{
 " nvim-treesitter/nvim-treesitter {{{
-highlight! link TSPunctDelimiter Grey
-highlight! link TSPunctBracket Fg
-highlight! link TSPunctSpecial Fg
-highlight! link TSConstant YellowItalic
+highlight! link TSAnnotation Purple
+highlight! link TSAttribute Yellow
+highlight! link TSBoolean Yellow
+highlight! link TSCharacter Green
+highlight! link TSComment Grey
+highlight! link TSConditional Purple
 highlight! link TSConstBuiltin YellowItalic
 highlight! link TSConstMacro Cyan
-highlight! link TSString Green
-highlight! link TSStringRegex Yellow
-highlight! link TSStringEscape Yellow
-highlight! link TSCharacter Green
-highlight! link TSNumber Yellow
-highlight! link TSBoolean Yellow
+highlight! link TSConstant YellowItalic
+highlight! link TSConstructor Fg
+highlight! link TSError CocErrorHighlight
+highlight! link TSException Purple
+highlight! link TSField Blue
 highlight! link TSFloat Yellow
-highlight! link TSFunction Blue
 highlight! link TSFuncBuiltin Blue
 highlight! link TSFuncMacro Blue
-highlight! link TSParameter CyanItalic
-highlight! link TSMethod Blue
-highlight! link TSField Blue
-highlight! link TSProperty Blue
-highlight! link TSConstructor Fg
-highlight! link TSConditional Purple
-highlight! link TSRepeat Purple
-highlight! link TSLabel Purple
-highlight! link TSOperator Purple
+highlight! link TSFunction Blue
+highlight! link TSInclude RedItalic
 highlight! link TSKeyword Purple
+highlight! link TSKeywordFunction Purple
+highlight! link TSLabel Purple
+highlight! link TSMethod Blue
+highlight! link TSNamespace YellowItalic
+highlight! link TSNumber Yellow
+highlight! link TSOperator Purple
+highlight! link TSParameter CyanItalic
+highlight! link TSParameterReference CyanItalic
+highlight! link TSProperty Blue
+highlight! link TSPunctBracket Fg
+highlight! link TSPunctDelimiter Grey
+highlight! link TSPunctSpecial Fg
+highlight! link TSRepeat Purple
+highlight! link TSString Green
+highlight! link TSStringEscape Yellow
+highlight! link TSStringRegex Yellow
+highlight! link TSStructure RedItalic
+highlight! link TSTag RedItalic
 highlight! link TSTagDelimiter Purple
-highlight! link TSException Purple
+highlight! link TSText Green
+call edge#highlight('TSEmphasis', s:palette.none, s:palette.none, 'bold')
+call edge#highlight('TSUnderline', s:palette.none, s:palette.none, 'underline')
 highlight! link TSType RedItalic
 highlight! link TSTypeBuiltin RedItalic
-highlight! link TSStructure RedItalic
-highlight! link TSInclude RedItalic
+highlight! link TSURI markdownUrl
+highlight! link TSVariable Fg
+highlight! link TSVariableBuiltin YellowItalic
 " }}}
 " neoclide/coc.nvim {{{
 call edge#highlight('CocHoverRange', s:palette.none, s:palette.none, 'bold,underline')
