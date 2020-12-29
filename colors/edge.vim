@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Nov 23 03:02:33 AM UTC 2020'
+let s:last_modified = 'Tue Dec 29 01:40:21 AM UTC 2020'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -145,6 +145,9 @@ if has('nvim')
   highlight! link LspDiagnosticsSignWarning YellowSign
   highlight! link LspDiagnosticsSignInformation BlueSign
   highlight! link LspDiagnosticsSignHint GreenSign
+  highlight! link LspReferenceText CurrentWord
+  highlight! link LspReferenceRead CurrentWord
+  highlight! link LspReferenceWrite CurrentWord
   highlight! link TermCursor Cursor
   highlight! link healthError Red
   highlight! link healthSuccess Green
