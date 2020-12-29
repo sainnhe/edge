@@ -7,9 +7,17 @@
 " -----------------------------------------------------------------------------
 
 " Initialization: {{{
-highlight clear
-if exists('syntax_on')
-  syntax reset
+let s:configuration = edge#get_configuration()
+let s:palette = edge#get_palette(s:configuration.style)
+let s:path = expand('<sfile>:p') " the path of this script
+let s:last_modified = 'Mon Nov 23 03:02:33 AM UTC 2020'
+let g:edge_loaded_file_types = []
+
+if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
+  highlight clear
+  if exists('syntax_on')
+    syntax reset
+  endif
 endif
 
 let g:colors_name = 'edge'
@@ -17,12 +25,6 @@ let g:colors_name = 'edge'
 if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co != 256
   finish
 endif
-
-let s:configuration = edge#get_configuration()
-let s:palette = edge#get_palette(s:configuration.style)
-let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Nov 23 03:02:33 AM UTC 2020'
-let g:edge_loaded_file_types = []
 " }}}
 " Common Highlight Groups: {{{
 " UI: {{{
