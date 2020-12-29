@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Tue Dec 29 05:06:48 AM UTC 2020'
+let s:last_modified = 'Tue Dec 29 05:22:29 AM UTC 2020'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -1859,12 +1859,12 @@ highlight! link dosiniNumber Blue
 " ft_begin: help {{{
 call edge#highlight('helpNote', s:palette.yellow, s:palette.none, 'bold')
 call edge#highlight('helpHeadline', s:palette.purple, s:palette.none, 'bold')
-call edge#highlight('helpHeader', s:palette.cyan, s:palette.none, 'bold')
+call edge#highlight('helpHeader', s:palette.blue, s:palette.none, 'bold')
 call edge#highlight('helpURL', s:palette.blue, s:palette.none, 'underline')
 call edge#highlight('helpHyperTextEntry', s:palette.red, s:palette.none, 'bold')
 highlight! link helpHyperTextJump Red
-highlight! link helpCommand Green
-highlight! link helpExample Blue
+highlight! link helpCommand Cyan
+highlight! link helpExample Green
 highlight! link helpSpecial Yellow
 highlight! link helpSectionDelim Grey
 " ft_end }}}
