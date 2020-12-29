@@ -16,6 +16,7 @@ All notable changes to this project will be documented in this file.
 - Remove duplicate docs in README.
 - Remove Anti-996-LICENSE.
 - Optimize diff colors.
+- Use more yellow.
 
 ### Fixed
 
