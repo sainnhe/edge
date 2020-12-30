@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Tue Dec 29 05:22:29 AM UTC 2020'
+let s:last_modified = 'Wed Dec 30 01:02:57 AM UTC 2020'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -124,23 +124,23 @@ call edge#highlight('debugPC', s:palette.bg0, s:palette.bg_green)
 call edge#highlight('debugBreakpoint', s:palette.bg0, s:palette.bg_red)
 call edge#highlight('ToolbarButton', s:palette.bg0, s:palette.bg_purple)
 if has('nvim')
-  call edge#highlight('LspDiagnosticsFloatingError', s:palette.red, s:palette.bg2)
-  call edge#highlight('LspDiagnosticsFloatingWarning', s:palette.yellow, s:palette.bg2)
-  call edge#highlight('LspDiagnosticsFloatingInformation', s:palette.blue, s:palette.bg2)
-  call edge#highlight('LspDiagnosticsFloatingHint', s:palette.green, s:palette.bg2)
   call edge#highlight('Substitute', s:palette.bg0, s:palette.yellow)
-  highlight! link LspDiagnosticsDefaultError ErrorLine
-  highlight! link LspDiagnosticsDefaultWarning WarningLine
-  highlight! link LspDiagnosticsDefaultInformation InfoLine
-  highlight! link LspDiagnosticsDefaultHint HintLine
+  highlight! link LspDiagnosticsFloatingError ErrorFloat
+  highlight! link LspDiagnosticsFloatingWarning WarningFloat
+  highlight! link LspDiagnosticsFloatingInformation InfoFloat
+  highlight! link LspDiagnosticsFloatingHint HintFloat
+  highlight! link LspDiagnosticsDefaultError ErrorText
+  highlight! link LspDiagnosticsDefaultWarning WarningText
+  highlight! link LspDiagnosticsDefaultInformation InfoText
+  highlight! link LspDiagnosticsDefaultHint HintText
   highlight! link LspDiagnosticsVirtualTextError Grey
   highlight! link LspDiagnosticsVirtualTextWarning Grey
   highlight! link LspDiagnosticsVirtualTextInformation Grey
   highlight! link LspDiagnosticsVirtualTextHint Grey
-  highlight! link LspDiagnosticsUnderlineError ErrorLine
-  highlight! link LspDiagnosticsUnderlineWarning WarningLine
-  highlight! link LspDiagnosticsUnderlineInformation InfoLine
-  highlight! link LspDiagnosticsUnderlineHint HintLine
+  highlight! link LspDiagnosticsUnderlineError ErrorText
+  highlight! link LspDiagnosticsUnderlineWarning WarningText
+  highlight! link LspDiagnosticsUnderlineInformation InfoText
+  highlight! link LspDiagnosticsUnderlineHint HintText
   highlight! link LspDiagnosticsSignError RedSign
   highlight! link LspDiagnosticsSignWarning YellowSign
   highlight! link LspDiagnosticsSignInformation BlueSign
@@ -255,7 +255,17 @@ else
   highlight clear InfoLine
   highlight clear HintLine
 endif
-if s:configuration.current_word ==# 'grey background'
+call edge#highlight('ErrorText', s:palette.none, s:palette.diff_red, 'undercurl', s:palette.red)
+call edge#highlight('WarningText', s:palette.none, s:palette.diff_yellow, 'undercurl', s:palette.yellow)
+call edge#highlight('InfoText', s:palette.none, s:palette.diff_blue, 'undercurl', s:palette.blue)
+call edge#highlight('HintText', s:palette.none, s:palette.diff_green, 'undercurl', s:palette.green)
+call edge#highlight('ErrorFloat', s:palette.red, s:palette.bg2)
+call edge#highlight('WarningFloat', s:palette.yellow, s:palette.bg2)
+call edge#highlight('InfoFloat', s:palette.blue, s:palette.bg2)
+call edge#highlight('HintFloat', s:palette.green, s:palette.bg2)
+if &diff
+  call edge#highlight('CurrentWord', s:palette.bg0, s:palette.green)
+elseif s:configuration.current_word ==# 'grey background'
   call edge#highlight('CurrentWord', s:palette.none, s:palette.bg2)
 else
   call edge#highlight('CurrentWord', s:palette.none, s:palette.none, s:configuration.current_word)
@@ -313,7 +323,7 @@ highlight! link TSConstBuiltin YellowItalic
 highlight! link TSConstMacro Cyan
 highlight! link TSConstant YellowItalic
 highlight! link TSConstructor Fg
-highlight! link TSError CocErrorHighlight
+highlight! link TSError ErrorText
 highlight! link TSException Purple
 highlight! link TSField Blue
 highlight! link TSFloat Yellow
@@ -352,14 +362,14 @@ highlight! link TSVariableBuiltin YellowItalic
 " }}}
 " neoclide/coc.nvim {{{
 call edge#highlight('CocHoverRange', s:palette.none, s:palette.none, 'bold,underline')
-call edge#highlight('CocErrorHighlight', s:palette.none, s:palette.none, 'undercurl', s:palette.red)
-call edge#highlight('CocWarningHighlight', s:palette.none, s:palette.none, 'undercurl', s:palette.yellow)
-call edge#highlight('CocInfoHighlight', s:palette.none, s:palette.none, 'undercurl', s:palette.blue)
-call edge#highlight('CocHintHighlight', s:palette.none, s:palette.none, 'undercurl', s:palette.green)
-call edge#highlight('CocErrorFloat', s:palette.red, s:palette.bg2)
-call edge#highlight('CocWarningFloat', s:palette.yellow, s:palette.bg2)
-call edge#highlight('CocInfoFloat', s:palette.blue, s:palette.bg2)
-call edge#highlight('CocHintFloat', s:palette.green, s:palette.bg2)
+highlight! link CocErrorFloat ErrorFloat
+highlight! link CocWarningFloat WarningFloat
+highlight! link CocInfoFloat InfoFloat
+highlight! link CocHintFloat HintFloat
+highlight! link CocErrorHighlight ErrorText
+highlight! link CocWarningHighlight WarningText
+highlight! link CocInfoHighlight InfoText
+highlight! link CocHintHighlight HintText
 highlight! link CocHighlightText CurrentWord
 highlight! link CocErrorSign RedSign
 highlight! link CocWarningSign YellowSign
@@ -421,10 +431,10 @@ highlight! link LspErrorVirtual Grey
 highlight! link LspWarningVirtual Grey
 highlight! link LspInformationVirtual Grey
 highlight! link LspHintVirtual Grey
-highlight! link LspErrorHighlight CocErrorHighlight
-highlight! link LspWarningHighlight CocWarningHighlight
-highlight! link LspInformationHighlight CocInfoHighlight
-highlight! link LspHintHighlight CocHintHighlight
+highlight! link LspErrorHighlight ErrorText
+highlight! link LspWarningHighlight WarningText
+highlight! link LspInformationHighlight InfoText
+highlight! link LspHintHighlight HintText
 highlight! link lspReference CurrentWord
 " }}}
 " ycm-core/YouCompleteMe {{{
@@ -432,13 +442,13 @@ highlight! link YcmErrorSign RedSign
 highlight! link YcmWarningSign YellowSign
 highlight! link YcmErrorLine ErrorLine
 highlight! link YcmWarningLine WarningLine
-highlight! link YcmErrorSection CocErrorHighlight
-highlight! link YcmWarningSection CocWarningHighlight
+highlight! link YcmErrorSection ErrorText
+highlight! link YcmWarningSection WarningText
 " }}}
 " dense-analysis/ale {{{
-highlight! link ALEError CocErrorHighlight
-highlight! link ALEWarning CocWarningHighlight
-highlight! link ALEInfo CocInfoHighlight
+highlight! link ALEError ErrorText
+highlight! link ALEWarning WarningText
+highlight! link ALEInfo InfoText
 highlight! link ALEErrorSign RedSign
 highlight! link ALEWarningSign YellowSign
 highlight! link ALEInfoSign BlueSign
