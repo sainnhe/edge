@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Wed Dec 30 01:13:24 AM UTC 2020'
+let s:last_modified = 'Thu Dec 31 10:29:57 AM UTC 2020'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -837,6 +837,20 @@ highlight! link texBeginEndName Blue
 highlight! link texDocType PurpleItalic
 highlight! link texDocTypeArgs Cyan
 highlight! link texInputFile Blue
+" }}}
+" vimtex: https://github.com/lervag/vimtex {{{
+highlight! link texCmd RedItalic
+highlight! link texCmdClass Purple
+highlight! link texCmdTitle Purple
+highlight! link texCmdAuthor Purple
+highlight! link texFileArg Blue
+highlight! link texCmdDef Purple
+highlight! link texDefArgName Yellow
+highlight! link texPartArgTitle Yellow
+highlight! link texCmdEnv Purple
+highlight! link texCmdPart Purple
+highlight! link texEnvArgName Green
+highlight! link texMathEnvArgName Green
 " }}}
 " ft_end }}}
 " ft_begin: html/markdown/javascriptreact/typescriptreact {{{
