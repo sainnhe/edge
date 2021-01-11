@@ -195,7 +195,10 @@ function! edge#ft_write(rootpath, ft, content) "{{{
   " If there is something like `call edge#highlight()`, then add
   " code to initialize the palette and configuration.
   if matchstr(a:content, 'edge#highlight') !=# ''
-    call writefile(['let s:configuration = edge#get_configuration()', 'let s:palette = edge#get_palette(s:configuration.style)'], ft_path, 'a')
+    call writefile([
+          \ 'let s:configuration = edge#get_configuration()',
+          \ 'let s:palette = edge#get_palette(s:configuration.style)'
+          \ ], ft_path, 'a')
   endif
   " Append the content.
   call writefile(split(a:content, "\n"), ft_path, 'a')
