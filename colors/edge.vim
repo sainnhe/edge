@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Dec 31 10:29:57 AM UTC 2020'
+let s:last_modified = 'Mon Jan 11 02:13:55 AM UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -654,7 +654,7 @@ if edge#ft_exists(s:path) " If the ftplugin exists.
       call edge#ft_gen(s:path, s:last_modified, 'update')
     endif
     finish
-  elseif !has('nvim') " Only clean the `after/ftplugin` directory when in vim. This code will produce a bug in neovim.
+  else
     call edge#ft_clean(s:path, 1)
   endif
 else
