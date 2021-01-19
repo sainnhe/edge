@@ -17,6 +17,7 @@ function! edge#get_configuration() "{{{
         \ 'sign_column_background': get(g:, 'edge_sign_column_background', 'default'),
         \ 'current_word': get(g:, 'edge_current_word', get(g:, 'edge_transparent_background', 0) == 0 ? 'grey background' : 'bold'),
         \ 'lightline_disable_bold': get(g:, 'edge_lightline_disable_bold', 0),
+        \ 'diagnostic_text_highlight': get(g:, 'edge_diagnostic_text_highlight', 0),
         \ 'diagnostic_line_highlight': get(g:, 'edge_diagnostic_line_highlight', 0),
         \ 'better_performance': get(g:, 'edge_better_performance', 0),
         \ }

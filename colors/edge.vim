@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Jan 11 02:13:55 AM UTC 2021'
+let s:last_modified = 'Tue Jan 19 10:50:59 AM UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -244,6 +244,17 @@ else
   call edge#highlight('BlueSign', s:palette.blue, s:palette.bg1)
   call edge#highlight('PurpleSign', s:palette.purple, s:palette.bg1)
 endif
+if s:configuration.diagnostic_text_highlight
+  call edge#highlight('ErrorText', s:palette.none, s:palette.diff_red, 'undercurl', s:palette.red)
+  call edge#highlight('WarningText', s:palette.none, s:palette.diff_yellow, 'undercurl', s:palette.yellow)
+  call edge#highlight('InfoText', s:palette.none, s:palette.diff_blue, 'undercurl', s:palette.blue)
+  call edge#highlight('HintText', s:palette.none, s:palette.diff_green, 'undercurl', s:palette.green)
+else
+  call edge#highlight('ErrorText', s:palette.none, s:palette.none, 'undercurl', s:palette.red)
+  call edge#highlight('WarningText', s:palette.none, s:palette.none, 'undercurl', s:palette.yellow)
+  call edge#highlight('InfoText', s:palette.none, s:palette.none, 'undercurl', s:palette.blue)
+  call edge#highlight('HintText', s:palette.none, s:palette.none, 'undercurl', s:palette.green)
+endif
 if s:configuration.diagnostic_line_highlight
   call edge#highlight('ErrorLine', s:palette.none, s:palette.diff_red)
   call edge#highlight('WarningLine', s:palette.none, s:palette.diff_yellow)
@@ -255,10 +266,6 @@ else
   highlight clear InfoLine
   highlight clear HintLine
 endif
-call edge#highlight('ErrorText', s:palette.none, s:palette.diff_red, 'undercurl', s:palette.red)
-call edge#highlight('WarningText', s:palette.none, s:palette.diff_yellow, 'undercurl', s:palette.yellow)
-call edge#highlight('InfoText', s:palette.none, s:palette.diff_blue, 'undercurl', s:palette.blue)
-call edge#highlight('HintText', s:palette.none, s:palette.diff_green, 'undercurl', s:palette.green)
 call edge#highlight('ErrorFloat', s:palette.red, s:palette.bg2)
 call edge#highlight('WarningFloat', s:palette.yellow, s:palette.bg2)
 call edge#highlight('InfoFloat', s:palette.blue, s:palette.bg2)
