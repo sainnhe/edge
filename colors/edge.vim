@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Tue Jan 26 03:16:22 AM UTC 2021'
+let s:last_modified = 'Tue Jan 26 03:31:57 AM UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -1007,6 +1007,7 @@ highlight! link jsTemplateExpression Yellow
 highlight! link jsTemplateBraces Yellow
 highlight! link jsClassMethodType RedItalic
 highlight! link jsExceptions RedItalic
+highlight! link jsLabel Purple
 " }}}
 " yajs: https://github.com/othree/yajs.vim{{{
 highlight! link javascriptOpSymbol Purple
