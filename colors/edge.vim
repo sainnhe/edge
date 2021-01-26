@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Tue Jan 19 10:50:59 AM UTC 2021'
+let s:last_modified = 'Tue Jan 26 03:16:22 AM UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -1383,7 +1383,7 @@ highlight! link pythonDecoratorName CyanItalic
 " }}}
 " python-syntax: https://github.com/vim-python/python-syntax{{{
 highlight! link pythonExClass RedItalic
-highlight! link pythonBuiltinType RedItalic
+highlight! link pythonBuiltinType Yellow
 highlight! link pythonBuiltinObj Yellow
 highlight! link pythonDottedName CyanItalic
 highlight! link pythonBuiltinFunc Blue
@@ -1395,7 +1395,8 @@ highlight! link pythonOperator Purple
 highlight! link pythonConditional Purple
 highlight! link pythonRepeat Purple
 highlight! link pythonException Purple
-highlight! link pythonNone YellowItalic
+highlight! link pythonNone Yellow
+highlight! link pythonClassVar RedItalic
 highlight! link pythonCoding Grey
 highlight! link pythonDot Grey
 " }}}
