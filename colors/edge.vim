@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sun Feb 14 02:12:21 AM UTC 2021'
+let s:last_modified = 'Sat Feb 27 11:20:52 AM UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -668,8 +668,10 @@ highlight! link agitDiffRemove Red
 highlight! link agitDiffAdd Green
 highlight! link agitDiffHeader Purple
 " }}}
+" }}}
+" Extended File Types: {{{
+" Whitelist: {{{ File type optimizations that will always be loaded.
 " netrw {{{
-" https://www.vim.org/scripts/script.php?script_id=1075
 highlight! link netrwDir Green
 highlight! link netrwClassify Green
 highlight! link netrwLink Grey
@@ -681,9 +683,17 @@ highlight! link netrwHelpCmd Blue
 highlight! link netrwCmdSep Grey
 highlight! link netrwVersion Purple
 " }}}
+" diff {{{
+highlight! link diffAdded Green
+highlight! link diffRemoved Red
+highlight! link diffChanged Blue
+highlight! link diffOldFile Green
+highlight! link diffNewFile Cyan
+highlight! link diffFile Yellow
+highlight! link diffLine Grey
+highlight! link diffIndexLine Yellow
 " }}}
-" Extended File Types: {{{
-" Note: To ensure that the `s:last_modified` variable is always up to date, you need to copy `.githooks/pre-commit` to `.git/hooks/pre-commit`.
+" }}}
 " Generate the `after/ftplugin` directory based on the comment tags in this file.
 " For example, the content between `ft_begin: sh/zsh` and `ft_end` will be placed in `after/ftplugin/sh/edge.vim` and `after/ftplugin/zsh/edge.vim`.
 if edge#ft_exists(s:path) " If the ftplugin exists.
@@ -1894,16 +1904,6 @@ highlight! link tomlKey Red
 highlight! link tomlBoolean Yellow
 highlight! link tomlString Green
 highlight! link tomlTableArray tomlTable
-" ft_end }}}
-" ft_begin: diff/git/gitcommit {{{
-highlight! link diffAdded Green
-highlight! link diffRemoved Red
-highlight! link diffChanged Blue
-highlight! link diffOldFile Green
-highlight! link diffNewFile Cyan
-highlight! link diffFile Yellow
-highlight! link diffLine Grey
-highlight! link diffIndexLine Yellow
 " ft_end }}}
 " ft_begin: gitcommit {{{
 highlight! link gitcommitSummary Purple
