@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sat Feb 27 11:31:38 AM UTC 2021'
+let s:last_modified = 'Sun Feb 28 10:51:35 AM UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -501,10 +501,26 @@ call edge#highlight('Lf_hl_match2', s:palette.purple, s:palette.none, 'bold')
 call edge#highlight('Lf_hl_match3', s:palette.red, s:palette.none, 'bold')
 call edge#highlight('Lf_hl_match4', s:palette.yellow, s:palette.none, 'bold')
 call edge#highlight('Lf_hl_matchRefine', s:palette.cyan, s:palette.none, 'bold')
+call edge#highlight('Lf_hl_popup_normalMode', s:palette.bg0, s:palette.green, 'bold')
+call edge#highlight('Lf_hl_popup_inputMode', s:palette.bg0, s:palette.blue, 'bold')
+call edge#highlight('Lf_hl_popup_category', s:palette.fg, s:palette.bg4)
+call edge#highlight('Lf_hl_popup_nameOnlyMode', s:palette.fg, s:palette.bg3)
+call edge#highlight('Lf_hl_popup_fullPathMode', s:palette.fg, s:palette.bg3)
+call edge#highlight('Lf_hl_popup_fuzzyMode', s:palette.fg, s:palette.bg3)
+call edge#highlight('Lf_hl_popup_regexMode', s:palette.fg, s:palette.bg3)
+call edge#highlight('Lf_hl_popup_lineInfo', s:palette.purple, s:palette.bg4)
+call edge#highlight('Lf_hl_popup_total', s:palette.bg0, s:palette.purple)
+call edge#highlight('Lf_hl_popup_cursor', s:palette.bg0, s:palette.green)
 highlight! link Lf_hl_cursorline Fg
 highlight! link Lf_hl_selection DiffAdd
 highlight! link Lf_hl_rgHighlight Visual
 highlight! link Lf_hl_gtagsHighlight Visual
+highlight! link Lf_hl_popup_inputText Pmenu
+highlight! link Lf_hl_popup_window Pmenu
+highlight! link Lf_hl_popup_prompt Green
+highlight! link Lf_hl_popup_cwd Pmenu
+highlight! link Lf_hl_popup_blank Lf_hl_popup_window
+highlight! link Lf_hl_popup_spin Yellow
 " }}}
 " liuchengxu/vim-clap {{{
 call edge#highlight('ClapSelected', s:palette.red, s:palette.bg2, 'bold')
