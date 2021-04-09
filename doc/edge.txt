@@ -269,6 +269,19 @@ Currently, the following plugins are supported:
 - https://github.com/vim-syntastic/syntastic
 
 ------------------------------------------------------------------------------
+                                                           *g:edge_virtual_text*
+g:edge_virtual_text~
+
+The virtual text colors in neovim.
+
+    Available values: `'grey'`, `'colored'`
+    Default value: `'grey'`
+
+E.g.
+>
+    let g:edge_virtual_text = 'colored'
+<
+------------------------------------------------------------------------------
                                                            *g:edge_current_word*
 g:edge_current_word~
 
