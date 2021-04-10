@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Apr  9 10:41:43 AM UTC 2021'
+let s:last_modified = 'Sat Apr 10 01:25:12 AM UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -266,7 +266,7 @@ else
   highlight clear InfoLine
   highlight clear HintLine
 endif
-if s:configuration.virtual_text ==# 'grey'
+if s:configuration.diagnostic_virtual_text ==# 'grey'
   highlight! link VirtualTextWarning Grey
   highlight! link VirtualTextError Grey
   highlight! link VirtualTextInfo Grey
