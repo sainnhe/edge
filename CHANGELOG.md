@@ -18,6 +18,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - Diagnostics text highlights.
+- `gui=undercurl` is enabled in tmux >= 2.9
 
 ## [0.1.4] - 2020-12-29
 
