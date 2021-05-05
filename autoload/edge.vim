@@ -34,7 +34,7 @@ function! edge#get_palette(style) "{{{
     if a:style ==# 'default' "{{{
       let palette = {
             \ 'bg0':        ['#2c2e34',   '235',  'Black'],
-            \ 'bg1':        ['#30323a',   '236',  'DarkGrey'],
+            \ 'bg1':        ['#33353f',   '236',  'DarkGrey'],
             \ 'bg2':        ['#363944',   '237',  'DarkGrey'],
             \ 'bg3':        ['#3b3e48',   '237',  'Grey'],
             \ 'bg4':        ['#414550',   '238',  'Grey'],
@@ -60,7 +60,7 @@ function! edge#get_palette(style) "{{{
     elseif a:style ==# 'aura' "{{{
       let palette = {
             \ 'bg0':        ['#2b2d37',   '235',  'Black'],
-            \ 'bg1':        ['#2f323e',   '236',  'DarkGrey'],
+            \ 'bg1':        ['#333644',   '236',  'DarkGrey'],
             \ 'bg2':        ['#363a49',   '237',  'DarkGrey'],
             \ 'bg3':        ['#3a3e4e',   '237',  'Grey'],
             \ 'bg4':        ['#404455',   '238',  'Grey'],
@@ -86,7 +86,7 @@ function! edge#get_palette(style) "{{{
     elseif a:style ==# 'neon' "{{{
       let palette = {
             \ 'bg0':        ['#2b2d3a',   '235',  'Black'],
-            \ 'bg1':        ['#2f3242',   '236',  'DarkGrey'],
+            \ 'bg1':        ['#333648',   '236',  'DarkGrey'],
             \ 'bg2':        ['#363a4e',   '237',  'DarkGrey'],
             \ 'bg3':        ['#393e53',   '237',  'Grey'],
             \ 'bg4':        ['#3f445b',   '238',  'Grey'],
