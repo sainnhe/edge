@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sat May  8 03:48:56 AM UTC 2021'
+let s:last_modified = 'Wed May 19 12:30:08 AM UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -81,7 +81,7 @@ endif
 call edge#highlight('DiffAdd', s:palette.none, s:palette.diff_green)
 call edge#highlight('DiffChange', s:palette.none, s:palette.diff_blue)
 call edge#highlight('DiffDelete', s:palette.none, s:palette.diff_red)
-call edge#highlight('DiffText', s:palette.bg0, s:palette.fg)
+call edge#highlight('DiffText', s:palette.bg0, s:palette.blue)
 call edge#highlight('Directory', s:palette.green, s:palette.none)
 call edge#highlight('ErrorMsg', s:palette.red, s:palette.none, 'bold,underline')
 call edge#highlight('WarningMsg', s:palette.yellow, s:palette.none, 'bold')
