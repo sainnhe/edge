@@ -252,6 +252,19 @@ E.g.
     let g:edge_sign_column_background = 'none'
 <
 ------------------------------------------------------------------------------
+                                                               *g:edge_show_eob*
+g:edge_show_eob~
+
+Whether to show |hl-EndOfBuffer|.
+
+    Available values: `1`, `0`
+    Default value: `1`
+
+E.g.
+>
+    let g:edge_show_eob = 0
+<
+------------------------------------------------------------------------------
                                               *g:edge_diagnostic_text_highlight*
 g:edge_diagnostic_text_highlight~
 

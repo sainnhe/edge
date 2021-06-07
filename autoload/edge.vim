@@ -21,6 +21,7 @@ function! edge#get_configuration() "{{{
         \ 'cursor': get(g:, 'edge_cursor', 'auto'),
         \ 'menu_selection_background': get(g:, 'edge_menu_selection_background', 'blue'),
         \ 'sign_column_background': get(g:, 'edge_sign_column_background', 'default'),
+        \ 'show_eob': get(g:, 'edge_show_eob', 1),
         \ 'current_word': get(g:, 'edge_current_word', get(g:, 'edge_transparent_background', 0) == 0 ? 'grey background' : 'bold'),
         \ 'lightline_disable_bold': get(g:, 'edge_lightline_disable_bold', 0),
         \ 'diagnostic_text_highlight': get(g:, 'edge_diagnostic_text_highlight', 0),

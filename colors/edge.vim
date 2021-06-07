@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sat May 22 02:44:18 AM UTC 2021'
+let s:last_modified = 'Mon Jun  7 08:28:52 AM UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -31,7 +31,11 @@ endif
 if s:configuration.transparent_background
   call edge#highlight('Normal', s:palette.fg, s:palette.none)
   call edge#highlight('Terminal', s:palette.fg, s:palette.none)
-  call edge#highlight('EndOfBuffer', s:palette.bg0, s:palette.none)
+  if s:configuration.show_eob
+    call edge#highlight('EndOfBuffer', s:palette.bg4, s:palette.none)
+  else
+    call edge#highlight('EndOfBuffer', s:palette.bg0, s:palette.none)
+  endif
   call edge#highlight('Folded', s:palette.grey, s:palette.none)
   call edge#highlight('ToolbarLine', s:palette.fg, s:palette.none)
   call edge#highlight('SignColumn', s:palette.fg, s:palette.none)
@@ -39,7 +43,11 @@ if s:configuration.transparent_background
 else
   call edge#highlight('Normal', s:palette.fg, s:palette.bg0)
   call edge#highlight('Terminal', s:palette.fg, s:palette.bg0)
-  call edge#highlight('EndOfBuffer', s:palette.bg0, s:palette.bg0)
+  if s:configuration.show_eob
+    call edge#highlight('EndOfBuffer', s:palette.bg4, s:palette.bg0)
+  else
+    call edge#highlight('EndOfBuffer', s:palette.bg0, s:palette.bg0)
+  endif
   call edge#highlight('Folded', s:palette.grey, s:palette.bg1)
   call edge#highlight('ToolbarLine', s:palette.fg, s:palette.bg2)
   if s:configuration.sign_column_background ==# 'default'
