@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Jun  7 08:28:52 AM UTC 2021'
+let s:last_modified = 'Tue Jun  8 11:25:38 PM UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -349,7 +349,7 @@ highlight! link TSAnnotation Purple
 highlight! link TSAttribute Yellow
 highlight! link TSBoolean Green
 highlight! link TSCharacter Green
-highlight! link TSComment Grey
+highlight! link TSComment Comment
 highlight! link TSConditional Purple
 highlight! link TSConstBuiltin CyanItalic
 highlight! link TSConstMacro CyanItalic
