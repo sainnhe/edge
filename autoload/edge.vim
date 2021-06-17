@@ -134,7 +134,7 @@ function! edge#get_palette(style) "{{{
           \ 'cyan':       ['#3a8b84',   '73',   'Cyan'],
           \ 'blue':       ['#5079be',   '68',   'Blue'],
           \ 'purple':     ['#b05ccc',   '134',  'Magenta'],
-          \ 'grey':       ['#949ba5',   '245',  'Grey'],
+          \ 'grey':       ['#8790a0',   '245',  'Grey'],
           \ 'none':       ['NONE',      'NONE', 'NONE']
           \ }
   endif "}}}
