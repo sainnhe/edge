@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Tue Jun  8 11:25:38 PM UTC 2021'
+let s:last_modified = 'Thu Jul  1 12:43:10 AM UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -1793,6 +1793,18 @@ highlight! link matlabArithmeticOperator Purple
 highlight! link matlabRelationalOperator Purple
 highlight! link matlabRelationalOperator Purple
 highlight! link matlabLogicalOperator Purple
+" }}}
+" ft_end }}}
+" ft_begin: octave {{{
+" vim-octave: https://github.com/McSinyx/vim-octave{{{
+highlight! link octaveDelimiter Fg
+highlight! link octaveSemicolon Grey
+highlight! link octaveOperator Purple
+highlight! link octaveVariable YellowItalic
+highlight! link octaveVarKeyword YellowItalic
+highlight! link octaveUserVar RedItalic
+highlight! link octaveQueryVar RedItalic
+highlight! link octaveSetVar RedItalic
 " }}}
 " ft_end }}}
 " ft_begin: sh/zsh {{{

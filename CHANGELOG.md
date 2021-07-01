@@ -16,6 +16,7 @@ All notable changes to this project will be documented in this file.
 - Optimize `kyazdani42/nvim-tree.lua`.
 - Add installation guide for using pack feature.
 - Add `g:edge_show_eob`.
+- Optimize `McSinyx/vim-octave`.
 
 ### Changed
 
