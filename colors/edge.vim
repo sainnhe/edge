@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Wed Jul  7 01:25:08 AM UTC 2021'
+let s:last_modified = 'Wed Jul  7 01:57:49 AM UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -1500,23 +1500,23 @@ highlight! link cppSTLexception Purple
 highlight! link cppSTLVariable RedItalic
 " }}}
 " chromatica: https://github.com/arakashic/chromatica.nvim{{{
-highlight! link Member CyanItalic
-highlight! link Variable Fg
-highlight! link Namespace RedItalic
-highlight! link EnumConstant Yellow
-highlight! link chromaticaException Purple
-highlight! link chromaticaCast Purple
-highlight! link OperatorOverload Purple
-highlight! link AccessQual Purple
-highlight! link Linkage Purple
-highlight! link AutoType RedItalic
+highlight! link Member TSProperty
+highlight! link Variable TSVariable
+highlight! link Namespace TSNamespace
+highlight! link EnumConstant TSType
+highlight! link chromaticaException TSException
+highlight! link chromaticaCast TSLabel
+highlight! link OperatorOverload TSOperator
+highlight! link AccessQual TSOperator
+highlight! link Linkage TSOperator
+highlight! link AutoType TSType
 " }}}
 " vim-lsp-cxx-highlight https://github.com/jackguo380/vim-lsp-cxx-highlight{{{
 highlight! link LspCxxHlSkippedRegion Grey
-highlight! link LspCxxHlSkippedRegionBeginEnd Purple
-highlight! link LspCxxHlGroupEnumConstant Yellow
-highlight! link LspCxxHlGroupNamespace RedItalic
-highlight! link LspCxxHlGroupMemberVariable CyanItalic
+highlight! link LspCxxHlSkippedRegionBeginEnd TSKeyword
+highlight! link LspCxxHlGroupEnumConstant TSType
+highlight! link LspCxxHlGroupNamespace TSNamespace
+highlight! link LspCxxHlGroupMemberVariable TSProperty
 " }}}
 " ft_end }}}
 " ft_begin: objc {{{
@@ -1568,18 +1568,18 @@ highlight! link pythonDot Grey
 " }}}
 " semshi: https://github.com/numirias/semshi{{{
 call edge#highlight('semshiUnresolved', s:palette.cyan, s:palette.none, 'undercurl')
-highlight! link semshiImported RedItalic
-highlight! link semshiParameter CyanItalic
+highlight! link semshiImported TSInclude
+highlight! link semshiParameter TSParameter
 highlight! link semshiParameterUnused Grey
-highlight! link semshiSelf RedItalic
-highlight! link semshiGlobal Blue
-highlight! link semshiBuiltin Blue
-highlight! link semshiAttribute Yellow
-highlight! link semshiLocal Purple
-highlight! link semshiFree Purple
-highlight! link semshiSelected CocHighlightText
-highlight! link semshiErrorSign ALEErrorSign
-highlight! link semshiErrorChar ALEErrorSign
+highlight! link semshiSelf TSVariableBuiltin
+highlight! link semshiGlobal TSType
+highlight! link semshiBuiltin TSTypeBuiltin
+highlight! link semshiAttribute TSAttribute
+highlight! link semshiLocal TSKeyword
+highlight! link semshiFree TSKeyword
+highlight! link semshiSelected CurrentWord
+highlight! link semshiErrorSign RedSign
+highlight! link semshiErrorChar RedSign
 " }}}
 " ft_end }}}
 " ft_begin: lua {{{
