@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Jul  8 01:16:29 AM UTC 2021'
+let s:last_modified = 'Thu Jul  8 01:23:31 AM UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -430,7 +430,7 @@ highlight! link CocSem_operator TSOperator
 highlight! link CocSem_parameter TSParameter
 highlight! link CocSem_parenthesis TSPunctBracket
 highlight! link CocSem_property TSProperty
-highlight! link CocSem_punctuation TSPunctDelimiter
+highlight! link CocSem_punctuation TSOperator
 highlight! link CocSem_regexp TSStringRegex
 highlight! link CocSem_selfKeyword TSConstBuiltin
 highlight! link CocSem_semicolon TSPunctDelimiter
