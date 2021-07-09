@@ -22,6 +22,7 @@ Features~
 - Designed to have a soft contrast for eye protection.
 - Customizable.
 - Rich support for common file types and plugins.
+- Semantic highlighting support.
 - Tree-sitter support.
 - Italic support 🎉
 
