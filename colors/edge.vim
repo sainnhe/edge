@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Jul  9 11:13:05 AM UTC 2021'
+let s:last_modified = 'Sat Jul 10 01:21:26 AM UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -733,6 +733,26 @@ if get(g:, 'indent_guides_auto_colors', 1) == 0
   call edge#highlight('IndentGuidesOdd', s:palette.bg0, s:palette.bg1)
   call edge#highlight('IndentGuidesEven', s:palette.bg0, s:palette.bg2)
 endif
+" }}}
+" thiagoalessio/rainbow_levels.vim {{{
+highlight! link RainbowLevel0 Red
+highlight! link RainbowLevel1 Yellow
+highlight! link RainbowLevel2 Green
+highlight! link RainbowLevel3 Cyan
+highlight! link RainbowLevel4 Blue
+highlight! link RainbowLevel5 Purple
+highlight! link RainbowLevel6 Green
+highlight! link RainbowLevel7 Cyan
+highlight! link RainbowLevel8 Blue
+" }}}
+" p00f/nvim-ts-rainbow {{{
+highlight! link rainbowcol1 Red
+highlight! link rainbowcol2 Yellow
+highlight! link rainbowcol3 Green
+highlight! link rainbowcol4 Cyan
+highlight! link rainbowcol5 Blue
+highlight! link rainbowcol6 Purple
+highlight! link rainbowcol7 Green
 " }}}
 " kshenoy/vim-signature {{{
 highlight! link SignatureMarkText BlueSign
