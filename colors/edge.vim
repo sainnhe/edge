@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sun Jul 11 01:31:34 AM UTC 2021'
+let s:last_modified = 'Sun Jul 11 10:39:18 AM UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -699,7 +699,6 @@ let g:VM_Cursor_hl = 'Cursor'
 let g:VM_Insert_hl = 'Cursor'
 " }}}
 " dominikduda/vim_current_word {{{
-highlight! link CurrentWord CurrentWord
 highlight! link CurrentWordTwins CurrentWord
 " }}}
 " RRethy/vim-illuminate {{{
