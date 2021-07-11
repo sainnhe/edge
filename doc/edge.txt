@@ -239,20 +239,6 @@ E.g.
     let g:edge_menu_selection_background = 'purple'
 <
 ------------------------------------------------------------------------------
-                                                 *g:edge_sign_column_background*
-g:edge_sign_column_background~
-
-By default, the background color of sign column is different from normal text.
-If you want to make it the same as normal text, set this option to `'none'`.
-
-    Available values: `'default'`, `'none'`
-    Default value: `'default'`
-
-E.g.
->
-    let g:edge_sign_column_background = 'none'
-<
-------------------------------------------------------------------------------
                                                                *g:edge_show_eob*
 g:edge_show_eob~
 

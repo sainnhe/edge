@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sat Jul 10 05:38:47 AM UTC 2021'
+let s:last_modified = 'Sun Jul 11 01:11:22 AM UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -50,14 +50,9 @@ else
   endif
   call edge#highlight('Folded', s:palette.grey, s:palette.bg1)
   call edge#highlight('ToolbarLine', s:palette.fg, s:palette.bg2)
-  if s:configuration.sign_column_background ==# 'default'
-    call edge#highlight('SignColumn', s:palette.fg, s:palette.bg1)
-    call edge#highlight('FoldColumn', s:palette.grey, s:palette.bg1)
-  else
-    call edge#highlight('SignColumn', s:palette.fg, s:palette.none)
-    call edge#highlight('FoldColumn', s:palette.grey, s:palette.none)
-  endif
 endif
+call edge#highlight('SignColumn', s:palette.fg, s:palette.none)
+call edge#highlight('FoldColumn', s:palette.grey, s:palette.none)
 call edge#highlight('IncSearch', s:palette.bg0, s:palette.bg_blue)
 call edge#highlight('Search', s:palette.bg0, s:palette.bg_green)
 call edge#highlight('ColorColumn', s:palette.none, s:palette.bg1)
@@ -81,10 +76,8 @@ endif
 call edge#highlight('LineNr', s:palette.grey, s:palette.none)
 if &diff
   call edge#highlight('CursorLineNr', s:palette.fg, s:palette.none, 'underline')
-elseif (&relativenumber == 1 && &cursorline == 0) || s:configuration.sign_column_background !=# 'default'
-  call edge#highlight('CursorLineNr', s:palette.fg, s:palette.none)
 else
-  call edge#highlight('CursorLineNr', s:palette.fg, s:palette.bg1)
+  call edge#highlight('CursorLineNr', s:palette.fg, s:palette.none)
 endif
 call edge#highlight('DiffAdd', s:palette.none, s:palette.diff_green)
 call edge#highlight('DiffChange', s:palette.none, s:palette.diff_blue)
@@ -123,7 +116,7 @@ call edge#highlight('StatusLineTermNC', s:palette.grey, s:palette.bg1)
 call edge#highlight('TabLine', s:palette.fg, s:palette.bg4)
 call edge#highlight('TabLineFill', s:palette.grey, s:palette.bg1)
 call edge#highlight('TabLineSel', s:palette.bg0, s:palette.bg_purple)
-call edge#highlight('VertSplit', s:palette.bg4, s:palette.none)
+call edge#highlight('VertSplit', s:palette.black, s:palette.none)
 call edge#highlight('Visual', s:palette.none, s:palette.bg3)
 call edge#highlight('VisualNOS', s:palette.none, s:palette.bg3, 'underline')
 call edge#highlight('QuickFixLine', s:palette.purple, s:palette.none, 'bold')
@@ -237,21 +230,12 @@ else
   call edge#highlight('BlueItalic', s:palette.blue, s:palette.none)
   call edge#highlight('PurpleItalic', s:palette.purple, s:palette.none)
 endif
-if s:configuration.transparent_background || s:configuration.sign_column_background !=# 'default'
-  call edge#highlight('RedSign', s:palette.red, s:palette.none)
-  call edge#highlight('YellowSign', s:palette.yellow, s:palette.none)
-  call edge#highlight('GreenSign', s:palette.green, s:palette.none)
-  call edge#highlight('CyanSign', s:palette.cyan, s:palette.none)
-  call edge#highlight('BlueSign', s:palette.blue, s:palette.none)
-  call edge#highlight('PurpleSign', s:palette.purple, s:palette.none)
-else
-  call edge#highlight('RedSign', s:palette.red, s:palette.bg1)
-  call edge#highlight('YellowSign', s:palette.yellow, s:palette.bg1)
-  call edge#highlight('GreenSign', s:palette.green, s:palette.bg1)
-  call edge#highlight('CyanSign', s:palette.cyan, s:palette.bg1)
-  call edge#highlight('BlueSign', s:palette.blue, s:palette.bg1)
-  call edge#highlight('PurpleSign', s:palette.purple, s:palette.bg1)
-endif
+call edge#highlight('RedSign', s:palette.red, s:palette.none)
+call edge#highlight('YellowSign', s:palette.yellow, s:palette.none)
+call edge#highlight('GreenSign', s:palette.green, s:palette.none)
+call edge#highlight('CyanSign', s:palette.cyan, s:palette.none)
+call edge#highlight('BlueSign', s:palette.blue, s:palette.none)
+call edge#highlight('PurpleSign', s:palette.purple, s:palette.none)
 if s:configuration.diagnostic_text_highlight
   call edge#highlight('ErrorText', s:palette.none, s:palette.diff_red, 'undercurl', s:palette.red)
   call edge#highlight('WarningText', s:palette.none, s:palette.diff_yellow, 'undercurl', s:palette.yellow)

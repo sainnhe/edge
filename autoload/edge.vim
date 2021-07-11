@@ -20,7 +20,6 @@ function! edge#get_configuration() "{{{
         \ 'enable_italic': get(g:, 'edge_enable_italic', 0),
         \ 'cursor': get(g:, 'edge_cursor', 'auto'),
         \ 'menu_selection_background': get(g:, 'edge_menu_selection_background', 'blue'),
-        \ 'sign_column_background': get(g:, 'edge_sign_column_background', 'default'),
         \ 'show_eob': get(g:, 'edge_show_eob', 1),
         \ 'current_word': get(g:, 'edge_current_word', get(g:, 'edge_transparent_background', 0) == 0 ? 'grey background' : 'bold'),
         \ 'lightline_disable_bold': get(g:, 'edge_lightline_disable_bold', 0),
@@ -34,6 +33,7 @@ function! edge#get_palette(style) "{{{
   if &background ==# 'dark' "{{{
     if a:style ==# 'default' "{{{
       let palette = {
+            \ 'black':      ['#202023',   '232',  'DarkGrey'],
             \ 'bg0':        ['#2c2e34',   '235',  'Black'],
             \ 'bg1':        ['#33353f',   '236',  'DarkGrey'],
             \ 'bg2':        ['#363944',   '237',  'DarkGrey'],
@@ -60,6 +60,7 @@ function! edge#get_palette(style) "{{{
             \ } "}}}
     elseif a:style ==# 'aura' "{{{
       let palette = {
+            \ 'black':      ['#202023',   '232',  'DarkGrey'],
             \ 'bg0':        ['#2b2d37',   '235',  'Black'],
             \ 'bg1':        ['#333644',   '236',  'DarkGrey'],
             \ 'bg2':        ['#363a49',   '237',  'DarkGrey'],
@@ -86,6 +87,7 @@ function! edge#get_palette(style) "{{{
             \ } "}}}
     elseif a:style ==# 'neon' "{{{
       let palette = {
+            \ 'black':      ['#202023',   '232',  'DarkGrey'],
             \ 'bg0':        ['#2b2d3a',   '235',  'Black'],
             \ 'bg1':        ['#333648',   '236',  'DarkGrey'],
             \ 'bg2':        ['#363a4e',   '237',  'DarkGrey'],
@@ -113,6 +115,7 @@ function! edge#get_palette(style) "{{{
     endif "}}}
   else "{{{
     let palette = {
+          \ 'black':      ['#dde2e7',   '253',  'Grey'],
           \ 'bg0':        ['#fafafa',   '231',  'White'],
           \ 'bg1':        ['#eef1f4',   '255',  'LightGrey'],
           \ 'bg2':        ['#e8ebf0',   '254',  'LightGrey'],

@@ -28,6 +28,10 @@ All notable changes to this project will be documented in this file.
 - Adjust status line bg.
 - Redesign syntax logic of tree-sitter.
 
+### Removed
+
+- Remove `g:edge_sign_column_background`.
+
 ## [0.1.4] - 2020-12-29
 
 ### Added
