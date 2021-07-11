@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sun Jul 11 01:11:22 AM UTC 2021'
+let s:last_modified = 'Sun Jul 11 01:31:34 AM UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -39,7 +39,7 @@ if s:configuration.transparent_background
   call edge#highlight('Folded', s:palette.grey, s:palette.none)
   call edge#highlight('ToolbarLine', s:palette.fg, s:palette.none)
   call edge#highlight('SignColumn', s:palette.fg, s:palette.none)
-  call edge#highlight('FoldColumn', s:palette.grey, s:palette.none)
+  call edge#highlight('FoldColumn', s:palette.grey_dim, s:palette.none)
 else
   call edge#highlight('Normal', s:palette.fg, s:palette.bg0)
   call edge#highlight('Terminal', s:palette.fg, s:palette.bg0)
@@ -52,11 +52,11 @@ else
   call edge#highlight('ToolbarLine', s:palette.fg, s:palette.bg2)
 endif
 call edge#highlight('SignColumn', s:palette.fg, s:palette.none)
-call edge#highlight('FoldColumn', s:palette.grey, s:palette.none)
+call edge#highlight('FoldColumn', s:palette.grey_dim, s:palette.none)
 call edge#highlight('IncSearch', s:palette.bg0, s:palette.bg_blue)
 call edge#highlight('Search', s:palette.bg0, s:palette.bg_green)
 call edge#highlight('ColorColumn', s:palette.none, s:palette.bg1)
-call edge#highlight('Conceal', s:palette.grey, s:palette.none)
+call edge#highlight('Conceal', s:palette.grey_dim, s:palette.none)
 if s:configuration.cursor ==# 'auto'
   call edge#highlight('Cursor', s:palette.none, s:palette.none, 'reverse')
 else
@@ -73,11 +73,11 @@ else
   call edge#highlight('CursorLine', s:palette.none, s:palette.bg1)
   call edge#highlight('CursorColumn', s:palette.none, s:palette.bg1)
 endif
-call edge#highlight('LineNr', s:palette.grey, s:palette.none)
+call edge#highlight('LineNr', s:palette.grey_dim, s:palette.none)
 if &diff
-  call edge#highlight('CursorLineNr', s:palette.fg, s:palette.none, 'underline')
+  call edge#highlight('CursorLineNr', s:palette.grey, s:palette.none, 'underline')
 else
-  call edge#highlight('CursorLineNr', s:palette.fg, s:palette.none)
+  call edge#highlight('CursorLineNr', s:palette.grey, s:palette.none)
 endif
 call edge#highlight('DiffAdd', s:palette.none, s:palette.diff_green)
 call edge#highlight('DiffChange', s:palette.none, s:palette.diff_blue)
@@ -710,8 +710,14 @@ highlight! link CursorWord0 CurrentWord
 highlight! link CursorWord1 CurrentWord
 " }}}
 " Yggdroot/indentLine {{{
-let g:indentLine_color_gui = s:palette.grey[0]
-let g:indentLine_color_term = s:palette.grey[1]
+let g:indentLine_color_gui = s:palette.grey_dim[0]
+let g:indentLine_color_term = s:palette.grey_dim[1]
+" }}}
+" lukas-reineke/indent-blankline.nvim {{{
+highlight! link IndentBlanklineChar Conceal
+highlight! link IndentBlanklineSpaceChar Conceal
+highlight! link IndentBlanklineSpaceCharBlankline Conceal
+highlight! link IndentBlanklineContextChar Grey
 " }}}
 " nathanaelkane/vim-indent-guides {{{
 if get(g:, 'indent_guides_auto_colors', 1) == 0

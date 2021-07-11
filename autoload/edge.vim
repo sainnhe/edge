@@ -56,6 +56,7 @@ function! edge#get_palette(style) "{{{
             \ 'blue':       ['#6cb6eb',   '110',  'Blue'],
             \ 'purple':     ['#d38aea',   '176',  'Magenta'],
             \ 'grey':       ['#7f8490',   '246',  'LightGrey'],
+            \ 'grey_dim':   ['#4d525f',   '240',  'Grey'],
             \ 'none':       ['NONE',      'NONE', 'NONE']
             \ } "}}}
     elseif a:style ==# 'aura' "{{{
@@ -83,6 +84,7 @@ function! edge#get_palette(style) "{{{
             \ 'blue':       ['#6cb6eb',   '110',  'Blue'],
             \ 'purple':     ['#d38aea',   '176',  'Magenta'],
             \ 'grey':       ['#7e8294',   '246',  'LightGrey'],
+            \ 'grey_dim':   ['#4c5064',   '240',  'Grey'],
             \ 'none':       ['NONE',      'NONE', 'NONE']
             \ } "}}}
     elseif a:style ==# 'neon' "{{{
@@ -110,6 +112,7 @@ function! edge#get_palette(style) "{{{
             \ 'blue':       ['#6cb6eb',   '110',  'Blue'],
             \ 'purple':     ['#d38aea',   '176',  'Magenta'],
             \ 'grey':       ['#7e8294',   '246',  'LightGrey'],
+            \ 'grey_dim':   ['#4a4f6a',   '240',  'Grey'],
             \ 'none':       ['NONE',      'NONE', 'NONE']
             \ } "}}}
     endif "}}}
@@ -138,6 +141,7 @@ function! edge#get_palette(style) "{{{
           \ 'blue':       ['#5079be',   '68',   'Blue'],
           \ 'purple':     ['#b05ccc',   '134',  'Magenta'],
           \ 'grey':       ['#8790a0',   '245',  'Grey'],
+          \ 'grey_dim':   ['#c6cfd8',   '249',  'Grey'],
           \ 'none':       ['NONE',      'NONE', 'NONE']
           \ }
   endif "}}}
