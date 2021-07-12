@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Jul 12 12:27:32 AM UTC 2021'
+let s:last_modified = 'Sun Jul 11 10:39:18 AM UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -88,7 +88,7 @@ call edge#highlight('ErrorMsg', s:palette.red, s:palette.none, 'bold,underline')
 call edge#highlight('WarningMsg', s:palette.yellow, s:palette.none, 'bold')
 call edge#highlight('ModeMsg', s:palette.fg, s:palette.none, 'bold')
 call edge#highlight('MoreMsg', s:palette.blue, s:palette.none, 'bold')
-call edge#highlight('MatchParen', s:palette.none, s:palette.grey_dim)
+call edge#highlight('MatchParen', s:palette.none, s:palette.bg4)
 call edge#highlight('NonText', s:palette.bg4, s:palette.none)
 call edge#highlight('Whitespace', s:palette.bg4, s:palette.none)
 call edge#highlight('SpecialKey', s:palette.bg4, s:palette.none)
