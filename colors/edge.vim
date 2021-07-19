@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sun Jul 11 10:39:18 AM UTC 2021'
+let s:last_modified = 'Mon Jul 19 01:16:04 AM UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -105,10 +105,10 @@ highlight! link WildMenu PmenuSel
 call edge#highlight('PmenuThumb', s:palette.none, s:palette.bg_grey)
 call edge#highlight('NormalFloat', s:palette.fg, s:palette.bg2)
 call edge#highlight('Question', s:palette.yellow, s:palette.none)
-call edge#highlight('SpellBad', s:palette.red, s:palette.none, 'undercurl', s:palette.red)
-call edge#highlight('SpellCap', s:palette.yellow, s:palette.none, 'undercurl', s:palette.yellow)
-call edge#highlight('SpellLocal', s:palette.blue, s:palette.none, 'undercurl', s:palette.blue)
-call edge#highlight('SpellRare', s:palette.purple, s:palette.none, 'undercurl', s:palette.purple)
+call edge#highlight('SpellBad', s:palette.none, s:palette.none, 'undercurl', s:palette.red)
+call edge#highlight('SpellCap', s:palette.none, s:palette.none, 'undercurl', s:palette.yellow)
+call edge#highlight('SpellLocal', s:palette.none, s:palette.none, 'undercurl', s:palette.blue)
+call edge#highlight('SpellRare', s:palette.none, s:palette.none, 'undercurl', s:palette.purple)
 call edge#highlight('StatusLine', s:palette.fg, s:palette.bg2)
 call edge#highlight('StatusLineTerm', s:palette.fg, s:palette.bg2)
 call edge#highlight('StatusLineNC', s:palette.grey, s:palette.bg1)
