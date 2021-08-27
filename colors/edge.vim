@@ -721,8 +721,8 @@ highlight! link SneakScope DiffText
 " phaazon/hop.nvim {{{
 call edge#highlight('HopNextKey', s:palette.purple, s:palette.none, 'bold')
 call edge#highlight('HopNextKey1', s:palette.blue, s:palette.none, 'bold')
-call edge#highlight('HopNextKey2', s:palette.blue, s:palette.none)
-call edge#highlight('HopUnmatched', s:palette.grey, s:palette.none)
+highlight! link HopNextKey2 Blue
+highlight! link HopUnmatched Grey
 " }}}
 " terryma/vim-multiple-cursors {{{
 highlight! link multiple_cursors_cursor Cursor
