@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Added
+
+- Optimize `fannheyward/coc-rust-analyzer`.
+
 ## [0.2.0] - 2021-08-06
 
 ### Added
