@@ -146,6 +146,26 @@ if has('nvim')
   highlight! link LspDiagnosticsSignWarning YellowSign
   highlight! link LspDiagnosticsSignInformation BlueSign
   highlight! link LspDiagnosticsSignHint GreenSign
+  highlight! link DiagnosticsFloatingError ErrorFloat
+  highlight! link DiagnosticsFloatingWarning WarningFloat
+  highlight! link DiagnosticsFloatingInformation InfoFloat
+  highlight! link DiagnosticsFloatingHint HintFloat
+  highlight! link DiagnosticsError ErrorText
+  highlight! link DiagnosticsWarning WarningText
+  highlight! link DiagnosticsInformation InfoText
+  highlight! link DiagnosticsHint HintText
+  highlight! link DiagnosticsVirtualTextError VirtualTextError
+  highlight! link DiagnosticsVirtualTextWarning VirtualTextWarning
+  highlight! link DiagnosticsVirtualTextInformation VirtualTextInfo
+  highlight! link DiagnosticsVirtualTextHint VirtualTextHint
+  highlight! link DiagnosticsUnderlineError ErrorText
+  highlight! link DiagnosticsUnderlineWarning WarningText
+  highlight! link DiagnosticsUnderlineInformation InfoText
+  highlight! link DiagnosticsUnderlineHint HintText
+  highlight! link DiagnosticsSignError RedSign
+  highlight! link DiagnosticsSignWarning YellowSign
+  highlight! link DiagnosticsSignInformation BlueSign
+  highlight! link DiagnosticsSignHint GreenSign
   highlight! link LspReferenceText CurrentWord
   highlight! link LspReferenceRead CurrentWord
   highlight! link LspReferenceWrite CurrentWord
