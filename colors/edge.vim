@@ -126,6 +126,26 @@ call edge#highlight('debugBreakpoint', s:palette.bg0, s:palette.bg_red)
 call edge#highlight('ToolbarButton', s:palette.bg0, s:palette.bg_purple)
 if has('nvim')
   call edge#highlight('Substitute', s:palette.bg0, s:palette.yellow)
+  highlight! link DiagnosticFloatingError ErrorFloat
+  highlight! link DiagnosticFloatingWarn WarningFloat
+  highlight! link DiagnosticFloatingInfo InfoFloat
+  highlight! link DiagnosticFloatingHint HintFloat
+  highlight! link DiagnosticError ErrorText
+  highlight! link DiagnosticWarn WarningText
+  highlight! link DiagnosticInfo InfoText
+  highlight! link DiagnosticHint HintText
+  highlight! link DiagnosticVirtualTextError VirtualTextError
+  highlight! link DiagnosticVirtualTextWarn VirtualTextWarning
+  highlight! link DiagnosticVirtualTextInfo VirtualTextInfo
+  highlight! link DiagnosticVirtualTextHint VirtualTextHint
+  highlight! link DiagnosticUnderlineError ErrorText
+  highlight! link DiagnosticUnderlineWarn WarningText
+  highlight! link DiagnosticUnderlineInfo InfoText
+  highlight! link DiagnosticUnderlineHint HintText
+  highlight! link DiagnosticSignError RedSign
+  highlight! link DiagnosticSignWarn YellowSign
+  highlight! link DiagnosticSignInfo BlueSign
+  highlight! link DiagnosticSignHint GreenSign
   highlight! link LspDiagnosticsFloatingError ErrorFloat
   highlight! link LspDiagnosticsFloatingWarning WarningFloat
   highlight! link LspDiagnosticsFloatingInformation InfoFloat
