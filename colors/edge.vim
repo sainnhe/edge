@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Aug  6 11:26:58 AM UTC 2021'
+let s:last_modified = 'Fri Sep 24 09:48:30 UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -1049,6 +1049,27 @@ highlight! link mkdRule Yellow
 highlight! link mkdDelimiter Grey
 highlight! link mkdId Green
 " }}}
+" ft_end }}}
+" ft_begin: vimwiki {{{
+call edge#highlight('VimwikiHeader1', s:palette.purple, s:palette.none, 'bold')
+call edge#highlight('VimwikiHeader2', s:palette.red, s:palette.none, 'bold')
+call edge#highlight('VimwikiHeader3', s:palette.blue, s:palette.none, 'bold')
+call edge#highlight('VimwikiHeader4', s:palette.yellow, s:palette.none, 'bold')
+call edge#highlight('VimwikiHeader5', s:palette.green, s:palette.none, 'bold')
+call edge#highlight('VimwikiHeader6', s:palette.cyan, s:palette.none, 'bold')
+call edge#highlight('VimwikiLink', s:palette.blue, s:palette.none, 'underline')
+call edge#highlight('VimwikiItalic', s:palette.none, s:palette.none, 'italic')
+call edge#highlight('VimwikiBold', s:palette.none, s:palette.none, 'bold')
+call edge#highlight('VimwikiUnderline', s:palette.none, s:palette.none, 'underline')
+highlight! link VimwikiList Red
+highlight! link VimwikiTag Purple
+highlight! link VimwikiCode Green
+highlight! link VimwikiHR Yellow
+highlight! link VimwikiHeaderChar Grey
+highlight! link VimwikiMarkers Grey
+highlight! link VimwikiPre Green
+highlight! link VimwikiPreDelim Green
+highlight! link VimwikiNoExistsLink Red
 " ft_end }}}
 " ft_begin: rst {{{
 " builtin: https://github.com/marshallward/vim-restructupurpletext{{{
