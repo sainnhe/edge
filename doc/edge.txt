@@ -61,7 +61,7 @@ Manually~
     1. Clone the repository: `git clone --depth 1 https://github.com/sainnhe/edge.git`
 
     2. Copy `/path/to/edge/autoload/edge.vim` to
-    `~/.vim/autoload/`.
+    `~/.vim/autoload/` .
 
     3. Copy `/path/to/edge/colors/edge.vim` to
     `~/.vim/colors/` .
