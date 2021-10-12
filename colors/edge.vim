@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Sep 24 09:48:30 UTC 2021'
+let s:last_modified = 'Tue Oct 12 07:31:32 UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -675,6 +675,7 @@ let g:fzf_colors = {
       \ 'bg+': ['bg', 'CursorLine', 'CursorColumn'],
       \ 'hl+': ['fg', 'Green'],
       \ 'info': ['fg', 'Cyan'],
+      \ 'border':  ['fg', 'Grey'],
       \ 'prompt': ['fg', 'Purple'],
       \ 'pointer': ['fg', 'Blue'],
       \ 'marker': ['fg', 'Blue'],
