@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Tue Oct 12 11:49:05 UTC 2021'
+let s:last_modified = 'Tue Oct 12 11:57:21 UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -546,11 +546,11 @@ highlight! link CocExplorerHelpHint Grey
 highlight! link CocRustChainingHint Grey
 " }}}
 " hrsh7th/nvim-cmp {{{
+call edge#highlight('CmpItemAbbrMatch', s:palette.blue, s:palette.none, 'bold')
+call edge#highlight('CmpItemAbbrMatchFuzzy', s:palette.blue, s:palette.none, 'bold')
 highlight! link CmpItemAbbr Fg
 highlight! link CmpItemAbbrDeprecated Fg
 highlight! link CmpItemMenu Fg
-highlight! link CmpItemAbbrMatch Blue
-highlight! link CmpItemAbbrMatchFuzzy Blue
 highlight! link CmpItemKind Purple
 " }}}
 " prabirshrestha/vim-lsp {{{
