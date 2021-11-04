@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Nov  4 09:05:29 UTC 2021'
+let s:last_modified = 'Thu Nov  4 12:57:20 UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -824,6 +824,25 @@ highlight! link BufTabLineCurrent TabLineSel
 highlight! link BufTabLineActive TabLine
 highlight! link BufTabLineHidden TabLineFill
 highlight! link BufTabLineFill TabLineFill
+" }}}
+" romgrk/barbar.nvim {{{
+call edge#highlight('BufferCurrent', s:palette.fg, s:palette.bg4)
+call edge#highlight('BufferCurrentIndex', s:palette.fg, s:palette.bg4)
+call edge#highlight('BufferCurrentMod', s:palette.blue, s:palette.bg4)
+call edge#highlight('BufferCurrentSign', s:palette.purple, s:palette.bg4)
+call edge#highlight('BufferCurrentTarget', s:palette.red, s:palette.bg4, 'bold')
+call edge#highlight('BufferVisible', s:palette.fg, s:palette.bg2)
+call edge#highlight('BufferVisibleIndex', s:palette.fg, s:palette.bg2)
+call edge#highlight('BufferVisibleMod', s:palette.blue, s:palette.bg2)
+call edge#highlight('BufferVisibleSign', s:palette.purple, s:palette.bg2)
+call edge#highlight('BufferVisibleTarget', s:palette.yellow, s:palette.bg2, 'bold')
+call edge#highlight('BufferInactive', s:palette.grey, s:palette.bg2)
+call edge#highlight('BufferInactiveIndex', s:palette.grey, s:palette.bg2)
+call edge#highlight('BufferInactiveMod', s:palette.grey, s:palette.bg2)
+call edge#highlight('BufferInactiveSign', s:palette.grey_dim, s:palette.bg2)
+call edge#highlight('BufferInactiveTarget', s:palette.yellow, s:palette.bg2, 'bold')
+call edge#highlight('BufferTabpages', s:palette.bg0, s:palette.blue, 'bold')
+call edge#highlight('BufferTabpageFill', s:palette.bg0, s:palette.bg0)
 " }}}
 " liuchengxu/vim-which-key {{{
 highlight! link WhichKey Red
