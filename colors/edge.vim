@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Nov  4 12:57:20 UTC 2021'
+let s:last_modified = 'Thu Nov  4 13:15:43 UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -871,6 +871,23 @@ highlight! link agitStatMessage Purple
 highlight! link agitDiffRemove Red
 highlight! link agitDiffAdd Green
 highlight! link agitDiffHeader Purple
+" }}}
+" rcarriga/nvim-notify {{{
+highlight! link NotifyERRORBorder Red
+highlight! link NotifyWARNBorder Yellow
+highlight! link NotifyINFOBorder Green
+highlight! link NotifyDEBUGBorder Grey
+highlight! link NotifyTRACEBorder Purple
+highlight! link NotifyERRORIcon Red
+highlight! link NotifyWARNIcon Yellow
+highlight! link NotifyINFOIcon Green
+highlight! link NotifyDEBUGIcon Grey
+highlight! link NotifyTRACEIcon Purple
+highlight! link NotifyERRORTitle Red
+highlight! link NotifyWARNTitle Yellow
+highlight! link NotifyINFOTitle Green
+highlight! link NotifyDEBUGTitle Grey
+highlight! link NotifyTRACETitle Purple
 " }}}
 " }}}
 " Extended File Types: {{{
