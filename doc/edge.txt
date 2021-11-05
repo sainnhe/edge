@@ -77,6 +77,10 @@ Manually~
     copy `/path/to/edge/autoload/lightline/colorscheme/edge.vim`
     to `~/.vim/autoload/lightline/colorscheme/` .
 
+    7. To install [lualine](https://github.com/nvim-lualine/lualine.nvim) theme,
+    copy `/path/to/edge/lua/lualine/themes/edge.lua`
+    to `~/.config/nvim/lua/lualine/themes/` .
+
 ------------------------------------------------------------------------------
 
 AUR~
@@ -145,6 +149,23 @@ Lightline~
         :let g:lightline.colorscheme = 'edge'
         :call lightline#init()
         :call lightline#colorscheme()
+<
+------------------------------------------------------------------------------
+
+Lualine~
+
+    To enable [lualine](https://github.com/nvim-lualine/lualine.nvim) color
+    scheme, put this in your init.lua:
+>
+        require'lualine'.setup {
+          options = {
+            theme = 'edge'
+          }
+        }
+<
+    To apply it without reloading:
+>
+        :lua require'lualine'.setup {options = {theme = 'edge'}}
 <
 ==============================================================================
 CONFIGURATION                                               *edge-configuration*
