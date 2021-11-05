@@ -1,3 +1,11 @@
+-- =============================================================================
+-- URL: https://github.com/sainnhe/edge
+-- Filename: lua/lualine/themes/edge.lua
+-- Author: sainnhe
+-- Email: sainnhe@gmail.com
+-- License: MIT License
+-- =============================================================================
+
 local configuration = vim.fn['edge#get_configuration']()
 local palette = vim.fn['edge#get_palette'](configuration.style)
 
