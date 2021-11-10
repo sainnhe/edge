@@ -130,10 +130,10 @@ if has('nvim')
   highlight! link DiagnosticFloatingWarn WarningFloat
   highlight! link DiagnosticFloatingInfo InfoFloat
   highlight! link DiagnosticFloatingHint HintFloat
-  highlight! link DiagnosticError ErrorText
-  highlight! link DiagnosticWarn WarningText
-  highlight! link DiagnosticInfo InfoText
-  highlight! link DiagnosticHint HintText
+  highlight! link DiagnosticError RedSign
+  highlight! link DiagnosticWarn YellowSign
+  highlight! link DiagnosticInfo BlueSign
+  highlight! link DiagnosticHint GreenSign
   highlight! link DiagnosticVirtualTextError VirtualTextError
   highlight! link DiagnosticVirtualTextWarn VirtualTextWarning
   highlight! link DiagnosticVirtualTextInfo VirtualTextInfo
@@ -150,10 +150,10 @@ if has('nvim')
   highlight! link LspDiagnosticsFloatingWarning WarningFloat
   highlight! link LspDiagnosticsFloatingInformation InfoFloat
   highlight! link LspDiagnosticsFloatingHint HintFloat
-  highlight! link LspDiagnosticsDefaultError ErrorText
-  highlight! link LspDiagnosticsDefaultWarning WarningText
-  highlight! link LspDiagnosticsDefaultInformation InfoText
-  highlight! link LspDiagnosticsDefaultHint HintText
+  highlight! link LspDiagnosticsDefaultError RedSign
+  highlight! link LspDiagnosticsDefaultWarning YellowSign
+  highlight! link LspDiagnosticsDefaultInformation BlueSign
+  highlight! link LspDiagnosticsDefaultHint GreenSign
   highlight! link LspDiagnosticsVirtualTextError VirtualTextError
   highlight! link LspDiagnosticsVirtualTextWarning VirtualTextWarning
   highlight! link LspDiagnosticsVirtualTextInformation VirtualTextInfo
