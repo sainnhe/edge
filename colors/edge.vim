@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Nov 11 05:58:18 UTC 2021'
+let s:last_modified = 'Thu Nov 11 07:39:33 AM UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -545,14 +545,6 @@ highlight! link CocExplorerHelpDescription Grey
 highlight! link CocExplorerHelpHint Grey
 highlight! link CocRustChainingHint Grey
 " }}}
-" hrsh7th/nvim-cmp {{{
-call edge#highlight('CmpItemAbbrMatch', s:palette.blue, s:palette.none, 'bold')
-call edge#highlight('CmpItemAbbrMatchFuzzy', s:palette.blue, s:palette.none, 'bold')
-highlight! link CmpItemAbbr Fg
-highlight! link CmpItemAbbrDeprecated Fg
-highlight! link CmpItemMenu Fg
-highlight! link CmpItemKind Purple
-" }}}
 " prabirshrestha/vim-lsp {{{
 highlight! link LspErrorVirtual VirtualTextError
 highlight! link LspWarningVirtual VirtualTextWarning
@@ -587,11 +579,6 @@ highlight! link ALEVirtualTextWarning VirtualTextWarning
 highlight! link ALEVirtualTextInfo VirtualTextInfo
 highlight! link ALEVirtualTextStyleError VirtualTextHint
 highlight! link ALEVirtualTextStyleWarning VirtualTextHint
-" }}}
-" folke/trouble.nvim {{{
-highlight! link TroubleText Fg
-highlight! link TroubleSource Grey
-highlight! link TroubleCode Grey
 " }}}
 " neomake/neomake {{{
 highlight! link NeomakeError ErrorText
@@ -696,12 +683,6 @@ let g:fzf_colors = {
       \ 'header': ['fg', 'Blue']
       \ }
 " }}}
-" nvim-telescope/telescope.nvim {{{
-call edge#highlight('TelescopeMatching', s:palette.green, s:palette.none, 'bold')
-highlight! link TelescopeBorder Grey
-highlight! link TelescopePromptPrefix Purple
-highlight! link TelescopeSelection DiffAdd
-" }}}
 " Shougo/denite.nvim{{{
 call edge#highlight('deniteMatchedChar', s:palette.green, s:palette.none, 'bold')
 call edge#highlight('deniteMatchedRange', s:palette.green, s:palette.none, 'bold,underline')
@@ -732,12 +713,6 @@ highlight! link SignifySignChange BlueSign
 highlight! link SignifySignDelete RedSign
 highlight! link SignifySignChangeDelete PurpleSign
 " }}}
-" lewis6991/gitsigns.nvim {{{
-highlight! link GitSignsAdd GreenSign
-highlight! link GitSignsChange BlueSign
-highlight! link GitSignsDelete RedSign
-highlight! link GitSignsChangeDelete PurpleSign
-" }}}
 " andymass/vim-matchup {{{
 call edge#highlight('MatchParenCur', s:palette.none, s:palette.none, 'bold')
 call edge#highlight('MatchWord', s:palette.none, s:palette.none, 'underline')
@@ -752,12 +727,6 @@ call edge#highlight('SneakLabelMask', s:palette.bg_purple, s:palette.bg_purple)
 highlight! link Sneak Search
 highlight! link SneakLabel Search
 highlight! link SneakScope DiffText
-" }}}
-" phaazon/hop.nvim {{{
-call edge#highlight('HopNextKey', s:palette.purple, s:palette.none, 'bold')
-call edge#highlight('HopNextKey1', s:palette.blue, s:palette.none, 'bold')
-highlight! link HopNextKey2 Blue
-highlight! link HopUnmatched Grey
 " }}}
 " terryma/vim-multiple-cursors {{{
 highlight! link multiple_cursors_cursor Cursor
@@ -783,12 +752,6 @@ highlight! link CursorWord1 CurrentWord
 let g:indentLine_color_gui = s:palette.grey_dim[0]
 let g:indentLine_color_term = s:palette.grey_dim[1]
 " }}}
-" lukas-reineke/indent-blankline.nvim {{{
-highlight! link IndentBlanklineChar Conceal
-highlight! link IndentBlanklineSpaceChar Conceal
-highlight! link IndentBlanklineSpaceCharBlankline Conceal
-highlight! link IndentBlanklineContextChar Grey
-" }}}
 " nathanaelkane/vim-indent-guides {{{
 if get(g:, 'indent_guides_auto_colors', 1) == 0
   call edge#highlight('IndentGuidesOdd', s:palette.bg0, s:palette.bg1)
@@ -806,15 +769,6 @@ highlight! link RainbowLevel6 Green
 highlight! link RainbowLevel7 Cyan
 highlight! link RainbowLevel8 Blue
 " }}}
-" p00f/nvim-ts-rainbow {{{
-highlight! link rainbowcol1 Red
-highlight! link rainbowcol2 Yellow
-highlight! link rainbowcol3 Green
-highlight! link rainbowcol4 Cyan
-highlight! link rainbowcol5 Blue
-highlight! link rainbowcol6 Purple
-highlight! link rainbowcol7 Green
-" }}}
 " kshenoy/vim-signature {{{
 highlight! link SignatureMarkText BlueSign
 highlight! link SignatureMarkerText PurpleSign
@@ -824,25 +778,6 @@ highlight! link BufTabLineCurrent TabLineSel
 highlight! link BufTabLineActive TabLine
 highlight! link BufTabLineHidden TabLineFill
 highlight! link BufTabLineFill TabLineFill
-" }}}
-" romgrk/barbar.nvim {{{
-call edge#highlight('BufferCurrent', s:palette.fg, s:palette.bg4)
-call edge#highlight('BufferCurrentIndex', s:palette.fg, s:palette.bg4)
-call edge#highlight('BufferCurrentMod', s:palette.blue, s:palette.bg4)
-call edge#highlight('BufferCurrentSign', s:palette.purple, s:palette.bg4)
-call edge#highlight('BufferCurrentTarget', s:palette.red, s:palette.bg4, 'bold')
-call edge#highlight('BufferVisible', s:palette.fg, s:palette.bg2)
-call edge#highlight('BufferVisibleIndex', s:palette.fg, s:palette.bg2)
-call edge#highlight('BufferVisibleMod', s:palette.blue, s:palette.bg2)
-call edge#highlight('BufferVisibleSign', s:palette.purple, s:palette.bg2)
-call edge#highlight('BufferVisibleTarget', s:palette.yellow, s:palette.bg2, 'bold')
-call edge#highlight('BufferInactive', s:palette.grey, s:palette.bg2)
-call edge#highlight('BufferInactiveIndex', s:palette.grey, s:palette.bg2)
-call edge#highlight('BufferInactiveMod', s:palette.grey, s:palette.bg2)
-call edge#highlight('BufferInactiveSign', s:palette.grey_dim, s:palette.bg2)
-call edge#highlight('BufferInactiveTarget', s:palette.yellow, s:palette.bg2, 'bold')
-call edge#highlight('BufferTabpages', s:palette.bg0, s:palette.blue, 'bold')
-call edge#highlight('BufferTabpageFill', s:palette.bg0, s:palette.bg0)
 " }}}
 " liuchengxu/vim-which-key {{{
 highlight! link WhichKey Red
@@ -872,6 +807,72 @@ highlight! link agitDiffRemove Red
 highlight! link agitDiffAdd Green
 highlight! link agitDiffHeader Purple
 " }}}
+if has('nvim')
+" hrsh7th/nvim-cmp {{{
+call edge#highlight('CmpItemAbbrMatch', s:palette.blue, s:palette.none, 'bold')
+call edge#highlight('CmpItemAbbrMatchFuzzy', s:palette.blue, s:palette.none, 'bold')
+highlight! link CmpItemAbbr Fg
+highlight! link CmpItemAbbrDeprecated Fg
+highlight! link CmpItemMenu Fg
+highlight! link CmpItemKind Purple
+" }}}
+" folke/trouble.nvim {{{
+highlight! link TroubleText Fg
+highlight! link TroubleSource Grey
+highlight! link TroubleCode Grey
+" }}}
+" nvim-telescope/telescope.nvim {{{
+call edge#highlight('TelescopeMatching', s:palette.green, s:palette.none, 'bold')
+highlight! link TelescopeBorder Grey
+highlight! link TelescopePromptPrefix Purple
+highlight! link TelescopeSelection DiffAdd
+" }}}
+" lewis6991/gitsigns.nvim {{{
+highlight! link GitSignsAdd GreenSign
+highlight! link GitSignsChange BlueSign
+highlight! link GitSignsDelete RedSign
+highlight! link GitSignsChangeDelete PurpleSign
+" }}}
+" phaazon/hop.nvim {{{
+call edge#highlight('HopNextKey', s:palette.purple, s:palette.none, 'bold')
+call edge#highlight('HopNextKey1', s:palette.blue, s:palette.none, 'bold')
+highlight! link HopNextKey2 Blue
+highlight! link HopUnmatched Grey
+" }}}
+" lukas-reineke/indent-blankline.nvim {{{
+highlight! link IndentBlanklineChar Conceal
+highlight! link IndentBlanklineSpaceChar Conceal
+highlight! link IndentBlanklineSpaceCharBlankline Conceal
+highlight! link IndentBlanklineContextChar Grey
+" }}}
+" p00f/nvim-ts-rainbow {{{
+highlight! link rainbowcol1 Red
+highlight! link rainbowcol2 Yellow
+highlight! link rainbowcol3 Green
+highlight! link rainbowcol4 Cyan
+highlight! link rainbowcol5 Blue
+highlight! link rainbowcol6 Purple
+highlight! link rainbowcol7 Green
+" }}}
+" romgrk/barbar.nvim {{{
+call edge#highlight('BufferCurrent', s:palette.fg, s:palette.bg4)
+call edge#highlight('BufferCurrentIndex', s:palette.fg, s:palette.bg4)
+call edge#highlight('BufferCurrentMod', s:palette.blue, s:palette.bg4)
+call edge#highlight('BufferCurrentSign', s:palette.purple, s:palette.bg4)
+call edge#highlight('BufferCurrentTarget', s:palette.red, s:palette.bg4, 'bold')
+call edge#highlight('BufferVisible', s:palette.fg, s:palette.bg2)
+call edge#highlight('BufferVisibleIndex', s:palette.fg, s:palette.bg2)
+call edge#highlight('BufferVisibleMod', s:palette.blue, s:palette.bg2)
+call edge#highlight('BufferVisibleSign', s:palette.purple, s:palette.bg2)
+call edge#highlight('BufferVisibleTarget', s:palette.yellow, s:palette.bg2, 'bold')
+call edge#highlight('BufferInactive', s:palette.grey, s:palette.bg2)
+call edge#highlight('BufferInactiveIndex', s:palette.grey, s:palette.bg2)
+call edge#highlight('BufferInactiveMod', s:palette.grey, s:palette.bg2)
+call edge#highlight('BufferInactiveSign', s:palette.grey_dim, s:palette.bg2)
+call edge#highlight('BufferInactiveTarget', s:palette.yellow, s:palette.bg2, 'bold')
+call edge#highlight('BufferTabpages', s:palette.bg0, s:palette.blue, 'bold')
+call edge#highlight('BufferTabpageFill', s:palette.bg0, s:palette.bg0)
+" }}}
 " rcarriga/nvim-notify {{{
 highlight! link NotifyERRORBorder Red
 highlight! link NotifyWARNBorder Yellow
@@ -889,6 +890,7 @@ highlight! link NotifyINFOTitle Green
 highlight! link NotifyDEBUGTitle Grey
 highlight! link NotifyTRACETitle Purple
 " }}}
+endif
 " }}}
 " Extended File Types: {{{
 " Whitelist: {{{ File type optimizations that will always be loaded.
