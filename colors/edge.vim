@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Nov 11 07:39:33 AM UTC 2021'
+let s:last_modified = 'Tue Nov 30 07:51:28 UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -815,6 +815,31 @@ highlight! link CmpItemAbbr Fg
 highlight! link CmpItemAbbrDeprecated Fg
 highlight! link CmpItemMenu Fg
 highlight! link CmpItemKind Purple
+highlight! link CmpItemKindText Fg
+highlight! link CmpItemKindMethod Blue
+highlight! link CmpItemKindFunction Blue
+highlight! link CmpItemKindConstructor Blue
+highlight! link CmpItemKindField Blue
+highlight! link CmpItemKindVariable Red
+highlight! link CmpItemKindClass Yellow
+highlight! link CmpItemKindInterface Yellow
+highlight! link CmpItemKindModule Yellow
+highlight! link CmpItemKindProperty Red
+highlight! link CmpItemKindUnit Green
+highlight! link CmpItemKindValue Green
+highlight! link CmpItemKindEnum Yellow
+highlight! link CmpItemKindKeyword Purple
+highlight! link CmpItemKindSnippet Cyan
+highlight! link CmpItemKindColor Cyan
+highlight! link CmpItemKindFile Cyan
+highlight! link CmpItemKindReference Cyan
+highlight! link CmpItemKindFolder Cyan
+highlight! link CmpItemKindEnumMember Green
+highlight! link CmpItemKindConstant Red
+highlight! link CmpItemKindStruct Yellow
+highlight! link CmpItemKindEvent Purple
+highlight! link CmpItemKindOperator Purple
+highlight! link CmpItemKindTypeParameter Yellow
 " }}}
 " folke/trouble.nvim {{{
 highlight! link TroubleText Fg
