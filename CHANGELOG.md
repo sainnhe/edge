@@ -18,6 +18,7 @@ All notable changes to this project will be documented in this file.
 - Support `nvim-lualine/lualine.nvim`.
 - Optimize performance in vim by disabling hi groups of neovim-only plugins.
 - Optimize `lewis6991/gitsigns.nvim`.
+- Optimize `airblade/vim-gitgutter`.
 
 ## [0.2.0] - 2021-08-06
 

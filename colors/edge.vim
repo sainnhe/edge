@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Dec 17 01:47:44 UTC 2021'
+let s:last_modified = 'Fri Dec 17 01:49:33 UTC 2021'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -706,6 +706,14 @@ highlight! link GitGutterAdd GreenSign
 highlight! link GitGutterChange BlueSign
 highlight! link GitGutterDelete RedSign
 highlight! link GitGutterChangeDelete PurpleSign
+highlight! link GitGutterAddLine DiffAdd
+highlight! link GitGutterChangeLine DiffChange
+highlight! link GitGutterDeleteLine DiffDelete
+highlight! link GitGutterChangeDeleteLine DiffChange
+highlight! link GitGutterAddLineNr Green
+highlight! link GitGutterChangeLineNr Blue
+highlight! link GitGutterDeleteLineNr Red
+highlight! link GitGutterChangeDeleteLineNr Purple
 " }}}
 " mhinz/vim-signify {{{
 highlight! link SignifySignAdd GreenSign
