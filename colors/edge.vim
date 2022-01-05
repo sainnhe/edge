@@ -344,7 +344,7 @@ endif
 " Plugins: {{{
 " nvim-treesitter/nvim-treesitter {{{
 call edge#highlight('TSStrong', s:palette.none, s:palette.none, 'bold')
-call edge#highlight('TSEmphasis', s:palette.none, s:palette.none, 'bold')
+call edge#highlight('TSEmphasis', s:palette.none, s:palette.none, 'italic')
 call edge#highlight('TSUnderline', s:palette.none, s:palette.none, 'underline')
 call edge#highlight('TSNote', s:palette.bg0, s:palette.blue, 'bold')
 call edge#highlight('TSWarning', s:palette.bg0, s:palette.yellow, 'bold')
