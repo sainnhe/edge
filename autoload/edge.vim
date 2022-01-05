@@ -6,12 +6,6 @@
 " License: MIT License
 " =============================================================================
 
-" g:edge#tmux: is in tmux < 2.9 or not {{{
-let g:edge#tmux = executable('tmux') && $TMUX !=# '' ?
-                  \ (str2float(system("tmux -V | grep -oE '[0-9]+\.[0-9]*'")) < 2.9 ?
-                    \ 1 :
-                    \ 0) :
-                  \ 0 "}}}
 function! edge#get_configuration() "{{{
   return {
         \ 'style': get(g:, 'edge_style', 'default'),
@@ -154,11 +148,7 @@ function! edge#highlight(group, fg, bg, ...) "{{{
         \ 'ctermfg=' . a:fg[1]
         \ 'ctermbg=' . a:bg[1]
         \ 'gui=' . (a:0 >= 1 ?
-          \ (a:1 ==# 'undercurl' ?
-            \ (g:edge#tmux ?
-              \ 'underline' :
-              \ 'undercurl') :
-            \ a:1) :
+          \ a:1 :
           \ 'NONE')
         \ 'cterm=' . (a:0 >= 1 ?
           \ (a:1 ==# 'undercurl' ?
