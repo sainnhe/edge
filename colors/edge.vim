@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Dec 17 01:50:20 UTC 2021'
+let s:last_modified = 'Sun Jan  9 10:50:17 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -1131,6 +1131,13 @@ highlight! link NeogitCommandCodeNormal Green
 highlight! link NeogitCommandCodeError Red
 highlight! link NeogitCommitViewHeader diffIndexLine
 highlight! link NeogitFilePath diffFile
+" ft_end }}}
+" ft_begin: dashboard {{{
+" https://github.com/glepnir/dashboard-nvim
+highlight! link DashboardHeader Purple
+highlight! link DashboardCenter Green
+highlight! link DashboardShortcut Blue
+highlight! link DashboardFooter Red
 " ft_end }}}
 " ft_begin: markdown {{{
 " builtin: {{{
