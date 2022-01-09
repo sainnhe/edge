@@ -208,6 +208,8 @@ function! edge#ft_write(rootpath, ft, content) "{{{
   endif
   " Append the content.
   call writefile(split(a:content, "\n"), ft_path, 'a')
+  " Add modeline.
+  call writefile(['" vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker fmr={{{,}}}:'], ft_path, 'a')
 endfunction "}}}
 function! edge#ft_rootpath(path) "{{{
   " Get the directory where `after/ftplugin` is generated.
