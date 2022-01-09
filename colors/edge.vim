@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sun Jan  9 12:17:33 UTC 2022'
+let s:last_modified = 'Sun Jan  9 12:24:45 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -934,8 +934,7 @@ highlight! link NotifyDEBUGTitle Grey
 highlight! link NotifyTRACETitle Purple
 " }}}
 " glepnir/lspsaga.nvim {{{
-call edge#highlight('LspFloatWinBorder', s:palette.bg1, s:palette.bg1)
-call edge#highlight('LspFloatWinNormal', s:palette.none, s:palette.bg1)
+call edge#highlight('LspFloatWinBorder', s:palette.bg0, s:palette.bg0)
 call edge#highlight('LspSagaDiagnosticHeader', s:palette.yellow, s:palette.none, 'bold')
 call edge#highlight('LspSagaCodeActionTitle', s:palette.blue, s:palette.none, 'bold')
 call edge#highlight('DefinitionPreviewTitle', s:palette.purple, s:palette.none, 'bold')
