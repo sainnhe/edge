@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sun Jan 16 11:33:57 UTC 2022'
+let s:last_modified = 'Sun Jan 16 12:07:23 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -953,7 +953,7 @@ highlight! link plugEdge Purple
 " ft_end }}}
 " ft_begin: coctree {{{
 " https://github.com/neoclide/coc.nvim
-highlight! link CocTreeOpenClose Grey
+highlight! link CocTreeOpenClose Purple
 highlight! link CocTreeDescription Grey
 highlight! link CocSymbolFile Green
 highlight! link CocSymbolModule Purple
