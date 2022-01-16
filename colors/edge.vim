@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Jan 14 12:46:56 UTC 2022'
+let s:last_modified = 'Sun Jan 16 11:25:06 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -477,77 +477,12 @@ highlight! link CocListPath StatusLine
 highlight! link CocSelectedText Purple
 highlight! link CocListsLine Fg
 highlight! link CocListsDesc Grey
-highlight! link CocTreeOpenClose Grey
 highlight! link HighlightedyankRegion Visual
-highlight! link CocSymbolFile Green
-highlight! link CocSymbolModule Purple
-highlight! link CocSymbolNamespace Purple
-highlight! link CocSymbolPackage Purple
-highlight! link CocSymbolClass Yellow
-highlight! link CocSymbolMethod Blue
-highlight! link CocSymbolProperty Red
-highlight! link CocSymbolField Blue
-highlight! link CocSymbolConstructor Blue
-highlight! link CocSymbolEnum Yellow
-highlight! link CocSymbolInterface Yellow
-highlight! link CocSymbolFunction Green
-highlight! link CocSymbolVariable Red
-highlight! link CocSymbolConstant Red
-highlight! link CocSymbolString Cyan
-highlight! link CocSymbolNumber Cyan
-highlight! link CocSymbolBoolean Cyan
-highlight! link CocSymbolArray Cyan
-highlight! link CocSymbolObject Cyan
-highlight! link CocSymbolKey Red
-highlight! link CocSymbolNull Cyan
-highlight! link CocSymbolEnumMember Cyan
-highlight! link CocSymbolStruct Yellow
-highlight! link CocSymbolEvent Cyan
-highlight! link CocSymbolOperator Cyan
-highlight! link CocSymbolTypeParameter Yellow
-highlight! link CocSymbolDefault Cyan
 highlight! link CocGitAddedSign GreenSign
 highlight! link CocGitChangeRemovedSign PurpleSign
 highlight! link CocGitChangedSign BlueSign
 highlight! link CocGitRemovedSign RedSign
 highlight! link CocGitTopRemovedSign RedSign
-highlight! link CocExplorerBufferRoot Purple
-highlight! link CocExplorerBufferExpandIcon Red
-highlight! link CocExplorerBufferBufnr Yellow
-highlight! link CocExplorerBufferModified Yellow
-highlight! link CocExplorerBufferReadonly Red
-highlight! link CocExplorerBufferBufname Grey
-highlight! link CocExplorerBufferFullpath Grey
-highlight! link CocExplorerFileRoot Purple
-highlight! link CocExplorerFileRootName Green
-highlight! link CocExplorerFileExpandIcon Red
-highlight! link CocExplorerFileFullpath Grey
-highlight! link CocExplorerFileDirectory Green
-highlight! link CocExplorerFileGitStaged Purple
-highlight! link CocExplorerFileGitUnstaged Yellow
-highlight! link CocExplorerFileGitRootStaged Purple
-highlight! link CocExplorerFileGitRootUnstaged Yellow
-highlight! link CocExplorerGitPathChange Fg
-highlight! link CocExplorerGitContentChange Fg
-highlight! link CocExplorerGitRenamed Purple
-highlight! link CocExplorerGitCopied Fg
-highlight! link CocExplorerGitAdded Green
-highlight! link CocExplorerGitUntracked Blue
-highlight! link CocExplorerGitUnmodified Fg
-highlight! link CocExplorerGitUnmerged Cyan
-highlight! link CocExplorerGitMixed Cyan
-highlight! link CocExplorerGitModified Yellow
-highlight! link CocExplorerGitDeleted Red
-highlight! link CocExplorerGitIgnored Grey
-highlight! link CocExplorerFileSize Blue
-highlight! link CocExplorerTimeAccessed Cyan
-highlight! link CocExplorerTimeCreated Cyan
-highlight! link CocExplorerTimeModified Cyan
-highlight! link CocExplorerIndentLine Conceal
-highlight! link CocExplorerHelpDescription Grey
-highlight! link CocExplorerHelpHint Grey
-highlight! link CocRustChainingHint Grey
-highlight! link CocRustTypeHint Grey
 " }}}
 " prabirshrestha/vim-lsp {{{
 highlight! link LspErrorVirtual VirtualTextError
@@ -1015,6 +950,75 @@ highlight! link plugStar Purple
 highlight! link plugUpdate Cyan
 highlight! link plugDeleted Grey
 highlight! link plugEdge Purple
+" ft_end }}}
+" ft_begin: coctree {{{
+" https://github.com/neoclide/coc.nvim
+highlight! link CocTreeOpenClose Grey
+highlight! link CocSymbolFile Green
+highlight! link CocSymbolModule Purple
+highlight! link CocSymbolNamespace Purple
+highlight! link CocSymbolPackage Purple
+highlight! link CocSymbolClass Yellow
+highlight! link CocSymbolMethod Blue
+highlight! link CocSymbolProperty Red
+highlight! link CocSymbolField Blue
+highlight! link CocSymbolConstructor Blue
+highlight! link CocSymbolEnum Yellow
+highlight! link CocSymbolInterface Yellow
+highlight! link CocSymbolFunction Green
+highlight! link CocSymbolVariable Red
+highlight! link CocSymbolConstant Red
+highlight! link CocSymbolString Cyan
+highlight! link CocSymbolNumber Cyan
+highlight! link CocSymbolBoolean Cyan
+highlight! link CocSymbolArray Cyan
+highlight! link CocSymbolObject Cyan
+highlight! link CocSymbolKey Red
+highlight! link CocSymbolNull Cyan
+highlight! link CocSymbolEnumMember Cyan
+highlight! link CocSymbolStruct Yellow
+highlight! link CocSymbolEvent Cyan
+highlight! link CocSymbolOperator Cyan
+highlight! link CocSymbolTypeParameter Yellow
+highlight! link CocSymbolDefault Cyan
+" ft_end }}}
+" ft_begin: coc-explorer {{{
+" https://github.com/weirongxu/coc-explorer
+highlight! link CocExplorerBufferRoot Purple
+highlight! link CocExplorerBufferExpandIcon Red
+highlight! link CocExplorerBufferBufnr Yellow
+highlight! link CocExplorerBufferModified Yellow
+highlight! link CocExplorerBufferReadonly Red
+highlight! link CocExplorerBufferBufname Grey
+highlight! link CocExplorerBufferFullpath Grey
+highlight! link CocExplorerFileRoot Purple
+highlight! link CocExplorerFileRootName Green
+highlight! link CocExplorerFileExpandIcon Red
+highlight! link CocExplorerFileFullpath Grey
+highlight! link CocExplorerFileDirectory Green
+highlight! link CocExplorerFileGitStaged Purple
+highlight! link CocExplorerFileGitUnstaged Yellow
+highlight! link CocExplorerFileGitRootStaged Purple
+highlight! link CocExplorerFileGitRootUnstaged Yellow
+highlight! link CocExplorerGitPathChange Fg
+highlight! link CocExplorerGitContentChange Fg
+highlight! link CocExplorerGitRenamed Purple
+highlight! link CocExplorerGitCopied Fg
+highlight! link CocExplorerGitAdded Green
+highlight! link CocExplorerGitUntracked Blue
+highlight! link CocExplorerGitUnmodified Fg
+highlight! link CocExplorerGitUnmerged Cyan
+highlight! link CocExplorerGitMixed Cyan
+highlight! link CocExplorerGitModified Yellow
+highlight! link CocExplorerGitDeleted Red
+highlight! link CocExplorerGitIgnored Grey
+highlight! link CocExplorerFileSize Blue
+highlight! link CocExplorerTimeAccessed Cyan
+highlight! link CocExplorerTimeCreated Cyan
+highlight! link CocExplorerTimeModified Cyan
+highlight! link CocExplorerIndentLine Conceal
+highlight! link CocExplorerHelpDescription Grey
+highlight! link CocExplorerHelpHint Grey
 " ft_end }}}
 " ft_begin: tagbar {{{
 " https://github.com/majutsushi/tagbar
@@ -1925,6 +1929,10 @@ highlight! link rustAssert Blue
 highlight! link rustPanic Blue
 highlight! link rustPubScopeCrate RedItalic
 highlight! link rustAttribute Purple
+" }}}
+" coc-rust-analyzer: https://github.com/fannheyward/coc-rust-analyzer {{{
+highlight! link CocRustChainingHint Grey
+highlight! link CocRustTypeHint Grey
 " }}}
 " ft_end }}}
 " ft_begin: swift {{{
