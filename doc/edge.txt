@@ -260,6 +260,21 @@ E.g.
     let g:edge_menu_selection_background = 'purple'
 <
 ------------------------------------------------------------------------------
+                                                       *g:edge_spell_foreground*
+g:edge_spell_foreground~
+
+By default, this color scheme won't color the foreground of |spell|, instead
+colored under curls will be used. If you also want to color the foreground,
+set this option to `'colored'`.
+
+    Available values: `'none'`, `'colored'`
+    Default value: `'none'`
+
+E.g.
+>
+    let g:edge_spell_foreground = 'colored'
+<
+------------------------------------------------------------------------------
                                                                *g:edge_show_eob*
 g:edge_show_eob~
 

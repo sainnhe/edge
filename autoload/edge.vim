@@ -14,6 +14,7 @@ function! edge#get_configuration() "{{{
         \ 'enable_italic': get(g:, 'edge_enable_italic', 0),
         \ 'cursor': get(g:, 'edge_cursor', 'auto'),
         \ 'menu_selection_background': get(g:, 'edge_menu_selection_background', 'blue'),
+        \ 'spell_foreground': get(g:, 'edge_spell_foreground', 'none'),
         \ 'show_eob': get(g:, 'edge_show_eob', 1),
         \ 'current_word': get(g:, 'edge_current_word', get(g:, 'edge_transparent_background', 0) == 0 ? 'grey background' : 'bold'),
         \ 'lightline_disable_bold': get(g:, 'edge_lightline_disable_bold', 0),
