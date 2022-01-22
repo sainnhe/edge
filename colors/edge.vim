@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sat Jan 22 04:51:47 UTC 2022'
+let s:last_modified = 'Sat Jan 22 10:48:52 AM UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -534,18 +534,18 @@ highlight! link Lf_hl_popup_blank Lf_hl_popup_window
 highlight! link Lf_hl_popup_spin Yellow
 " }}}
 " liuchengxu/vim-clap {{{
-call edge#highlight('ClapSelected', s:palette.red, s:palette.bg2, 'bold')
-call edge#highlight('ClapCurrentSelection', s:palette.blue, s:palette.bg2, 'bold')
+call edge#highlight('ClapSelected', s:palette.red, s:palette.none, 'bold')
+call edge#highlight('ClapCurrentSelection', s:palette.none, s:palette.bg0, 'bold')
 call edge#highlight('ClapSpinner', s:palette.purple, s:palette.bg2, 'bold')
-call edge#highlight('ClapBlines', s:palette.fg, s:palette.bg2)
-call edge#highlight('ClapProviderId', s:palette.fg, s:palette.bg2, 'bold')
-call edge#highlight('ClapMatches1', s:palette.red, s:palette.bg2, 'bold')
-call edge#highlight('ClapMatches2', s:palette.yellow, s:palette.bg2, 'bold')
-call edge#highlight('ClapMatches3', s:palette.cyan, s:palette.bg2, 'bold')
-call edge#highlight('ClapMatches4', s:palette.blue, s:palette.bg2, 'bold')
-call edge#highlight('ClapMatches5', s:palette.purple, s:palette.bg2, 'bold')
-call edge#highlight('ClapFuzzyMatches', s:palette.green, s:palette.bg2, 'bold')
-call edge#highlight('ClapNoMatchesFound', s:palette.red, s:palette.bg2, 'bold')
+call edge#highlight('ClapBlines', s:palette.fg, s:palette.none)
+call edge#highlight('ClapProviderId', s:palette.fg, s:palette.none, 'bold')
+call edge#highlight('ClapMatches1', s:palette.red, s:palette.none, 'bold')
+call edge#highlight('ClapMatches2', s:palette.yellow, s:palette.none, 'bold')
+call edge#highlight('ClapMatches3', s:palette.cyan, s:palette.none, 'bold')
+call edge#highlight('ClapMatches4', s:palette.blue, s:palette.none, 'bold')
+call edge#highlight('ClapMatches5', s:palette.purple, s:palette.none, 'bold')
+call edge#highlight('ClapFuzzyMatches', s:palette.green, s:palette.none, 'bold')
+call edge#highlight('ClapNoMatchesFound', s:palette.red, s:palette.none, 'bold')
 highlight! link ClapInput Pmenu
 highlight! link ClapDisplay Pmenu
 highlight! link ClapPreview Pmenu
@@ -565,6 +565,7 @@ highlight! link ClapBlinesLineNr Grey
 highlight! link ClapProviderColon ClapBlines
 highlight! link ClapProviderAbout ClapBlines
 highlight! link ClapFile Fg
+highlight! link ClapSearchText ClapFuzzyMatches
 " }}}
 " junegunn/fzf.vim {{{
 let g:fzf_colors = {
