@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sat Jan 22 04:44:29 UTC 2022'
+let s:last_modified = 'Sat Jan 22 04:51:47 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -564,6 +564,7 @@ highlight! link ClapFuzzyMatches12 ClapFuzzyMatches
 highlight! link ClapBlinesLineNr Grey
 highlight! link ClapProviderColon ClapBlines
 highlight! link ClapProviderAbout ClapBlines
+highlight! link ClapFile Fg
 " }}}
 " junegunn/fzf.vim {{{
 let g:fzf_colors = {
