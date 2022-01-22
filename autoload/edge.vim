@@ -174,10 +174,11 @@ function! edge#ft_gen(path, last_modified, msg) "{{{
     endfor
   endfor
   call edge#ft_write(rootpath, 'text', "let g:edge_last_modified = '" . a:last_modified . "'") " Write the last modified time to `after/ftplugin/text/edge.vim`
+  let ftplugin_relative_path = has('win32') ? '\after\ftplugin' : '/after/ftplugin'
   if a:msg ==# 'update'
-    echohl WarningMsg | echom '[edge] Updated ' . rootpath . '/after/ftplugin' | echohl None
+    echohl WarningMsg | echom '[edge] Updated ' . rootpath . ftplugin_relative_path | echohl None
   else
-    echohl WarningMsg | echom '[edge] Generated ' . rootpath . '/after/ftplugin' | echohl None
+    echohl WarningMsg | echom '[edge] Generated ' . rootpath . ftplugin_relative_path | echohl None
   endif
 endfunction "}}}
 function! edge#ft_write(rootpath, ft, content) "{{{
@@ -252,7 +253,8 @@ function! edge#ft_clean(path, msg) "{{{
     call delete(rootpath . '/after', 'd')
   endif
   if a:msg
-    echohl WarningMsg | echom '[edge] Cleaned ' . rootpath . '/after/ftplugin' | echohl None
+    let ftplugin_relative_path = has('win32') ? '\after\ftplugin' : '/after/ftplugin'
+    echohl WarningMsg | echom '[edge] Cleaned ' . rootpath . ftplugin_relative_path | echohl None
   endif
 endfunction "}}}
 function! edge#ft_exists(path) "{{{
