@@ -35,6 +35,7 @@ This color scheme is heavily inspired by [Atom One](https://github.com/atom/atom
 - Customizable.
 - Rich support for common file types and plugins.
 - Tree-sitter support.
+- Semantic highlighting support.
 - [Italic support](https://github.com/sainnhe/icursive-nerd-font) 🎉
 
 ## Documentation
