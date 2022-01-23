@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 ### Added
 
 - Add `g:edge_spell_foreground`.
+- Optimize `junegunn/limelight.vim`.
 
 ### Changed
 

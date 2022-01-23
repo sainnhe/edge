@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sat Jan 22 12:11:18 UTC 2022'
+let s:last_modified = 'Sun Jan 23 13:04:34 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -706,6 +706,10 @@ highlight! link WhichKey Red
 highlight! link WhichKeySeperator Green
 highlight! link WhichKeyGroup Purple
 highlight! link WhichKeyDesc Blue
+" }}}
+" junegunn/limelight.vim {{{
+let g:limelight_conceal_ctermfg = s:palette.grey_dim[1]
+let g:limelight_conceal_guifg = s:palette.grey_dim[0]
 " }}}
 " unblevable/quick-scope {{{
 call edge#highlight('QuickScopePrimary', s:palette.green, s:palette.none, 'underline')
