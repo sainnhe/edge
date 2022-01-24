@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Jan 24 04:20:34 UTC 2022'
+let s:last_modified = 'Mon Jan 24 08:03:13 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -207,7 +207,7 @@ call edge#highlight('Conditional', s:palette.purple, s:palette.none)
 call edge#highlight('Repeat', s:palette.purple, s:palette.none)
 call edge#highlight('Statement', s:palette.purple, s:palette.none)
 call edge#highlight('Macro', s:palette.yellow, s:palette.none)
-call edge#highlight('Error', s:palette.purple, s:palette.none)
+call edge#highlight('Error', s:palette.red, s:palette.none)
 call edge#highlight('Label', s:palette.yellow, s:palette.none)
 call edge#highlight('Special', s:palette.yellow, s:palette.none)
 call edge#highlight('SpecialChar', s:palette.yellow, s:palette.none)
