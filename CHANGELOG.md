@@ -16,6 +16,10 @@ All notable changes to this project will be documented in this file.
 - Redesign semantic hi groups in coc.nvim [neoclide/coc.nvim#3355](https://github.com/neoclide/coc.nvim/pull/3355).
 - Generate `/after/syntax`.
 
+### Fixed
+
+- Update &runtimepath after generating syntax files.
+
 ### Removed
 
 - Remove extra stuffs from this repo. [`44aff34`](https://github.com/sainnhe/edge/commit/44aff34e04337120a49a52e94ce735d09c7fafbe)
