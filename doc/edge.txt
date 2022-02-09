@@ -191,13 +191,10 @@ g:edge_style~
 
 The style of this color scheme.
 
-    Available values: `'default'`, `'aura'`, `'neon'`
-    Default value: `'default'`
+    Type:               |String|
+    Available values:   `'default'`, `'aura'`, `'neon'`
+    Default value:      `'default'`
 
-E.g.
->
-    let g:edge_style = 'aura'
-<
 ------------------------------------------------------------------------------
                                                  *g:edge_disable_italic_comment*
 g:edge_disable_italic_comment~
@@ -205,20 +202,20 @@ g:edge_disable_italic_comment~
 By default, italic is enabled in `Comment`. To disable italic in `Comment`, set
 this option to `1`.
 
-E.g.
->
-    let g:edge_disable_italic_comment = 1
-<
+    Type:               |Number|
+    Available values:   `0`, `1`
+    Default value:      `0`
+
 ------------------------------------------------------------------------------
                                                           *g:edge_enable_italic*
 g:edge_enable_italic~
 
 To enable italic in this color scheme, set this option to `1`.
 
-E.g.
->
-    let g:edge_enable_italic = 1
-<
+    Type:               |Number|
+    Available values:   `0`, `1`
+    Default value:      `0`
+
 Note: This option is designed to use with fonts that support cursive italics.
 See |edge-faq| for more information.
 
@@ -228,37 +225,31 @@ g:edge_cursor~
 
 Customize the cursor color, only works in GUI clients.
 
-    Available values: `'auto'`, `'red'`, `'yellow'`, `'green'`, `'cyan'`,
+    Type:               |String|
+    Available values:   `'auto'`, `'red'`, `'yellow'`, `'green'`, `'cyan'`,
     `'blue'`, `'purple'`
-    Default value: `'auto'`
+    Default value:      `'auto'`
 
-E.g.
->
-    let g:edge_cursor = 'green'
-<
 ------------------------------------------------------------------------------
                                                  *g:edge_transparent_background*
 g:edge_transparent_background~
 
 To use transparent background, set this option to `1`.
 
-E.g.
->
-    let g:edge_transparent_background = 1
-<
+    Type:               |Number|
+    Available values:   `0`, `1`
+    Default value:      `0`
+
 ------------------------------------------------------------------------------
                                               *g:edge_menu_selection_background*
 g:edge_menu_selection_background~
 
 Customize the background color of |hl-PmenuSel| and |hl-WildMenu|.
 
-    Available values: `'blue'`, `'green'`, `'purple'`
-    Default value: `'blue'`
+    Type:               |String|
+    Available values:   `'blue'`, `'green'`, `'purple'`
+    Default value:      `'blue'`
 
-E.g.
->
-    let g:edge_menu_selection_background = 'purple'
-<
 ------------------------------------------------------------------------------
                                                        *g:edge_spell_foreground*
 g:edge_spell_foreground~
@@ -267,26 +258,20 @@ By default, this color scheme won't color the foreground of |spell|, instead
 colored under curls will be used. If you also want to color the foreground,
 set this option to `'colored'`.
 
-    Available values: `'none'`, `'colored'`
-    Default value: `'none'`
+    Type:               |String|
+    Available values:   `'none'`, `'colored'`
+    Default value:      `'none'`
 
-E.g.
->
-    let g:edge_spell_foreground = 'colored'
-<
 ------------------------------------------------------------------------------
                                                                *g:edge_show_eob*
 g:edge_show_eob~
 
 Whether to show |hl-EndOfBuffer|.
 
-    Available values: `1`, `0`
-    Default value: `1`
+    Type:               |Number|
+    Available values:   `1`, `0`
+    Default value:      `1`
 
-E.g.
->
-    let g:edge_show_eob = 0
-<
 ------------------------------------------------------------------------------
                                               *g:edge_diagnostic_text_highlight*
 g:edge_diagnostic_text_highlight~
@@ -295,13 +280,10 @@ Some plugins support highlighting error/warning/info/hint texts, by default
 these texts are only underlined, but you can use this option to also highlight
 the background of them.
 
-    Available values: `0`, `1`
-    Default value: `0`
+    Type:               |Number|
+    Available values:   `0`, `1`
+    Default value:      `0`
 
-E.g.
->
-    let g:edge_diagnostic_text_highlight = 1
-<
 Currently, the following plugins are supported:
 
 - neovim's built-in language server client
@@ -320,10 +302,10 @@ Some plugins support highlighting error/warning/info/hint lines, but this
 feature is disabled by default in this color scheme. To enable this feature,
 set this option to `1`.
 
-E.g.
->
-    let g:edge_diagnostic_line_highlight = 1
-<
+    Type:               |Number|
+    Available values:   `0`, `1`
+    Default value:      `0`
+
 Currently, the following plugins are supported:
 
 - https://github.com/neoclide/coc.nvim
@@ -339,13 +321,10 @@ Some plugins can use virtual text feature of neovim to display
 error/warning/info/hint information, you can use this option to adjust the
 colors of it.
 
-    Available values: `'grey'`, `'colored'`
-    Default value: `'grey'`
+    Type:               |String|
+    Available values:   `'grey'`, `'colored'`
+    Default value:      `'grey'`
 
-E.g.
->
-    let g:edge_diagnostic_virtual_text = 'colored'
-<
 Currently, the following plugins are supported:
 
 - neovim's built-in language server client
@@ -361,14 +340,11 @@ g:edge_current_word~
 Some plugins can highlight the word under current cursor, you can use this
 option to control their behavior.
 
-    Available values: `'grey background'`, `'bold'`, `'underline'`, `'italic'`
-    Default value: `'grey background'` when not in transparent mode, `'bold'`
+    Type:               |String|
+    Available values:   `'grey background'`, `'bold'`, `'underline'`, `'italic'`
+    Default value:      `'grey background'` when not in transparent mode, `'bold'`
     when in transparent mode.
 
-E.g.
->
-    let g:edge_current_word = 'bold'
-<
 Currently, the following plugins are supported:
 
 - https://github.com/neoclide/coc-highlight
@@ -384,10 +360,10 @@ g:edge_lightline_disable_bold~
 By default, bold is enabled in lightline color scheme. To disable bold in
 lightline color scheme, set this option to `1`.
 
-E.g.
->
-    let g:edge_lightline_disable_bold = 1
-<
+    Type:               |Number|
+    Available values:   `0`, `1`
+    Default value:      `0`
+
 Note: this configuration option doesn't need to be placed before `colorscheme edge`
 
 ------------------------------------------------------------------------------
@@ -400,10 +376,10 @@ demand by placing them in the `after/syntax` directory.
 
 Enabling this option will reduce loading time by approximately 50%.
 
-E.g.
->
-    let g:edge_better_performance = 1
-<
+    Type:               |Number|
+    Available values:   `0`, `1`
+    Default value:      `0`
+
 ==============================================================================
 FAQ                                                                   *edge-faq*
 

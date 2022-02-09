@@ -24,6 +24,7 @@ All notable changes to this project will be documented in this file.
 ### Removed
 
 - Remove extra stuffs from this repo. [`44aff34`](https://github.com/sainnhe/edge/commit/44aff34e04337120a49a52e94ce735d09c7fafbe)
+- Remove examples of configuration options in help doc.
 
 ## [0.2.1] - 2022-01-09
 
