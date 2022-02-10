@@ -1,4 +1,5 @@
-*edge.txt*
+*edge.txt* Clean & Elegant Color Scheme inspired by Atom One and Material
+*edge*
 
 CONTENTS                                     *edge-contents*
 
@@ -8,7 +9,7 @@ Usage                                        |edge-usage|
 Configuration                                |edge-configuration|
 FAQ                                          |edge-faq|
 
-Note: Type |gO| to show the outline of contents.
+Note: Type |gO| in neovim to show the outline of contents.
 
 ==============================================================================
 INTRODUCTION                                                 *edge-introduction*
