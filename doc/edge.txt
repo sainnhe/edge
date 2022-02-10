@@ -1,6 +1,15 @@
 *edge.txt* Clean & Elegant Color Scheme inspired by Atom One and Material
 *edge*
+>
+                        ______    __
+                       / ____/___/ /___ ____
+                      / __/ / __  / __ `/ _ \
+                     / /___/ /_/ / /_/ /  __/
+                    /_____/\__,_/\__, /\___/
+                                /____/
+<
 
+==============================================================================
 CONTENTS                                     *edge-contents*
 
 Introduction                                 |edge-introduction|
