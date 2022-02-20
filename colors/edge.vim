@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Jan 24 08:03:13 UTC 2022'
+let s:last_modified = 'Sun Feb 20 08:00:30 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -649,6 +649,9 @@ call edge#highlight('SneakLabelMask', s:palette.bg_purple, s:palette.bg_purple)
 highlight! link Sneak Search
 highlight! link SneakLabel Search
 highlight! link SneakScope DiffText
+" }}}
+" rhysd/clever-f.vim {{{
+highlight! link CleverFDefaultLabel Search
 " }}}
 " terryma/vim-multiple-cursors {{{
 highlight! link multiple_cursors_cursor Cursor
