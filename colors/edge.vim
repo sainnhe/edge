@@ -850,6 +850,23 @@ highlight! link NotifyINFOTitle Green
 highlight! link NotifyDEBUGTitle Grey
 highlight! link NotifyTRACETitle Purple
 " }}}
+" rcarriga/nvim-dap-ui {{{
+call edge#highlight('DapUIModifiedValue', s:palette.cyan, s:palette.none, 'bold')
+call edge#highlight('DapUIBreakpointsCurrentLine', s:palette.green, s:palette.none, 'bold')
+highlight! link DapUIScope Cyan
+highlight! link DapUIType Purple
+highlight! link DapUIDecoration Cyan
+highlight! link DapUIThread Green
+highlight! link DapUIStoppedThread Cyan
+highlight! link DapUISource Purple
+highlight! link DapUILineNumber Cyan
+highlight! link DapUIFloatBorder Cyan
+highlight! link DapUIWatchesEmpty Red
+highlight! link DapUIWatchesValue Green
+highlight! link DapUIWatchesError Red
+highlight! link DapUIBreakpointsPath Cyan
+highlight! link DapUIBreakpointsInfo Green
+" }}}
 " glepnir/lspsaga.nvim {{{
 call edge#highlight('LspFloatWinBorder', s:palette.bg0, s:palette.bg0)
 call edge#highlight('LspSagaDiagnosticHeader', s:palette.yellow, s:palette.none, 'bold')
