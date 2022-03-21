@@ -116,8 +116,7 @@ Vim~
 
         " The configuration options should be placed before `colorscheme edge`.
         let g:edge_style = 'aura'
-        let g:edge_enable_italic = 1
-        let g:edge_disable_italic_comment = 1
+        let g:edge_better_performance = 1
 
         colorscheme edge
 <
@@ -189,8 +188,7 @@ E.g.
     endif
 
     let g:edge_style = 'edge'
-    let g:edge_enable_italic = 1
-    let g:edge_disable_italic_comment = 1
+    let g:edge_better_performance = 1
 
     colorscheme edge
     let g:lightline.colorscheme = 'edge'
@@ -429,7 +427,7 @@ How to enable cursive italic keywords?~
 
 2. Enable italic keywords in this color scheme: `let g:edge_enable_italic = 1`
 
-3. Disable italic comment(optional): `let g:edge_disable_italic_comment = 1`
+3. (Optional) Disable italic comment: `let g:edge_disable_italic_comment = 1`
 
 ------------------------------------------------------------------------------
 
