@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sun Feb 20 08:00:30 UTC 2022'
+let s:last_modified = 'Mon Mar 21 12:07:18 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -310,7 +310,7 @@ endif
 " }}}
 " }}}
 " Terminal: {{{
-if (has('termguicolors') && &termguicolors) || has('gui_running')
+if ((has('termguicolors') && &termguicolors) || has('gui_running')) && !s:configuration.disable_terminal_colors
   " Definition
   let s:terminal = {
         \ 'black':    &background ==# 'dark' ? s:palette.bg0 : s:palette.fg,
