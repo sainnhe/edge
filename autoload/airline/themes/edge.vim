@@ -9,6 +9,9 @@
 " Initialization: {{{
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
+if s:configuration.transparent_background
+  let s:palette.bg1 = s:palette.none
+endif
 "}}}
 " Definition: {{{
 let s:accents = s:palette.red
