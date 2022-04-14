@@ -10,7 +10,7 @@ local configuration = vim.fn['edge#get_configuration']()
 local palette = vim.fn['edge#get_palette'](configuration.style)
 
 if configuration.transparent_background == 1 then
-  palette.bg1[1] = palette.none[1]
+  palette.bg1 = palette.none
 end
 
 return {
