@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Apr  4 01:47:34 UTC 2022'
+let s:last_modified = 'Wed May  4 00:34:14 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -104,6 +104,7 @@ endif
 highlight! link WildMenu PmenuSel
 call edge#highlight('PmenuThumb', s:palette.none, s:palette.bg_grey)
 call edge#highlight('NormalFloat', s:palette.fg, s:palette.bg2)
+call edge#highlight('FloatBorder', s:palette.grey, s:palette.bg2)
 call edge#highlight('Question', s:palette.yellow, s:palette.none)
 if s:configuration.spell_foreground ==# 'none'
   call edge#highlight('SpellBad', s:palette.none, s:palette.none, 'undercurl', s:palette.red)
