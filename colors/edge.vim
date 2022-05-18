@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Wed May 18 13:18:36 UTC 2022'
+let s:last_modified = 'Wed May 18 13:37:45 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -421,6 +421,12 @@ highlight! link TSVariableBuiltin CyanItalic
 " }}}
 " neoclide/coc.nvim {{{
 call edge#highlight('CocHoverRange', s:palette.none, s:palette.none, 'bold,underline')
+call edge#highlight('CocSearch', s:palette.green, s:palette.none, 'bold')
+highlight! link CocDisabled Grey
+highlight! link CocSnippetVisual DiffAdd
+highlight! link CocInlayHint Grey
+highlight! link CocNotificationProgress Green
+highlight! link CocNotificationButton PmenuSel
 highlight! link CocSemClass TSType
 highlight! link CocSemEnum TSType
 highlight! link CocSemInterface TSType
