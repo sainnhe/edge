@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Wed May  4 00:34:14 UTC 2022'
+let s:last_modified = 'Wed May 18 12:20:27 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -28,7 +28,7 @@ endif
 " }}}
 " Common Highlight Groups: {{{
 " UI: {{{
-if s:configuration.transparent_background
+if s:configuration.transparent_background == 1
   call edge#highlight('Normal', s:palette.fg, s:palette.none)
   call edge#highlight('Terminal', s:palette.fg, s:palette.none)
   if s:configuration.show_eob
@@ -117,13 +117,23 @@ else
   call edge#highlight('SpellLocal', s:palette.blue, s:palette.none, 'undercurl', s:palette.blue)
   call edge#highlight('SpellRare', s:palette.purple, s:palette.none, 'undercurl', s:palette.purple)
 endif
-call edge#highlight('StatusLine', s:palette.fg, s:palette.bg2)
-call edge#highlight('StatusLineTerm', s:palette.fg, s:palette.bg2)
-call edge#highlight('StatusLineNC', s:palette.grey, s:palette.bg1)
-call edge#highlight('StatusLineTermNC', s:palette.grey, s:palette.bg1)
-call edge#highlight('TabLine', s:palette.fg, s:palette.bg4)
-call edge#highlight('TabLineFill', s:palette.grey, s:palette.bg1)
-call edge#highlight('TabLineSel', s:palette.bg0, s:palette.bg_purple)
+if s:configuration.transparent_background == 2
+  call edge#highlight('StatusLine', s:palette.fg, s:palette.none)
+  call edge#highlight('StatusLineTerm', s:palette.fg, s:palette.none)
+  call edge#highlight('StatusLineNC', s:palette.grey, s:palette.none)
+  call edge#highlight('StatusLineTermNC', s:palette.grey, s:palette.none)
+  call edge#highlight('TabLine', s:palette.fg, s:palette.bg4)
+  call edge#highlight('TabLineFill', s:palette.grey, s:palette.none)
+  call edge#highlight('TabLineSel', s:palette.bg0, s:palette.bg_purple)
+else
+  call edge#highlight('StatusLine', s:palette.fg, s:palette.bg2)
+  call edge#highlight('StatusLineTerm', s:palette.fg, s:palette.bg2)
+  call edge#highlight('StatusLineNC', s:palette.grey, s:palette.bg1)
+  call edge#highlight('StatusLineTermNC', s:palette.grey, s:palette.bg1)
+  call edge#highlight('TabLine', s:palette.fg, s:palette.bg4)
+  call edge#highlight('TabLineFill', s:palette.grey, s:palette.bg1)
+  call edge#highlight('TabLineSel', s:palette.bg0, s:palette.bg_purple)
+endif
 call edge#highlight('VertSplit', s:palette.black, s:palette.none)
 call edge#highlight('Visual', s:palette.none, s:palette.bg3)
 call edge#highlight('VisualNOS', s:palette.none, s:palette.bg3, 'underline')

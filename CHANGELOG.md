@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file.
 - Optimize `rcarriga/nvim-dap-ui`.
 - Add `g:edge_disable_terminal_colors`.
 - Optimize `voldikss/vim-floaterm`.
+- Support `g:edge_transparent_background == 2`.
 
 ### Changed
 
