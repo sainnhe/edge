@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Wed May 18 12:42:19 UTC 2022'
+let s:last_modified = 'Wed May 18 13:18:36 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -1061,6 +1061,37 @@ highlight! link VistaHeadNr Fg
 highlight! link VistaPublic Blue
 highlight! link VistaProtected Green
 highlight! link VistaPrivate Purple
+" syn_end }}}
+" syn_begin: aerial {{{
+" https://github.com/stevearc/aerial.nvim
+highlight! link AerialLine CursorLine
+highlight! link AerialGuide LineNr
+highlight! link AerialFileIcon Green
+highlight! link AerialModuleIcon Purple
+highlight! link AerialNamespaceIcon Purple
+highlight! link AerialPackageIcon Purple
+highlight! link AerialClassIcon Yellow
+highlight! link AerialMethodIcon Blue
+highlight! link AerialPropertyIcon Red
+highlight! link AerialFieldIcon Blue
+highlight! link AerialConstructorIcon Blue
+highlight! link AerialEnumIcon Yellow
+highlight! link AerialInterfaceIcon Yellow
+highlight! link AerialFunctionIcon Green
+highlight! link AerialVariableIcon Red
+highlight! link AerialConstantIcon Red
+highlight! link AerialStringIcon Cyan
+highlight! link AerialNumberIcon Cyan
+highlight! link AerialBooleanIcon Cyan
+highlight! link AerialArrayIcon Cyan
+highlight! link AerialObjectIcon Cyan
+highlight! link AerialKeyIcon Red
+highlight! link AerialNullIcon Cyan
+highlight! link AerialEnumMemberIcon Cyan
+highlight! link AerialStructIcon Yellow
+highlight! link AerialEventIcon Cyan
+highlight! link AerialOperatorIcon Cyan
+highlight! link AerialTypeParameterIcon Yellow
 " syn_end }}}
 " syn_begin: nerdtree {{{
 " https://github.com/preservim/nerdtree

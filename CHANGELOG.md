@@ -14,6 +14,7 @@ All notable changes to this project will be documented in this file.
 - Add `g:edge_disable_terminal_colors`.
 - Optimize `voldikss/vim-floaterm`.
 - Support `g:edge_transparent_background == 2`.
+- Optimize `stevearc/aerial.nvim`.
 
 ### Changed
 
