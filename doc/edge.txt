@@ -405,16 +405,16 @@ Enabling this option will reduce loading time by approximately 50%.
 
 ------------------------------------------------------------------------------
                                                         *g:edge_colors_override*
-g:edge_colors_override 
+g:edge_colors_override~
 
 Override color palette. The available keys can be found in
 `/path/to/edge/autoload/edge.vim`.
 
 E.g.
- 
+>
     let g:edge_colors_override = {'bg0': ['#202020', '234'], 'bg2': ['#282828', '235']}
     colorscheme edge
- 
+<
     Type:               |Dictionary|
     Default value:      `{}`
 
