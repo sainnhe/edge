@@ -16,6 +16,7 @@ All notable changes to this project will be documented in this file.
 - Support `g:edge_transparent_background == 2`.
 - Optimize `stevearc/aerial.nvim`.
 - Optimize `wbthomason/packer.nvim`.
+- Add `g:edge_colors_override`.
 
 ### Changed
 

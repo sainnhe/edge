@@ -23,9 +23,10 @@ function! edge#get_configuration() "{{{
         \ 'diagnostic_virtual_text': get(g:, 'edge_diagnostic_virtual_text', 'grey'),
         \ 'disable_terminal_colors': get(g:, 'edge_disable_terminal_colors', 0),
         \ 'better_performance': get(g:, 'edge_better_performance', 0),
+        \ 'colors_override': get(g:, 'edge_colors_override', {}),
         \ }
 endfunction "}}}
-function! edge#get_palette(style) "{{{
+function! edge#get_palette(style, colors_override) "{{{
   if &background ==# 'dark' "{{{
     if a:style ==# 'default' "{{{
       let palette = {
@@ -141,7 +142,7 @@ function! edge#get_palette(style) "{{{
           \ 'none':       ['NONE',      'NONE']
           \ }
   endif "}}}
-  return palette
+  return extend(palette, a:colors_override)
 endfunction "}}}
 function! edge#highlight(group, fg, bg, ...) "{{{
   execute 'highlight' a:group
@@ -206,7 +207,7 @@ function! edge#syn_write(rootpath, syn, content) "{{{
   if matchstr(a:content, 'edge#highlight') !=# ''
     call writefile([
           \ 'let s:configuration = edge#get_configuration()',
-          \ 'let s:palette = edge#get_palette(s:configuration.style)'
+          \ 'let s:palette = edge#get_palette(s:configuration.style, s:configuration.colors_override)'
           \ ], syn_path, 'a')
   endif
   " Append the content.

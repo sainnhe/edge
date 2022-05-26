@@ -403,6 +403,21 @@ Enabling this option will reduce loading time by approximately 50%.
     Available values:   `0`, `1`
     Default value:      `0`
 
+------------------------------------------------------------------------------
+                                                        *g:edge_colors_override*
+g:edge_colors_override 
+
+Override color palette. The available keys can be found in
+`/path/to/edge/autoload/edge.vim`.
+
+E.g.
+ 
+    let g:edge_colors_override = {'bg0': ['#202020', '234'], 'bg2': ['#282828', '235']}
+    colorscheme edge
+ 
+    Type:               |Dictionary|
+    Default value:      `{}`
+
 ==============================================================================
 FAQ                                                                   *edge-faq*
 
@@ -462,8 +477,9 @@ How to use custom colors?~
       highlight! link groupC groupD
     
       " Initialize the color palette.
-      " The parameter is a valid value for `g:edge_style`,
-      let l:palette = edge#get_palette('aura')
+      " The first parameter is a valid value for `g:edge_style`,
+      " and the second parameter is a valid value for `g:edge_colors_override`.
+      let l:palette = edge#get_palette('aura', {})
       " Define a highlight group.
       " The first parameter is the name of a highlight group,
       " the second parameter is the foreground color,
