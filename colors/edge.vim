@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu May 26 07:08:20 UTC 2022'
+let s:last_modified = 'Tue May 31 11:50:14 AM UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -678,10 +678,11 @@ highlight! link multiple_cursors_cursor Cursor
 highlight! link multiple_cursors_visual Visual
 " }}}
 " mg979/vim-visual-multi {{{
-let g:VM_Mono_hl = 'Cursor'
+call edge#highlight('VMCursor', s:palette.blue, s:palette.grey_dim)
+let g:VM_Mono_hl = 'VMCursor'
 let g:VM_Extend_hl = 'Visual'
-let g:VM_Cursor_hl = 'Cursor'
-let g:VM_Insert_hl = 'Cursor'
+let g:VM_Cursor_hl = 'VMCursor'
+let g:VM_Insert_hl = 'VMCursor'
 " }}}
 " dominikduda/vim_current_word {{{
 highlight! link CurrentWordTwins CurrentWord
