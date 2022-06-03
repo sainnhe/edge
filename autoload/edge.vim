@@ -108,14 +108,14 @@ function! edge#get_palette(style, dim_foreground, colors_override) "{{{
     if a:dim_foreground "{{{
       let palette_fg = {
             \ 'fg':         ['#97a4b5',   '250'],
-            \ 'grey':       ['#727687',   '246'],
-            \ 'grey_dim':   ['#535667',   '240'],
+            \ 'grey':       ['#677287',   '246'],
+            \ 'grey_dim':   ['#4f5868',   '240'],
             \ } " }}}
     else " {{{
       let palette_fg = {
             \ 'fg':         ['#c5cdd9',   '250'],
-            \ 'grey':       ['#7e8294',   '246'],
-            \ 'grey_dim':   ['#5c6071',   '240'],
+            \ 'grey':       ['#758094',   '246'],
+            \ 'grey_dim':   ['#535c6a',   '240'],
             \ }
     endif "}}}
     let palette = extend(palette, palette_fg) "}}}
