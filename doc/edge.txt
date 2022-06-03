@@ -204,6 +204,17 @@ The style of this color scheme.
     Default value:      `'default'`
 
 ------------------------------------------------------------------------------
+                                                         *g:edge_dim_foreground*
+g:edge_dim_foreground~
+
+By default, the foreground color of the dark variants is white. If you want to
+use dark grey foreground, set this option to `1`.
+
+    Type:               |Number|
+    Available values:   `0`, `1`
+    Default value:      `0`
+
+------------------------------------------------------------------------------
                                                  *g:edge_disable_italic_comment*
 g:edge_disable_italic_comment~
 

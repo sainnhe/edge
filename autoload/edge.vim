@@ -9,6 +9,7 @@
 function! edge#get_configuration() "{{{
   return {
         \ 'style': get(g:, 'edge_style', 'default'),
+        \ 'dim_foreground': get(g:, 'edge_dim_foreground', 0),
         \ 'transparent_background': get(g:, 'edge_transparent_background', 0),
         \ 'disable_italic_comment': get(g:, 'edge_disable_italic_comment', 0),
         \ 'enable_italic': get(g:, 'edge_enable_italic', 0),
@@ -26,7 +27,7 @@ function! edge#get_configuration() "{{{
         \ 'colors_override': get(g:, 'edge_colors_override', {}),
         \ }
 endfunction "}}}
-function! edge#get_palette(style, colors_override) "{{{
+function! edge#get_palette(style, dim_foreground, colors_override) "{{{
   if &background ==# 'dark' "{{{
     if a:style ==# 'default' "{{{
       let palette = {
@@ -45,15 +46,12 @@ function! edge#get_palette(style, colors_override) "{{{
             \ 'diff_blue':  ['#354157',   '17'],
             \ 'bg_purple':  ['#d38aea',   '176'],
             \ 'diff_yellow':['#4e432f',   '54'],
-            \ 'fg':         ['#c5cdd9',   '250'],
             \ 'red':        ['#ec7279',   '203'],
             \ 'yellow':     ['#deb974',   '179'],
             \ 'green':      ['#a0c980',   '107'],
             \ 'cyan':       ['#5dbbc1',   '72'],
             \ 'blue':       ['#6cb6eb',   '110'],
             \ 'purple':     ['#d38aea',   '176'],
-            \ 'grey':       ['#7f8490',   '246'],
-            \ 'grey_dim':   ['#5b616e',   '240'],
             \ 'none':       ['NONE',      'NONE']
             \ } "}}}
     elseif a:style ==# 'aura' "{{{
@@ -73,15 +71,12 @@ function! edge#get_palette(style, colors_override) "{{{
             \ 'diff_blue':  ['#354157',   '17'],
             \ 'bg_purple':  ['#d38aea',   '176'],
             \ 'diff_yellow':['#4e432f',   '54'],
-            \ 'fg':         ['#c5cdd9',   '250'],
             \ 'red':        ['#ec7279',   '203'],
             \ 'yellow':     ['#deb974',   '179'],
             \ 'green':      ['#a0c980',   '107'],
             \ 'cyan':       ['#5dbbc1',   '72'],
             \ 'blue':       ['#6cb6eb',   '110'],
             \ 'purple':     ['#d38aea',   '176'],
-            \ 'grey':       ['#7e8294',   '246'],
-            \ 'grey_dim':   ['#5b5e71',   '240'],
             \ 'none':       ['NONE',      'NONE']
             \ } "}}}
     elseif a:style ==# 'neon' "{{{
@@ -101,18 +96,29 @@ function! edge#get_palette(style, colors_override) "{{{
             \ 'diff_blue':  ['#354157',   '17'],
             \ 'bg_purple':  ['#d38aea',   '176'],
             \ 'diff_yellow':['#4e432f',   '54'],
-            \ 'fg':         ['#c5cdd9',   '250'],
             \ 'red':        ['#ec7279',   '203'],
             \ 'yellow':     ['#deb974',   '179'],
             \ 'green':      ['#a0c980',   '107'],
             \ 'cyan':       ['#5dbbc1',   '72'],
             \ 'blue':       ['#6cb6eb',   '110'],
             \ 'purple':     ['#d38aea',   '176'],
+            \ 'none':       ['NONE',      'NONE']
+            \ }
+    endif "}}}
+    if a:dim_foreground "{{{
+      let palette_fg = {
+            \ 'fg':         ['#97a4b5',   '250'],
+            \ 'grey':       ['#727687',   '246'],
+            \ 'grey_dim':   ['#535667',   '240'],
+            \ } " }}}
+    else " {{{
+      let palette_fg = {
+            \ 'fg':         ['#c5cdd9',   '250'],
             \ 'grey':       ['#7e8294',   '246'],
             \ 'grey_dim':   ['#5c6071',   '240'],
-            \ 'none':       ['NONE',      'NONE']
-            \ } "}}}
+            \ }
     endif "}}}
+    let palette = extend(palette, palette_fg) "}}}
   else "{{{
     let palette = {
           \ 'black':      ['#dde2e7',   '253'],
@@ -140,8 +146,8 @@ function! edge#get_palette(style, colors_override) "{{{
           \ 'grey':       ['#8790a0',   '245'],
           \ 'grey_dim':   ['#bac3cb',   '249'],
           \ 'none':       ['NONE',      'NONE']
-          \ }
-  endif "}}}
+          \ } "}}}
+  endif
   return extend(palette, a:colors_override)
 endfunction "}}}
 function! edge#highlight(group, fg, bg, ...) "{{{
@@ -207,7 +213,7 @@ function! edge#syn_write(rootpath, syn, content) "{{{
   if matchstr(a:content, 'edge#highlight') !=# ''
     call writefile([
           \ 'let s:configuration = edge#get_configuration()',
-          \ 'let s:palette = edge#get_palette(s:configuration.style, s:configuration.colors_override)'
+          \ 'let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)'
           \ ], syn_path, 'a')
   endif
   " Append the content.

@@ -8,9 +8,9 @@
 
 " Initialization: {{{
 let s:configuration = edge#get_configuration()
-let s:palette = edge#get_palette(s:configuration.style, s:configuration.colors_override)
+let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Tue May 31 11:50:14 AM UTC 2022'
+let s:last_modified = 'Fri Jun  3 01:10:48 PM UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)

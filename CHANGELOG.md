@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Added
+
+- Add `g:edge_dim_foreground`.
+
 ## [0.2.2] - 2022-05-26
 
 ### Added
