@@ -489,8 +489,9 @@ How to use custom colors?~
     
       " Initialize the color palette.
       " The first parameter is a valid value for `g:edge_style`,
-      " and the second parameter is a valid value for `g:edge_colors_override`.
-      let l:palette = edge#get_palette('aura', {})
+      " the second parameter is a valid value for `g:edge_dim_foreground`,
+      " and the third parameter is a valid value for `g:edge_colors_override`.
+      let l:palette = edge#get_palette('aura', 0, {})
       " Define a highlight group.
       " The first parameter is the name of a highlight group,
       " the second parameter is the foreground color,
