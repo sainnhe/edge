@@ -403,6 +403,7 @@ highlight! link TSPunctBracket Grey
 highlight! link TSPunctDelimiter Grey
 highlight! link TSPunctSpecial Yellow
 highlight! link TSRepeat Purple
+highlight! link TSStorageClass Purple
 highlight! link TSString Green
 highlight! link TSStringEscape Yellow
 highlight! link TSStringRegex Yellow
