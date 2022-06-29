@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Jun  3 01:10:48 PM UTC 2022'
+let s:last_modified = 'Wed Jun 29 09:25:17 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -919,6 +919,9 @@ highlight! link DiagnosticInformation DiagnosticInfo
 highlight! link ReferencesCount Grey
 highlight! link DefinitionCount Grey
 highlight! link TargetFileName Grey
+" }}}
+" b0o/incline.nvim {{{
+call edge#highlight('InclineNormalNC', s:palette.grey, s:palette.bg2)
 " }}}
 endif
 " }}}
