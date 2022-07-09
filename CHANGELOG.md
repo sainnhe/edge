@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file.
 - Add `g:edge_dim_foreground`.
 - Optimize `b0o/incline.nvim`.
 - Optimize winbar.
+- Optimize `echasnovski/mini.nvim`.
 
 ## [0.2.2] - 2022-05-26
 
