@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sun Jul  3 03:03:22 UTC 2022'
+let s:last_modified = 'Sat Jul 16 13:29:03 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -28,7 +28,7 @@ endif
 " }}}
 " Common Highlight Groups: {{{
 " UI: {{{
-if s:configuration.transparent_background == 1
+if s:configuration.transparent_background >= 1
   call edge#highlight('Normal', s:palette.fg, s:palette.none)
   call edge#highlight('Terminal', s:palette.fg, s:palette.none)
   if s:configuration.show_eob
