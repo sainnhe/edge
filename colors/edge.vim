@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sat Jul 16 13:29:03 UTC 2022'
+let s:last_modified = 'Tue Aug  2 09:55:57 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -328,14 +328,14 @@ endif
 if ((has('termguicolors') && &termguicolors) || has('gui_running')) && !s:configuration.disable_terminal_colors
   " Definition
   let s:terminal = {
-        \ 'black':    &background ==# 'dark' ? s:palette.bg0 : s:palette.fg,
+        \ 'black':    &background ==# 'dark' ? s:palette.bg3 : s:palette.fg,
         \ 'red':      s:palette.red,
         \ 'yellow':   s:palette.yellow,
         \ 'green':    s:palette.green,
         \ 'cyan':     s:palette.cyan,
         \ 'blue':     s:palette.blue,
         \ 'purple':   s:palette.purple,
-        \ 'white':    &background ==# 'dark' ? s:palette.fg : s:palette.bg0
+        \ 'white':    &background ==# 'dark' ? s:palette.fg : s:palette.bg3
         \ }
   " Implementation: {{{
   if !has('nvim')
