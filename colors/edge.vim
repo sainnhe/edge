@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Wed Aug  3 10:24:57 UTC 2022'
+let s:last_modified = 'Wed Aug  3 11:56:17 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -1149,6 +1149,10 @@ highlight! link VistaHeadNr Fg
 highlight! link VistaPublic Blue
 highlight! link VistaProtected Green
 highlight! link VistaPrivate Purple
+" syn_end }}}
+" syn_begin: Outline {{{
+" https://github.com/simrat39/symbols-outline.nvim
+highlight! link FocusedSymbol NormalFloat
 " syn_end }}}
 " syn_begin: aerial {{{
 " https://github.com/stevearc/aerial.nvim

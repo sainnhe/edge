@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file.
 - Support coc popup menu.
 - Optimize `ggandor/lightspeed.nvim`.
 - Optimize `pwntester/octo.nvim`.
+- Optimize `simrat39/symbols-outline.nvim`.
 
 ## [0.2.2] - 2022-05-26
 
