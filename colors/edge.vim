@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Wed Aug  3 09:09:46 UTC 2022'
+let s:last_modified = 'Wed Aug  3 09:34:18 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -972,6 +972,15 @@ highlight! link MiniStarterItem Normal
 highlight! link MiniStarterSection Title
 highlight! link MiniSurround IncSearch
 highlight! link MiniTablineFill TabLineFill
+" }}}
+" ggandor/lightspeed.nvim {{{
+call edge#highlight('LightspeedLabel', s:palette.red, s:palette.none, 'bold,underline')
+call edge#highlight('LightspeedLabelDistant', s:palette.blue, s:palette.none, 'bold,underline')
+call edge#highlight('LightspeedShortcut', s:palette.bg0, s:palette.red, 'bold')
+call edge#highlight('LightspeedUnlabeledMatch', s:palette.fg, s:palette.none, 'bold')
+call edge#highlight('LightspeedPendingOpArea', s:palette.bg0, s:palette.green)
+highlight! link LightspeedMaskedChar Purple
+highlight! link LightspeedGreyWash Grey
 " }}}
 endif
 " }}}
