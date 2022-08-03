@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Wed Aug  3 02:36:41 UTC 2022'
+let s:last_modified = 'Wed Aug  3 09:09:46 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -933,28 +933,9 @@ highlight! link TargetFileName Grey
 call edge#highlight('InclineNormalNC', s:palette.grey, s:palette.bg2)
 " }}}
 " echasnovski/mini.nvim {{{
-highlight! link MiniCompletionActiveParameter LspSignatureActiveParameter
-
-highlight! link MiniCursorword CurrentWord
-highlight! link MiniCursorwordCurrent CurrentWord
-
-highlight! link MiniIndentscopeSymbol Grey
-call edge#highlight('MiniIndentscopePrefix', s:palette.none, s:palette.none, 'nocombine') " Make it invisible
-
-highlight! link MiniJump Search
-
+call edge#highlight('MiniIndentscopePrefix', s:palette.none, s:palette.none, 'nocombine')
 call edge#highlight('MiniJump2dSpot', s:palette.purple, s:palette.none, 'bold,nocombine')
-
 call edge#highlight('MiniStarterCurrent', s:palette.none, s:palette.none, 'nocombine')
-highlight! link MiniStarterFooter Red
-highlight! link MiniStarterHeader Purple
-highlight! link MiniStarterInactive Comment
-highlight! link MiniStarterItem Normal
-call edge#highlight('MiniStarterItemBullet', s:palette.grey, s:palette.none)
-call edge#highlight('MiniStarterItemPrefix', s:palette.yellow, s:palette.none)
-highlight! link MiniStarterSection Title
-call edge#highlight('MiniStarterQuery', s:palette.blue, s:palette.none)
-
 call edge#highlight('MiniStatuslineDevinfo', s:palette.fg, s:palette.bg2)
 call edge#highlight('MiniStatuslineFileinfo', s:palette.fg, s:palette.bg2)
 call edge#highlight('MiniStatuslineFilename', s:palette.grey, s:palette.bg1)
@@ -965,23 +946,32 @@ call edge#highlight('MiniStatuslineModeNormal', s:palette.bg0, s:palette.bg_purp
 call edge#highlight('MiniStatuslineModeOther', s:palette.bg0, s:palette.cyan, 'bold')
 call edge#highlight('MiniStatuslineModeReplace', s:palette.bg0, s:palette.yellow, 'bold')
 call edge#highlight('MiniStatuslineModeVisual', s:palette.bg0, s:palette.bg_red, 'bold')
-
-highlight! link MiniSurround IncSearch
-
 call edge#highlight('MiniTablineCurrent', s:palette.fg, s:palette.bg4)
-highlight! link MiniTablineFill TabLineFill
 call edge#highlight('MiniTablineHidden', s:palette.grey, s:palette.bg2)
 call edge#highlight('MiniTablineModifiedCurrent', s:palette.blue, s:palette.bg4)
 call edge#highlight('MiniTablineModifiedHidden', s:palette.grey, s:palette.bg2)
 call edge#highlight('MiniTablineModifiedVisible', s:palette.blue, s:palette.bg2)
 call edge#highlight('MiniTablineTabpagesection', s:palette.bg0, s:palette.blue, 'bold')
 call edge#highlight('MiniTablineVisible', s:palette.fg, s:palette.bg2)
-
 call edge#highlight('MiniTestEmphasis', s:palette.none, s:palette.none, 'bold')
 call edge#highlight('MiniTestFail', s:palette.red, s:palette.none, 'bold')
 call edge#highlight('MiniTestPass', s:palette.green, s:palette.none, 'bold')
-
 call edge#highlight('MiniTrailspace', s:palette.none, s:palette.red)
+highlight! link MiniStarterItemBullet Grey
+highlight! link MiniStarterItemPrefix Yellow
+highlight! link MiniStarterQuery Blue
+highlight! link MiniCompletionActiveParameter LspSignatureActiveParameter
+highlight! link MiniCursorword CurrentWord
+highlight! link MiniCursorwordCurrent CurrentWord
+highlight! link MiniIndentscopeSymbol Grey
+highlight! link MiniJump Search
+highlight! link MiniStarterFooter Red
+highlight! link MiniStarterHeader Purple
+highlight! link MiniStarterInactive Comment
+highlight! link MiniStarterItem Normal
+highlight! link MiniStarterSection Title
+highlight! link MiniSurround IncSearch
+highlight! link MiniTablineFill TabLineFill
 " }}}
 endif
 " }}}
