@@ -2,7 +2,7 @@
 -- URL: https://github.com/sainnhe/edge
 -- Filename: lua/lualine/themes/edge.lua
 -- Author: sainnhe
--- Email: sainnhe@gmail.com
+-- Email: i@sainnhe.dev
 -- License: MIT License
 -- =============================================================================
 

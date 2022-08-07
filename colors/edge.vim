@@ -1,7 +1,7 @@
 " -----------------------------------------------------------------------------
 " Name:         Edge
 " Description:  Clean & Elegant Color Scheme inspired by Atom One and Material
-" Author:       Sainnhepark <sainnhe@gmail.com>
+" Author:       Sainnhepark <i@sainnhe.dev>
 " Website:      https://github.com/sainnhe/edge/
 " License:      MIT && Anti-996
 " -----------------------------------------------------------------------------

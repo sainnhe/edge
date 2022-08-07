@@ -2,7 +2,7 @@
 " URL: https://github.com/sainnhe/edge
 " Filename: autoload/edge.vim
 " Author: sainnhe
-" Email: sainnhe@gmail.com
+" Email: i@sainnhe.dev
 " License: MIT License
 " =============================================================================
 

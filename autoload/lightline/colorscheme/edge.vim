@@ -2,7 +2,7 @@
 " URL: https://github.com/sainnhe/edge/
 " Filename: autoload/lightline/colorscheme/edge.vim
 " Author: Sainnhepark
-" Email: sainnhe@gmail.com
+" Email: i@sainnhe.dev
 " License: MIT License
 " =============================================================================
 
