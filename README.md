@@ -42,7 +42,7 @@ This color scheme is heavily inspired by [Atom One](https://github.com/atom/atom
 - Rich support for common file types and plugins.
 - Tree-sitter support.
 - Semantic highlighting support.
-- [Italic support](https://www.sainnhe.dev/post/patch-fonts-with-cursive-italic-styles/) 🎉
+- [Italic support](https://aka.sainnhe.dev/fonts) 🎉
 
 ## Documentation
 
