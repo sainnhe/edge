@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Aug 25 08:14:27 UTC 2022'
+let s:last_modified = 'Thu Aug 25 08:26:14 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -517,8 +517,11 @@ if !has('nvim') && has('textprop') && !exists('g:YCM_HIGHLIGHT_GROUP')
         \ 'namespace': 'TSNamespace',
         \ }
   for tokenType in keys( g:YCM_HIGHLIGHT_GROUP )
-    call prop_type_add( 'YCM_HL_' . tokenType,
-          \ { 'highlight': g:YCM_HIGHLIGHT_GROUP[ tokenType ] } )
+    try
+      call prop_type_add( 'YCM_HL_' . tokenType,
+            \ { 'highlight': g:YCM_HIGHLIGHT_GROUP[ tokenType ] } )
+    catch
+    endtry
   endfor
 endif
 " }}}
