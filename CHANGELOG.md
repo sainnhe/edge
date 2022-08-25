@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file.
 - Optimize `pwntester/octo.nvim`.
 - Optimize `simrat39/symbols-outline.nvim`.
 - Support for YCM semantic highlighting.
+- Optimize `MattesGroeger/vim-bookmarks`.
 
 ## [0.2.2] - 2022-05-26
 
