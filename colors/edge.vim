@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Aug 25 10:46:09 UTC 2022'
+let s:last_modified = 'Sun Aug 28 11:41:22 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -960,8 +960,16 @@ call edge#highlight('LspFloatWinBorder', s:palette.bg0, s:palette.bg0)
 call edge#highlight('LspSagaDiagnosticHeader', s:palette.yellow, s:palette.none, 'bold')
 call edge#highlight('LspSagaCodeActionTitle', s:palette.blue, s:palette.none, 'bold')
 call edge#highlight('DefinitionPreviewTitle', s:palette.purple, s:palette.none, 'bold')
+highlight! link LspSagaDiagnosticError Red
+highlight! link LspSagaDiagnosticWarn Yellow
+highlight! link LspSagaDiagnosticInfo Blue
+highlight! link LspSagaDiagnosticHint Green
+highlight! link LspSagaErrorTrunCateLine LspSagaDiagnosticError
+highlight! link LspSagaWarnTrunCateLine LspSagaDiagnosticWarn
+highlight! link LspSagaInfoTrunCateLine LspSagaDiagnosticInfo
+highlight! link LspSagaHintTrunCateLine LspSagaDiagnosticHint
+highlight! link LspSagaDiagnosticSource Yellow
 highlight! link LspSagaDiagnosticBorder Yellow
-highlight! link LspSagaDiagnosticTruncateLine Yellow
 highlight! link LspSagaRenameBorder Blue
 highlight! link LspSagaRenamePromptPrefix Purple
 highlight! link LspSagaCodeActionBorder Blue
