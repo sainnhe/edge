@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Aug 29 17:13:36 UTC 2022'
+let s:last_modified = 'Tue Sep  6 12:25:43 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -135,6 +135,7 @@ else
   call edge#highlight('TabLineSel', s:palette.bg0, s:palette.bg_purple)
 endif
 call edge#highlight('VertSplit', s:palette.black, s:palette.none)
+highlight! link WinSeparator VertSplit
 call edge#highlight('Visual', s:palette.none, s:palette.bg3)
 call edge#highlight('VisualNOS', s:palette.none, s:palette.bg3, 'underline')
 call edge#highlight('QuickFixLine', s:palette.purple, s:palette.none, 'bold')
