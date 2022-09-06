@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Tue Sep  6 12:25:43 UTC 2022'
+let s:last_modified = 'Tue Sep  6 12:31:14 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -881,7 +881,7 @@ if has('nvim')
 call edge#highlight('CmpItemAbbrMatch', s:palette.blue, s:palette.none, 'bold')
 call edge#highlight('CmpItemAbbrMatchFuzzy', s:palette.blue, s:palette.none, 'bold')
 highlight! link CmpItemAbbr Fg
-highlight! link CmpItemAbbrDeprecated Fg
+highlight! link CmpItemAbbrDeprecated Grey
 highlight! link CmpItemMenu Fg
 highlight! link CmpItemKind Purple
 highlight! link CmpItemKindText Fg
