@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Tue Sep  6 12:31:14 UTC 2022'
+let s:last_modified = 'Thu Sep  8 20:15:25 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -409,7 +409,6 @@ highlight! link TSStorageClass Purple
 highlight! link TSString Green
 highlight! link TSStringEscape Yellow
 highlight! link TSStringRegex Yellow
-highlight! link TSStructure CyanItalic
 highlight! link TSSymbol Red
 highlight! link TSTag RedItalic
 highlight! link TSTagDelimiter Purple
@@ -459,7 +458,6 @@ if has('nvim-0.8.0')
   highlight! link @string TSString
   highlight! link @string.escape TSStringEscape
   highlight! link @string.regex TSStringRegex
-  highlight! link @structure TSStructure
   highlight! link @symbol TSSymbol
   highlight! link @tag TSTag
   highlight! link @tag.delimiter TSTagDelimiter
@@ -2056,7 +2054,7 @@ highlight! link AutoType TSType
 " vim-lsp-cxx-highlight https://github.com/jackguo380/vim-lsp-cxx-highlight{{{
 highlight! link LspCxxHlSkippedRegion Grey
 highlight! link LspCxxHlSkippedRegionBeginEnd TSKeyword
-highlight! link LspCxxHlGroupEnumConstant TSStructure
+highlight! link LspCxxHlGroupEnumConstant CyanItalic
 highlight! link LspCxxHlGroupNamespace TSNamespace
 highlight! link LspCxxHlGroupMemberVariable TSVariable
 " }}}
