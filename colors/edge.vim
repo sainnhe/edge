@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Sep  9 13:48:14 UTC 2022'
+let s:last_modified = 'Fri Nov 11 09:51:22 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -938,10 +938,10 @@ highlight! link HopNextKey2 Blue
 highlight! link HopUnmatched Grey
 " }}}
 " lukas-reineke/indent-blankline.nvim {{{
-highlight! link IndentBlanklineChar Conceal
-highlight! link IndentBlanklineSpaceChar Conceal
-highlight! link IndentBlanklineSpaceCharBlankline Conceal
-highlight! link IndentBlanklineContextChar Grey
+call edge#highlight('IndentBlanklineContextChar', s:palette.grey, s:palette.none, 'nocombine')
+call edge#highlight('IndentBlanklineChar', s:palette.grey_dim, s:palette.none, 'nocombine')
+highlight! link IndentBlanklineSpaceChar IndentBlanklineChar
+highlight! link IndentBlanklineSpaceCharBlankline IndentBlanklineChar
 " }}}
 " p00f/nvim-ts-rainbow {{{
 highlight! link rainbowcol1 Red
