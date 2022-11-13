@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Nov 11 09:51:22 UTC 2022'
+let s:last_modified = 'Sun Nov 13 11:41:25 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -417,6 +417,8 @@ highlight! link TSStrike Grey
 highlight! link TSMath Green
 highlight! link TSType Yellow
 highlight! link TSTypeBuiltin Yellow
+highlight! link TSTypeDefinition Purple
+highlight! link TSTypeQualifier Purple
 highlight! link TSURI markdownUrl
 highlight! link TSVariable RedItalic
 highlight! link TSVariableBuiltin CyanItalic
@@ -466,6 +468,8 @@ if has('nvim-0.8.0')
   highlight! link @math TSMath
   highlight! link @type TSType
   highlight! link @type.builtin TSTypeBuiltin
+  highlight! link @type.definition TSTypeDefinition
+  highlight! link @type.qualifier TSTypeQualifier
   highlight! link @uri TSURI
   highlight! link @variable TSVariable
   highlight! link @variable.builtin TSVariableBuiltin
