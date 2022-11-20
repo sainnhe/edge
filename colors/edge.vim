@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sun Nov 13 11:41:25 UTC 2022'
+let s:last_modified = 'Sun Nov 20 02:24:28 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -376,45 +376,62 @@ highlight! link TSAnnotation Purple
 highlight! link TSAttribute Yellow
 highlight! link TSBoolean Green
 highlight! link TSCharacter Green
+highlight! link TSCharacterSpecial SpecialChar
 highlight! link TSComment Comment
 highlight! link TSConditional Purple
 highlight! link TSConstBuiltin CyanItalic
 highlight! link TSConstMacro CyanItalic
 highlight! link TSConstant RedItalic
 highlight! link TSConstructor Blue
+highlight! link TSDebug Debug
+highlight! link TSDefine Define
+highlight! link TSEnvironment Macro
+highlight! link TSEnvironmentName Type
+highlight! link TSError Error
 highlight! link TSException Purple
-highlight! link TSField Blue
+highlight! link TSField Cyan
 highlight! link TSFloat Green
 highlight! link TSFuncBuiltin Blue
 highlight! link TSFuncMacro Blue
 highlight! link TSFunction Blue
+highlight! link TSFunctionCall Blue
 highlight! link TSInclude Purple
 highlight! link TSKeyword Purple
 highlight! link TSKeywordFunction Purple
 highlight! link TSKeywordOperator Purple
+highlight! link TSKeywordReturn Purple
 highlight! link TSLabel Purple
+highlight! link TSLiteral String
+highlight! link TSMath Green
 highlight! link TSMethod Blue
+highlight! link TSMethodCall Blue
 highlight! link TSNamespace Yellow
 highlight! link TSNone Fg
 highlight! link TSNumber Green
 highlight! link TSOperator Purple
 highlight! link TSParameter RedItalic
 highlight! link TSParameterReference RedItalic
-highlight! link TSProperty RedItalic
+highlight! link TSPreProc PreProc
+highlight! link TSProperty Cyan
 highlight! link TSPunctBracket Grey
 highlight! link TSPunctDelimiter Grey
 highlight! link TSPunctSpecial Yellow
 highlight! link TSRepeat Purple
 highlight! link TSStorageClass Purple
+highlight! link TSStorageClassLifetime Purple
+highlight! link TSStrike Grey
 highlight! link TSString Green
 highlight! link TSStringEscape Yellow
 highlight! link TSStringRegex Yellow
+highlight! link TSStringSpecial SpecialChar
 highlight! link TSSymbol Red
 highlight! link TSTag RedItalic
+highlight! link TSTagAttribute Blue
 highlight! link TSTagDelimiter Purple
 highlight! link TSText Green
-highlight! link TSStrike Grey
-highlight! link TSMath Green
+highlight! link TSTextReference Constant
+highlight! link TSTitle Title
+highlight! link TSTodo Todo
 highlight! link TSType Yellow
 highlight! link TSTypeBuiltin Yellow
 highlight! link TSTypeDefinition Purple
@@ -427,45 +444,75 @@ if has('nvim-0.8.0')
   highlight! link @attribute TSAttribute
   highlight! link @boolean TSBoolean
   highlight! link @character TSCharacter
+  highlight! link @character.special TSCharacterSpecial
   highlight! link @comment TSComment
+  highlight! link @conceal Conceal
   highlight! link @conditional TSConditional
   highlight! link @constant TSConstant
   highlight! link @constant.builtin TSConstBuiltin
   highlight! link @constant.macro TSConstMacro
   highlight! link @constructor TSConstructor
+  highlight! link @debug TSDebug
+  highlight! link @define TSDefine
+  highlight! link @error TSError
   highlight! link @exception TSException
   highlight! link @field TSField
   highlight! link @float TSFloat
   highlight! link @function TSFunction
   highlight! link @function.builtin TSFuncBuiltin
+  highlight! link @function.call TSFunctionCall
   highlight! link @function.macro TSFuncMacro
   highlight! link @include TSInclude
   highlight! link @keyword TSKeyword
   highlight! link @keyword.function TSKeywordFunction
   highlight! link @keyword.operator TSKeywordOperator
+  highlight! link @keyword.return TSKeywordReturn
   highlight! link @label TSLabel
+  highlight! link @math TSMath
   highlight! link @method TSMethod
+  highlight! link @method.call TSMethodCall
   highlight! link @namespace TSNamespace
   highlight! link @none TSNone
   highlight! link @number TSNumber
   highlight! link @operator TSOperator
   highlight! link @parameter TSParameter
   highlight! link @parameter.reference TSParameterReference
+  highlight! link @preproc TSPreProc
   highlight! link @property TSProperty
   highlight! link @punctuation.bracket TSPunctBracket
   highlight! link @punctuation.delimiter TSPunctDelimiter
   highlight! link @punctuation.special TSPunctSpecial
   highlight! link @repeat TSRepeat
   highlight! link @storageclass TSStorageClass
+  highlight! link @storageclass.lifetime TSStorageClassLifetime
+  highlight! link @strike TSStrike
   highlight! link @string TSString
   highlight! link @string.escape TSStringEscape
   highlight! link @string.regex TSStringRegex
+  highlight! link @string.special TSStringSpecial
   highlight! link @symbol TSSymbol
   highlight! link @tag TSTag
+  highlight! link @tag.attribute TSTagAttribute
   highlight! link @tag.delimiter TSTagDelimiter
   highlight! link @text TSText
-  highlight! link @strike TSStrike
-  highlight! link @math TSMath
+  highlight! link @text.danger TSDanger
+  highlight! link @text.diff.add diffAdded
+  highlight! link @text.diff.delete diffRemoved
+  highlight! link @text.emphasis TSEmphasis
+  highlight! link @text.environment TSEnvironment
+  highlight! link @text.environment.name TSEnvironmentName
+  highlight! link @text.literal TSLiteral
+  highlight! link @text.math TSMath
+  highlight! link @text.note TSNote
+  highlight! link @text.reference TSTextReference
+  highlight! link @text.strike TSStrike
+  highlight! link @text.strong TSStrong
+  highlight! link @text.title TSTitle
+  highlight! link @text.todo TSTodo
+  highlight! link @text.underline TSUnderline
+  highlight! link @text.uri TSURI
+  highlight! link @text.warning TSWarning
+  highlight! link @todo TSTodo
   highlight! link @type TSType
   highlight! link @type.builtin TSTypeBuiltin
   highlight! link @type.definition TSTypeDefinition
