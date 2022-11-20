@@ -32,6 +32,7 @@ function! edge#get_palette(style, dim_foreground, colors_override) "{{{
     if a:style ==# 'default' "{{{
       let palette = {
             \ 'black':      ['#202023',   '232'],
+            \ 'bg_dim':     ['#24262a',   '232'],
             \ 'bg0':        ['#2c2e34',   '235'],
             \ 'bg1':        ['#33353f',   '236'],
             \ 'bg2':        ['#363944',   '237'],
@@ -57,6 +58,7 @@ function! edge#get_palette(style, dim_foreground, colors_override) "{{{
     elseif a:style ==# 'aura' "{{{
       let palette = {
             \ 'black':      ['#202023',   '232'],
+            \ 'bg_dim':     ['#24262d',   '232'],
             \ 'bg0':        ['#2b2d37',   '235'],
             \ 'bg1':        ['#333644',   '236'],
             \ 'bg2':        ['#363a49',   '237'],
@@ -82,6 +84,7 @@ function! edge#get_palette(style, dim_foreground, colors_override) "{{{
     elseif a:style ==# 'neon' "{{{
       let palette = {
             \ 'black':      ['#202023',   '232'],
+            \ 'bg_dim':     ['#252630',   '232'],
             \ 'bg0':        ['#2b2d3a',   '235'],
             \ 'bg1':        ['#333648',   '236'],
             \ 'bg2':        ['#363a4e',   '237'],

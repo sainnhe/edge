@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sun Nov 20 02:34:39 UTC 2022'
+let s:last_modified = 'Sun Nov 20 03:35:45 AM UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -1004,23 +1004,23 @@ highlight! link rainbowcol6 Purple
 highlight! link rainbowcol7 Green
 " }}}
 " romgrk/barbar.nvim {{{
-call edge#highlight('BufferCurrent', s:palette.fg, s:palette.bg4)
-call edge#highlight('BufferCurrentIndex', s:palette.fg, s:palette.bg4)
-call edge#highlight('BufferCurrentMod', s:palette.blue, s:palette.bg4)
-call edge#highlight('BufferCurrentSign', s:palette.purple, s:palette.bg4)
-call edge#highlight('BufferCurrentTarget', s:palette.red, s:palette.bg4, 'bold')
-call edge#highlight('BufferVisible', s:palette.fg, s:palette.bg2)
-call edge#highlight('BufferVisibleIndex', s:palette.fg, s:palette.bg2)
-call edge#highlight('BufferVisibleMod', s:palette.blue, s:palette.bg2)
-call edge#highlight('BufferVisibleSign', s:palette.purple, s:palette.bg2)
-call edge#highlight('BufferVisibleTarget', s:palette.yellow, s:palette.bg2, 'bold')
-call edge#highlight('BufferInactive', s:palette.grey, s:palette.bg2)
-call edge#highlight('BufferInactiveIndex', s:palette.grey, s:palette.bg2)
-call edge#highlight('BufferInactiveMod', s:palette.grey, s:palette.bg2)
-call edge#highlight('BufferInactiveSign', s:palette.grey_dim, s:palette.bg2)
-call edge#highlight('BufferInactiveTarget', s:palette.yellow, s:palette.bg2, 'bold')
-call edge#highlight('BufferTabpages', s:palette.bg0, s:palette.blue, 'bold')
-call edge#highlight('BufferTabpageFill', s:palette.bg0, s:palette.bg0)
+call edge#highlight('BufferCurrent', s:palette.fg, s:palette.bg0)
+call edge#highlight('BufferCurrentIndex', s:palette.fg, s:palette.bg0)
+call edge#highlight('BufferCurrentMod', s:palette.blue, s:palette.bg0)
+call edge#highlight('BufferCurrentSign', s:palette.purple, s:palette.bg0)
+call edge#highlight('BufferCurrentTarget', s:palette.red, s:palette.bg0, 'bold')
+call edge#highlight('BufferVisible', s:palette.fg, s:palette.bg_dim)
+call edge#highlight('BufferVisibleIndex', s:palette.fg, s:palette.bg_dim)
+call edge#highlight('BufferVisibleMod', s:palette.blue, s:palette.bg_dim)
+call edge#highlight('BufferVisibleSign', s:palette.purple, s:palette.bg_dim)
+call edge#highlight('BufferVisibleTarget', s:palette.yellow, s:palette.bg_dim, 'bold')
+call edge#highlight('BufferInactive', s:palette.grey, s:palette.bg_dim)
+call edge#highlight('BufferInactiveIndex', s:palette.grey, s:palette.bg_dim)
+call edge#highlight('BufferInactiveMod', s:palette.grey, s:palette.bg_dim)
+call edge#highlight('BufferInactiveSign', s:palette.grey_dim, s:palette.bg_dim)
+call edge#highlight('BufferInactiveTarget', s:palette.yellow, s:palette.bg_dim, 'bold')
+call edge#highlight('BufferTabpages', s:palette.grey, s:palette.bg_dim, 'bold')
+call edge#highlight('BufferTabpageFill', s:palette.bg_dim, s:palette.bg_dim)
 " }}}
 " rcarriga/nvim-notify {{{
 highlight! link NotifyERRORBorder Red
@@ -1372,6 +1372,9 @@ highlight! link DirvishArg Green
 " syn_end }}}
 " syn_begin: NvimTree {{{
 " https://github.com/kyazdani42/nvim-tree.lua
+call edge#highlight('NvimTreeNormal', s:palette.fg, s:palette.bg_dim)
+call edge#highlight('NvimTreeEndOfBuffer', s:palette.bg_dim, s:palette.bg_dim)
+call edge#highlight('NvimTreeVertSplit', s:palette.bg0, s:palette.bg0)
 highlight! link NvimTreeSymlink Fg
 highlight! link NvimTreeFolderName Green
 highlight! link NvimTreeRootFolder Grey

@@ -18,6 +18,7 @@ All notable changes to this project will be documented in this file.
 - Optimize `MattesGroeger/vim-bookmarks`.
 - Support for vim-lsp semantic highlighting and inlayHints.
 - New tree-sitter tokens.
+- Support for shading.
 
 ## [0.2.2] - 2022-05-26
 
