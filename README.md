@@ -52,6 +52,10 @@ See [`:help edge.txt`](https://github.com/sainnhe/edge/blob/master/doc/edge.txt)
 
 See this [wiki page](https://github.com/sainnhe/edge/wiki/Related-Projects).
 
+## Contributing
+
+See this [post](https://www.sainnhe.dev/post/contributing-guide/).
+
 ## More Color Schemes
 
 - [Gruvbox Material](https://github.com/sainnhe/gruvbox-material)
