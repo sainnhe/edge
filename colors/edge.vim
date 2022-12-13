@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Nov 21 06:24:28 AM UTC 2022'
+let s:last_modified = 'Tue Dec 13 04:02:38 UTC 2022'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -30,6 +30,7 @@ endif
 " UI: {{{
 if s:configuration.transparent_background >= 1
   call edge#highlight('Normal', s:palette.fg, s:palette.none)
+  call edge#highlight('NormalNC', s:palette.fg, s:palette.none)
   call edge#highlight('Terminal', s:palette.fg, s:palette.none)
   if s:configuration.show_eob
     call edge#highlight('EndOfBuffer', s:palette.bg4, s:palette.none)
@@ -42,11 +43,24 @@ if s:configuration.transparent_background >= 1
   call edge#highlight('FoldColumn', s:palette.grey_dim, s:palette.none)
 else
   call edge#highlight('Normal', s:palette.fg, s:palette.bg0)
+  if s:configuration.dim_inactive_windows
+    call edge#highlight('NormalNC', s:palette.fg, s:palette.bg_dim)
+  else
+    call edge#highlight('NormalNC', s:palette.fg, s:palette.bg0)
+  endif
   call edge#highlight('Terminal', s:palette.fg, s:palette.bg0)
   if s:configuration.show_eob
-    call edge#highlight('EndOfBuffer', s:palette.bg4, s:palette.bg0)
+    if s:configuration.dim_inactive_windows
+      call edge#highlight('EndOfBuffer', s:palette.bg4, s:palette.bg_dim)
+    else
+      call edge#highlight('EndOfBuffer', s:palette.bg4, s:palette.bg0)
+    endif
   else
-    call edge#highlight('EndOfBuffer', s:palette.bg0, s:palette.bg0)
+    if s:configuration.dim_inactive_windows
+      call edge#highlight('EndOfBuffer', s:palette.bg_dim, s:palette.bg_dim)
+    else
+      call edge#highlight('EndOfBuffer', s:palette.bg0, s:palette.bg0)
+    endif
   endif
   call edge#highlight('Folded', s:palette.grey, s:palette.bg1)
   call edge#highlight('ToolbarLine', s:palette.fg, s:palette.bg2)
@@ -134,7 +148,11 @@ else
   call edge#highlight('TabLineFill', s:palette.grey, s:palette.bg1)
   call edge#highlight('TabLineSel', s:palette.bg0, s:palette.bg_purple)
 endif
-call edge#highlight('VertSplit', s:palette.black, s:palette.none)
+if s:configuration.dim_inactive_windows
+  call edge#highlight('VertSplit', s:palette.bg4, s:palette.bg_dim)
+else
+  call edge#highlight('VertSplit', s:palette.black, s:palette.none)
+endif
 highlight! link WinSeparator VertSplit
 call edge#highlight('Visual', s:palette.none, s:palette.bg3)
 call edge#highlight('VisualNOS', s:palette.none, s:palette.bg3, 'underline')

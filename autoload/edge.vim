@@ -11,6 +11,7 @@ function! edge#get_configuration() "{{{
         \ 'style': get(g:, 'edge_style', 'default'),
         \ 'dim_foreground': get(g:, 'edge_dim_foreground', 0),
         \ 'transparent_background': get(g:, 'edge_transparent_background', 0),
+        \ 'dim_inactive_windows': get(g:, 'edge_dim_inactive_windows', 0),
         \ 'disable_italic_comment': get(g:, 'edge_disable_italic_comment', 0),
         \ 'enable_italic': get(g:, 'edge_enable_italic', 0),
         \ 'cursor': get(g:, 'edge_cursor', 'auto'),
