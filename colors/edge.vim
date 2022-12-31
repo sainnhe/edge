@@ -452,7 +452,7 @@ highlight! link TSTitle Title
 highlight! link TSTodo Todo
 highlight! link TSType Yellow
 highlight! link TSTypeBuiltin Yellow
-highlight! link TSTypeDefinition Purple
+highlight! link TSTypeDefinition Yellow
 highlight! link TSTypeQualifier Purple
 highlight! link TSURI markdownUrl
 highlight! link TSVariable RedItalic
