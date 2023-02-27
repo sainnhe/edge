@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Dec 23 13:22:40 UTC 2022'
+let s:last_modified = 'Mon Feb 27 03:32:20 UTC 2023'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -255,14 +255,13 @@ call edge#highlight('Operator', s:palette.purple, s:palette.none)
 call edge#highlight('Title', s:palette.purple, s:palette.none, 'bold')
 call edge#highlight('Tag', s:palette.yellow, s:palette.none)
 call edge#highlight('Delimiter', s:palette.fg, s:palette.none)
+call edge#highlight('Todo', s:palette.bg0, s:palette.blue, 'bold')
 if s:configuration.disable_italic_comment
   call edge#highlight('Comment', s:palette.grey, s:palette.none)
   call edge#highlight('SpecialComment', s:palette.grey, s:palette.none)
-  call edge#highlight('Todo', s:palette.red, s:palette.none)
 else
   call edge#highlight('Comment', s:palette.grey, s:palette.none, 'italic')
   call edge#highlight('SpecialComment', s:palette.grey, s:palette.none, 'italic')
-  call edge#highlight('Todo', s:palette.red, s:palette.none, 'italic')
 endif
 call edge#highlight('Ignore', s:palette.grey, s:palette.none)
 call edge#highlight('Underlined', s:palette.none, s:palette.none, 'underline')
@@ -387,7 +386,7 @@ endif
 call edge#highlight('TSStrong', s:palette.none, s:palette.none, 'bold')
 call edge#highlight('TSEmphasis', s:palette.none, s:palette.none, 'italic')
 call edge#highlight('TSUnderline', s:palette.none, s:palette.none, 'underline')
-call edge#highlight('TSNote', s:palette.bg0, s:palette.blue, 'bold')
+call edge#highlight('TSNote', s:palette.bg0, s:palette.green, 'bold')
 call edge#highlight('TSWarning', s:palette.bg0, s:palette.yellow, 'bold')
 call edge#highlight('TSDanger', s:palette.bg0, s:palette.red, 'bold')
 highlight! link TSAnnotation Purple
