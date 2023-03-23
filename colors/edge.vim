@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Feb 27 03:32:20 UTC 2023'
+let s:last_modified = 'Thu Mar 23 10:34:43 UTC 2023'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -340,6 +340,44 @@ elseif s:configuration.current_word ==# 'grey background'
 else
   call edge#highlight('CurrentWord', s:palette.none, s:palette.none, s:configuration.current_word)
 endif
+" Define a color for each LSP item kind to create highlights for nvim-cmp, aerial.nvim, nvim-navic and coc.nvim
+let g:edge_lsp_kind_color = [
+      \ ["Array", "Cyan"],
+      \ ["Boolean", "Cyan"],
+      \ ["Class", "Yellow"],
+      \ ["Color", "Cyan"],
+      \ ["Constant", "Red"],
+      \ ["Constructor", "Blue"],
+      \ ["Default", "Cyan"],
+      \ ["Enum", "Yellow"],
+      \ ["EnumMember", "Green"],
+      \ ["Event", "Purple"],
+      \ ["Field", "Blue"],
+      \ ["File", "Green"],
+      \ ["Folder", "Cyan"],
+      \ ["Function", "Green"],
+      \ ["Interface", "Yellow"],
+      \ ["Key", "Red"],
+      \ ["Keyword", "Purple"],
+      \ ["Method", "Blue"],
+      \ ["Module", "Yellow"],
+      \ ["Namespace", "Purple"],
+      \ ["Null", "Cyan"],
+      \ ["Number", "Cyan"],
+      \ ["Object", "Cyan"],
+      \ ["Operator", "Purple"],
+      \ ["Package", "Purple"],
+      \ ["Property", "Red"],
+      \ ["Reference", "Cyan"],
+      \ ["Snippet", "Cyan"],
+      \ ["String", "Cyan"],
+      \ ["Struct", "Yellow"],
+      \ ["Text", "Fg"],
+      \ ["TypeParameter", "Yellow"],
+      \ ["Unit", "Green"],
+      \ ["Value", "Green"],
+      \ ["Variable", "Red"],
+      \ ]
 " }}}
 " }}}
 " Terminal: {{{
@@ -952,31 +990,9 @@ highlight! link CmpItemAbbr Fg
 highlight! link CmpItemAbbrDeprecated Grey
 highlight! link CmpItemMenu Fg
 highlight! link CmpItemKind Purple
-highlight! link CmpItemKindText Fg
-highlight! link CmpItemKindMethod Blue
-highlight! link CmpItemKindFunction Blue
-highlight! link CmpItemKindConstructor Blue
-highlight! link CmpItemKindField Blue
-highlight! link CmpItemKindVariable Red
-highlight! link CmpItemKindClass Yellow
-highlight! link CmpItemKindInterface Yellow
-highlight! link CmpItemKindModule Yellow
-highlight! link CmpItemKindProperty Red
-highlight! link CmpItemKindUnit Green
-highlight! link CmpItemKindValue Green
-highlight! link CmpItemKindEnum Yellow
-highlight! link CmpItemKindKeyword Purple
-highlight! link CmpItemKindSnippet Cyan
-highlight! link CmpItemKindColor Cyan
-highlight! link CmpItemKindFile Cyan
-highlight! link CmpItemKindReference Cyan
-highlight! link CmpItemKindFolder Cyan
-highlight! link CmpItemKindEnumMember Green
-highlight! link CmpItemKindConstant Red
-highlight! link CmpItemKindStruct Yellow
-highlight! link CmpItemKindEvent Purple
-highlight! link CmpItemKindOperator Purple
-highlight! link CmpItemKindTypeParameter Yellow
+for kind in g:edge_lsp_kind_color
+  execute "highlight! link CmpItemKind" . kind[0] . " " . kind[1]
+endfor
 " }}}
 " folke/trouble.nvim {{{
 highlight! link TroubleText Fg
@@ -1237,33 +1253,9 @@ highlight! link packerTimeLow Green
 " https://github.com/neoclide/coc.nvim
 highlight! link CocTreeOpenClose Purple
 highlight! link CocTreeDescription Grey
-highlight! link CocSymbolFile Green
-highlight! link CocSymbolModule Purple
-highlight! link CocSymbolNamespace Purple
-highlight! link CocSymbolPackage Purple
-highlight! link CocSymbolClass Yellow
-highlight! link CocSymbolMethod Blue
-highlight! link CocSymbolProperty Red
-highlight! link CocSymbolField Blue
-highlight! link CocSymbolConstructor Blue
-highlight! link CocSymbolEnum Yellow
-highlight! link CocSymbolInterface Yellow
-highlight! link CocSymbolFunction Green
-highlight! link CocSymbolVariable Red
-highlight! link CocSymbolConstant Red
-highlight! link CocSymbolString Cyan
-highlight! link CocSymbolNumber Cyan
-highlight! link CocSymbolBoolean Cyan
-highlight! link CocSymbolArray Cyan
-highlight! link CocSymbolObject Cyan
-highlight! link CocSymbolKey Red
-highlight! link CocSymbolNull Cyan
-highlight! link CocSymbolEnumMember Cyan
-highlight! link CocSymbolStruct Yellow
-highlight! link CocSymbolEvent Cyan
-highlight! link CocSymbolOperator Cyan
-highlight! link CocSymbolTypeParameter Yellow
-highlight! link CocSymbolDefault Cyan
+for kind in g:edge_lsp_kind_color
+  execute "highlight! link CocSymbol" . kind[0] . " " . kind[1]
+endfor
 " syn_end }}}
 " syn_begin: coc-explorer {{{
 " https://github.com/weirongxu/coc-explorer
@@ -1340,32 +1332,9 @@ highlight! link FocusedSymbol NormalFloat
 " https://github.com/stevearc/aerial.nvim
 highlight! link AerialLine CursorLine
 highlight! link AerialGuide LineNr
-highlight! link AerialFileIcon Green
-highlight! link AerialModuleIcon Purple
-highlight! link AerialNamespaceIcon Purple
-highlight! link AerialPackageIcon Purple
-highlight! link AerialClassIcon Yellow
-highlight! link AerialMethodIcon Blue
-highlight! link AerialPropertyIcon Red
-highlight! link AerialFieldIcon Blue
-highlight! link AerialConstructorIcon Blue
-highlight! link AerialEnumIcon Yellow
-highlight! link AerialInterfaceIcon Yellow
-highlight! link AerialFunctionIcon Green
-highlight! link AerialVariableIcon Red
-highlight! link AerialConstantIcon Red
-highlight! link AerialStringIcon Cyan
-highlight! link AerialNumberIcon Cyan
-highlight! link AerialBooleanIcon Cyan
-highlight! link AerialArrayIcon Cyan
-highlight! link AerialObjectIcon Cyan
-highlight! link AerialKeyIcon Red
-highlight! link AerialNullIcon Cyan
-highlight! link AerialEnumMemberIcon Cyan
-highlight! link AerialStructIcon Yellow
-highlight! link AerialEventIcon Cyan
-highlight! link AerialOperatorIcon Cyan
-highlight! link AerialTypeParameterIcon Yellow
+for kind in g:edge_lsp_kind_color
+  execute "highlight! link Aerial" . kind[0] . "Icon " . kind[1]
+endfor
 " syn_end }}}
 " syn_begin: nerdtree {{{
 " https://github.com/preservim/nerdtree
