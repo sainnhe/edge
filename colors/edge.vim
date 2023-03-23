@@ -577,6 +577,9 @@ if has('nvim-0.8.0')
   highlight! link @variable.builtin TSVariableBuiltin
 endif
 " }}}
+" github/copilot.vim {{{
+highlight! link CopilotSuggestion Grey
+" }}}
 " neoclide/coc.nvim {{{
 call edge#highlight('CocHoverRange', s:palette.none, s:palette.none, 'bold,underline')
 call edge#highlight('CocSearch', s:palette.green, s:palette.none, 'bold')
