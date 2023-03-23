@@ -69,6 +69,7 @@ call edge#highlight('SignColumn', s:palette.fg, s:palette.none)
 call edge#highlight('FoldColumn', s:palette.grey_dim, s:palette.none)
 call edge#highlight('IncSearch', s:palette.bg0, s:palette.bg_blue)
 call edge#highlight('Search', s:palette.bg0, s:palette.bg_green)
+highlight! link CurSearch IncSearch
 call edge#highlight('ColorColumn', s:palette.none, s:palette.bg1)
 call edge#highlight('Conceal', s:palette.grey_dim, s:palette.none)
 if s:configuration.cursor ==# 'auto'
@@ -115,6 +116,8 @@ elseif s:configuration.menu_selection_background ==# 'green'
 elseif s:configuration.menu_selection_background ==# 'purple'
   call edge#highlight('PmenuSel', s:palette.bg0, s:palette.bg_purple)
 endif
+call edge#highlight('PmenuKind', s:palette.purple, s:palette.bg2)
+call edge#highlight('PmenuExtra', s:palette.grey, s:palette.bg2)
 highlight! link WildMenu PmenuSel
 call edge#highlight('PmenuThumb', s:palette.none, s:palette.bg_grey)
 call edge#highlight('NormalFloat', s:palette.fg, s:palette.bg2)
