@@ -191,7 +191,7 @@ E.g.
     let g:edge_better_performance = 1
 
     colorscheme edge
-    let g:lightline.colorscheme = 'edge'
+    let g:lightline = {'colorscheme' : 'edge'}
 <
 ------------------------------------------------------------------------------
                                                                   *g:edge_style*
