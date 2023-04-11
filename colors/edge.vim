@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Tue Apr 11 11:49:06 UTC 2023'
+let s:last_modified = 'Tue Apr 11 15:45:03 UTC 2023'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -1024,6 +1024,13 @@ highlight! link CmpItemMenu Fg
 highlight! link CmpItemKind Purple
 for kind in g:edge_lsp_kind_color
   execute "highlight! link CmpItemKind" . kind[0] . " " . kind[1]
+endfor
+" }}}
+" SmiteshP/nvim-navic {{{
+highlight! link NavicText Fg
+highlight! link NavicSeparator Grey
+for kind in g:edge_lsp_kind_color
+  execute "highlight! link NavicIcons" . kind[0] . " " . kind[1]
 endfor
 " }}}
 " folke/trouble.nvim {{{
