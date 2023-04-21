@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Apr 21 20:01:13 UTC 2023'
+let s:last_modified = 'Fri Apr 21 20:07:53 UTC 2023'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -2239,7 +2239,7 @@ highlight! link luaFunction Purple
 highlight! link luaTable Fg
 highlight! link luaIn Purple
 " }}}
-" vim-lua: https://github.com/tbastos/vim-lua{{{
+" vim-lua: https://github.com/tbastos/vim-lua {{{
 highlight! link luaFuncCall Blue
 highlight! link luaLocal Purple
 highlight! link luaSpecialValue Blue
@@ -2251,6 +2251,12 @@ highlight! link luaFuncTable RedItalic
 highlight! link luaFuncArgName Fg
 highlight! link luaEllipsis Purple
 highlight! link luaDocTag Blue
+" }}}
+" nvim-treesitter/nvim-treesitter {{{
+highlight! link luaTSConstructor luaBraces
+if has('nvim-0.8.0')
+  highlight! link @constructor.lua luaTSConstructor
+endif
 " }}}
 " syn_end }}}
 " syn_begin: java {{{
