@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Apr 21 20:07:53 UTC 2023'
+let s:last_modified = 'Sat Apr 22 21:12:18 UTC 2023'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -326,11 +326,16 @@ if s:configuration.diagnostic_virtual_text ==# 'grey'
   highlight! link VirtualTextError Grey
   highlight! link VirtualTextInfo Grey
   highlight! link VirtualTextHint Grey
-else
+elseif s:configuration.diagnostic_virtual_text ==# 'colored'
   highlight! link VirtualTextWarning Yellow
   highlight! link VirtualTextError Red
   highlight! link VirtualTextInfo Blue
   highlight! link VirtualTextHint Green
+else
+  call edge#highlight('VirtualTextWarning', s:palette.yellow, s:palette.diff_yellow)
+  call edge#highlight('VirtualTextError', s:palette.red, s:palette.diff_red)
+  call edge#highlight('VirtualTextInfo', s:palette.blue, s:palette.diff_blue)
+  call edge#highlight('VirtualTextHint', s:palette.green, s:palette.diff_green)
 endif
 call edge#highlight('ErrorFloat', s:palette.red, s:palette.bg2)
 call edge#highlight('WarningFloat', s:palette.yellow, s:palette.bg2)
