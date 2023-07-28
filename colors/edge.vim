@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Apr 24 19:42:43 UTC 2023'
+let s:last_modified = 'Fri Jul 28 07:45:26 UTC 2023'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -50,17 +50,9 @@ else
   endif
   call edge#highlight('Terminal', s:palette.fg, s:palette.bg0)
   if s:configuration.show_eob
-    if s:configuration.dim_inactive_windows
-      call edge#highlight('EndOfBuffer', s:palette.bg4, s:palette.bg_dim)
-    else
-      call edge#highlight('EndOfBuffer', s:palette.bg4, s:palette.bg0)
-    endif
+    call edge#highlight('EndOfBuffer', s:palette.bg4, s:palette.none)
   else
-    if s:configuration.dim_inactive_windows
-      call edge#highlight('EndOfBuffer', s:palette.bg_dim, s:palette.bg_dim)
-    else
-      call edge#highlight('EndOfBuffer', s:palette.bg0, s:palette.bg0)
-    endif
+    call edge#highlight('EndOfBuffer', s:palette.bg0, s:palette.none)
   endif
   call edge#highlight('Folded', s:palette.grey, s:palette.bg1)
   call edge#highlight('ToolbarLine', s:palette.fg, s:palette.bg2)
