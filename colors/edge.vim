@@ -112,8 +112,13 @@ call edge#highlight('PmenuKind', s:palette.purple, s:palette.bg2)
 call edge#highlight('PmenuExtra', s:palette.grey, s:palette.bg2)
 highlight! link WildMenu PmenuSel
 call edge#highlight('PmenuThumb', s:palette.none, s:palette.bg_grey)
-call edge#highlight('NormalFloat', s:palette.fg, s:palette.bg2)
-call edge#highlight('FloatBorder', s:palette.grey, s:palette.bg2)
+if s:configuration.float_style ==# 'dim'
+  call edge#highlight('NormalFloat', s:palette.fg, s:palette.bg_dim)
+  call edge#highlight('FloatBorder', s:palette.grey, s:palette.bg_dim)
+else
+  call edge#highlight('NormalFloat', s:palette.fg, s:palette.bg2)
+  call edge#highlight('FloatBorder', s:palette.grey, s:palette.bg2)
+endif
 call edge#highlight('Question', s:palette.yellow, s:palette.none)
 if s:configuration.spell_foreground ==# 'none'
   call edge#highlight('SpellBad', s:palette.none, s:palette.none, 'undercurl', s:palette.red)
@@ -639,6 +644,7 @@ highlight! link CocErrorFloat ErrorFloat
 highlight! link CocWarningFloat WarningFloat
 highlight! link CocInfoFloat InfoFloat
 highlight! link CocHintFloat HintFloat
+highlight! link CocFloating NormalFloat
 highlight! link CocFloatDividingLine Grey
 highlight! link CocErrorHighlight ErrorText
 highlight! link CocWarningHighlight WarningText
