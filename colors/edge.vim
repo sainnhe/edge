@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Aug  7 07:21:35 UTC 2023'
+let s:last_modified = 'Tue Oct 24 15:37:15 UTC 2023'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -115,9 +115,11 @@ call edge#highlight('PmenuThumb', s:palette.none, s:palette.bg_grey)
 if s:configuration.float_style ==# 'dim'
   call edge#highlight('NormalFloat', s:palette.fg, s:palette.bg_dim)
   call edge#highlight('FloatBorder', s:palette.grey, s:palette.bg_dim)
+  call edge#highlight('FloatTitle', s:palette.purple, s:palette.bg_dim, 'bold')
 else
   call edge#highlight('NormalFloat', s:palette.fg, s:palette.bg2)
   call edge#highlight('FloatBorder', s:palette.grey, s:palette.bg2)
+  call edge#highlight('FloatTitle', s:palette.purple, s:palette.bg2, 'bold')
 endif
 call edge#highlight('Question', s:palette.yellow, s:palette.none)
 if s:configuration.spell_foreground ==# 'none'
