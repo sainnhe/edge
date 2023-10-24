@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Tue Oct 24 15:37:15 UTC 2023'
+let s:last_modified = 'Tue Oct 24 16:26:26 UTC 2023'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -1072,8 +1072,10 @@ highlight! link HopNextKey2 Blue
 highlight! link HopUnmatched Grey
 " }}}
 " lukas-reineke/indent-blankline.nvim {{{
-call edge#highlight('IndentBlanklineContextChar', s:palette.grey, s:palette.none, 'nocombine')
-call edge#highlight('IndentBlanklineChar', s:palette.grey_dim, s:palette.none, 'nocombine')
+call edge#highlight('IblScope', s:palette.grey, s:palette.none, 'nocombine')
+call edge#highlight('IblIndent', s:palette.bg4, s:palette.none, 'nocombine')
+highlight! link IndentBlanklineContextChar IblScope
+highlight! link IndentBlanklineChar IblIndent
 highlight! link IndentBlanklineSpaceChar IndentBlanklineChar
 highlight! link IndentBlanklineSpaceCharBlankline IndentBlanklineChar
 " }}}
