@@ -524,7 +524,7 @@ How to use custom colors?~
       " See `colors/edge.vim` for all predefined highlight groups.
       highlight! link groupA groupB
       highlight! link groupC groupD
-    
+
       " Initialize the color palette.
       " The first parameter is a valid value for `g:edge_style`,
       " the second parameter is a valid value for `g:edge_dim_foreground`,
@@ -539,15 +539,30 @@ How to use custom colors?~
       " See `autoload/edge.vim` for the format of `l:palette`.
       call edge#highlight('groupE', l:palette.red, l:palette.none, 'undercurl', l:palette.red)
     endfunction
-    
+
     augroup EdgeCustom
       autocmd!
       autocmd ColorScheme edge call s:edge_custom()
     augroup END
-    
+
     colorscheme edge
 <
-Note: Make sure to define the `augroup` before declare the `colorscheme`.
+Or in Neovim (Lua configuration):
+>
+    vim.api.nvim_create_autocmd('ColorScheme', {
+      group = vim.api.nvim_create_augroup('custom_highlights_edge', {}),
+      pattern = 'edge',
+      callback = function()
+        local config = vim.fn['edge#get_configuration']()
+        local palette = vim.fn['edge#get_palette'](config.style, config.dim_foreground, config.colors_override)
+        local set_hl = vim.fn['edge#highlight']
+
+        set_hl('Search', palette.none, palette.diff_blue)
+        set_hl('IncSearch', palette.none, palette.diff_green)
+      end
+    })
+<
+Note: Make sure to define the `augroup` before calling `colorscheme`.
 
 ------------------------------------------------------------------------------
 
