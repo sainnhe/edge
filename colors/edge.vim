@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Wed Mar 27 01:57:23 PM UTC 2024'
+let s:last_modified = 'Wed Mar 27 02:45:33 PM UTC 2024'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -498,7 +498,7 @@ highlight! link TSType Yellow
 highlight! link TSTypeBuiltin Yellow
 highlight! link TSTypeDefinition Yellow
 highlight! link TSTypeQualifier Purple
-highlight! link TSURI markdownUrl
+call edge#highlight('TSURI', s:palette.green, s:palette.none, 'underline')
 highlight! link TSVariable RedItalic
 highlight! link TSVariableBuiltin CyanItalic
 if has('nvim-0.8.0')
@@ -1620,10 +1620,10 @@ call edge#highlight('markdownH3', s:palette.blue, s:palette.none, 'bold')
 call edge#highlight('markdownH4', s:palette.yellow, s:palette.none, 'bold')
 call edge#highlight('markdownH5', s:palette.green, s:palette.none, 'bold')
 call edge#highlight('markdownH6', s:palette.cyan, s:palette.none, 'bold')
-call edge#highlight('markdownUrl', s:palette.green, s:palette.none, 'underline')
 call edge#highlight('markdownItalic', s:palette.none, s:palette.none, 'italic')
 call edge#highlight('markdownBold', s:palette.none, s:palette.none, 'bold')
 call edge#highlight('markdownItalicDelimiter', s:palette.grey, s:palette.none, 'italic')
+highlight! link markdownUrl TSURI
 highlight! link markdownCode Green
 highlight! link markdownCodeBlock Green
 highlight! link markdownCodeDelimiter Green
