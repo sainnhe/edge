@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Wed Mar 27 02:45:33 PM UTC 2024'
+let s:last_modified = 'Wed May 15 02:10:51 PM UTC 2024'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -501,7 +501,7 @@ highlight! link TSTypeQualifier Purple
 call edge#highlight('TSURI', s:palette.green, s:palette.none, 'underline')
 highlight! link TSVariable RedItalic
 highlight! link TSVariableBuiltin CyanItalic
-if has('nvim-0.8.0')
+if has('nvim-0.8')
   highlight! link @annotation TSAnnotation
   highlight! link @attribute TSAttribute
   highlight! link @boolean TSBoolean
@@ -626,7 +626,7 @@ if has('nvim-0.8.0')
   highlight! link @variable.member TSField
   highlight! link @variable.parameter TSParameter
 endif
-if has('nvim-0.9.0')
+if has('nvim-0.9')
   highlight! link @lsp.type.class TSType
   highlight! link @lsp.type.comment TSComment
   highlight! link @lsp.type.decorator TSFunction
@@ -1770,7 +1770,7 @@ highlight! link htmlString Green
 " }}}
 " nvim-treesitter/nvim-treesitter {{{
 highlight! link htmlTSText TSNone
-if has('nvim-0.8.0')
+if has('nvim-0.8')
   highlight! link @text.html htmlTSText
 endif
 " }}}
@@ -2039,7 +2039,7 @@ highlight! link jsxClosePunct Red
 highlight! link jsxEscapeJs Yellow
 highlight! link jsxAttrib Red
 " }}}
-if has('nvim-0.9.0')
+if has('nvim-0.9')
   highlight! link @lsp.typemod.variable.defaultLibrary.javascript TSConstBuiltin
   highlight! link @lsp.typemod.variable.defaultLibrary.javascriptreact TSConstBuiltin
 endif
@@ -2202,10 +2202,10 @@ highlight! link typescriptMathStaticProp Fg
 " }}}
 " nvim-treesitter/nvim-treesitter {{{
 highlight! link tsxTSConstructor TSType
-if has('nvim-0.8.0')
+if has('nvim-0.8')
   highlight! link @constructor.tsx tsxTSConstructor
 endif
-if has('nvim-0.9.0')
+if has('nvim-0.9')
   highlight! link @lsp.typemod.variable.defaultLibrary.typescript TSConstBuiltin
   highlight! link @lsp.typemod.variable.defaultLibrary.typescriptreact TSConstBuiltin
 endif
@@ -2342,7 +2342,7 @@ highlight! link luaDocTag Blue
 " }}}
 " nvim-treesitter/nvim-treesitter {{{
 highlight! link luaTSConstructor luaBraces
-if has('nvim-0.8.0')
+if has('nvim-0.8')
   highlight! link @constructor.lua luaTSConstructor
 endif
 " }}}
@@ -2800,7 +2800,7 @@ highlight! link gitcommitArrow Grey
 highlight! link gitcommitFile Blue
 " }}}
 " nvim-treesitter/nvim-treesitter {{{
-if has('nvim-0.8.0')
+if has('nvim-0.8')
   highlight! link @text.gitcommit TSNone
 endif
 " }}}
