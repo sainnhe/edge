@@ -20,6 +20,7 @@ function! edge#get_configuration() "{{{
         \ 'show_eob': get(g:, 'edge_show_eob', 1),
         \ 'float_style': get(g:, 'edge_float_style', 'bright'),
         \ 'current_word': get(g:, 'edge_current_word', get(g:, 'edge_transparent_background', 0) == 0 ? 'grey background' : 'bold'),
+        \ 'inlay_hints_background': get(g:, 'edge_inlay_hints_background', 'none'),
         \ 'lightline_disable_bold': get(g:, 'edge_lightline_disable_bold', 0),
         \ 'diagnostic_text_highlight': get(g:, 'edge_diagnostic_text_highlight', 0),
         \ 'diagnostic_line_highlight': get(g:, 'edge_diagnostic_line_highlight', 0),
