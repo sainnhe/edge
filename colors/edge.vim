@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sun Jun  2 09:22:00 UTC 2024'
+let s:last_modified = 'Mon Jun  3 07:48:12 UTC 2024'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -168,14 +168,14 @@ if has('nvim')
   highlight! link WinBar StatusLine
   highlight! link WinBarNC StatusLineNC
   if s:configuration.diagnostic_text_highlight
-    call edge#highlight('DiagnosticError', s:palette.red, s:palette.bg_red)
-    call edge#highlight('DiagnosticUnderlineError', s:palette.none, s:palette.bg_red, 'undercurl', s:palette.red)
-    call edge#highlight('DiagnosticWarn', s:palette.yellow, s:palette.bg_yellow)
-    call edge#highlight('DiagnosticUnderlineWarn', s:palette.none, s:palette.bg_yellow, 'undercurl', s:palette.yellow)
-    call edge#highlight('DiagnosticInfo', s:palette.blue, s:palette.bg_blue)
-    call edge#highlight('DiagnosticUnderlineInfo', s:palette.none, s:palette.bg_blue, 'undercurl', s:palette.blue)
-    call edge#highlight('DiagnosticHint', s:palette.green, s:palette.bg_green)
-    call edge#highlight('DiagnosticUnderlineHint', s:palette.none, s:palette.bg_green, 'undercurl', s:palette.green)
+    call edge#highlight('DiagnosticError', s:palette.red, s:palette.diff_red)
+    call edge#highlight('DiagnosticUnderlineError', s:palette.none, s:palette.diff_red, 'undercurl', s:palette.red)
+    call edge#highlight('DiagnosticWarn', s:palette.yellow, s:palette.diff_yellow)
+    call edge#highlight('DiagnosticUnderlineWarn', s:palette.none, s:palette.diff_yellow, 'undercurl', s:palette.yellow)
+    call edge#highlight('DiagnosticInfo', s:palette.blue, s:palette.diff_blue)
+    call edge#highlight('DiagnosticUnderlineInfo', s:palette.none, s:palette.diff_blue, 'undercurl', s:palette.blue)
+    call edge#highlight('DiagnosticHint', s:palette.green, s:palette.diff_green)
+    call edge#highlight('DiagnosticUnderlineHint', s:palette.none, s:palette.diff_green, 'undercurl', s:palette.green)
   else
     call edge#highlight('DiagnosticError', s:palette.red, s:palette.none)
     call edge#highlight('DiagnosticUnderlineError', s:palette.none, s:palette.none, 'undercurl', s:palette.red)
