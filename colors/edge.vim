@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Jun 21 07:17:01 PM UTC 2024'
+let s:last_modified = 'Sat Jun 22 01:00:03 PM UTC 2024'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -141,6 +141,10 @@ if s:configuration.transparent_background == 2
   call edge#highlight('TabLine', s:palette.fg, s:palette.bg4)
   call edge#highlight('TabLineFill', s:palette.grey, s:palette.none)
   call edge#highlight('TabLineSel', s:palette.bg0, s:palette.bg_purple)
+  if has('nvim')
+    call edge#highlight('WinBar', s:palette.fg, s:palette.none, 'bold')
+    call edge#highlight('WinBarNC', s:palette.grey, s:palette.none)
+  endif
 else
   call edge#highlight('StatusLine', s:palette.fg, s:palette.bg2)
   call edge#highlight('StatusLineTerm', s:palette.fg, s:palette.bg2)
@@ -149,6 +153,10 @@ else
   call edge#highlight('TabLine', s:palette.fg, s:palette.bg4)
   call edge#highlight('TabLineFill', s:palette.grey, s:palette.bg1)
   call edge#highlight('TabLineSel', s:palette.bg0, s:palette.bg_purple)
+  if has('nvim')
+    call edge#highlight('WinBar', s:palette.fg, s:palette.bg2, 'bold')
+    call edge#highlight('WinBarNC', s:palette.grey, s:palette.bg1)
+  endif
 endif
 if s:configuration.dim_inactive_windows
   call edge#highlight('VertSplit', s:palette.bg4, s:palette.bg_dim)
@@ -165,8 +173,6 @@ call edge#highlight('debugBreakpoint', s:palette.bg0, s:palette.bg_red)
 call edge#highlight('ToolbarButton', s:palette.bg0, s:palette.bg_purple)
 if has('nvim')
   call edge#highlight('Substitute', s:palette.bg0, s:palette.yellow)
-  highlight! link WinBar StatusLine
-  highlight! link WinBarNC StatusLineNC
   if s:configuration.diagnostic_text_highlight
     call edge#highlight('DiagnosticError', s:palette.red, s:palette.diff_red)
     call edge#highlight('DiagnosticUnderlineError', s:palette.none, s:palette.diff_red, 'undercurl', s:palette.red)
