@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sat Jun 22 01:00:03 PM UTC 2024'
+let s:last_modified = 'Sat Jun 25 09:55:50 AM UTC 2024'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -1247,14 +1247,35 @@ highlight! link TargetFileName Grey
 call edge#highlight('InclineNormalNC', s:palette.grey, s:palette.bg2)
 " }}}
 " echasnovski/mini.nvim {{{
+call edge#highlight('MiniAnimateCursor', s:palette.none, s:palette.none, 'reverse,nocombine')
+if s:configuration.float_style ==# 'dim'
+  call edge#highlight('MiniFilesTitleFocused', s:palette.green, s:palette.bg_dim, 'bold')
+else
+  call edge#highlight('MiniFilesTitleFocused', s:palette.green, s:palette.bg2, 'bold')
+endif
+call edge#highlight('MiniHipatternsFixme', s:palette.bg0, s:palette.red, 'bold')
+call edge#highlight('MiniHipatternsHack', s:palette.bg0, s:palette.yellow, 'bold')
+call edge#highlight('MiniHipatternsNote', s:palette.bg0, s:palette.blue, 'bold')
+call edge#highlight('MiniHipatternsTodo', s:palette.bg0, s:palette.green, 'bold')
+call edge#highlight('MiniIconsAzure', s:palette.blue, s:palette.none)
+call edge#highlight('MiniIconsBlue', s:palette.blue, s:palette.none)
+call edge#highlight('MiniIconsCyan', s:palette.cyan, s:palette.none)
+call edge#highlight('MiniIconsGreen', s:palette.green, s:palette.none)
+call edge#highlight('MiniIconsGrey', s:palette.fg, s:palette.none)
+call edge#highlight('MiniIconsOrange', s:palette.yellow, s:palette.none)
+call edge#highlight('MiniIconsPurple', s:palette.purple, s:palette.none)
+call edge#highlight('MiniIconsRed', s:palette.red, s:palette.none)
+call edge#highlight('MiniIconsYellow', s:palette.yellow, s:palette.none)
 call edge#highlight('MiniIndentscopePrefix', s:palette.none, s:palette.none, 'nocombine')
 call edge#highlight('MiniJump2dSpot', s:palette.purple, s:palette.none, 'bold,nocombine')
+call edge#highlight('MiniJump2dSpotAhead', s:palette.cyan, s:palette.none, 'nocombine')
+call edge#highlight('MiniJump2dSpotUnique', s:palette.yellow, s:palette.none, 'bold,nocombine')
 call edge#highlight('MiniStarterCurrent', s:palette.none, s:palette.none, 'nocombine')
 call edge#highlight('MiniStatuslineDevinfo', s:palette.fg, s:palette.bg2)
 call edge#highlight('MiniStatuslineFileinfo', s:palette.fg, s:palette.bg2)
 call edge#highlight('MiniStatuslineFilename', s:palette.grey, s:palette.bg1)
-call edge#highlight('MiniStatuslineModeInactive', s:palette.grey, s:palette.bg1)
 call edge#highlight('MiniStatuslineModeCommand', s:palette.bg0, s:palette.bg_green, 'bold')
+call edge#highlight('MiniStatuslineModeInactive', s:palette.grey, s:palette.bg1)
 call edge#highlight('MiniStatuslineModeInsert', s:palette.bg0, s:palette.bg_blue, 'bold')
 call edge#highlight('MiniStatuslineModeNormal', s:palette.bg0, s:palette.bg_purple, 'bold')
 call edge#highlight('MiniStatuslineModeOther', s:palette.bg0, s:palette.cyan, 'bold')
@@ -1271,18 +1292,72 @@ call edge#highlight('MiniTestEmphasis', s:palette.none, s:palette.none, 'bold')
 call edge#highlight('MiniTestFail', s:palette.red, s:palette.none, 'bold')
 call edge#highlight('MiniTestPass', s:palette.green, s:palette.none, 'bold')
 call edge#highlight('MiniTrailspace', s:palette.none, s:palette.red)
-highlight! link MiniStarterItemBullet Grey
-highlight! link MiniStarterItemPrefix Yellow
-highlight! link MiniStarterQuery Blue
+highlight! link MiniAnimateNormalFloat NormalFloat
+highlight! link MiniClueBorder FloatBorder
+highlight! link MiniClueDescGroup DiagnosticFloatingWarn
+highlight! link MiniClueDescSingle NormalFloat
+highlight! link MiniClueNextKey DiagnosticFloatingHint
+highlight! link MiniClueNextKeyWithPostkeys DiagnosticFloatingError
+highlight! link MiniClueSeparator DiagnosticFloatingInfo
+highlight! link MiniClueTitle FloatTitle
 highlight! link MiniCompletionActiveParameter LspSignatureActiveParameter
 highlight! link MiniCursorword CurrentWord
 highlight! link MiniCursorwordCurrent CurrentWord
+highlight! link MiniDepsChangeAdded diffAdded
+highlight! link MiniDepsChangeRemoved diffRemoved
+highlight! link MiniDepsHint DiagnosticHint
+highlight! link MiniDepsInfo DiagnosticInfo
+highlight! link MiniDepsMsgBreaking DiagnosticWarn
+highlight! link MiniDepsPlaceholder Comment
+highlight! link MiniDepsTitle Title
+highlight! link MiniDepsTitleError DiffDelete
+highlight! link MiniDepsTitleSame DiffChange
+highlight! link MiniDepsTitleUpdate DiffAdd
+highlight! link MiniDiffOverAdd DiffAdd
+highlight! link MiniDiffOverChange DiffText
+highlight! link MiniDiffOverContext DiffChange
+highlight! link MiniDiffOverDelete DiffDelete
+highlight! link MiniDiffSignAdd GreenSign
+highlight! link MiniDiffSignChange BlueSign
+highlight! link MiniDiffSignDelete RedSign
+highlight! link MiniFilesBorder FloatBorder
+highlight! link MiniFilesBorderModified DiagnosticFloatingWarn
+highlight! link MiniFilesCursorLine CursorLine
+highlight! link MiniFilesDirectory Directory
+highlight! link MiniFilesFile NormalFloat
+highlight! link MiniFilesNormal NormalFloat
+highlight! link MiniFilesTitle FloatTitle
 highlight! link MiniIndentscopeSymbol Grey
 highlight! link MiniJump Search
+highlight! link MiniJump2dDim Comment
+highlight! link MiniMapNormal NormalFloat
+highlight! link MiniMapSymbolCount Special
+highlight! link MiniMapSymbolLine Title
+highlight! link MiniMapSymbolView Delimiter
+highlight! link MiniNotifyBorder FloatBorder
+highlight! link MiniNotifyNormal NormalFloat
+highlight! link MiniNotifyTitle FloatTitle
+highlight! link MiniOperatorsExchangeFrom IncSearch
+highlight! link MiniPickBorder FloatBorder
+highlight! link MiniPickBorderBusy DiagnosticFloatingWarn
+highlight! link MiniPickBorderText FloatTitle
+highlight! link MiniPickHeader DiagnosticFloatingHint
+highlight! link MiniPickIconDirectory Directory
+highlight! link MiniPickIconFile MiniPickNormal
+highlight! link MiniPickMatchCurrent CursorLine
+highlight! link MiniPickMatchMarked DiffChange
+highlight! link MiniPickMatchRanges DiagnosticFloatingHint
+highlight! link MiniPickNormal NormalFloat
+highlight! link MiniPickPreviewLine CursorLine
+highlight! link MiniPickPreviewRegion IncSearch
+highlight! link MiniPickPrompt DiagnosticFloatingInfo
 highlight! link MiniStarterFooter Red
 highlight! link MiniStarterHeader Purple
 highlight! link MiniStarterInactive Comment
 highlight! link MiniStarterItem Normal
+highlight! link MiniStarterItemBullet Grey
+highlight! link MiniStarterItemPrefix Yellow
+highlight! link MiniStarterQuery Blue
 highlight! link MiniStarterSection Title
 highlight! link MiniSurround IncSearch
 highlight! link MiniTablineFill TabLineFill
