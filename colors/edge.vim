@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sat Jun 25 09:55:50 AM UTC 2024'
+let s:last_modified = 'Tue Jun 25 13:42:29 UTC 2024'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -1274,8 +1274,8 @@ call edge#highlight('MiniStarterCurrent', s:palette.none, s:palette.none, 'nocom
 call edge#highlight('MiniStatuslineDevinfo', s:palette.fg, s:palette.bg2)
 call edge#highlight('MiniStatuslineFileinfo', s:palette.fg, s:palette.bg2)
 call edge#highlight('MiniStatuslineFilename', s:palette.grey, s:palette.bg1)
+call edge#highlight('MiniStatuslineInactive', s:palette.grey, s:palette.bg1)
 call edge#highlight('MiniStatuslineModeCommand', s:palette.bg0, s:palette.bg_green, 'bold')
-call edge#highlight('MiniStatuslineModeInactive', s:palette.grey, s:palette.bg1)
 call edge#highlight('MiniStatuslineModeInsert', s:palette.bg0, s:palette.bg_blue, 'bold')
 call edge#highlight('MiniStatuslineModeNormal', s:palette.bg0, s:palette.bg_purple, 'bold')
 call edge#highlight('MiniStatuslineModeOther', s:palette.bg0, s:palette.cyan, 'bold')
