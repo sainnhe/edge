@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Jul  8 08:00:07 UTC 2024'
+let s:last_modified = 'Sat Jul 13 15:40:15 UTC 2024'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -97,8 +97,12 @@ call edge#highlight('ModeMsg', s:palette.fg, s:palette.none, 'bold')
 call edge#highlight('MoreMsg', s:palette.blue, s:palette.none, 'bold')
 call edge#highlight('MatchParen', s:palette.none, s:palette.bg4)
 call edge#highlight('NonText', s:palette.bg4, s:palette.none)
-call edge#highlight('Whitespace', s:palette.bg4, s:palette.none)
-call edge#highlight('SpecialKey', s:palette.yellow, s:palette.none)
+if has('nvim')
+  call edge#highlight('Whitespace', s:palette.bg4, s:palette.none)
+  call edge#highlight('SpecialKey', s:palette.yellow, s:palette.none)
+else
+  call edge#highlight('SpecialKey', s:palette.bg4, s:palette.none)
+endif
 call edge#highlight('Pmenu', s:palette.fg, s:palette.bg2)
 call edge#highlight('PmenuSbar', s:palette.none, s:palette.bg2)
 if s:configuration.menu_selection_background ==# 'blue'
