@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sat Jul 13 15:40:15 UTC 2024'
+let s:last_modified = 'Mon Sep  2 06:19:07 UTC 2024'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -367,6 +367,8 @@ if &diff
   call edge#highlight('CurrentWord', s:palette.bg0, s:palette.green)
 elseif s:configuration.current_word ==# 'grey background'
   call edge#highlight('CurrentWord', s:palette.none, s:palette.bg2)
+elseif s:configuration.current_word ==# 'high contrast background'
+  call edge#highlight('CurrentWord', s:palette.none, s:palette.bg4)
 else
   call edge#highlight('CurrentWord', s:palette.none, s:palette.none, s:configuration.current_word)
 endif
