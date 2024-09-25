@@ -89,7 +89,11 @@ endif
 call edge#highlight('DiffAdd', s:palette.none, s:palette.diff_green)
 call edge#highlight('DiffChange', s:palette.none, s:palette.diff_blue)
 call edge#highlight('DiffDelete', s:palette.none, s:palette.diff_red)
-call edge#highlight('DiffText', s:palette.bg0, s:palette.blue)
+if has('nvim')
+  call edge#highlight('DiffText', s:palette.bg0, s:palette.blue)
+else
+  call edge#highlight('DiffText', s:palette.blue, s:palette.bg0, 'reverse')
+endif
 call edge#highlight('Directory', s:palette.green, s:palette.none)
 call edge#highlight('ErrorMsg', s:palette.red, s:palette.none, 'bold,underline')
 call edge#highlight('WarningMsg', s:palette.yellow, s:palette.none, 'bold')
