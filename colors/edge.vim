@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Sep  2 06:19:07 UTC 2024'
+let s:last_modified = 'Wed Sep 25 13:46:10 UTC 2024'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -59,8 +59,13 @@ else
 endif
 call edge#highlight('SignColumn', s:palette.fg, s:palette.none)
 call edge#highlight('FoldColumn', s:palette.grey_dim, s:palette.none)
-call edge#highlight('IncSearch', s:palette.bg0, s:palette.bg_blue)
-call edge#highlight('Search', s:palette.bg0, s:palette.bg_green)
+if has('nvim')
+  call edge#highlight('IncSearch', s:palette.bg0, s:palette.bg_blue)
+  call edge#highlight('Search', s:palette.bg0, s:palette.bg_green)
+else
+  call edge#highlight('IncSearch', s:palette.bg_blue, s:palette.bg0, 'reverse')
+  call edge#highlight('Search', s:palette.bg_green, s:palette.bg0, 'reverse')
+endif
 highlight! link CurSearch IncSearch
 call edge#highlight('ColorColumn', s:palette.none, s:palette.bg1)
 call edge#highlight('Conceal', s:palette.grey_dim, s:palette.none)
