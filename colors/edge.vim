@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Sep 30 09:58:16 UTC 2024'
+let s:last_modified = 'Mon Sep 30 10:10:17 UTC 2024'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -2732,7 +2732,7 @@ highlight! link shDerefVar RedItalic
 highlight! link shDerefSpecial RedItalic
 highlight! link shDerefOff RedItalic
 highlight! link shVarAssign Purple
-highlight! link shFunctionOne Blue
+highlight! link shFunction Blue
 highlight! link shFunctionKey Purple
 " }}}
 " syn_end }}}
