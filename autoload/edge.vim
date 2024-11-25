@@ -193,7 +193,7 @@ function! edge#syn_gen(path, last_modified, msg) "{{{
     call edge#ftplugin_detect(a:path)
   else
     echohl WarningMsg | echom '[edge] Generated ' . rootpath . syntax_relative_path | echohl None
-    execute 'set runtimepath+=' . fnamemodify(rootpath, ':p') . 'after'
+    execute 'set runtimepath+=' . fnameescape(fnamemodify(rootpath, ':p')) . 'after'
   endif
 endfunction "}}}
 function! edge#syn_write(rootpath, syn, content) "{{{
