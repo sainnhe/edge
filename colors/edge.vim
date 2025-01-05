@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Jan  2 09:46:16 UTC 2025'
+let s:last_modified = 'Sun Jan  5 07:45:18 UTC 2025'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -1113,6 +1113,13 @@ highlight! link CmpItemMenu Fg
 highlight! link CmpItemKind Purple
 for kind in g:edge_lsp_kind_color
   execute "highlight! link CmpItemKind" . kind[0] . " " . kind[1]
+endfor
+" }}}
+" Saghen/blink.cmp {{{
+call edge#highlight('BlinkCmpLabelMatch', s:palette.blue, s:palette.none, 'bold')
+highlight! link BlinkCmpKind Purple
+for kind in g:edge_lsp_kind_color
+  execute "highlight! link BlinkCmpKind" . kind[0] . " " . kind[1]
 endfor
 " }}}
 " SmiteshP/nvim-navic {{{
