@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Feb  7 14:36:02 UTC 2025'
+let s:last_modified = 'Sat Feb  8 08:39:08 UTC 2025'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -1158,6 +1158,9 @@ call edge#highlight('TelescopeMatching', s:palette.green, s:palette.none, 'bold'
 highlight! link TelescopeBorder Grey
 highlight! link TelescopePromptPrefix Purple
 highlight! link TelescopeSelection DiffAdd
+" }}}
+" ibhagwan/fzf-lua {{{
+highlight! link FzfLuaBorder Grey
 " }}}
 " lewis6991/gitsigns.nvim {{{
 highlight! link GitSignsAdd GreenSign
