@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sat Feb  8 08:49:27 UTC 2025'
+let s:last_modified = 'Sat Feb  8 19:40:50 UTC 2025'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -1168,6 +1168,8 @@ highlight! link SnacksPickerBorder Grey
 highlight! link SnacksPickerTitle Title
 highlight! link SnacksPickerFooter SnacksPickerTitle
 highlight! link SnacksPickerPrompt Purple
+highlight! link SnacksPickerInputCursorLine Normal
+highlight! link SnacksPickerListCursorLine CursorLine
 call edge#highlight('SnacksPickerMatch', s:palette.green, s:palette.none, 'bold')
 highlight! link SnacksPickerToggle CursorLine
 highlight! link SnacksPickerDir Comment
