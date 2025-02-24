@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Sat Feb  8 19:40:50 UTC 2025'
+let s:last_modified = 'Mon Feb 24 13:16:19 UTC 2025'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -1136,7 +1136,6 @@ endfor
 " }}}
 " Saghen/blink.cmp {{{
 call edge#highlight('BlinkCmpLabelMatch', s:palette.blue, s:palette.none, 'bold')
-highlight! link BlinkCmpKind Purple
 for kind in g:edge_lsp_kind_color
   execute "highlight! link BlinkCmpKind" . kind[0] . " " . kind[1]
 endfor
