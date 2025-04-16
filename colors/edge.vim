@@ -1214,8 +1214,8 @@ highlight! link RainbowDelimiterViolet Purple
 call edge#highlight('BufferCurrent', s:palette.fg, s:palette.bg0)
 call edge#highlight('BufferCurrentIndex', s:palette.fg, s:palette.bg0)
 call edge#highlight('BufferCurrentMod', s:palette.blue, s:palette.bg0)
-call edge#highlight('BufferCurrentSign', s:palette.purple, s:palette.bg0)
 call edge#highlight('BufferCurrentTarget', s:palette.red, s:palette.bg0, 'bold')
+call edge#highlight('BufferCurrentSign', s:palette.purple, s:palette.bg0)
 call edge#highlight('BufferCurrentADDED', s:palette.green, s:palette.bg0)
 call edge#highlight('BufferCurrentDELETED', s:palette.red, s:palette.bg0)
 call edge#highlight('BufferCurrentCHANGED', s:palette.blue, s:palette.bg0)
@@ -1227,11 +1227,11 @@ call edge#highlight('BufferVisibleTarget', s:palette.yellow, s:palette.bg_dim, '
 call edge#highlight('BufferInactive', s:palette.grey, s:palette.bg_dim)
 call edge#highlight('BufferInactiveIndex', s:palette.grey, s:palette.bg_dim)
 call edge#highlight('BufferInactiveMod', s:palette.grey, s:palette.bg_dim)
-call edge#highlight('BufferInactiveSign', s:palette.grey_dim, s:palette.bg_dim)
 call edge#highlight('BufferInactiveTarget', s:palette.yellow, s:palette.bg_dim, 'bold')
-call edge#highlight('BufferInactiveADDED', s:palette.grey_dim, s:palette.bg_dim)
-call edge#highlight('BufferInactiveDELETED', s:palette.grey_dim, s:palette.bg_dim)
-call edge#highlight('BufferInactiveCHANGED', s:palette.grey_dim, s:palette.bg_dim)
+call edge#highlight('BufferInactiveSign', s:palette.grey_dim, s:palette.bg_dim)
+highlight! link BufferInactiveADDED BufferInactiveSign
+highlight! link BufferInactiveDELETED BufferInactiveSign
+highlight! link BufferInactiveCHANGED BufferInactiveSign
 call edge#highlight('BufferTabpages', s:palette.grey, s:palette.bg_dim, 'bold')
 call edge#highlight('BufferTabpageFill', s:palette.bg_dim, s:palette.bg_dim)
 " }}}
