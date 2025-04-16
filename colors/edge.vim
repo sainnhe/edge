@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Wed Apr 16 15:50:03 UTC 2025'
+let s:last_modified = 'Wed Apr 16 19:26:34 UTC 2025'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -1233,6 +1233,7 @@ highlight! link BufferInactiveADDED BufferInactiveSign
 highlight! link BufferInactiveDELETED BufferInactiveSign
 highlight! link BufferInactiveCHANGED BufferInactiveSign
 call edge#highlight('BufferTabpages', s:palette.grey, s:palette.bg_dim, 'bold')
+call edge#highlight('BufferTabpagesSep', s:palette.grey_dim, s:palette.bg_dim, 'bold')
 call edge#highlight('BufferTabpageFill', s:palette.bg_dim, s:palette.bg_dim)
 " }}}
 " rcarriga/nvim-notify {{{
