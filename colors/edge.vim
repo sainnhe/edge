@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Feb 24 13:16:19 UTC 2025'
+let s:last_modified = 'Wed Apr 16 15:50:03 UTC 2025'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -1216,6 +1216,9 @@ call edge#highlight('BufferCurrentIndex', s:palette.fg, s:palette.bg0)
 call edge#highlight('BufferCurrentMod', s:palette.blue, s:palette.bg0)
 call edge#highlight('BufferCurrentSign', s:palette.purple, s:palette.bg0)
 call edge#highlight('BufferCurrentTarget', s:palette.red, s:palette.bg0, 'bold')
+call edge#highlight('BufferCurrentADDED', s:palette.green, s:palette.bg0)
+call edge#highlight('BufferCurrentDELETED', s:palette.red, s:palette.bg0)
+call edge#highlight('BufferCurrentCHANGED', s:palette.blue, s:palette.bg0)
 call edge#highlight('BufferVisible', s:palette.fg, s:palette.bg_dim)
 call edge#highlight('BufferVisibleIndex', s:palette.fg, s:palette.bg_dim)
 call edge#highlight('BufferVisibleMod', s:palette.blue, s:palette.bg_dim)
@@ -1226,6 +1229,9 @@ call edge#highlight('BufferInactiveIndex', s:palette.grey, s:palette.bg_dim)
 call edge#highlight('BufferInactiveMod', s:palette.grey, s:palette.bg_dim)
 call edge#highlight('BufferInactiveSign', s:palette.grey_dim, s:palette.bg_dim)
 call edge#highlight('BufferInactiveTarget', s:palette.yellow, s:palette.bg_dim, 'bold')
+call edge#highlight('BufferInactiveADDED', s:palette.grey_dim, s:palette.bg_dim)
+call edge#highlight('BufferInactiveDELETED', s:palette.grey_dim, s:palette.bg_dim)
+call edge#highlight('BufferInactiveCHANGED', s:palette.grey_dim, s:palette.bg_dim)
 call edge#highlight('BufferTabpages', s:palette.grey, s:palette.bg_dim, 'bold')
 call edge#highlight('BufferTabpageFill', s:palette.bg_dim, s:palette.bg_dim)
 " }}}
