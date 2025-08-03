@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Fri Aug  1 08:53:37 UTC 2025'
+let s:last_modified = 'Sun Aug  3 18:52:45 UTC 2025'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -195,6 +195,8 @@ if has('nvim')
     call edge#highlight('DiagnosticUnderlineInfo', s:palette.none, s:palette.bg_blue, 'undercurl', s:palette.blue)
     call edge#highlight('DiagnosticHint', s:palette.purple, s:palette.bg_purple)
     call edge#highlight('DiagnosticUnderlineHint', s:palette.none, s:palette.bg_purple, 'undercurl', s:palette.purple)
+    call edge#highlight('DiagnosticOk', s:palette.green, s:palette.bg_green)
+    call edge#highlight('DiagnosticUnderlineOk', s:palette.none, s:palette.bg_green, 'undercurl', s:palette.green)
   else
     call edge#highlight('DiagnosticError', s:palette.red, s:palette.none)
     call edge#highlight('DiagnosticUnderlineError', s:palette.none, s:palette.none, 'undercurl', s:palette.red)
@@ -204,19 +206,24 @@ if has('nvim')
     call edge#highlight('DiagnosticUnderlineInfo', s:palette.none, s:palette.none, 'undercurl', s:palette.blue)
     call edge#highlight('DiagnosticHint', s:palette.purple, s:palette.none)
     call edge#highlight('DiagnosticUnderlineHint', s:palette.none, s:palette.none, 'undercurl', s:palette.purple)
+    call edge#highlight('DiagnosticOk', s:palette.green, s:palette.none)
+    call edge#highlight('DiagnosticUnderlineOk', s:palette.none, s:palette.none, 'undercurl', s:palette.green)
   endif
   highlight! link DiagnosticFloatingError ErrorFloat
   highlight! link DiagnosticFloatingWarn WarningFloat
   highlight! link DiagnosticFloatingInfo InfoFloat
   highlight! link DiagnosticFloatingHint HintFloat
+  highlight! link DiagnosticFloatingOk OkFloat
   highlight! link DiagnosticVirtualTextError VirtualTextError
   highlight! link DiagnosticVirtualTextWarn VirtualTextWarning
   highlight! link DiagnosticVirtualTextInfo VirtualTextInfo
   highlight! link DiagnosticVirtualTextHint VirtualTextHint
+  highlight! link DiagnosticVirtualTextOk VirtualTextOk
   highlight! link DiagnosticSignError RedSign
   highlight! link DiagnosticSignWarn YellowSign
   highlight! link DiagnosticSignInfo BlueSign
   highlight! link DiagnosticSignHint PurpleSign
+  highlight! link DiagnosticSignOk GreenSign
   highlight! link LspDiagnosticsFloatingError DiagnosticFloatingError
   highlight! link LspDiagnosticsFloatingWarning DiagnosticFloatingWarn
   highlight! link LspDiagnosticsFloatingInformation DiagnosticFloatingInfo
@@ -360,21 +367,25 @@ if s:configuration.diagnostic_virtual_text ==# 'grey'
   highlight! link VirtualTextError Grey
   highlight! link VirtualTextInfo Grey
   highlight! link VirtualTextHint Grey
+  highlight! link VirtualTextOk Grey
 elseif s:configuration.diagnostic_virtual_text ==# 'colored'
   highlight! link VirtualTextWarning Yellow
   highlight! link VirtualTextError Red
   highlight! link VirtualTextInfo Blue
   highlight! link VirtualTextHint Purple
+  highlight! link VirtualTextOk Green
 else
   call edge#highlight('VirtualTextWarning', s:palette.yellow, s:palette.bg_yellow)
   call edge#highlight('VirtualTextError', s:palette.red, s:palette.bg_red)
   call edge#highlight('VirtualTextInfo', s:palette.blue, s:palette.bg_blue)
   call edge#highlight('VirtualTextHint', s:palette.purple, s:palette.bg_purple)
+  call edge#highlight('VirtualTextOk', s:palette.green, s:palette.bg_green)
 endif
 call edge#highlight('ErrorFloat', s:palette.red, s:palette.none)
 call edge#highlight('WarningFloat', s:palette.yellow, s:palette.none)
 call edge#highlight('InfoFloat', s:palette.blue, s:palette.none)
 call edge#highlight('HintFloat', s:palette.purple, s:palette.none)
+call edge#highlight('OkFloat', s:palette.green, s:palette.none)
 if &diff
   call edge#highlight('CurrentWord', s:palette.bg0, s:palette.green)
 elseif s:configuration.current_word ==# 'grey background'
