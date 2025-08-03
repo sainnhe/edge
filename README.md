@@ -7,35 +7,35 @@
 </h2>
 
 ![edge-dark](https://gitlab.com/sainnhe/img/-/raw/master/edge-dark.png)
-![dark](https://user-images.githubusercontent.com/58662350/214516806-d5b8ed87-7090-4e7d-b365-76bfe6c24b72.png)
+![dark](https://github.com/user-attachments/assets/763d4dd6-5035-4f46-83b7-e0673f403820)
 
 <h2 align="center">
 𝐄𝐝𝐠𝐞 𝐃𝐚𝐫𝐤 (𝐀𝐮𝐫𝐚)
 </h2>
 
 ![aura-dark](https://gitlab.com/sainnhe/img/-/raw/master/aura-dark.png)
-![aura](https://user-images.githubusercontent.com/58662350/214516826-d8cee875-f1f4-489f-8b32-ef71ac6afade.png)
+![aura](https://github.com/user-attachments/assets/3b4a940c-253c-44fd-91fe-d1366e8552f5)
 
 <h2 align="center">
 𝐄𝐝𝐠𝐞 𝐃𝐚𝐫𝐤 (𝐍𝐞𝐨𝐧)
 </h2>
 
 ![neon-dark](https://gitlab.com/sainnhe/img/-/raw/master/neon-dark.png)
-![neon](https://user-images.githubusercontent.com/58662350/214516850-17c63c6c-f68d-4d72-b338-565829e3a78c.png)
+![neon](https://github.com/user-attachments/assets/66d90c3c-a3db-42b6-8f12-ad3462550c8a)
 
 <h2 align="center">
 𝐄𝐝𝐠𝐞 𝐃𝐚𝐫𝐤 (𝐀𝐮𝐫𝐚 𝐃𝐢𝐦)
 </h2>
 
 ![edge-dim](https://gitlab.com/sainnhe/img/-/raw/master/edge-dim.png)
-![aura_dim](https://user-images.githubusercontent.com/58662350/214516872-10d32c9f-0f25-4da2-a4fb-6b77dabf7c0f.png)
+![aura_dim](https://github.com/user-attachments/assets/da887353-91b1-4a16-8aeb-b74dd90b6ba6)
 
 <h2 align="center">
 𝐄𝐝𝐠𝐞 𝐋𝐢𝐠𝐡𝐭
 </h2>
 
 ![edge-light](https://gitlab.com/sainnhe/img/-/raw/master/edge-light.png)
-![light](https://user-images.githubusercontent.com/58662350/214516898-5e712bc2-4ced-4851-8c22-dffb059d4352.png)
+![light](https://github.com/user-attachments/assets/9138e04a-0f0d-4525-948b-b4216721e747)
 
 This color scheme is heavily inspired by [Atom One](https://github.com/atom/atom/tree/master/packages/one-dark-syntax) and [Material](https://github.com/equinusocio/material-theme), I'm trying to combine my favorite designs of them in this color scheme.
 
