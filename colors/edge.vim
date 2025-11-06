@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Nov  6 13:31:02 UTC 2025'
+let s:last_modified = 'Thu Nov  6 13:34:42 UTC 2025'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -712,6 +712,12 @@ if has('nvim-0.9')
 endif
 highlight! link TSModuleInfoGood Green
 highlight! link TSModuleInfoBad Red
+" }}}
+" nvim-treesitter/nvim-treesitter-context {{{
+call edge#highlight('TreesitterContext', s:palette.fg, s:palette.bg2)
+if s:configuration.dim_inactive_windows && !s:configuration.transparent_background
+  call edge#highlight('TreesitterContextLineNumber', s:palette.grey_dim, s:palette.bg0)
+endif
 " }}}
 " github/copilot.vim {{{
 highlight! link CopilotSuggestion Grey
