@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Mon Aug 18 19:04:57 UTC 2025'
+let s:last_modified = 'Thu Nov  6 13:29:33 UTC 2025'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -130,9 +130,9 @@ if s:configuration.float_style ==# 'dim'
   call edge#highlight('FloatBorder', s:palette.grey, s:palette.bg_dim)
   call edge#highlight('FloatTitle', s:palette.purple, s:palette.bg_dim, 'bold')
 elseif s:configuration.float_style ==# 'none'
-  call edge#highlight('NormalFloat', s:palette.fg, s:palette.none)
-  call edge#highlight('FloatBorder', s:palette.grey, s:palette.none)
-  call edge#highlight('FloatTitle', s:palette.purple, s:palette.none, 'bold')
+  call edge#highlight('NormalFloat', s:palette.fg, s:palette.bg0)
+  call edge#highlight('FloatBorder', s:palette.grey, s:palette.bg0)
+  call edge#highlight('FloatTitle', s:palette.purple, s:palette.bg0, 'bold')
 else
   call edge#highlight('NormalFloat', s:palette.fg, s:palette.bg2)
   call edge#highlight('FloatBorder', s:palette.grey, s:palette.bg2)
