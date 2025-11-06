@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Nov  6 14:06:22 UTC 2025'
+let s:last_modified = 'Thu Nov  6 14:07:03 UTC 2025'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -1359,10 +1359,16 @@ call edge#highlight('MiniIndentscopePrefix', s:palette.none, s:palette.none, 'no
 call edge#highlight('MiniJump2dSpot', s:palette.purple, s:palette.none, 'bold,nocombine')
 call edge#highlight('MiniJump2dSpotAhead', s:palette.cyan, s:palette.none, 'nocombine')
 call edge#highlight('MiniJump2dSpotUnique', s:palette.yellow, s:palette.none, 'bold,nocombine')
+highlight! link MiniPickPrompt NormalFloat
 if s:configuration.float_style ==# 'dim'
-  call edge#highlight('MiniPickPrompt', s:palette.blue, s:palette.bg_dim)
+  call edge#highlight('MiniPickPromptPrefix', s:palette.purple, s:palette.bg_dim)
+  call edge#highlight('MiniPickPromptCaret', s:palette.blue, s:palette.bg_dim)
+elseif s:configuration.float_style ==# 'none'
+  call edge#highlight('MiniPickPromptPrefix', s:palette.purple, s:palette.bg0)
+  call edge#highlight('MiniPickPromptCaret', s:palette.blue, s:palette.bg0)
 else
-  call edge#highlight('MiniPickPrompt', s:palette.blue, s:palette.bg2)
+  call edge#highlight('MiniPickPromptPrefix', s:palette.purple, s:palette.bg2)
+  call edge#highlight('MiniPickPromptCaret', s:palette.blue, s:palette.bg2)
 endif
 call edge#highlight('MiniStarterCurrent', s:palette.none, s:palette.none, 'nocombine')
 call edge#highlight('MiniStatuslineDevinfo', s:palette.fg, s:palette.bg2)
@@ -1425,18 +1431,7 @@ highlight! link MiniNotifyBorder FloatBorder
 highlight! link MiniNotifyNormal NormalFloat
 highlight! link MiniNotifyTitle FloatTitle
 highlight! link MiniOperatorsExchangeFrom IncSearch
-highlight! link MiniPickBorder FloatBorder
-highlight! link MiniPickBorderBusy DiagnosticFloatingWarn
-highlight! link MiniPickBorderText FloatTitle
-highlight! link MiniPickHeader DiagnosticFloatingHint
-highlight! link MiniPickIconDirectory Directory
-highlight! link MiniPickIconFile MiniPickNormal
-highlight! link MiniPickMatchCurrent CursorLine
 highlight! link MiniPickMatchMarked DiffChange
-highlight! link MiniPickMatchRanges DiagnosticFloatingHint
-highlight! link MiniPickNormal NormalFloat
-highlight! link MiniPickPreviewLine CursorLine
-highlight! link MiniPickPreviewRegion IncSearch
 highlight! link MiniStarterFooter Red
 highlight! link MiniStarterHeader Purple
 highlight! link MiniStarterInactive Comment
