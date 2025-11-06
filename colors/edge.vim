@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Nov  6 13:34:42 UTC 2025'
+let s:last_modified = 'Thu Nov  6 14:06:22 UTC 2025'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -1335,11 +1335,12 @@ call edge#highlight('InclineNormalNC', s:palette.grey, s:palette.bg2)
 " }}}
 " echasnovski/mini.nvim {{{
 call edge#highlight('MiniAnimateCursor', s:palette.none, s:palette.none, 'reverse,nocombine')
-call edge#highlight('MiniFilesFile', s:palette.fg, s:palette.none)
 if s:configuration.float_style ==# 'dim'
-  call edge#highlight('MiniFilesTitleFocused', s:palette.green, s:palette.bg_dim, 'bold')
+  call edge#highlight('MiniFilesTitle', s:palette.grey, s:palette.bg0)
+elseif s:configuration.float_style ==# 'none'
+  call edge#highlight('MiniFilesTitle', s:palette.grey, s:palette.bg1)
 else
-  call edge#highlight('MiniFilesTitleFocused', s:palette.green, s:palette.bg2, 'bold')
+  call edge#highlight('MiniFilesTitle', s:palette.grey, s:palette.bg4)
 endif
 call edge#highlight('MiniHipatternsFixme', s:palette.bg0, s:palette.red, 'bold')
 call edge#highlight('MiniHipatternsHack', s:palette.bg0, s:palette.yellow, 'bold')
@@ -1413,12 +1414,6 @@ highlight! link MiniDiffOverDelete DiffDelete
 highlight! link MiniDiffSignAdd GreenSign
 highlight! link MiniDiffSignChange BlueSign
 highlight! link MiniDiffSignDelete RedSign
-highlight! link MiniFilesBorder FloatBorder
-highlight! link MiniFilesBorderModified DiagnosticFloatingWarn
-highlight! link MiniFilesCursorLine CursorLine
-highlight! link MiniFilesDirectory Directory
-highlight! link MiniFilesNormal NormalFloat
-highlight! link MiniFilesTitle FloatTitle
 highlight! link MiniIndentscopeSymbol Grey
 highlight! link MiniJump Search
 highlight! link MiniJump2dDim Comment
