@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Nov  6 13:29:33 UTC 2025'
+let s:last_modified = 'Thu Nov  6 13:31:02 UTC 2025'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -128,15 +128,15 @@ call edge#highlight('PmenuThumb', s:palette.none, s:palette.bg_grey)
 if s:configuration.float_style ==# 'dim'
   call edge#highlight('NormalFloat', s:palette.fg, s:palette.bg_dim)
   call edge#highlight('FloatBorder', s:palette.grey, s:palette.bg_dim)
-  call edge#highlight('FloatTitle', s:palette.purple, s:palette.bg_dim, 'bold')
+  call edge#highlight('FloatTitle', s:palette.purple, s:palette.bg0, 'bold')
 elseif s:configuration.float_style ==# 'none'
   call edge#highlight('NormalFloat', s:palette.fg, s:palette.bg0)
   call edge#highlight('FloatBorder', s:palette.grey, s:palette.bg0)
-  call edge#highlight('FloatTitle', s:palette.purple, s:palette.bg0, 'bold')
+  call edge#highlight('FloatTitle', s:palette.purple, s:palette.bg1, 'bold')
 else
   call edge#highlight('NormalFloat', s:palette.fg, s:palette.bg2)
   call edge#highlight('FloatBorder', s:palette.grey, s:palette.bg2)
-  call edge#highlight('FloatTitle', s:palette.purple, s:palette.bg2, 'bold')
+  call edge#highlight('FloatTitle', s:palette.purple, s:palette.bg4, 'bold')
 endif
 call edge#highlight('Question', s:palette.yellow, s:palette.none)
 if s:configuration.spell_foreground ==# 'none'
