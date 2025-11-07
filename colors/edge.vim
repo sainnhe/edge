@@ -129,7 +129,7 @@ if s:configuration.float_style ==# 'dim'
   call edge#highlight('NormalFloat', s:palette.fg, s:palette.bg_dim)
   call edge#highlight('FloatBorder', s:palette.grey, s:palette.bg_dim)
   call edge#highlight('FloatTitle', s:palette.purple, s:palette.bg0, 'bold')
-elseif s:configuration.float_style ==# 'none'
+elseif s:configuration.float_style ==# 'blend'
   call edge#highlight('NormalFloat', s:palette.fg, s:palette.bg0)
   call edge#highlight('FloatBorder', s:palette.grey, s:palette.bg0)
   call edge#highlight('FloatTitle', s:palette.purple, s:palette.bg1, 'bold')
@@ -1337,7 +1337,7 @@ call edge#highlight('InclineNormalNC', s:palette.grey, s:palette.bg2)
 call edge#highlight('MiniAnimateCursor', s:palette.none, s:palette.none, 'reverse,nocombine')
 if s:configuration.float_style ==# 'dim'
   call edge#highlight('MiniFilesTitle', s:palette.grey, s:palette.bg0)
-elseif s:configuration.float_style ==# 'none'
+elseif s:configuration.float_style ==# 'blend'
   call edge#highlight('MiniFilesTitle', s:palette.grey, s:palette.bg1)
 else
   call edge#highlight('MiniFilesTitle', s:palette.grey, s:palette.bg4)
@@ -1363,7 +1363,7 @@ highlight! link MiniPickPrompt NormalFloat
 if s:configuration.float_style ==# 'dim'
   call edge#highlight('MiniPickPromptPrefix', s:palette.purple, s:palette.bg_dim)
   call edge#highlight('MiniPickPromptCaret', s:palette.blue, s:palette.bg_dim)
-elseif s:configuration.float_style ==# 'none'
+elseif s:configuration.float_style ==# 'blend'
   call edge#highlight('MiniPickPromptPrefix', s:palette.purple, s:palette.bg0)
   call edge#highlight('MiniPickPromptCaret', s:palette.blue, s:palette.bg0)
 else
