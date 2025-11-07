@@ -10,7 +10,7 @@
 let s:configuration = edge#get_configuration()
 let s:palette = edge#get_palette(s:configuration.style, s:configuration.dim_foreground, s:configuration.colors_override)
 let s:path = expand('<sfile>:p') " the path of this script
-let s:last_modified = 'Thu Nov  6 14:07:03 UTC 2025'
+let s:last_modified = 'Fri Nov  7 20:31:15 UTC 2025'
 let g:edge_loaded_file_types = []
 
 if !(exists('g:colors_name') && g:colors_name ==# 'edge' && s:configuration.better_performance)
@@ -28,7 +28,7 @@ endif
 " }}}
 " Common Highlight Groups: {{{
 " UI: {{{
-if s:configuration.transparent_background >= 1
+if s:configuration.transparent_background
   call edge#highlight('Normal', s:palette.fg, s:palette.none)
   call edge#highlight('NormalNC', s:palette.fg, s:palette.none)
   call edge#highlight('Terminal', s:palette.fg, s:palette.none)
@@ -130,9 +130,15 @@ if s:configuration.float_style ==# 'dim'
   call edge#highlight('FloatBorder', s:palette.grey, s:palette.bg_dim)
   call edge#highlight('FloatTitle', s:palette.purple, s:palette.bg0, 'bold')
 elseif s:configuration.float_style ==# 'blend'
-  call edge#highlight('NormalFloat', s:palette.fg, s:palette.bg0)
-  call edge#highlight('FloatBorder', s:palette.grey, s:palette.bg0)
-  call edge#highlight('FloatTitle', s:palette.purple, s:palette.bg1, 'bold')
+  if s:configuration.transparent_background
+    highlight! link NormalFloat Normal
+    highlight! link FloatBorder Grey
+    call edge#highlight('FloatTitle', s:palette.purple, s:palette.none, 'bold')
+  else
+    call edge#highlight('NormalFloat', s:palette.fg, s:palette.bg0)
+    call edge#highlight('FloatBorder', s:palette.grey, s:palette.bg0)
+    call edge#highlight('FloatTitle', s:palette.purple, s:palette.bg1, 'bold')
+  endif
 else
   call edge#highlight('NormalFloat', s:palette.fg, s:palette.bg2)
   call edge#highlight('FloatBorder', s:palette.grey, s:palette.bg2)
@@ -1338,7 +1344,11 @@ call edge#highlight('MiniAnimateCursor', s:palette.none, s:palette.none, 'revers
 if s:configuration.float_style ==# 'dim'
   call edge#highlight('MiniFilesTitle', s:palette.grey, s:palette.bg0)
 elseif s:configuration.float_style ==# 'blend'
-  call edge#highlight('MiniFilesTitle', s:palette.grey, s:palette.bg1)
+  if s:configuration.transparent_background
+    highlight! link MiniFilesTitle Grey
+  else
+    call edge#highlight('MiniFilesTitle', s:palette.grey, s:palette.bg1)
+  endif
 else
   call edge#highlight('MiniFilesTitle', s:palette.grey, s:palette.bg4)
 endif
@@ -1364,8 +1374,13 @@ if s:configuration.float_style ==# 'dim'
   call edge#highlight('MiniPickPromptPrefix', s:palette.purple, s:palette.bg_dim)
   call edge#highlight('MiniPickPromptCaret', s:palette.blue, s:palette.bg_dim)
 elseif s:configuration.float_style ==# 'blend'
-  call edge#highlight('MiniPickPromptPrefix', s:palette.purple, s:palette.bg0)
-  call edge#highlight('MiniPickPromptCaret', s:palette.blue, s:palette.bg0)
+  if s:configuration.transparent_background
+    highlight! link MiniPickPromptPrefix Purple
+    highlight! link MiniPickPromptCaret Blue
+  else
+    call edge#highlight('MiniPickPromptPrefix', s:palette.purple, s:palette.bg0)
+    call edge#highlight('MiniPickPromptCaret', s:palette.blue, s:palette.bg0)
+  endif
 else
   call edge#highlight('MiniPickPromptPrefix', s:palette.purple, s:palette.bg2)
   call edge#highlight('MiniPickPromptCaret', s:palette.blue, s:palette.bg2)
